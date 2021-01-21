@@ -1,0 +1,12 @@
+---
+title: "An Introduction to Data Science Methods in Education"
+subtitle: "University of Tennessee, Knoxville"
+author: "Joshua Rosenberg and Alex Lishinski"
+date: "Spring, 2021"
+---
+
+Welcome to An Introduction to Data Science Methods in Education! The overarching goal of this course is to support graduate-level students across the Department of Theory and Practice in Teacher Education (and the Bailey Graduate School of Education) - and across the University - to be empowered to use new data sources and research methods in their research. 
+
+Important note: This class is designed as a fully online and partially synchronous course.  We will meet synchronously every week via Zoom (always via this link: ) on Thursdays 2:50-4:05 pm.
+
+This class will be taught in a fully-online format. We will use Zoom for synchronous (or at-the-same-time) a) introductions to new content, b) “try-it-out” laboratories, and c) discussions. We will also use a number of tools for asynchronous communication, especially [Slack (click for link to our class Slack workspace)](https://datascienceinedu.slack.com/).

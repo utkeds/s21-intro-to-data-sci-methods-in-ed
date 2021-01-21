@@ -1,0 +1,28 @@
+---
+title: "Assignments"
+output: html_document
+---
+
+## Homework (14)
+
+Weekly homework. To be submitted in the form of an R Markdown file (`.Rmd`) via Canvas.
+
+## Interactive examinations (4)
+
+Interaction examinations following each unit. These provide a chance to reflect on and summarize what you did and learned during the unit. Don't worry, these aren't high-stress!
+
+## Personal statement on equity, privacy, and ethics
+
+Write a personal statement on one’s perspective toward the role and nature of data, addressing how issues of equity, privacy, and ethics are central to data science in education (due approximately one-third of the way through the semester).
+
+## Curate data science resources (3)
+
+Curate data science resources as a part of a class resource throughout the semester.
+
+## Individual project
+
+Complete an individually-designed project that can take different forms (R Markdown Report, interactive Shiny app, interactive dashboard, etc.) related to identifying and solving a data-related problem in education using R (due approximately two-thirds of the way through the semester).
+
+## Portfolio
+
+Develop a portfolio with your work from throughout the semester. 

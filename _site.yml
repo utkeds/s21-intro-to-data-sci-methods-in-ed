@@ -1,0 +1,14 @@
+name: "An Intro. to DS in Edu."
+navbar:
+  title: "DS in Edu"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "Syllabus"
+      href: syllabus.html
+    - text: "Presentations"
+      href: presentations.html
+    - text: "Homework"
+      href: homework.html
+    - text: "Assignment Descriptions"
+      href: assignments.html
