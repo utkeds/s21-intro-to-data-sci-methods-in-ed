@@ -3,11 +3,15 @@ title: "Schedule"
 output: html_document
 ---
 
-```{r, echo = FALSE}
+```{r, echo = FALSE, message = FALSE}
 library(readxl)
+library(tidyverse)
 
 read_excel(
   here::here("libs", "data", "schedule.xlsx")
 ) %>% 
+  slice(-2) %>% 
+  #mutate(Week = Date) %>% 
+  #mutate(Date = str_split(Date, "  -"))
   knitr::kable()
 ```

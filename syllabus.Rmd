@@ -13,6 +13,7 @@ knitr::opts_chunk$set(echo = TRUE)
 Course Section: TPTE 595 (MA) and TPTE 695 (PhD) 
 Meeting Time and Place: Thursday, 2:50 – 4:05 pm (online, partially synchronous) 
 Course Credit Hours: 3
+Course Website: https://making-data-science-count.github.io/s21-intro-to-data-sci-methods-in-ed/
 
 ## Faculty Contact Information
 Dr. Joshua Rosenberg

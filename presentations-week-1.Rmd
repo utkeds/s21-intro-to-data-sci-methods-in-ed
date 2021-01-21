@@ -22,7 +22,6 @@ library(xaringan)
 library(dataedu)
 library(here)
 
-here::set_here()
 #joro_years <- round(as.numeric(difftime(as.Date(Sys.Date()), Sys.getenv("joro_bday"), unit="weeks"))/52.25, 1)
 ```
 
@@ -54,7 +53,7 @@ class: inverse, center, middle
 
 ```{r, out.width = "400px", echo = FALSE, fig.align = "center", message = FALSE}
 library(here)
-include_graphics(here("libs", "img", "jr-joro.jpg"))
+include_graphics("libs/img/jr-joro.jpg")
 ```
 
 ---
