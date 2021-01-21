@@ -317,42 +317,131 @@ $(document).ready(function () {
 </div>
 
 
-<pre class="r"><code>tibble::tribble(
-                ~Date,                                                          ~Unit,                                                                      ~Topic,                                       ~Homework,                            ~Assignment.Due,
-  &quot;Week 1   - Jan 21&quot;,                                           &quot;1: Getting started&quot;,                           &quot;Introductions to each other and to data science&quot;,                                           &quot;HW1&quot;,                                         NA,
-                   NA,                                                             NA,                                                                          NA, &quot;and/or personal learning or development plan &quot;,                                         NA,
-  &quot;Week 2   - Jan 28&quot;, &quot;Foundational skills: Projects, functions, packages, and data&quot;,                                                                       &quot;HW2&quot;,                                              NA,                                         NA,
-   &quot;Week 3   - Feb 4&quot;,                                            &quot;2: Exploring data&quot;,                           &quot;Visualization data with the grammar of graphics&quot;,                                           &quot;HW3&quot;,                                   &quot;Exam 1&quot;,
-  &quot;Week 4   - Feb 11&quot;,                                                             NA, &quot;More visualization with the grammar of graphics (and some data wrangling)&quot;,                                           &quot;HW4&quot;,              &quot;Privacy Statement (Initial)&quot;,
-  &quot;Week 5   - Feb 18&quot;,                                                             NA,                                              &quot;Wrangling and “tidying” data&quot;,                                           &quot;HW5&quot;,                                         NA,
-  &quot;Week 6   - Feb 25&quot;,                                                             NA,                                            &quot;Summarizing data descriptively&quot;,                                           &quot;HW6&quot;,                                         NA,
-   &quot;Week 7   - Mar 4&quot;,                                                    &quot;3: Ethics&quot;,                                                  &quot;Surveillance and privacy&quot;,                                           &quot;HW8&quot;,                                   &quot;Exam 2&quot;,
-  &quot;Week 8   - Mar 11&quot;,                                                             NA,                                &quot;Strategic (and not strategic) uses of data&quot;,                                           &quot;HW9&quot;,              &quot;Privacy Statement (Initial)&quot;,
-  &quot;Week 9   - Mar 18&quot;,                                                             NA,                                                 &quot;Protecting anonymous data&quot;,                                          &quot;HW10&quot;,                                         NA,
-   &quot;Week 10 - Mar 25&quot;,                                        &quot;4: Making conclusions&quot;,                                                     &quot;Estimating parameters&quot;,                                          &quot;HW10&quot;,                                   &quot;Exam 3&quot;,
-    &quot;Week 11 - Apr 1&quot;,                                                             NA,                                           &quot;Making inferences about effects&quot;,                                          &quot;HW11&quot;,                                         NA,
-   &quot;Week 12 - Apr 8 &quot;,                                                             NA,                                         &quot;Communicating results effectively&quot;,                                          &quot;HW12&quot;,                                         NA,
-   &quot;Week 13 - Apr 15&quot;,                                             &quot;5: Looking ahead&quot;,                                     &quot;A buffet of advanced methods (Part 1)&quot;,                                          &quot;HW13&quot;,            &quot;Final presentation; Portfolio&quot;,
-   &quot;Week 14 - Apr 22&quot;,                                                             NA,                                     &quot;A buffet of advanced methods (Part 2)&quot;,                                          &quot;HW14&quot;, &quot;Feedback on final presentations; Exam 4 &quot;
-  )</code></pre>
-<pre><code>## # A tibble: 15 x 5
-##    Date     Unit              Topic                Homework        Assignment.Due     
-##    &lt;chr&gt;    &lt;chr&gt;             &lt;chr&gt;                &lt;chr&gt;           &lt;chr&gt;              
-##  1 Week 1 … 1: Getting start… Introductions to ea… HW1             &lt;NA&gt;               
-##  2 &lt;NA&gt;     &lt;NA&gt;              &lt;NA&gt;                 and/or persona… &lt;NA&gt;               
-##  3 Week 2 … Foundational ski… HW2                  &lt;NA&gt;            &lt;NA&gt;               
-##  4 Week 3 … 2: Exploring data Visualization data … HW3             Exam 1             
-##  5 Week 4 … &lt;NA&gt;              More visualization … HW4             Privacy Statement …
-##  6 Week 5 … &lt;NA&gt;              Wrangling and “tidy… HW5             &lt;NA&gt;               
-##  7 Week 6 … &lt;NA&gt;              Summarizing data de… HW6             &lt;NA&gt;               
-##  8 Week 7 … 3: Ethics         Surveillance and pr… HW8             Exam 2             
-##  9 Week 8 … &lt;NA&gt;              Strategic (and not … HW9             Privacy Statement …
-## 10 Week 9 … &lt;NA&gt;              Protecting anonymou… HW10            &lt;NA&gt;               
-## 11 Week 10… 4: Making conclu… Estimating paramete… HW10            Exam 3             
-## 12 Week 11… &lt;NA&gt;              Making inferences a… HW11            &lt;NA&gt;               
-## 13 Week 12… &lt;NA&gt;              Communicating resul… HW12            &lt;NA&gt;               
-## 14 Week 13… 5: Looking ahead  A buffet of advance… HW13            Final presentation…
-## 15 Week 14… &lt;NA&gt;              A buffet of advance… HW14            Feedback on final …</code></pre>
+<table>
+<colgroup>
+<col width="7%" />
+<col width="25%" />
+<col width="31%" />
+<col width="18%" />
+<col width="16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Date</th>
+<th align="left">Unit</th>
+<th align="left">Topic</th>
+<th align="left">Homework</th>
+<th align="left">Assignment Due</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Week 1   - Jan 21</td>
+<td align="left">1: Getting started</td>
+<td align="left">Introductions to each other and to data science</td>
+<td align="left">HW1</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">and/or personal learning or development plan</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Week 2   - Jan 28</td>
+<td align="left">Foundational skills: Projects, functions, packages, and data</td>
+<td align="left">HW2</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Week 3   - Feb 4</td>
+<td align="left">2: Exploring data</td>
+<td align="left">Visualization data with the grammar of graphics</td>
+<td align="left">HW3</td>
+<td align="left">Exam 1</td>
+</tr>
+<tr class="odd">
+<td align="left">Week 4   - Feb 11</td>
+<td align="left">NA</td>
+<td align="left">More visualization with the grammar of graphics (and some data wrangling)</td>
+<td align="left">HW4</td>
+<td align="left">Privacy Statement (Initial)</td>
+</tr>
+<tr class="even">
+<td align="left">Week 5   - Feb 18</td>
+<td align="left">NA</td>
+<td align="left">Wrangling and “tidying” data</td>
+<td align="left">HW5</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Week 6   - Feb 25</td>
+<td align="left">NA</td>
+<td align="left">Summarizing data descriptively</td>
+<td align="left">HW6</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Week 7   - Mar 4</td>
+<td align="left">3: Ethics</td>
+<td align="left">Surveillance and privacy</td>
+<td align="left">HW8</td>
+<td align="left">Exam 2</td>
+</tr>
+<tr class="odd">
+<td align="left">Week 8   - Mar 11</td>
+<td align="left">NA</td>
+<td align="left">Strategic (and not strategic) uses of data</td>
+<td align="left">HW9</td>
+<td align="left">Privacy Statement (Initial)</td>
+</tr>
+<tr class="even">
+<td align="left">Week 9   - Mar 18</td>
+<td align="left">NA</td>
+<td align="left">Protecting anonymous data</td>
+<td align="left">HW10</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Week 10 - Mar 25</td>
+<td align="left">4: Making conclusions</td>
+<td align="left">Estimating parameters</td>
+<td align="left">HW10</td>
+<td align="left">Exam 3</td>
+</tr>
+<tr class="even">
+<td align="left">Week 11 - Apr 1</td>
+<td align="left">NA</td>
+<td align="left">Making inferences about effects</td>
+<td align="left">HW11</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Week 12 - Apr 8</td>
+<td align="left">NA</td>
+<td align="left">Communicating results effectively</td>
+<td align="left">HW12</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Week 13 - Apr 15</td>
+<td align="left">5: Looking ahead</td>
+<td align="left">A buffet of advanced methods (Part 1)</td>
+<td align="left">HW13</td>
+<td align="left">Final presentation; Portfolio</td>
+</tr>
+<tr class="odd">
+<td align="left">Week 14 - Apr 22</td>
+<td align="left">NA</td>
+<td align="left">A buffet of advanced methods (Part 2)</td>
+<td align="left">HW14</td>
+<td align="left">Feedback on final presentations; Exam 4</td>
+</tr>
+</tbody>
+</table>
 
 
 

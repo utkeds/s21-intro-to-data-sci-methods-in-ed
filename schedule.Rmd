@@ -3,24 +3,11 @@ title: "Schedule"
 output: html_document
 ---
 
-```{r}
-tibble::tribble(
-                ~Date,                                                          ~Unit,                                                                      ~Topic,                                       ~Homework,                            ~Assignment.Due,
-  "Week 1   - Jan 21",                                           "1: Getting started",                           "Introductions to each other and to data science",                                           "HW1",                                         NA,
-                   NA,                                                             NA,                                                                          NA, "and/or personal learning or development plan ",                                         NA,
-  "Week 2   - Jan 28", "Foundational skills: Projects, functions, packages, and data",                                                                       "HW2",                                              NA,                                         NA,
-   "Week 3   - Feb 4",                                            "2: Exploring data",                           "Visualization data with the grammar of graphics",                                           "HW3",                                   "Exam 1",
-  "Week 4   - Feb 11",                                                             NA, "More visualization with the grammar of graphics (and some data wrangling)",                                           "HW4",              "Privacy Statement (Initial)",
-  "Week 5   - Feb 18",                                                             NA,                                              "Wrangling and “tidying” data",                                           "HW5",                                         NA,
-  "Week 6   - Feb 25",                                                             NA,                                            "Summarizing data descriptively",                                           "HW6",                                         NA,
-   "Week 7   - Mar 4",                                                    "3: Ethics",                                                  "Surveillance and privacy",                                           "HW8",                                   "Exam 2",
-  "Week 8   - Mar 11",                                                             NA,                                "Strategic (and not strategic) uses of data",                                           "HW9",              "Privacy Statement (Initial)",
-  "Week 9   - Mar 18",                                                             NA,                                                 "Protecting anonymous data",                                          "HW10",                                         NA,
-   "Week 10 - Mar 25",                                        "4: Making conclusions",                                                     "Estimating parameters",                                          "HW10",                                   "Exam 3",
-    "Week 11 - Apr 1",                                                             NA,                                           "Making inferences about effects",                                          "HW11",                                         NA,
-   "Week 12 - Apr 8 ",                                                             NA,                                         "Communicating results effectively",                                          "HW12",                                         NA,
-   "Week 13 - Apr 15",                                             "5: Looking ahead",                                     "A buffet of advanced methods (Part 1)",                                          "HW13",            "Final presentation; Portfolio",
-   "Week 14 - Apr 22",                                                             NA,                                     "A buffet of advanced methods (Part 2)",                                          "HW14", "Feedback on final presentations; Exam 4 "
-  )
+```{r, echo = FALSE}
+library(readxl)
 
+read_excel(
+  here::here("libs", "data", "schedule.xlsx")
+) %>% 
+  knitr::kable()
 ```
