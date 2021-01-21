@@ -23,24 +23,93 @@ session. Run this next chunk the same way as the first:
 library(ggplot2)
 ```
 
-## Print a built-in dataset, txhousing
+## Print a built-in dataset
 
-Next, simply run txhousing to view a dataset built-in to R:
+Next, simply run msleep to view a dataset built-in to R:
 
 ```{r}
-txhousing
+msleep
 ```
 
-What do you notice? What do you wonder? Add a few thoughts after the dashes below!
+What do you notice? What do you wonder? Consider viewing additional rows by clicking
+the numbers at the bottom of the table; or more rows by clicking the black right arrow 
+at the top.
+
+Add a few thoughts on what you notice and what you wonder after the dashes below!
+You can add additional dashes, if needed!
 
 - 
 - 
 - 
 
-## Create a plot!
+## Run code to a plot
+
+Here, we will run code to create our first plot. 
+
+The ggplot2 package has a function, ggplot(), that we will use.
+
+This function takes arguments for: a) what variables in a dataset correspond to 
+different aesthetic features of a graph, like an x- and y-axis, and b) how the data
+is represented.
+
+Below, bodywt and sleep_total correspond to the x- and y-axis, respectively, and 
+the values are represented by a point.
+
 
 ```{r}
-ggplot(txhousing,
-       aes(x = date, y = listings)) +
+ggplot(msleep, aes(x = bodywt, y = sleep_total)) +
   geom_point()
 ```
+
+Nice job!
+
+Plots can be constructed layer-by-layer; here, let's add the conservation status
+of the mammals by color.
+
+See what the conservation statuses represent here: 
+https://en.wikipedia.org/wiki/Category:Biota_by_conservation_status
+
+```{r}
+ggplot(msleep, aes(x = bodywt, y = sleep_total, color = conservation)) +
+  geom_point()
+```
+
+There are many graphs you can create, from the simple to the complex!
+
+For example, we can quickly look at the distribution of the sleep_total variable
+with a density plot:
+
+```{r}
+ggplot(msleep, aes(x = sleep_total)) +
+  geom_density()
+```
+
+## Create your own plot!
+
+Now, create your own plot, using the following two code chunks as a foundation or starting 
+points. Look above at the variables in the msleep dataset (where you printed the data) for a 
+reminder of what the dataset includes!
+
+First, can you create a density plot using a different variable (other than sleep_total)?
+
+Try it out below:
+
+```{r}
+ggplot(msleep, aes(x = )) +
+  geom_density()
+```
+
+Next, can you create a different scatterplot; or a version of one? Try it out by adding
+different variables for the x, y, and color arguments below:
+
+```{r}
+ggplot(msleep, aes(x = , y = , color = )) +
+  geom_point()
+```
+
+## fin
+
+Great job! Once you've finished your work, click "Knit" at the top to render a 
+report that you can share; this is how you'll submit homework for class!
+
+:clap:
