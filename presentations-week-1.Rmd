@@ -63,6 +63,31 @@ include_graphics(here("libs", "img", "jr-joro.jpg"))
 
 ---
 
+# #whoami
+
+.pull-left[
+* Alex Lishinski, Ph.D.
+* Contact: 
+  * [@html034](https://twitter.com/html034)
+  * [@html034@fosstodon.org](https://fosstodon.org/@html034)
+  * [alishins@utk.edu](mailto:alishins@utk.edu)
+  * https://alexlishinski.com
+* Postdoctoral researcher, CS Education, University of Tennessee, Knoxville
+* Dad (3 year old toddler)
+* Primary areas of interest:
+  * Computer Science education
+  * Quantitative research methods
+  * Data science in education
+* Former philosopher
+]
+
+```{r, out.width = "400px", echo = FALSE, fig.align = "center", message = FALSE}
+library(here)
+include_graphics(here("libs", "img", "jr-joro.jpg"))
+```
+
+---
+
 # Getting to know one another
 
 ## https://bit.ly/swu-jam
@@ -77,18 +102,11 @@ class: inverse, center, middle
 
 # Homebase
 
-*These will appear in every presentation throughout the day today*
-
 **All materials here:**
-https://github.com/jrosen48/swu-data-sci
+https://making-data-science-count.github.io/s21-intro-to-data-sci-methods-in-ed/
 
-**RStudio Cloud**
-https://rstudio.cloud/project/1421785
-
-**Ask questions on Google Docs:**
-https://docs.google.com/document/d/1zB3IilyuU0khd10DWQNn44peOkVNI-OLyxRW6WFW5Qw/edit
-
-**Ask questions in Zoom chat!**
+**Ask questions on Slack:**
+datascienceinedu.slack.com
 
 ---
 
@@ -116,8 +134,8 @@ A - No, but many themes are shared.
 **Q - What computing language will we learn?**  
 A - R.
 
-**Q: Why not language X?**  
-A: We can discuss that over coffee.
+**Q: Why not python?**  
+A: We can discuss that over coffee. (but short answer, it's doesn't have the data science functionality that R has, natively and through packages)
 ]
 
 ---
@@ -142,7 +160,7 @@ knitr::include_graphics(here("libs", "img", "r.png"))
 ---
 
 ```{r echo=FALSE, out.width="73%", fig.align="left"}
-knitr::include_graphics(here("libs", "img", "rstudio.png"))
+knitr::include_graphics(here("libs", "img", "RStudio.png"))
 ```
 
 ---
