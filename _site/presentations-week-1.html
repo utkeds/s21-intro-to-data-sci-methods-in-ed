@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Part 1: Introductions and Getting Up and Running</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Joshua M. Rosenberg, Alex Lishinski" />
+    <meta name="date" content="2022-01-21" />
+    <script src="site_libs/header-attrs/header-attrs.js"></script>
+    <link href="site_libs/remark-css/default.css" rel="stylesheet" />
+    <link href="site_libs/remark-css/metropolis.css" rel="stylesheet" />
+    <link href="site_libs/remark-css/metropolis-fonts.css" rel="stylesheet" />
+    <link rel="stylesheet" href="custom.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Part 1: Introductions and Getting Up and Running
+### Joshua M. Rosenberg, Alex Lishinski
+### January 21, 2022
+
+---
+
+
+
+
+class: inverse, center, middle
+
+# *Big idea*: Those of us in education-including and especially you-can creatively work with data using R and RStudio.
+
+---
+
+class: inverse, center, middle
+
+# Introductions
+
+---
+
+# #whoami
+
+.pull-left[
+* Joshua Rosenberg, Ph.D.
+* Contact: 
+  * [@jrosenberg6432](https://twitter.com/jrosenberg6432)
+  * [jmrosenberg@utk.edu](mailto:jmrosenberg@utk.edu)
+  * https://joshuamrosenberg.com
+* Assistant Professor, STEM Education, University of Tennessee, Knoxville
+* Dad (2 year old toddler)
+* Primary areas of interest:
+  * Science education
+  * Data science (for) education
+  * Data science in education
+* Former HS science teacher
+* Presently PI or Co-PI for three NSF grants
+]
+
+&lt;img src="/Users/joshuarosenberg/s21-intro-to-data-sci-methods-in-ed/libs/img/jr-joro.jpg" width="400px" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Getting to know one another
+
+## https://bit.ly/swu-jam
+
+---
+
+class: inverse, center, middle
+
+# Session Information
+
+---
+
+# Homebase
+
+*These will appear in every presentation throughout the day today*
+
+**All materials here:**
+https://github.com/jrosen48/swu-data-sci
+
+**RStudio Cloud**
+https://rstudio.cloud/project/1421785
+
+**Ask questions on Google Docs:**
+https://docs.google.com/document/d/1zB3IilyuU0khd10DWQNn44peOkVNI-OLyxRW6WFW5Qw/edit
+
+**Ask questions in Zoom chat!**
+
+---
+
+## Course FAQ
+
+.pull-left-wide[
+**Q - What data science background does this course assume?**  
+A - None.
+
+**Q - Is this an intro stat course?**  
+A - While statistics `\(\ne\)` data science, they are very closely related and have tremendous of overlap. Hence, this course is a great way to get started with statistics. However this course is *not* your typical high school statistics course.
+
+**Q - Will we be doing computing?**   
+A - Yes.
+]
+
+---
+
+## Course FAQ
+
+.pull-left-wide[
+**Q - Is this an intro CS course?**  
+A - No, but many themes are shared.
+
+**Q - What computing language will we learn?**  
+A - R.
+
+**Q: Why not language X?**  
+A: We can discuss that over coffee.
+]
+
+---
+
+class: middle
+
+# Software
+
+---
+
+&lt;img src="/Users/joshuarosenberg/s21-intro-to-data-sci-methods-in-ed/libs/img/excel.png" width="75%" style="display: block; margin: auto auto auto 0;" /&gt;
+
+
+---
+
+&lt;img src="/Users/joshuarosenberg/s21-intro-to-data-sci-methods-in-ed/libs/img/r.png" width="50%" style="display: block; margin: auto auto auto 0;" /&gt;
+
+---
+
+&lt;img src="/Users/joshuarosenberg/s21-intro-to-data-sci-methods-in-ed/libs/img/rstudio.png" width="73%" style="display: block; margin: auto auto auto 0;" /&gt;
+
+---
+
+class: middle
+
+# Data science life cycle
+
+---
+
+&lt;img src="/Users/joshuarosenberg/s21-intro-to-data-sci-methods-in-ed/libs/img/data-science-cycle/data-science-cycle.001.png" width="90%" style="display: block; margin: auto auto auto 0;" /&gt;
+
+---
+
+&lt;img src="/Users/joshuarosenberg/s21-intro-to-data-sci-methods-in-ed/libs/img/data-science-cycle/data-science-cycle.002.png" width="90%" style="display: block; margin: auto auto auto 0;" /&gt;
+
+---
+
+&lt;img src="/Users/joshuarosenberg/s21-intro-to-data-sci-methods-in-ed/libs/img/data-science-cycle/data-science-cycle.003.png" width="90%" style="display: block; margin: auto auto auto 0;" /&gt;
+
+---
+
+&lt;img src="/Users/joshuarosenberg/s21-intro-to-data-sci-methods-in-ed/libs/img/data-science-cycle/data-science-cycle.004.png" width="90%" style="display: block; margin: auto auto auto 0;" /&gt;
+
+---
+
+&lt;img src="/Users/joshuarosenberg/s21-intro-to-data-sci-methods-in-ed/libs/img/data-science-cycle/data-science-cycle.005.png" width="90%" style="display: block; margin: auto auto auto 0;" /&gt;
+
+---
+
+&lt;img src="/Users/joshuarosenberg/s21-intro-to-data-sci-methods-in-ed/libs/img/data-science-cycle/data-science-cycle.006.png" width="90%" style="display: block; margin: auto auto auto 0;" /&gt;
+
+---
+
+
+
+```
+## # A tibble: 5 x 2
+##   date             season
+##   &lt;chr&gt;            &lt;chr&gt; 
+## 1 23 January 2017  winter
+## 2 4 March 2017     spring
+## 3 14 June 2017     summer
+## 4 1 September 2017 fall  
+## 5 ...              ...
+```
+]
+
+---
+
+&lt;img src="/Users/joshuarosenberg/s21-intro-to-data-sci-methods-in-ed/libs/img/data-science-cycle/data-science-cycle.007.png" width="90%" style="display: block; margin: auto auto auto 0;" /&gt;
+
+---
+
+&lt;img src="/Users/joshuarosenberg/s21-intro-to-data-sci-methods-in-ed/libs/img/data-science-cycle/data-science-cycle.008.png" width="90%" style="display: block; margin: auto auto auto 0;" /&gt;
+
+---
+
+&lt;img src="/Users/joshuarosenberg/s21-intro-to-data-sci-methods-in-ed/libs/img/data-science-cycle/data-science-cycle.009.png" width="90%" style="display: block; margin: auto auto auto 0;" /&gt;
+
+---
+
+# What we learned from your survey responses (thank you!)
+
+- Everyone uses spreadsheet software
+- You're (mostly) confident that you can solve problems with respect to analyzing 
+data, but are less confident with respect to using statistical software
+- Most of you have used data analysis notebooks (RMarkdown?)
+- You have impressive backgrounds and professional experiences
+- For many, programming and using statistics correctly can be intimidating
+- You're a bit more interested in preparing data for analyses than we thought (cool!)
+
+---
+
+# Objectives
+
+By the end of the session, participants will be able to:
+
+1. Develop confidence going forward in you ability to analyze data as a part of your program
+1. Be able to visualize educational data.
+1. Use linear (regression) models as a general-purpose tool for data analysis.
+1. Explore some of the more data science-related aspects of R through text analysis
+
+---
+
+# Pedagogical framework
+
+*Constructivist*
+
+You'll be involved in the process of building new capabilities (and knowledge and skills) with support from others and carefully-chosen scaffolds.
+
+1. Each of the four sessions will be organized around a big idea
+1. You will be doing a great deal of the work
+1. Then, we will discuss what we did and how it applies
+
+---
+
+# Over-arching design
+
+The pedagogical framework *plays out* in the following specific ways:
+
+1. You'll first see some brief examples to give you a sense of what's possible
+1. You'll be using R Markdown to try things out
+1. You'll have a chance to share your ideas and thoughts about what you've done; it will also give me a chance to hear from you about what you did
+
+---
+
+# Agenda
+
+### *Part 1: Getting up and running*
+### Part 2: Visualizing and exploring data
+### Part 3: Modeling and understanding data
+### Part 4: Doing more with data science
+
+---
+
+class: inverse, center, middle
+
+# Background on R and RStudio
+
+---
+
+# A little motivation theory
+
+## Expectancy-value theory
+
+- We choose things that we are *confident* that we can do well and that are *valuable* to us
+
+- We do these in a sociocultural *context*: our sense of belonging impacts what we choose to do
+
+---
+
+# An argument about RMarkdown
+
+- This presentation will make the argument that **you can use R and RStudio to solve
+problems that are important to you**
+
+- In doing so, you can **participate in a cool community of data scientists in education**
+
+---
+
+# Why learn R?
+
+* It is capable of carrying out basic and complex statistical analyses
+* It is able to work with data small (*n* = 30) and large (*n* = 100,000+) efficiently
+* It is a programming language and so is quite flexible
+* There is a great, inclusive community of users and developers (and teachers)
+* It is increasingly used in education
+* It can help you to carry out your educational analyses in open and trustworthy ways
+* It is cross-platform, open-source, and freely-available
+
+---
+
+
+class: inverse, center, middle
+
+# Where You'll Be Running R
+
+RStudio Cloud (preferred)  
+OR  
+R and RStudio on your computer  
+
+---
+
+# RStudio Cloud
+
+**[This link will take you to the RStudio Cloud project for this part of the session](https://rstudio.cloud/project/964811).**
+
+Link also here: https://rstudio.cloud/project/964811
+
+Once you have navigated to this webpage, log in using a Google or GitHub account. Then, create a permanent copy of the project in your own workspace (see the prompt at the top of the page guiding you to do this).
+
+From here, you can write and run R code exactly as your would through RStudio on your computer.
+---
+
+# R and RStudio
+
+**If you like, you may (of course!) use R and RStudio**
+
+To download R:
+* [Visit this page to download R](https://cran.r-project.org/)
+* Find your operating system (Mac, Windows, or Linux)
+* Download the 'latest release' on the page for your operating system and download and install the application
+
+To download RStudio:
+* [Visit this page to download RStudio](https://rstudio.com/products/rstudio/download/)
+* Find your operating system (Mac, Windows, or Linux)
+* Download the 'latest release' on the page for your operating system and download and install the application
+
+---
+
+class: inverse, center, middle
+
+# Try it out! Getting started with RStudio
+
+Activities:  
+
+Running a single RMarkdown chunk  
+Running another RMarkdown chunk  
+Rendering an RMarkdown document to a PDF  
+Creating your first visualization
+
+---
+
+# RMarkdown
+
+* RMarkdown is a data analysis "notebook" that combines text with code and output
+* It is a great file type to use when beginning to use R and to create reproducible analyses
+* It is fun to use because you can generate different types of output (Word, PDF, and even web-based)
+
+---
+
+# Let's look at a bit of code together
+
+What do you think this code will do?
+
+
+```r
+sci_mo_processed %&gt;% 
+  filter(percentage_earned &gt;= .60) %&gt;% 
+  select(student_id, course_id, percentage_earned))
+```
+
+---
+
+# Let's look at a bit of code together
+
+
+```r
+sci_mo_processed %&gt;% 
+  filter(percentage_earned &gt;= .60) %&gt;% 
+  select(student_id, course_id, percentage_earned)
+```
+
+```
+## # A tibble: 563 x 3
+##    student_id course_id     percentage_earned
+##         &lt;dbl&gt; &lt;chr&gt;                     &lt;dbl&gt;
+##  1      43146 FrScA-S216-02             0.677
+##  2      44638 OcnA-S116-01              0.757
+##  3      47448 FrScA-S216-01             0.661
+##  4      47979 OcnA-S216-01              0.677
+##  5      48797 PhysA-S116-01             0.865
+##  6      51943 FrScA-S216-03             0.855
+##  7      52446 PhysA-S116-01             0.824
+##  8      53447 FrScA-S116-01             0.676
+##  9      53475 FrScA-S116-02             0.820
+## 10      53475 FrScA-S216-01             0.808
+## # … with 553 more rows
+```
+
+---
+
+# Let's look at a bit of code together
+
+What do you think this code will do?
+
+
+```r
+sci_mo_processed %&gt;% 
+  filter(percentage_earned &gt;= .60) %&gt;% 
+  arrange(desc(percentage_earned)) %&gt;% 
+  select(student_id, course_id, percentage_earned, TimeSpent)
+```
+
+---
+
+# Let's look at a bit of code together
+
+
+```r
+sci_mo_processed %&gt;% 
+  filter(percentage_earned &gt;= .60) %&gt;% 
+  select(student_id, course_id, percentage_earned, TimeSpent)
+```
+
+```
+## # A tibble: 563 x 4
+##    student_id course_id     percentage_earned TimeSpent
+##         &lt;dbl&gt; &lt;chr&gt;                     &lt;dbl&gt;     &lt;dbl&gt;
+##  1      43146 FrScA-S216-02             0.677   1555.  
+##  2      44638 OcnA-S116-01              0.757   1383.  
+##  3      47448 FrScA-S216-01             0.661    860.  
+##  4      47979 OcnA-S216-01              0.677   1599.  
+##  5      48797 PhysA-S116-01             0.865   1482.  
+##  6      51943 FrScA-S216-03             0.855      3.45
+##  7      52446 PhysA-S116-01             0.824   1390.  
+##  8      53447 FrScA-S116-01             0.676   1479.  
+##  9      53475 FrScA-S116-02             0.820     NA   
+## 10      53475 FrScA-S216-01             0.808   1867.  
+## # … with 553 more rows
+```
+
+---
+
+# Running a single RMarkdown chunk 
+
+Let's hop over to the "demo doc" for part 1!
+
+[`demo-doc-1-setting-up.Rmd`](demo-doc-1-setting-up.Rmd)
+
+Let's run the first chunk by clicking the green arrow in the first code chunk.
+
+If you saw the message "It worked!", congratulations - it worked!
+
+---
+
+# Running another RMarkdown chunk  
+
+After running one chunk, we can easily run the next chunk. 
+
+What happens when you print the second chunk (with `sci_mo_processed`)?
+
+---
+
+# Working through the remainder of the document
+
+(We'll work together through a few sections of the document in this phase)
+
+---
+
+# Rendering an RMarkdown document to a PDF  
+
+Have you made it to the end of the document? 
+
+Now, we'll render to a PDF.
+
+---
+
+class: inverse, center, middle
+
+# *Discuss in groups! (five minutes in groups, five minutes together)*
+
+- What challenges did you face?
+- What successes did you face?
+- What questions do you still have?
+
+---
+
+class: inverse, center, middle
+
+# *Big idea*: Those of us in education-including and especially you-can creatively work with data using R and RStudio.
+
+---
+
+class: inverse, center, middle
+
+# *Next*: Data visualization and data exploration
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

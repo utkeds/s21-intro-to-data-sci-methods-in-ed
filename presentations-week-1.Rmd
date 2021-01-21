@@ -58,7 +58,7 @@ class: inverse, center, middle
 
 ```{r, out.width = "400px", echo = FALSE, fig.align = "center", message = FALSE}
 library(here)
-include_graphics(here("img", "jr-joro.jpg"))
+include_graphics(here("libs", "img", "jr-joro.jpg"))
 ```
 
 ---
@@ -129,20 +129,20 @@ class: middle
 ---
 
 ```{r echo=FALSE, out.width="75%", fig.align="left"}
-knitr::include_graphics(here("img", "excel.png"))
+knitr::include_graphics(here("libs", "img", "excel.png"))
 ```
 
 
 ---
 
 ```{r echo=FALSE, out.width="50%", fig.align="left"}
-knitr::include_graphics(here("img", "r.png"))
+knitr::include_graphics(here("libs", "img", "r.png"))
 ```
 
 ---
 
 ```{r echo=FALSE, out.width="73%", fig.align="left"}
-knitr::include_graphics(here("img", "rstudio.png"))
+knitr::include_graphics(here("libs", "img", "rstudio.png"))
 ```
 
 ---
@@ -154,37 +154,37 @@ class: middle
 ---
 
 ```{r echo=FALSE, out.width="90%", fig.align="left"}
-knitr::include_graphics(here("img", "data-science-cycle", "data-science-cycle.001.png"))
+knitr::include_graphics(here("libs", "img", "data-science-cycle", "data-science-cycle.001.png"))
 ```
 
 ---
 
 ```{r echo=FALSE, out.width="90%", fig.align="left"}
-knitr::include_graphics(here("img", "data-science-cycle", "data-science-cycle.002.png"))
+knitr::include_graphics(here("libs", "img", "data-science-cycle", "data-science-cycle.002.png"))
 ```
 
 ---
 
 ```{r echo=FALSE, out.width="90%", fig.align="left"}
-knitr::include_graphics(here("img", "data-science-cycle", "data-science-cycle.003.png"))
+knitr::include_graphics(here("libs", "img", "data-science-cycle", "data-science-cycle.003.png"))
 ```
 
 ---
 
 ```{r echo=FALSE, out.width="90%", fig.align="left"}
-knitr::include_graphics(here("img", "data-science-cycle", "data-science-cycle.004.png"))
+knitr::include_graphics(here("libs", "img", "data-science-cycle", "data-science-cycle.004.png"))
 ```
 
 ---
 
 ```{r echo=FALSE, out.width="90%", fig.align="left"}
-knitr::include_graphics(here("img", "data-science-cycle", "data-science-cycle.005.png"))
+knitr::include_graphics(here("libs", "img", "data-science-cycle", "data-science-cycle.005.png"))
 ```
 
 ---
 
 ```{r echo=FALSE, out.width="90%", fig.align="left"}
-knitr::include_graphics(here("img", "data-science-cycle", "data-science-cycle.006.png"))
+knitr::include_graphics(here("libs", "img", "data-science-cycle", "data-science-cycle.006.png"))
 ```
 
 ---
@@ -206,24 +206,24 @@ travel
 ---
 
 ```{r echo=FALSE, out.width="90%", fig.align="left"}
-knitr::include_graphics(here("img", "data-science-cycle", "data-science-cycle.007.png"))
+knitr::include_graphics(here("libs", "img", "data-science-cycle", "data-science-cycle.007.png"))
 ```
 
 ---
 
 ```{r echo=FALSE, out.width="90%", fig.align="left"}
-knitr::include_graphics(here("img", "data-science-cycle", "data-science-cycle.008.png"))
+knitr::include_graphics(here("libs", "img", "data-science-cycle", "data-science-cycle.008.png"))
 ```
 
 ---
 
 ```{r echo=FALSE, out.width="90%", fig.align="left"}
-knitr::include_graphics(here("img", "data-science-cycle", "data-science-cycle.009.png"))
+knitr::include_graphics(here("libs", "img", "data-science-cycle", "data-science-cycle.009.png"))
 ```
 
 ---
 
-# What I learned from your survey responses (thank you!)
+# What we learned from your survey responses (thank you!)
 
 - Everyone uses spreadsheet software
 - You're (mostly) confident that you can solve problems with respect to analyzing 
@@ -231,7 +231,7 @@ data, but are less confident with respect to using statistical software
 - Most of you have used data analysis notebooks (RMarkdown?)
 - You have impressive backgrounds and professional experiences
 - For many, programming and using statistics correctly can be intimidating
-- You're a bit more interested in preparing data for analyses than I thought (cool!)
+- You're a bit more interested in preparing data for analyses than we thought (cool!)
 
 ---
 
