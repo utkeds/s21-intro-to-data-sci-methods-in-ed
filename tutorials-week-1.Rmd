@@ -1,0 +1,46 @@
+---
+title: "Week 1 - Tutorial"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## First, let's install and load ggplot2 
+
+We'll do so by running the following line of code; click the green arrow to the
+right to run the code!
+
+```{r}
+install.packages("ggplot2")
+```
+
+Next, we'll "load" ggplot2, or check it out for use in our current analysis / R 
+session. Run this next chunk the same way as the first:
+
+```{r}
+library(ggplot2)
+```
+
+## Print a built-in dataset, txhousing
+
+Next, simply run txhousing to view a dataset built-in to R:
+
+```{r}
+txhousing
+```
+
+What do you notice? What do you wonder? Add a few thoughts after the dashes below!
+
+- 
+- 
+- 
+
+## Create a plot!
+
+```{r}
+ggplot(txhousing,
+       aes(x = date, y = listings)) +
+  geom_point()
+```
