@@ -86,7 +86,7 @@ include_graphics(here("libs", "img", "jr-joro.jpg"))
 
 # Getting to know one another
 
-# Breakout rooms!
+## Breakout rooms!
 
 Starting with whomever had a snack or meal most recently, discuss . . . 
 
@@ -104,7 +104,6 @@ class: inverse, center, middle
 
 ---
 
-<<<<<<< HEAD
 # Homebase
 
 **All materials here:**
