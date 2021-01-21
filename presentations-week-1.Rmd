@@ -30,14 +30,14 @@ library(here)
 1. Introductions to one another
 1. A brief introduction to data science
 1. First activity: Visualizing data in RStudio!
-1. Overview of course and discussion of syllabus
+1. Discussion of the syllabus
 1. Check-out
 
 ---
 
 class: inverse, center, middle
 
-# Introductions
+# Part 1/5: Introductions (to one another)
 
 ---
 
@@ -80,19 +80,7 @@ Starting with whomever had a snack or meal most recently, discuss . . .
 
 class: inverse, center, middle
 
-# Let's get started!
-
----
-
-# First activity: Data viz!
-
-
-
----
-
-class: inverse, center, middle
-
-# Course Information
+# Part 2/5: Introductions (to the class)
 
 ---
 
@@ -126,16 +114,6 @@ A: We can discuss that over coffee.
 
 ---
 
-
-
----
-
-class: middle
-
-# Software
-
----
-
 ```{r echo=FALSE, out.width="75%", fig.align="left"}
 knitr::include_graphics(here("libs", "img", "excel.png"))
 ```
@@ -152,12 +130,6 @@ knitr::include_graphics(here("libs", "img", "r.png"))
 ```{r echo=FALSE, out.width="73%", fig.align="left"}
 knitr::include_graphics(here("libs", "img", "rstudio.png"))
 ```
-
----
-
-class: middle
-
-# Data science life cycle
 
 ---
 
@@ -260,7 +232,6 @@ By the end of the session, participants will be able to:
 
 You'll be involved in the process of building new capabilities (and knowledge and skills) with support from others and carefully-chosen scaffolds.
 
-1. Each of the four sessions will be organized around a big idea
 1. You will be doing a great deal of the work
 1. Then, we will discuss what we did and how it applies
 
@@ -276,21 +247,6 @@ The pedagogical framework *plays out* in the following specific ways:
 
 ---
 
-# Agenda
-
-### *Part 1: Getting up and running*
-### Part 2: Visualizing and exploring data
-### Part 3: Modeling and understanding data
-### Part 4: Doing more with data science
-
----
-
-class: inverse, center, middle
-
-# Background on R and RStudio
-
----
-
 # A little motivation theory
 
 ## Expectancy-value theory
@@ -301,7 +257,7 @@ class: inverse, center, middle
 
 ---
 
-# An argument about RMarkdown
+# An argument for this class
 
 - This presentation will make the argument that **you can use R and RStudio to solve
 problems that are important to you**
@@ -319,57 +275,6 @@ problems that are important to you**
 * It is increasingly used in education
 * It can help you to carry out your educational analyses in open and trustworthy ways
 * It is cross-platform, open-source, and freely-available
-
----
-
-
-class: inverse, center, middle
-
-# Where You'll Be Running R
-
-RStudio Cloud (preferred)  
-OR  
-R and RStudio on your computer  
-
----
-
-# RStudio Cloud
-
-**[This link will take you to the RStudio Cloud project for this part of the session](https://rstudio.cloud/project/964811).**
-
-Link also here: https://rstudio.cloud/project/964811
-
-Once you have navigated to this webpage, log in using a Google or GitHub account. Then, create a permanent copy of the project in your own workspace (see the prompt at the top of the page guiding you to do this).
-
-From here, you can write and run R code exactly as your would through RStudio on your computer.
----
-
-# R and RStudio
-
-**If you like, you may (of course!) use R and RStudio**
-
-To download R:
-* [Visit this page to download R](https://cran.r-project.org/)
-* Find your operating system (Mac, Windows, or Linux)
-* Download the 'latest release' on the page for your operating system and download and install the application
-
-To download RStudio:
-* [Visit this page to download RStudio](https://rstudio.com/products/rstudio/download/)
-* Find your operating system (Mac, Windows, or Linux)
-* Download the 'latest release' on the page for your operating system and download and install the application
-
----
-
-class: inverse, center, middle
-
-# Try it out! Getting started with RStudio
-
-Activities:  
-
-Running a single RMarkdown chunk  
-Running another RMarkdown chunk  
-Rendering an RMarkdown document to a PDF  
-Creating your first visualization
 
 ---
 
@@ -426,44 +331,52 @@ sci_mo_processed %>%
 
 ---
 
-# Running a single RMarkdown chunk 
+class: inverse, center, middle
 
-Let's hop over to the "demo doc" for part 1!
-
-[`demo-doc-1-setting-up.Rmd`](demo-doc-1-setting-up.Rmd)
-
-Let's run the first chunk by clicking the green arrow in the first code chunk.
-
-If you saw the message "It worked!", congratulations - it worked!
+# Part 3/5: Tutorial
 
 ---
 
-# Running another RMarkdown chunk  
+# First in-class tutorial: Data viz!
 
-After running one chunk, we can easily run the next chunk. 
-
-What happens when you print the second chunk (with `sci_mo_processed`)?
-
----
-
-# Working through the remainder of the document
-
-(We'll work together through a few sections of the document in this phase)
-
----
-
-# Rendering an RMarkdown document to a PDF  
-
-Have you made it to the end of the document? 
-
-Now, we'll render to a PDF.
+- Navigate to https://github.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed/find/main
+- Begin to type "tutorials"
+- Find `tutorials-week-1.Rmd`
+- Download this file by right-clicking it and then open it within RStudio
+- Walk through the steps
 
 ---
 
 class: inverse, center, middle
 
-# *Discuss in groups (in Slack)
+# Part 4/5: Syllabus
 
-- What challenges did you face?
-- What successes did you face?
+---
+
+# Organization of the class
+
+- Class website: https://making-data-science-count.github.io/s21-intro-to-data-sci-methods-in-ed/
+- Canvas: for submitting assignments and checking grades
+- Slack: for communication
+- Email: also for communication
+- Zoom: for synchronous classes
+
+---
+
+
+class: inverse, center, middle
+
+# Part 5/5: Check-out
+
+---
+
+# Random note(s)
+
+- Free rstudio::conf(): https://rstudio.com/conference/ (today until 8 am PT tomorrow, 1/22/2021)
+
+---
+
+# Discuss in base groups (or, if there is insufficient time, in Slack)
+
+- What is one thing you learned today?
 - What questions do you still have?
