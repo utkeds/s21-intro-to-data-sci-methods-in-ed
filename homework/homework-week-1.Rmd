@@ -1,127 +1,166 @@
 ---
-title: "1-setting-up-demo-doc"
-author: ""
-output: pdf_document
+title: "Week 1 - Tutorial"
+output: html_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE, error = TRUE)
 ```
 
-# Loading, setting up 
+## First, let's install and load ggplot2 
 
-Let's first load the {dataedu} package and the {tidyverse} suite of packages.
-
-Click the green arrow to the first right of what is a "code chunk" below:
+We'll do so by running the following line of code. This line of code, though, is 
+a bit different from most: it installs a new R "package" with specific, additional 
+functionality. Installing R packages is very common. The reason it is different from
+most code, though, is you typically only want to run it once - after that, the package
+is installed on your computer, and you don't need to run it again. For that reason,
+we've commented out this line of code below. You will just have to remove that 
+comment symbol and then click the green arrow to the right to run the code!
 
 ```{r}
-library(dataedu)
-library(tidyverse)
-
-sci_mo_processed %>% 
-  ggplot(aes(x = percentage_earned)) +
-  geom_density()
+# install.packages("ggplot2")
 ```
 
-If you saw a plot, congratulations! Things are working just fine.
-
-What do you notice about this plot? What do you wonder?
-
-Here is the data set we will use; click the green arrow again:
+Next, we'll "load" ggplot2, or check it out for use in our current analysis / R 
+session. Run this next chunk the same way as the first:
 
 ```{r}
-sci_mo_processed
+library(ggplot2)
 ```
 
-# Selecting variables
+## Print a built-in dataset
 
-Let's select only a few variables.
+Next, simply run msleep to view a dataset built-in to R:
 
 ```{r}
-sci_mo_processed %>% 
-  select(student_id, course_id, percentage_earned)
+msleep
 ```
 
-**Try it out!**
+What do you notice? What do you wonder? Consider viewing additional rows by clicking
+the numbers at the bottom of the table; or more rows by clicking the black right arrow 
+at the top.
 
-Let's try to *include one additional variable* in your select function, 
+Add a few thoughts on what you notice and what you wonder after the dashes below!
+You can add additional dashes, if needed!
 
-First, type the name of the data to view a summary of your data (including what variables are included in it):
+- 
+- 
+- 
 
-```{r}
-sci_mo_processed
-```
+## Run code to a plot
 
-Then, add a new variable to the code below after percentage_earned, being careful to type the new variable name as it appears in the data. When you're ready, click the green arrow to view the result.
+Here, we will run code to create our first plot. 
 
-```{r}
-sci_mo_processed %>% 
-  select(student_id, course_id, percentage_earned)
-```
+The ggplot2 package has a function, ggplot(), that we will use.
 
-# Filtering variables
+This function takes arguments for: a) what variables in a dataset correspond to 
+different aesthetic features of a graph, like an x- and y-axis, and b) how the data
+is represented.
 
-Next, let's explore filtering variables
-
-```{r}
-sci_mo_processed %>% 
-  filter(percentage_earned >= .60)
-```
-
-What do you think will happen if we add another condition to the filter statement?
-
-**Try it out!**
-
-Let's try to filter on TimeSpent, which is a variable for how many minutes students were on the course Learning Management System (LMS).
-
-Be sure to run the result to see whether it did what you think it should do!
+Below, bodywt and sleep_total correspond to the x- and y-axis, respectively, and 
+the values are represented by a point.
 
 ```{r}
-sci_mo_processed %>% 
-  filter(percentage_earned >= .60,
-         TimeSpent > )
-```
-
-# Creating a plot (with ggplot2)
-
-What do you think this code will do?
-
-```{r}
-sci_mo_processed %>% 
-  ggplot(aes(x = TimeSpent)) +
-  geom_histogram()
-```
-
-**Try it out!**
-
-Now, add TimeSpent to the code below as the variable that will correspond to the *y*-axis. 
-
-Notice that instead of using geom_density, we're using geom_point. What do you think
-this will create?
-
-Be sure to run the code chunk to see the result.
-
-```{r}
-sci_mo_processed %>% 
-  ggplot(aes(x = percentage_earned, y = )) +
+ggplot(msleep, aes(x = bodywt, y = sleep_total)) +
   geom_point()
 ```
 
----
+Nice job!
 
-# Rendering this document to a PDF report 
+Plots can be constructed layer-by-layer; here, let's add the conservation status
+of the mammals by color.
 
-- add your name as the author at the very top of this document
-- click "Knit" and check out the result!
+See what the conservation statuses represent here: 
+https://en.wikipedia.org/wiki/Category:Biota_by_conservation_status
 
-# Visualizing a larger dataset (leap)
-
-Can you filter or select variables from the dataset below?
-
-Can you select a smaller number of variables from the dataset below?
-
-If you add to this code, change the chunk option eval = FALSE to eval = TRUE!
-
-```{r, eval = FALSE}
-tt_tweets
+```{r}
+ggplot(msleep, aes(x = bodywt, y = sleep_total, color = conservation)) +
+  geom_point()
 ```
+
+There are many graphs you can create, from the simple to the complex!
+
+For example, we can quickly look at the distribution of the sleep_total variable
+with a density plot:
+
+```{r}
+ggplot(msleep, aes(x = sleep_total)) +
+  geom_density()
+```
+
+## Create your own plot!
+
+Now, create your own plot, using the following two code chunks as a foundation or starting 
+points. Look above at the variables in the msleep dataset (where you printed the data) for a 
+reminder of what the dataset includes!
+
+First, can you create a density plot using a different variable (other than sleep_total)?
+
+Try it out below:
+
+```{r}
+ggplot(msleep, aes(x = )) +
+  geom_density()
+```
+
+Next, can you create a different scatterplot; or a version of one? Try it out by adding
+different variables for the x, y, and color arguments below:
+
+```{r}
+ggplot(msleep, aes(x = , y = , color = )) +
+  geom_point()
+```
+
+## Reach!
+
+Completed the above? Try for a "reach" in one of three ways:
+
+1. Add a line of best fit to one of the scatterplots you created above in the
+blank codechunk below.
+
+To learn how, check out this excellent cheat sheet: https://github.com/rstudio/cheatsheets/raw/master/data-visualization-2.1.pdf
+
+Or consult this chapter on visualizing data with ggplot2: 
+https://r4ds.had.co.nz/data-visualisation.html
+
+```{r}
+
+```
+
+2. Create a plot of your choice using a *different* dataset built in to ggplot2.
+
+To see available datasets, run the following code chunk:
+
+```{r}
+data(package = "ggplot2")
+```
+
+To load the data, simply type its name. Create your plot in the code chunk below:
+
+```{r}
+
+```
+
+3. Create a plot using a *dataset of your choice*. There are a number of datasets
+built into R; to see all of those on your machine, run the following code chunk
+(warning - if you've installed a number of packages already, you may have a lot!):
+
+```{r}
+data(package = .packages(all.available = TRUE))
+```
+
+Create your plot below:
+
+```{r}
+
+```
+
+## fin
+
+Great job! Once you've finished your work, click "Knit" at the top to render a 
+report that you can share; this is how you'll submit homework for class! 
+
+Please submit this rendered HTML file in both a) canvas and b) the #homework-week-1
+channel in Slack.
+
+:clap: :clap: :clap:

@@ -3,4 +3,5 @@ title: "Homework"
 output: html_document
 ---
 
-- [Week 1](https://github.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed/blob/main/tutorials-week-1.Rmd)
+- [Week 1](https://github.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed/blob/main/homework/homework-week-1.Rmd)
+- [Week 2](https://github.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed/blob/main/homework/homework-week-2.Rmd)
