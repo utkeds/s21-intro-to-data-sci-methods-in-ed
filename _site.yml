@@ -16,4 +16,6 @@ navbar:
       href: assignments.html
     - text: "GitHub Repository"
       href: https://github.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed
+output_dir: "docs"
+exclude: ["tutorials-week-1.Rmd"]
       

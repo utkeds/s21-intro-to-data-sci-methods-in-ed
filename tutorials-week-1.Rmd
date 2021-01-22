@@ -4,16 +4,21 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE, error = TRUE)
 ```
 
 ## First, let's install and load ggplot2 
 
-We'll do so by running the following line of code; click the green arrow to the
-right to run the code!
+We'll do so by running the following line of code. This line of code, though, is 
+a bit different from most: it installs a new R "package" with specific, additional 
+functionality. Installing R packages is very common. The reason it is different from
+most code, though, is you typically only want to run it once - after that, the package
+is installed on your computer, and you don't need to run it again. For that reason,
+we've commented out this line of code below. You will just have to remove that 
+comment symbol and then click the green arrow to the right to run the code!
 
 ```{r}
-install.packages("ggplot2")
+# install.packages("ggplot2")
 ```
 
 Next, we'll "load" ggplot2, or check it out for use in our current analysis / R 
@@ -54,7 +59,6 @@ is represented.
 
 Below, bodywt and sleep_total correspond to the x- and y-axis, respectively, and 
 the values are represented by a point.
-
 
 ```{r}
 ggplot(msleep, aes(x = bodywt, y = sleep_total)) +
@@ -107,9 +111,56 @@ ggplot(msleep, aes(x = , y = , color = )) +
   geom_point()
 ```
 
+## Reach!
+
+Completed the above? Try for a "reach" in one of three ways:
+
+1. Add a line of best fit to one of the scatterplots you created above in the
+blank codechunk below.
+
+To learn how, check out this excellent cheat sheet: https://github.com/rstudio/cheatsheets/raw/master/data-visualization-2.1.pdf
+
+Or consult this chapter on visualizing data with ggplot2: 
+https://r4ds.had.co.nz/data-visualisation.html
+
+```{r}
+
+```
+
+2. Create a plot of your choice using a *different* dataset built in to ggplot2.
+
+To see available datasets, run the following code chunk:
+
+```{r}
+data(package = "ggplot2")
+```
+
+To load the data, simply type its name. Create your plot in the code chunk below:
+
+```{r}
+
+```
+
+3. Create a plot using a *dataset of your choice*. There are a number of datasets
+built into R; to see all of those on your machine, run the following code chunk
+(warning - if you've installed a number of packages already, you may have a lot!):
+
+```{r}
+data(package = .packages(all.available = TRUE))
+```
+
+Create your plot below:
+
+```{r}
+
+```
+
 ## fin
 
 Great job! Once you've finished your work, click "Knit" at the top to render a 
-report that you can share; this is how you'll submit homework for class!
+report that you can share; this is how you'll submit homework for class! 
 
-:clap:
+Please submit this rendered HTML file in both a) canvas and b) the #homework-week-1
+channel in Slack.
+
+:clap: :clap: :clap:

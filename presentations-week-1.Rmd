@@ -59,12 +59,27 @@ class: inverse, center, middle
 * Presently PI or Co-PI for three NSF grants
 ]
 
-```{r, out.width = "400px", echo = FALSE, fig.align = "center", message = FALSE}
-library(here)
-include_graphics("libs/img/jr-joro.jpg")
-```
+---
+
+# #whoami
+.pull-left[
+* Alex Lishinski, Ph.D.
+* Contact: 
+  * [@html034](https://twitter.com/html034)
+  * [@html034@fosstodon.org](https://fosstodon.org/@html034)
+  * [alishins@utk.edu](mailto:alishins@utk.edu)
+  * https://alexlishinski.com
+* Postdoctoral researcher, CS Education, University of Tennessee, Knoxville
+* Dad (3 year old toddler)
+* Primary areas of interest:
+  * Computer Science education
+  * Quantitative research methods
+  * Data science in education
+* Former philosopher
+]
 
 ---
+  
 
 # Breakout rooms!
 
@@ -208,21 +223,9 @@ knitr::include_graphics(here("libs", "img", "data-science-cycle", "data-science-
 - Everyone uses spreadsheet software
 - You're (mostly) confident that you can solve problems with respect to analyzing 
 data, but are less confident with respect to using statistical software
-- Most of you have used data analysis notebooks (RMarkdown?)
 - You have impressive backgrounds and professional experiences
 - For many, programming and using statistics correctly can be intimidating
 - You're a bit more interested in preparing data for analyses than we thought (cool!)
-
----
-
-# Objectives
-
-By the end of the session, participants will be able to:
-
-1. Develop confidence going forward in you ability to analyze data as a part of your program
-1. Be able to visualize educational data.
-1. Use linear (regression) models as a general-purpose tool for data analysis.
-1. Explore some of the more data science-related aspects of R through text analysis
 
 ---
 
