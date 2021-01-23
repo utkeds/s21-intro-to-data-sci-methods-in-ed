@@ -173,7 +173,7 @@ scale by replacing the "x" below with your response:
 ```{r}
 tibble::tribble(
   ~question,                                   ~response,
-  "How.challenging.was.this.homework?",        x,
+  "How challenging was this homework?",        x,
   "How interesting was this homework to you?", x,
   "How valuable was this homework to you?",    x
 )
