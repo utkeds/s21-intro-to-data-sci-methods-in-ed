@@ -180,3 +180,8 @@ tibble::tribble(
 ```
 
 Include any other comments, feedback, or reflections on this homework below:
+
+
+
+If you like, you can post these other comments, feedback, or reflections in the 
+message you post to #homework in Slack to share what you've done.
