@@ -5,7 +5,7 @@ author: "Joshua M. Rosenberg, Alex Lishinski"
 date: "January 21, 2022"
 output:
   xaringan::moon_reader:
-    css: [default, metropolis, metropolis-fonts, custom.css]
+    css: [theme.css]
     lib_dir: libs
     nature:
       highlightStyle: github
