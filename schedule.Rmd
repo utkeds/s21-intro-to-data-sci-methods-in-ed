@@ -8,7 +8,7 @@ library(readxl)
 library(tidyverse)
 
 read_excel(
-  here::here("libs", "data", "schedule.xlsx")
+  here::here("data", "schedule.xlsx")
 ) %>% 
   slice(-2) %>% 
   #mutate(Week = Date) %>% 

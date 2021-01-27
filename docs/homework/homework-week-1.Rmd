@@ -164,3 +164,24 @@ Please submit this rendered HTML file in both a) canvas and b) the #homework-wee
 channel in Slack.
 
 :clap: :clap: :clap:
+
+## Self-assessment and reflection
+
+Respond to the following three questions on a 1 (not at all) to 5 (very much) 
+scale by replacing the "x" below with your response:
+
+```{r}
+tibble::tribble(
+  ~question,                                   ~response,
+  "How challenging was this homework?",        x,
+  "How interesting was this homework to you?", x,
+  "How valuable was this homework to you?",    x
+)
+```
+
+Include any other comments, feedback, or reflections on this homework below:
+
+
+
+If you like, you can post these other comments, feedback, or reflections in the 
+message you post to #homework in Slack to share what you've done.
