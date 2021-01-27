@@ -22,8 +22,6 @@ library(xaringan)
 library(dataedu)
 library(here)
 
-here::i_am("slides/presentations-week-1.Rmd")
-
 #joro_years <- round(as.numeric(difftime(as.Date(Sys.Date()), Sys.getenv("joro_bday"), unit="weeks"))/52.25, 1)
 ```
 
@@ -132,7 +130,7 @@ A: We can discuss that over coffee.
 ---
 
 ```{r echo=FALSE, out.width="75%", fig.align="left"}
-knitr::include_graphics("img/excel.png")
+knitr::include_graphics("./img/excel.png")
 ```
 
 
