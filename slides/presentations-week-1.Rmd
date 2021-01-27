@@ -22,6 +22,8 @@ library(xaringan)
 library(dataedu)
 library(here)
 
+here::i_am("slides/presentations-week-1.Rmd")
+
 #joro_years <- round(as.numeric(difftime(as.Date(Sys.Date()), Sys.getenv("joro_bday"), unit="weeks"))/52.25, 1)
 ```
 
@@ -130,56 +132,56 @@ A: We can discuss that over coffee.
 ---
 
 ```{r echo=FALSE, out.width="75%", fig.align="left"}
-knitr::include_graphics(here("slides", "img", "excel.png"))
+knitr::include_graphics("img/excel.png")
 ```
 
 
 ---
 
 ```{r echo=FALSE, out.width="50%", fig.align="left"}
-knitr::include_graphics(here("slides", "img", "r.png"))
+knitr::include_graphics("img/r.png")
 ```
 
 ---
 
 ```{r echo=FALSE, out.width="73%", fig.align="left"}
-knitr::include_graphics(here("slides", "img", "rstudio.png"))
+knitr::include_graphics("img/rstudio.png")
 ```
 
 ---
 
 ```{r echo=FALSE, out.width="90%", fig.align="left"}
-knitr::include_graphics(here("slides", "img", "data-science-cycle", "data-science-cycle.001.png"))
+knitr::include_graphics("img/data-science-cycle/data-science-cycle.001.png")
 ```
 
 ---
 
 ```{r echo=FALSE, out.width="90%", fig.align="left"}
-knitr::include_graphics(here("slides", "img", "data-science-cycle", "data-science-cycle.002.png"))
+knitr::include_graphics("img/data-science-cycle/data-science-cycle.002.png")
 ```
 
 ---
 
 ```{r echo=FALSE, out.width="90%", fig.align="left"}
-knitr::include_graphics(here("slides", "img", "data-science-cycle", "data-science-cycle.003.png"))
+knitr::include_graphics("img/data-science-cycle/data-science-cycle.003.png")
 ```
 
 ---
 
 ```{r echo=FALSE, out.width="90%", fig.align="left"}
-knitr::include_graphics(here("slides", "img", "data-science-cycle", "data-science-cycle.004.png"))
+knitr::include_graphics("img/data-science-cycle/data-science-cycle.004.png")
 ```
 
 ---
 
 ```{r echo=FALSE, out.width="90%", fig.align="left"}
-knitr::include_graphics(here("slides", "img", "data-science-cycle", "data-science-cycle.005.png"))
+knitr::include_graphics("img/data-science-cycle/data-science-cycle.005.png")
 ```
 
 ---
 
 ```{r echo=FALSE, out.width="90%", fig.align="left"}
-knitr::include_graphics(here("slides", "img", "data-science-cycle", "data-science-cycle.006.png"))
+knitr::include_graphics("img/data-science-cycle/data-science-cycle.006.png")
 ```
 
 ---
@@ -201,19 +203,19 @@ travel
 ---
 
 ```{r echo=FALSE, out.width="90%", fig.align="left"}
-knitr::include_graphics(here("slides", "img", "data-science-cycle", "data-science-cycle.007.png"))
+knitr::include_graphics("img/data-science-cycle/data-science-cycle.007.png")
 ```
 
 ---
 
 ```{r echo=FALSE, out.width="90%", fig.align="left"}
-knitr::include_graphics(here("slides", "img", "data-science-cycle", "data-science-cycle.008.png"))
+knitr::include_graphics("img/data-science-cycle/data-science-cycle.008.png")
 ```
 
 ---
 
 ```{r echo=FALSE, out.width="90%", fig.align="left"}
-knitr::include_graphics(here("slides", "img", "data-science-cycle", "data-science-cycle.009.png"))
+knitr::include_graphics("img/data-science-cycle/data-science-cycle.009.png")
 ```
 
 ---
