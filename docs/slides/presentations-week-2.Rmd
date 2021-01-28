@@ -12,7 +12,19 @@ output:
       highlightLines: true
       countIncrementalSlides: false
 ---
+  
 
+# Breakout rooms!
+
+Starting with whomever had a snack or meal most recently, discuss . . . 
+
+Based on X criteria
+- What was one “win” you had from the homework?
+- What was one challenge you had from the homework?
+
+(10 minutes)
+
+---
 
 ## Projects and Directories: Setting up your environment
 
@@ -105,6 +117,13 @@ glimpse(mtcars)
 
 # Basic programming operators
 
+```{r}
+mtcars %>% 
+  
+```
+
+---
+
 Assignment operator
 
 ```{r}
@@ -118,6 +137,15 @@ thing4 <- 4.5729
 thing4
 thing5 <- TRUE
 thing5
+```
+
+---
+
+Assignment operator
+
+
+```{r}
+
 ```
 
 ---
@@ -159,27 +187,48 @@ x | y
 Subsetting and accessing objects
 
 ```{r}
+library(dplyr)
+# cols by name
+mtcars %>% 
+  select(mpg, cyl, hp)
+
 #mtcars
 # variables in data frame or tibble
 mtcars$mpg
-# rows by number
+mtcars$cyl
+mtcrs$hp
+
+# rows by index
 mtcars[1:10,]
 # rows by condition
 dplyr::filter(mtcars, mpg < 20)
 # cols by number
 mtcars[,c(1,2,4)]
-# cols by name
-dplyr::select(mtcars, mpg, cyl, hp)
+
 ```
 
+---
 
+# Breakout rooms
+
+```{r}
+library(dplyr)
+
+storms
+```
+
+Use `dplyr::select()`, `dplyr::filter()`, and `dplyr::arrange()`.
+
+Create a new R Markdown document.
 
 ---
 
 ## Readings
 
-Textbook chapter - Foundational skills: https://datascienceineducation.com/c06.html
-Grammar of Graphics: http://vita.had.co.nz/papers/layered-grammar.pdf
+Two assigned readings for the next week:
+
+- Data Science in Education Using R (DSIEUR) chapter - Foundational skills: https://datascienceineducation.com/c06.html
+- Grammar of Graphics: http://vita.had.co.nz/papers/layered-grammar.pdf
 
 ---
 
@@ -190,3 +239,12 @@ Grammar of Graphics: http://vita.had.co.nz/papers/layered-grammar.pdf
 1. Videos
 1. Cleaning data
 1. Social media / textual data / qualitative data
+
+--- 
+
+# Wrapping up
+
+In your base group's Slack channel:
+
+- What is one thing you took away from today?
+- What is something you want to learn more about? 
