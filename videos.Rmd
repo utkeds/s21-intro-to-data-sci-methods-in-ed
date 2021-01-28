@@ -1,0 +1,15 @@
+---
+title: "Videos"
+output: html_document
+---
+
+### Class recordings
+- [Week 1](https://tennessee.zoom.us/rec/share/g-Y9kRxRoWwJsoIHKyi7mK8XUAMNb9Vu_OAn5_ytFlA-FvMDhH9m6TAy2BOBVGjE.cm_vKbsbkjrTGjZ2)
+
+### Homework videos 
+
+- [HW 1](https://tennessee.zoom.us/rec/play/yJ1NDKe3Ln1b7odc0vI_MI8hNQcY9tX54JFZBx0_Y66VYU1gwe[…]v6qHyX4KBlPnqHssx9y.UsopmL1uFrV-A6R6?startTime=1611332611000)
+
+
+### Topic videos
+
