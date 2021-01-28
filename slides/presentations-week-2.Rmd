@@ -102,7 +102,7 @@ Project options are saved in .Rproj file
 
 The here package helps you to navigate around in a project:
 
-```{r}
+```{r, eval = FALSE}
 library(here)
 
 # data file
@@ -151,7 +151,7 @@ So far, we have used *built-in data*. There is a lot of built-in data!
 
 Loading different types of data
 
-Comma-seperated values (.csv)
+Comma-separated values (`.csv`)
 
 ```{r, eval = FALSE}
 library(readr)
@@ -162,7 +162,7 @@ readr::read_csv(here("data", "filename.csv"))
 
 # 3. Data 
 
-.xlsx
+`.xlsx`
 
 ```{r, eval = FALSE}
 library(readxl)
@@ -173,7 +173,7 @@ read_excel((here("data", "schedule.xlsx")))
 
 # 3. SPSS
 
-.sav
+`.sav`
 
 ```{r, eval = FALSE}
 library(haven)
@@ -208,7 +208,7 @@ More often than not, the word is a verb, such as `filter()`, suggesting that weâ
 
 Indeed, functions act like verbs: they tell R what to do with our data.
 
-The parentheses are where we can provide arguments to a function.
+The parentheses are where we can provide arguments.
 
 ---
 
@@ -226,11 +226,9 @@ glimpse(mtcars)
 
 ---
 
-# 4. Basic programming operators
+# 4. `select()`
 
-`select()`
-
-```{r}
+```{r, message = FALSE}
 library(dplyr)
 
 storms %>% 
@@ -264,6 +262,8 @@ storms %>%
 # 4. Putting it together
 
 ```{r}
+library(dplyr)
+
 storms %>% 
   select(name, year, month, day, hour, status) %>% 
   filter(month == 8) %>% 
@@ -319,11 +319,7 @@ storms %>%
 
 # 4. Assignment operators
 
----
-
-# 4. Assignment operators
-
-How many now?
+How many columns are in storms after running the following two lines of code?
 
 ```{r, eval = FALSE}
 storms <- storms %>% 
@@ -367,7 +363,7 @@ x | y
 
 Using `storms`: 
 
-```{r}
+```{r, eval = FALSE}
 library(dplyr)
 
 storms
