@@ -14,6 +14,8 @@ navbar:
       href: homework.html
     - text: "Assignment Descriptions"
       href: assignments.html
+    - text: "Videos"
+      href: videos.html
     - text: "GitHub Repository"
       href: https://github.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed
 output_dir: "docs"

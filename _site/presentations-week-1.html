@@ -5,8 +5,10 @@
     <meta charset="utf-8" />
     <meta name="author" content="Joshua M. Rosenberg, Alex Lishinski" />
     <meta name="date" content="2022-01-21" />
-    <script src="libs/header-attrs/header-attrs.js"></script>
-    <link rel="stylesheet" href="theme.css" type="text/css" />
+    <link href="site_libs/remark-css/default.css" rel="stylesheet" />
+    <link href="site_libs/remark-css/metropolis.css" rel="stylesheet" />
+    <link href="site_libs/remark-css/metropolis-fonts.css" rel="stylesheet" />
+    <link rel="stylesheet" href="custom.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
@@ -21,19 +23,11 @@ class: center, middle, inverse, title-slide
 
 
 
-# Agenda
-
-1. Introductions to one another
-1. A brief introduction to data science
-1. First activity: Visualizing data in RStudio!
-1. Discussion of the syllabus
-1. Check-out
-
 ---
 
 class: inverse, center, middle
 
-# Part 1/5: Introductions (to one another)
+# Introductions
 
 ---
 
@@ -55,9 +49,13 @@ class: inverse, center, middle
 * Presently PI or Co-PI for three NSF grants
 ]
 
+<<<<<<< HEAD
+&lt;img src="/home/alishinski/Documents/work/s21-intro-data-sci/libs/img/jr-joro.jpg" width="400px" style="display: block; margin: auto;" /&gt;
+
 ---
 
 # #whoami
+
 .pull-left[
 * Alex Lishinski, Ph.D.
 * Contact: 
@@ -74,10 +72,16 @@ class: inverse, center, middle
 * Former philosopher
 ]
 
----
-  
+&lt;img src="/home/alishinski/Documents/work/s21-intro-data-sci/libs/img/jr-joro.jpg" width="400px" style="display: block; margin: auto;" /&gt;
+=======
+&lt;img src="libs/img/jr-joro.jpg" width="400px" style="display: block; margin: auto;" /&gt;
+>>>>>>> origin/main
 
-# Breakout rooms!
+---
+
+# Getting to know one another
+
+## Breakout rooms!
 
 Starting with whomever had a snack or meal most recently, discuss . . . 
 
@@ -85,13 +89,33 @@ Starting with whomever had a snack or meal most recently, discuss . . .
 1. What is something you like to do but aren't particularly good at?
 1. Why are you interested in data science?
 
-(10 minutes)
+(7 minutes)
 
 ---
 
 class: inverse, center, middle
 
-# Part 2/5: Introductions (to the class)
+# Let's get started!
+
+---
+
+# Homebase
+
+**All materials here:**
+https://making-data-science-count.github.io/s21-intro-to-data-sci-methods-in-ed/
+
+**Ask questions on Slack:**
+datascienceinedu.slack.com
+
+# First activity: Data viz!
+
+RStudio Cloud
+
+---
+
+class: inverse, center, middle
+
+# Course Information
 
 ---
 
@@ -119,46 +143,62 @@ A - No, but many themes are shared.
 **Q - What computing language will we learn?**  
 A - R.
 
-**Q: Why not language X?**  
-A: We can discuss that over coffee.
+**Q: Why not python?**  
+A: We can discuss that over coffee. (but short answer, it's doesn't have the data science functionality that R has, natively and through packages)
 ]
 
 ---
 
-&lt;img src="./img/excel.png" width="75%" style="display: block; margin: auto auto auto 0;" /&gt;
 
 
 ---
 
-&lt;img src="img/r.png" width="50%" style="display: block; margin: auto auto auto 0;" /&gt;
+class: middle
+
+# Software
 
 ---
 
-&lt;img src="img/rstudio.png" width="73%" style="display: block; margin: auto auto auto 0;" /&gt;
+&lt;img src="/home/alishinski/Documents/work/s21-intro-data-sci/libs/img/excel.png" width="75%" style="display: block; margin: auto auto auto 0;" /&gt;
+
 
 ---
 
-&lt;img src="img/data-science-cycle/data-science-cycle.001.png" width="90%" style="display: block; margin: auto auto auto 0;" /&gt;
+&lt;img src="/home/alishinski/Documents/work/s21-intro-data-sci/libs/img/r.png" width="50%" style="display: block; margin: auto auto auto 0;" /&gt;
 
 ---
 
-&lt;img src="img/data-science-cycle/data-science-cycle.002.png" width="90%" style="display: block; margin: auto auto auto 0;" /&gt;
+&lt;img src="/home/alishinski/Documents/work/s21-intro-data-sci/libs/img/RStudio.png" width="73%" style="display: block; margin: auto auto auto 0;" /&gt;
 
 ---
 
-&lt;img src="img/data-science-cycle/data-science-cycle.003.png" width="90%" style="display: block; margin: auto auto auto 0;" /&gt;
+class: middle
+
+# Data science life cycle
 
 ---
 
-&lt;img src="img/data-science-cycle/data-science-cycle.004.png" width="90%" style="display: block; margin: auto auto auto 0;" /&gt;
+&lt;img src="/home/alishinski/Documents/work/s21-intro-data-sci/libs/img/data-science-cycle/data-science-cycle.001.png" width="90%" style="display: block; margin: auto auto auto 0;" /&gt;
 
 ---
 
-&lt;img src="img/data-science-cycle/data-science-cycle.005.png" width="90%" style="display: block; margin: auto auto auto 0;" /&gt;
+&lt;img src="/home/alishinski/Documents/work/s21-intro-data-sci/libs/img/data-science-cycle/data-science-cycle.002.png" width="90%" style="display: block; margin: auto auto auto 0;" /&gt;
 
 ---
 
-&lt;img src="img/data-science-cycle/data-science-cycle.006.png" width="90%" style="display: block; margin: auto auto auto 0;" /&gt;
+&lt;img src="/home/alishinski/Documents/work/s21-intro-data-sci/libs/img/data-science-cycle/data-science-cycle.003.png" width="90%" style="display: block; margin: auto auto auto 0;" /&gt;
+
+---
+
+&lt;img src="/home/alishinski/Documents/work/s21-intro-data-sci/libs/img/data-science-cycle/data-science-cycle.004.png" width="90%" style="display: block; margin: auto auto auto 0;" /&gt;
+
+---
+
+&lt;img src="/home/alishinski/Documents/work/s21-intro-data-sci/libs/img/data-science-cycle/data-science-cycle.005.png" width="90%" style="display: block; margin: auto auto auto 0;" /&gt;
+
+---
+
+&lt;img src="/home/alishinski/Documents/work/s21-intro-data-sci/libs/img/data-science-cycle/data-science-cycle.006.png" width="90%" style="display: block; margin: auto auto auto 0;" /&gt;
 
 ---
 
@@ -178,15 +218,15 @@ A: We can discuss that over coffee.
 
 ---
 
-&lt;img src="img/data-science-cycle/data-science-cycle.007.png" width="90%" style="display: block; margin: auto auto auto 0;" /&gt;
+&lt;img src="/home/alishinski/Documents/work/s21-intro-data-sci/libs/img/data-science-cycle/data-science-cycle.007.png" width="90%" style="display: block; margin: auto auto auto 0;" /&gt;
 
 ---
 
-&lt;img src="img/data-science-cycle/data-science-cycle.008.png" width="90%" style="display: block; margin: auto auto auto 0;" /&gt;
+&lt;img src="/home/alishinski/Documents/work/s21-intro-data-sci/libs/img/data-science-cycle/data-science-cycle.008.png" width="90%" style="display: block; margin: auto auto auto 0;" /&gt;
 
 ---
 
-&lt;img src="img/data-science-cycle/data-science-cycle.009.png" width="90%" style="display: block; margin: auto auto auto 0;" /&gt;
+&lt;img src="/home/alishinski/Documents/work/s21-intro-data-sci/libs/img/data-science-cycle/data-science-cycle.009.png" width="90%" style="display: block; margin: auto auto auto 0;" /&gt;
 
 ---
 
@@ -195,9 +235,21 @@ A: We can discuss that over coffee.
 - Everyone uses spreadsheet software
 - You're (mostly) confident that you can solve problems with respect to analyzing 
 data, but are less confident with respect to using statistical software
+- Most of you have used data analysis notebooks (RMarkdown?)
 - You have impressive backgrounds and professional experiences
 - For many, programming and using statistics correctly can be intimidating
 - You're a bit more interested in preparing data for analyses than we thought (cool!)
+
+---
+
+# Objectives
+
+By the end of the session, participants will be able to:
+
+1. Develop confidence going forward in you ability to analyze data as a part of your program
+1. Be able to visualize educational data.
+1. Use linear (regression) models as a general-purpose tool for data analysis.
+1. Explore some of the more data science-related aspects of R through text analysis
 
 ---
 
@@ -207,6 +259,7 @@ data, but are less confident with respect to using statistical software
 
 You'll be involved in the process of building new capabilities (and knowledge and skills) with support from others and carefully-chosen scaffolds.
 
+1. Each of the four sessions will be organized around a big idea
 1. You will be doing a great deal of the work
 1. Then, we will discuss what we did and how it applies
 
@@ -222,6 +275,21 @@ The pedagogical framework *plays out* in the following specific ways:
 
 ---
 
+# Agenda
+
+### *Part 1: Getting up and running*
+### Part 2: Visualizing and exploring data
+### Part 3: Modeling and understanding data
+### Part 4: Doing more with data science
+
+---
+
+class: inverse, center, middle
+
+# Background on R and RStudio
+
+---
+
 # A little motivation theory
 
 ## Expectancy-value theory
@@ -232,7 +300,7 @@ The pedagogical framework *plays out* in the following specific ways:
 
 ---
 
-# An argument for this class
+# An argument about RMarkdown
 
 - This presentation will make the argument that **you can use R and RStudio to solve
 problems that are important to you**
@@ -250,6 +318,57 @@ problems that are important to you**
 * It is increasingly used in education
 * It can help you to carry out your educational analyses in open and trustworthy ways
 * It is cross-platform, open-source, and freely-available
+
+---
+
+
+class: inverse, center, middle
+
+# Where You'll Be Running R
+
+RStudio Cloud (preferred)  
+OR  
+R and RStudio on your computer  
+
+---
+
+# RStudio Cloud
+
+**[This link will take you to the RStudio Cloud project for this part of the session](https://rstudio.cloud/project/964811).**
+
+Link also here: https://rstudio.cloud/project/964811
+
+Once you have navigated to this webpage, log in using a Google or GitHub account. Then, create a permanent copy of the project in your own workspace (see the prompt at the top of the page guiding you to do this).
+
+From here, you can write and run R code exactly as your would through RStudio on your computer.
+---
+
+# R and RStudio
+
+**If you like, you may (of course!) use R and RStudio**
+
+To download R:
+* [Visit this page to download R](https://cran.r-project.org/)
+* Find your operating system (Mac, Windows, or Linux)
+* Download the 'latest release' on the page for your operating system and download and install the application
+
+To download RStudio:
+* [Visit this page to download RStudio](https://rstudio.com/products/rstudio/download/)
+* Find your operating system (Mac, Windows, or Linux)
+* Download the 'latest release' on the page for your operating system and download and install the application
+
+---
+
+class: inverse, center, middle
+
+# Try it out! Getting started with RStudio
+
+Activities:  
+
+Running a single RMarkdown chunk  
+Running another RMarkdown chunk  
+Rendering an RMarkdown document to a PDF  
+Creating your first visualization
 
 ---
 
@@ -344,54 +463,46 @@ sci_mo_processed %&gt;%
 
 ---
 
+# Running a single RMarkdown chunk 
+
+Let's hop over to the "demo doc" for part 1!
+
+[`demo-doc-1-setting-up.Rmd`](demo-doc-1-setting-up.Rmd)
+
+Let's run the first chunk by clicking the green arrow in the first code chunk.
+
+If you saw the message "It worked!", congratulations - it worked!
+
+---
+
+# Running another RMarkdown chunk  
+
+After running one chunk, we can easily run the next chunk. 
+
+What happens when you print the second chunk (with `sci_mo_processed`)?
+
+---
+
+# Working through the remainder of the document
+
+(We'll work together through a few sections of the document in this phase)
+
+---
+
+# Rendering an RMarkdown document to a PDF  
+
+Have you made it to the end of the document? 
+
+Now, we'll render to a PDF.
+
+---
+
 class: inverse, center, middle
 
-# Part 3/5: Tutorial
+# *Discuss in groups (in Slack)
 
----
-
-# First in-class tutorial: Data viz!
-
-- Navigate to https://github.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed/find/main
-- Begin to type "tutorials"
-- Find `tutorials-week-1.Rmd`
-- Download this file by right-clicking it and then open it within RStudio
-- Walk through the steps
-
----
-
-class: inverse, center, middle
-
-# Part 4/5: Syllabus
-
----
-
-# Organization of the class
-
-- Class website: https://making-data-science-count.github.io/s21-intro-to-data-sci-methods-in-ed/
-- Canvas: for submitting assignments and checking grades
-- Slack: for communication
-- Email: also for communication
-- Zoom: for synchronous classes
-
----
-
-
-class: inverse, center, middle
-
-# Part 5/5: Check-out
-
----
-
-# Random note(s)
-
-- Free rstudio::conf(): https://rstudio.com/conference/ (today until 8 am PT tomorrow, 1/22/2021)
-
----
-
-# Discuss in base groups (or, if there is insufficient time, in Slack)
-
-- What is one thing you learned today?
+- What challenges did you face?
+- What successes did you face?
 - What questions do you still have?
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
