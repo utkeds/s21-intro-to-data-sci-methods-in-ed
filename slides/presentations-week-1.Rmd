@@ -137,49 +137,49 @@ knitr::include_graphics("./img/excel.png")
 ---
 
 ```{r echo=FALSE, out.width="50%", fig.align="left"}
-knitr::include_graphics("img/r.png")
+knitr::include_graphics("./img/r.png")
 ```
 
 ---
 
 ```{r echo=FALSE, out.width="73%", fig.align="left"}
-knitr::include_graphics("img/rstudio.png")
+knitr::include_graphics("./img/rstudio.png")
 ```
 
 ---
 
 ```{r echo=FALSE, out.width="90%", fig.align="left"}
-knitr::include_graphics("img/data-science-cycle/data-science-cycle.001.png")
+knitr::include_graphics("./img/data-science-cycle/data-science-cycle.001.png")
 ```
 
 ---
 
 ```{r echo=FALSE, out.width="90%", fig.align="left"}
-knitr::include_graphics("img/data-science-cycle/data-science-cycle.002.png")
+knitr::include_graphics("./img/data-science-cycle/data-science-cycle.002.png")
 ```
 
 ---
 
 ```{r echo=FALSE, out.width="90%", fig.align="left"}
-knitr::include_graphics("img/data-science-cycle/data-science-cycle.003.png")
+knitr::include_graphics("./img/data-science-cycle/data-science-cycle.003.png")
 ```
 
 ---
 
 ```{r echo=FALSE, out.width="90%", fig.align="left"}
-knitr::include_graphics("img/data-science-cycle/data-science-cycle.004.png")
+knitr::include_graphics("./img/data-science-cycle/data-science-cycle.004.png")
 ```
 
 ---
 
 ```{r echo=FALSE, out.width="90%", fig.align="left"}
-knitr::include_graphics("img/data-science-cycle/data-science-cycle.005.png")
+knitr::include_graphics("./img/data-science-cycle/data-science-cycle.005.png")
 ```
 
 ---
 
 ```{r echo=FALSE, out.width="90%", fig.align="left"}
-knitr::include_graphics("img/data-science-cycle/data-science-cycle.006.png")
+knitr::include_graphics("./img/data-science-cycle/data-science-cycle.006.png")
 ```
 
 ---
@@ -201,19 +201,19 @@ travel
 ---
 
 ```{r echo=FALSE, out.width="90%", fig.align="left"}
-knitr::include_graphics("img/data-science-cycle/data-science-cycle.007.png")
+knitr::include_graphics("./img/data-science-cycle/data-science-cycle.007.png")
 ```
 
 ---
 
 ```{r echo=FALSE, out.width="90%", fig.align="left"}
-knitr::include_graphics("img/data-science-cycle/data-science-cycle.008.png")
+knitr::include_graphics("./img/data-science-cycle/data-science-cycle.008.png")
 ```
 
 ---
 
 ```{r echo=FALSE, out.width="90%", fig.align="left"}
-knitr::include_graphics("img/data-science-cycle/data-science-cycle.009.png")
+knitr::include_graphics("./img/data-science-cycle/data-science-cycle.009.png")
 ```
 
 ---
