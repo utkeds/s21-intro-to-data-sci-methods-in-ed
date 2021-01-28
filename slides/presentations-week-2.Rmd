@@ -25,6 +25,15 @@ we can do fun and ambitious things this semester.
 
 ---
 
+# Homework highlight #1
+
+
+---
+
+# Homework higlight #2
+
+---
+
 # Course organization
 
 - [Website](https://making-data-science-count.github.io/s21-intro-to-data-sci-methods-in-ed/)
@@ -120,7 +129,7 @@ here("data", "fall=2018-data-file.csv")
 
 ---
 
-# Installing another package
+# 2. Installing another package
 
 Tidyverse, a collection of R packages.
 
@@ -151,7 +160,7 @@ readr::read_csv(here("data", "filename.csv"))
 
 ---
 
-## Data 
+# 3. Data 
 
 .xlsx
 
@@ -162,7 +171,7 @@ read_excel((here("data", "schedule.xlsx")))
 
 ---
 
-## SPSS
+# 3. SPSS
 
 .sav
 
@@ -173,7 +182,7 @@ read_sav((here("data:, file-name.sav")))
 
 ---
 
-## Other data sources
+# 3. Other data sources
 
 Google Sheets
 
@@ -203,7 +212,7 @@ The parentheses are where we can provide arguments to a function.
 
 ---
 
-# Functions
+# 4. Functions
 
 - What is the name of the *package* used below?
 - What is the name of the *data* used below?
@@ -217,7 +226,7 @@ glimpse(mtcars)
 
 ---
 
-# Basic programming operators
+# 4. Basic programming operators
 
 `select()`
 
@@ -230,7 +239,7 @@ storms %>%
 
 ---
 
-`filter()`
+# 4. `filter()`
 
 ```{r}
 library(dplyr)
@@ -241,7 +250,7 @@ storms %>%
 
 ---
 
-`arrange()`
+# 4. `arrange()`
 
 ```{r}
 library(dplyr)
@@ -252,7 +261,7 @@ storms %>%
 
 ---
 
-# Putting it together
+# 4. Putting it together
 
 ```{r}
 storms %>% 
@@ -263,7 +272,7 @@ storms %>%
 
 ---
 
-Assignment operator
+# 4. Assignment operator
 
 ```{r}
 storms_in_august <- storms %>% 
@@ -272,18 +281,58 @@ storms_in_august <- storms %>%
   arrange(hour)
 ```
 
+What is one thing that is different between `storms_in_august` and `storms` ?
+
 ---
 
-Assignment operator
-
+# 4. Assignment operator
 
 ```{r}
-
+storms
 ```
 
 ---
 
-# Basic programming operators
+# 4. Assignment operator
+
+```{r}
+storms_in_august
+```
+
+---
+
+# 4. Assignment operator
+
+```{r}
+ncol(storms)
+```
+
+Tricky question: How many columns are present in `storms` after the following 
+operation?
+
+```{r, eval = FALSE}
+storms %>% 
+  select(name, year, status) 
+```
+
+---
+
+# 4. Assignment operators
+
+---
+
+# 4. Assignment operators
+
+How many now?
+
+```{r, eval = FALSE}
+storms <- storms %>% 
+  select(name, year, status) 
+```
+
+---
+
+# 4. Basic programming operators
 
 Math
 
@@ -297,7 +346,7 @@ z <- 4 / 2 ** 3
 
 ---
 
-# Basic programming operators
+# 4. Basic programming operators
 
 Logic
 
@@ -312,37 +361,11 @@ x | y
 !x
 ```
 
-
----
-
-# Basic programming operators
-
-Subsetting and accessing objects
-
-```{r}
-library(dplyr)
-# cols by name
-mtcars %>% 
-  select(mpg, cyl, hp)
-
-#mtcars
-# variables in data frame or tibble
-mtcars$mpg
-mtcars$cyl
-mtcars$hp
-
-# rows by index
-mtcars[1:10,]
-# rows by condition
-dplyr::filter(mtcars, mpg < 20)
-# cols by number
-mtcars[,c(1,2,4)]
-
-```
-
 ---
 
 # Breakout rooms
+
+Using `storms`: 
 
 ```{r}
 library(dplyr)
@@ -350,9 +373,10 @@ library(dplyr)
 storms
 ```
 
-Use `dplyr::select()`, `dplyr::filter()`, and `dplyr::arrange()`.
+Use `dplyr::select()`, `dplyr::filter()`, and `dplyr::arrange()` using *different* arguments
+than those used in any of the above examples.
 
-Create a new R Markdown document.
+Create a new R Markdown document. Share in your base group's channel on Slack.
 
 ---
 
