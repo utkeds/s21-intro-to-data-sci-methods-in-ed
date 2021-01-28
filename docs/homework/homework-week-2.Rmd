@@ -7,145 +7,57 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# Loading, setting up 
-
-Let's first load the {dataedu} package and the {tidyverse} suite of packages.
-
-Click the green arrow to the first right of what is a "code chunk" below:
-
-```{r}
-library(dataedu)
-library(tidyverse)
-
-sci_mo_processed %>% 
-  ggplot(aes(x = percentage_earned)) +
-  geom_density()
-```
-
-If you saw a plot, congratulations! Things are working just fine.
-
-What do you notice about this plot? What do you wonder?
-
-Here is the data set we will use; click the green arrow again:
-
-```{r}
-sci_mo_processed
-```
-
-# Selecting variables
-
-Let's select only a few variables.
-
-```{r}
-sci_mo_processed %>% 
-  select(student_id, course_id, percentage_earned)
-```
-
-**Try it out!**
-
-Let's try to *include one additional variable* in your select function, 
-
-First, type the name of the data to view a summary of your data (including what variables are included in it):
-
-```{r}
-sci_mo_processed
-```
-
-Then, add a new variable to the code below after percentage_earned, being careful to type the new variable name as it appears in the data. When you're ready, click the green arrow to view the result.
-
-```{r}
-sci_mo_processed %>% 
-  select(student_id, course_id, percentage_earned)
-```
-
-# Filtering variables
-
-Next, let's explore filtering variables
-
-```{r}
-sci_mo_processed %>% 
-  filter(percentage_earned >= .60)
-```
-
-What do you think will happen if we add another condition to the filter statement?
-
-**Try it out!**
-
-Let's try to filter on TimeSpent, which is a variable for how many minutes students were on the course Learning Management System (LMS).
-
-Be sure to run the result to see whether it did what you think it should do!
-
-```{r}
-sci_mo_processed %>% 
-  filter(percentage_earned >= .60,
-         TimeSpent > )
-```
-
-# Creating a plot (with ggplot2)
-
-What do you think this code will do?
-
-```{r}
-sci_mo_processed %>% 
-  ggplot(aes(x = TimeSpent)) +
-  geom_histogram()
-```
-
-**Try it out!**
-
-Now, add TimeSpent to the code below as the variable that will correspond to the *y*-axis. 
-
-Notice that instead of using geom_density, we're using geom_point. What do you think
-this will create?
-
-Be sure to run the code chunk to see the result.
-
-```{r}
-sci_mo_processed %>% 
-  ggplot(aes(x = percentage_earned, y = )) +
-  geom_point()
-```
-
----
-
-# Rendering this document to a PDF report 
-
-- add your name as the author at the very top of this document
-- click "Knit" and check out the result!
-
-# Visualizing a larger dataset (leap)
-
-Can you filter or select variables from the dataset below?
-
-Can you select a smaller number of variables from the dataset below?
-
-If you add to this code, change the chunk option eval = FALSE to eval = TRUE!
-
-```{r, eval = FALSE}
-tt_tweets
-```
-
-
-
-
-
-
 ## Setting up your environment
 
+Save this file to a directory where you will keep you work for the semester.
+
+Associate that directory with an R project.
+
+For more instructions on how to do that see video.
+
+```{r}
+rprojroot::has_file('.Rproj')
+rprojroot::find_root(criterion = rprojroot::is_rstudio_project)
+here::here()
+```
+
+## Read data
+
+There is a file called answer_export.csv in the data folder here: https://github.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed
+
+Download that file to your project directory.
+
+In the code chunk below, load the readr package, read the file in and assign it to the name `data`.
+
+```{r}
 
 
 
+exists("data")
+```
 
 
-## Read in this data file
+## Examine data
 
+How many rows and columns does `data` have?
 
+Put a way of finding out in the chunk below
 
+```{r}
 
+```
 
+Get the last 10 rows and last 2 columns of `data` in the chunk below
 
+```{r}
 
+```
 
+Get the `content` and `session_id` variables from `data` in the chunk below
+
+```{r}
+
+```
 
 
 ## Self-assessment and reflection
@@ -154,6 +66,7 @@ Respond to the following three questions on a 1 (not at all) to 5 (very much)
 scale by replacing the "x" below with your response:
 
 ```{r}
+x = NULL
 tibble::tribble(
   ~question,                                   ~response,
   "How challenging was this homework?",        x,
