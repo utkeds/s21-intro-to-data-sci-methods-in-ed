@@ -326,6 +326,32 @@ storms <- storms %>%
   select(name, year, status) 
 ```
 
+
+---
+
+# 4. Pipe operator
+
+We've been using the pipe operator `%>%` from the magrittr package
+
+The pipe sends the results of a function (or object) from left side of pipe as the first argument of next function after pipe.
+
+So instead of this:
+
+```{r, eval = FALSE}
+library(magrittr)
+library(dplyr)
+
+mtfilter <- dplyr::filter(mtcars, mpg < 20)
+mtsubset <- dplyr::select(mtfilter, mpg, cyl, disp)
+```
+
+We can do this:
+
+```{r, eval = FALSE }
+mtcars %>% dplyr::filter(mtcars, mpg < 20) %>% dplyr::select(mpg, cyl, disp)
+```
+
+
 ---
 
 # 4. Basic programming operators
@@ -338,6 +364,7 @@ x
 y <- 2 + 3 -1
 y
 z <- 4 / 2 ** 3
+z
 ```
 
 ---
