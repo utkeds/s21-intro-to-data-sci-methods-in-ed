@@ -1,7 +1,6 @@
 ---
-title: "1-setting-up-demo-doc"
-author: ""
-output: pdf_document
+title: "HW Week 2 - Foundational Skills"
+output: html_document
 ---
 
 ```{r setup, include=FALSE}
@@ -125,3 +124,47 @@ If you add to this code, change the chunk option eval = FALSE to eval = TRUE!
 ```{r, eval = FALSE}
 tt_tweets
 ```
+
+
+
+
+
+
+## Setting up your environment
+
+
+
+
+
+
+## Read in this data file
+
+
+
+
+
+
+
+
+
+
+## Self-assessment and reflection
+
+Respond to the following three questions on a 1 (not at all) to 5 (very much) 
+scale by replacing the "x" below with your response:
+
+```{r}
+tibble::tribble(
+  ~question,                                   ~response,
+  "How challenging was this homework?",        x,
+  "How interesting was this homework to you?", x,
+  "How valuable was this homework to you?",    x
+)
+```
+
+Include any other comments, feedback, or reflections on this homework below:
+
+
+
+If you like, you can post these other comments, feedback, or reflections in the 
+message you post to #homework in Slack to share what you've done.
