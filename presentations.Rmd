@@ -4,4 +4,4 @@ output: html_document
 ---
 
 - Week 1: [RMD](https://github.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed/blob/main/presentations-week-1.Rmd), [HTML](slides/presentations-week-1.html)
-- Week 2: [RMD](https://github.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed/blob/main/slides/presentations-week-2.Rmd), [HTML](https://making-data-science-count.github.io/s21-intro-to-data-sci-methods-in-ed/slides/presentations-week-2.html#1)
+- Week 2: [RMD](https://github.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed/blob/main/slides/presentations-week-2.Rmd), [HTML](slides/presentations-week-2.html)
