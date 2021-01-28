@@ -1,7 +1,7 @@
 ---
 title: "Week 2: Foundational Skills"
 subtitle: ""
-author: "Joshua M. Rosenberg, Alex Lishinski"
+author: "Joshua Rosenberg, Alex Lishinski"
 date: "January 28, 2021"
 output:
   xaringan::moon_reader:
@@ -13,8 +13,73 @@ output:
       countIncrementalSlides: false
 ---
 
+# Welcome!
 
-## Projects and Directories: Setting up your environment
+Welcome to *week 2*!
+
+Great job last week. 
+
+We now feel like we have a set of **high expectations to meet** and be 
+held to. If you have any anxiety, rest assured that we do, too, but we believe 
+we can do fun and ambitious things this semester. 
+
+---
+
+# Course organization
+
+- [Website](https://making-data-science-count.github.io/s21-intro-to-data-sci-methods-in-ed/)
+  - Syllabus
+  - Presentations
+  - Homework
+  - Videos (recordings of class and about specific topics)
+  
+- Slack: https://datascienceinedu.slack.com/home
+- Zoom: https://tennessee.zoom.us/j/98262405076
+
+- Email: jrosenb8@utk.edu and alishins@utk.edu
+
+---
+
+# Breakout rooms!
+
+Starting with whomever had the most sleep last night... 
+
+- Remind base group members of your name (and, if you like, your program)
+- What was one “win” you had from the homework?
+- What was one challenge you had from the homework?
+
+(10 minutes)
+
+---
+
+# Foundational R skills
+
+A general framework for you to use as a foundation and as a set of concepts to help you work through the class.
+
+The four core concepts we will use to build our framework are:
+
+1. Projects
+1. Packages
+1. Data
+1. Functions
+
+You will use each of these in most of your analyses with R.
+
+---
+
+# Course text
+
+```{r, echo = FALSE, out.width="30%", fig.align='center'}
+knitr::include_graphics("https://datascienceineducation.com/dsieur-cover-routledge.jpg")
+```
+
+http://datascienceineducation.com/
+
+https://github.com/data-edu/data-science-in-education
+
+---
+
+## 1. Projects
 
 Working Directories 
 
@@ -24,65 +89,127 @@ getwd()
 
 R Projects 
 
-Project options saved in .Rproj file
+Project options are saved in .Rproj file
 
-here package
+The here package helps you to navigate around in a project:
 
 ```{r}
 library(here)
-# base project folder identified by here()
-here() 
-# data subfolder within base folder
-here("data")
+
+# data file
+here("data", "fall=2018-data-file.csv")
 ```
 
 ---
 
-# Packages
+# 2. Packages
 
 1. What are packages? 
   + Code bundles that add functionality to R
+  + Examples: ggplot2, dplyr, rtweet, quanteda, lme4
 1. Where do we get packages?
-  + CRAN or github
+  + CRAN or GitHub
 1. How do we install packages?
   + install.packages("pkg-name")
 1. How do we know what packages to use?
   + Searching 
+  + People and news related to R (more later - there are *tons*)
   + CRAN task views
 1. How do we use packages?
-  + library("pkg-name")
+  + `library(pkgname)`
 
 ---
 
-## Data
+# Installing another package
+
+Tidyverse, a collection of R packages.
+
+https://www.tidyverse.org/
+
+Install via the following (do this now):
+
+```{r, eval = FALSE}
+install.packages("tidyverse")
+```
+
+What issues have arisen?
+
+---
+
+# 3. Data
+
+So far, we have used *built-in data*. There is a lot of built-in data!
 
 Loading different types of data
 
-.csv
+Comma-seperated values (.csv)
 
-```{r}
+```{r, eval = FALSE}
 library(readr)
-#readr::read_csv(here("data", "filename.csv"))
+readr::read_csv(here("data", "filename.csv"))
 ```
+
+---
+
+## Data 
+
 .xlsx
 
-```{r}
+```{r, eval = FALSE}
 library(readxl)
 read_excel((here("data", "schedule.xlsx")))
 ```
 
+---
+
+## SPSS
+
 .sav
 
-```{r}
+```{r, eval = FALSE}
 library(haven)
-#read_sav((here("file-name.sav")))
+read_sav((here("data:, file-name.sav")))
 ```
 
 ---
 
-## Functions
+## Other data sources
 
-```{r}
+Google Sheets
+
+```{r, eval = FALSE}
+library(googlesheets4)
+```
+
+Web
+
+```{r, eval = FALSE}
+read_csv("https://github.com/data-edu/dataedu/raw/master/data-raw/wt01_online-science-motivation/raw/s12-course-data.csv")
+```
+
+---
+
+# 4. Functions
+
+- A function is a reusable piece of code that allows us to consistently repeat a programming task
+
+- Functions in R can be identified by a word followed by a set of parentheses, like so: `word()`. 
+
+More often than not, the word is a verb, such as `filter()`, suggesting that we’re about to perform an action. 
+
+Indeed, functions act like verbs: they tell R what to do with our data.
+
+The parentheses are where we can provide arguments to a function.
+
+---
+
+# Functions
+
+- What is the name of the *package* used below?
+- What is the name of the *data* used below?
+- What is the name of the function used below?*
+
+```{r, eval = FALSE}
 library(dplyr)
 #mtcars
 glimpse(mtcars)
@@ -90,34 +217,68 @@ glimpse(mtcars)
 
 ---
 
-## Finding help
+# Basic programming operators
+
+`select()`
 
 ```{r}
-?mean
-?dplyr::filter
+library(dplyr)
+
+storms %>% 
+  select(name, year, month, day, hour, status)
 ```
 
 ---
 
-## Trying out a new function and working through challenges
+`filter()`
+
+```{r}
+library(dplyr)
+
+storms %>% 
+  filter(month == 8)
+```
 
 ---
 
-# Basic programming operators
+`arrange()`
+
+```{r}
+library(dplyr)
+
+storms %>% 
+  arrange(hour)
+```
+
+---
+
+# Putting it together
+
+```{r}
+storms %>% 
+  select(name, year, month, day, hour, status) %>% 
+  filter(month == 8) %>% 
+  arrange(hour)
+```
+
+---
 
 Assignment operator
 
 ```{r}
-thing1 <- "text"
-thing1
-thing2 <- 2
-thing2
-thing3 <- c(1,2,3,4,5)
-thing3
-thing4 <- 4.5729
-thing4
-thing5 <- TRUE
-thing5
+storms_in_august <- storms %>% 
+  select(name, year, month, day, hour, status) %>% 
+  filter(month == 8) %>% 
+  arrange(hour)
+```
+
+---
+
+Assignment operator
+
+
+```{r}
+
 ```
 
 ---
@@ -159,27 +320,39 @@ x | y
 Subsetting and accessing objects
 
 ```{r}
+library(dplyr)
+# cols by name
+mtcars %>% 
+  select(mpg, cyl, hp)
+
 #mtcars
 # variables in data frame or tibble
 mtcars$mpg
-# rows by number
+mtcars$cyl
+mtcars$hp
+
+# rows by index
 mtcars[1:10,]
 # rows by condition
 dplyr::filter(mtcars, mpg < 20)
 # cols by number
 mtcars[,c(1,2,4)]
-# cols by name
-dplyr::select(mtcars, mpg, cyl, hp)
+
 ```
-
-
 
 ---
 
-## Readings
+# Breakout rooms
 
-Textbook chapter - Foundational skills: https://datascienceineducation.com/c06.html
-Grammar of Graphics: http://vita.had.co.nz/papers/layered-grammar.pdf
+```{r}
+library(dplyr)
+
+storms
+```
+
+Use `dplyr::select()`, `dplyr::filter()`, and `dplyr::arrange()`.
+
+Create a new R Markdown document.
 
 ---
 
@@ -190,3 +363,35 @@ Grammar of Graphics: http://vita.had.co.nz/papers/layered-grammar.pdf
 1. Videos
 1. Cleaning data
 1. Social media / textual data / qualitative data
+
+---
+
+## Readings
+
+Two assigned readings for the next week:
+
+- Data Science in Education Using R (DSIEUR) chapter #3: https://datascienceineducation.com/c03.html
+- Grammar of Graphics: http://vita.had.co.nz/papers/layered-grammar.pdf
+
+---
+
+## Coming up
+
+### This week
+
+- Readings (by next class; Thursday, 2/4)
+- HW2
+- Optional office hours (Tuesday, 2/2, 4-4:30 pm; same Zoom room)
+
+### Next week
+
+- Exam 1
+
+---
+
+# Wrapping up
+
+In your base group's Slack channel:
+
+- What is one thing you took away from today?
+- What is something you want to learn more about? 
