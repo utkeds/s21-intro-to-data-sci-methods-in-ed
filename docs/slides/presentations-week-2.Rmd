@@ -1,0 +1,192 @@
+---
+title: "Week 2: Foundational Skills"
+subtitle: ""
+author: "Joshua M. Rosenberg, Alex Lishinski"
+date: "January 28, 2021"
+output:
+  xaringan::moon_reader:
+    css: [theme.css]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+
+## Projects and Directories: Setting up your environment
+
+Working Directories
+
+```{r}
+getwd() 
+```
+
+R Projects 
+
+Project options saved in .Rproj file
+
+here package
+
+```{r}
+library(here)
+# base project folder identified by here()
+here() 
+# data subfolder within base folder
+here("data")
+```
+
+---
+
+# Packages
+
+1. What are packages? 
+  + Code bundles that add functionality to R
+1. Where do we get packages?
+  + CRAN or github
+1. How do we install packages?
+  + install.packages("pkg-name")
+1. How do we know what packages to use?
+  + Searching 
+  + CRAN task views
+1. How do we use packages?
+  + library("pkg-name")
+
+---
+
+## Data
+
+Loading different types of data
+
+.csv
+
+```{r}
+library(readr)
+#readr::read_csv(here("data", "filename.csv"))
+```
+.xlsx
+
+```{r}
+library(readxl)
+read_excel((here("data", "schedule.xlsx")))
+```
+
+.sav
+
+```{r}
+library(haven)
+#read_sav((here("file-name.sav")))
+```
+
+---
+
+## Functions
+
+```{r}
+library(dplyr)
+#mtcars
+glimpse(mtcars)
+```
+
+---
+
+## Finding help
+
+```{r}
+?mean
+?dplyr::filter
+```
+
+---
+
+## Trying out a new function and working through challenges
+
+---
+
+# Basic programming operators
+
+Assignment operator
+
+```{r}
+thing1 <- "text"
+thing1
+thing2 <- 2
+thing2
+thing3 <- c(1,2,3,4,5)
+thing3
+thing4 <- 4.5729
+thing4
+thing5 <- TRUE
+thing5
+```
+
+---
+
+# Basic programming operators
+
+Math
+
+```{r}
+x <- 3 * 4
+x
+y <- 2 + 3 -1
+y
+z <- 4 / 2 ** 3
+```
+
+---
+
+# Basic programming operators
+
+Logic
+
+```{r}
+x <- TRUE
+y <- FALSE
+# and
+x & y
+# or 
+x | y
+# not 
+!x
+```
+
+
+---
+
+# Basic programming operators
+
+Subsetting and accessing objects
+
+```{r}
+#mtcars
+# variables in data frame or tibble
+mtcars$mpg
+# rows by number
+mtcars[1:10,]
+# rows by condition
+dplyr::filter(mtcars, mpg < 20)
+# cols by number
+mtcars[,c(1,2,4)]
+# cols by name
+dplyr::select(mtcars, mpg, cyl, hp)
+```
+
+
+
+---
+
+## Readings
+
+Textbook chapter - Foundational skills: https://datascienceineducation.com/c06.html
+Grammar of Graphics: http://vita.had.co.nz/papers/layered-grammar.pdf
+
+---
+
+# Syllabus Discussion
+
+1. Big project - topics, proposals 
+1. Assignment details
+1. Videos
+1. Cleaning data
+1. Social media / textual data / qualitative data

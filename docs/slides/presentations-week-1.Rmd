@@ -83,7 +83,34 @@ class: inverse, center, middle
 ---
   
 
-# Breakout rooms!
+# #whoami
+
+.pull-left[
+* Alex Lishinski, Ph.D.
+* Contact: 
+  * [@html034](https://twitter.com/html034)
+  * [@html034@fosstodon.org](https://fosstodon.org/@html034)
+  * [alishins@utk.edu](mailto:alishins@utk.edu)
+  * https://alexlishinski.com
+* Postdoctoral researcher, CS Education, University of Tennessee, Knoxville
+* Dad (3 year old toddler)
+* Primary areas of interest:
+  * Computer Science education
+  * Quantitative research methods
+  * Data science in education
+* Former philosopher
+]
+
+```{r, out.width = "400px", echo = FALSE, fig.align = "center", message = FALSE}
+library(here)
+include_graphics(here("libs", "img", ".jpg"))
+```
+
+---
+
+# Getting to know one another
+
+## Breakout rooms!
 
 Starting with whomever had a snack or meal most recently, discuss . . . 
 
@@ -96,6 +123,7 @@ Starting with whomever had a snack or meal most recently, discuss . . .
 ---
 
 class: inverse, center, middle
+
 
 # Part 2/5: Introductions (to the class)
 
@@ -125,8 +153,8 @@ A - No, but many themes are shared.
 **Q - What computing language will we learn?**  
 A - R.
 
-**Q: Why not language X?**  
-A: We can discuss that over coffee.
+**Q: Why not python?**  
+A: We can discuss that over coffee. (but short answer, it's doesn't have the data science functionality that R has, natively and through packages)
 ]
 
 ---
@@ -145,7 +173,11 @@ knitr::include_graphics("img/r.png")
 ---
 
 ```{r echo=FALSE, out.width="73%", fig.align="left"}
+<<<<<<< HEAD:presentations-week-1.Rmd
+knitr::include_graphics(here("libs", "img", "RStudio.png"))
+=======
 knitr::include_graphics("img/rstudio.png")
+>>>>>>> origin/main:docs/slides/presentations-week-1.Rmd
 ```
 
 ---
