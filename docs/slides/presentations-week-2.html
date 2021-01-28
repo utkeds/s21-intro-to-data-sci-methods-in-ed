@@ -3,8 +3,9 @@
   <head>
     <title>Week 2: Foundational Skills</title>
     <meta charset="utf-8" />
-    <meta name="author" content="Joshua M. Rosenberg, Alex Lishinski" />
+    <meta name="author" content="Joshua Rosenberg, Alex Lishinski" />
     <meta name="date" content="2021-01-28" />
+    <script src="libs/header-attrs-2.6/header-attrs.js"></script>
     <link rel="stylesheet" href="theme.css" type="text/css" />
   </head>
   <body>
@@ -12,14 +13,86 @@
 class: center, middle, inverse, title-slide
 
 # Week 2: Foundational Skills
-### Joshua M. Rosenberg, Alex Lishinski
+### Joshua Rosenberg, Alex Lishinski
 ### January 28, 2021
 
 ---
 
 
+# Welcome!
 
-## Projects and Directories: Setting up your environment
+Welcome to *week 2*!
+
+Great job last week. 
+
+We now feel like we have a set of **high expectations to meet** and be 
+held to. If you have any anxiety, rest assured that we do, too, but we believe 
+we can do fun and ambitious things this semester. 
+
+---
+
+# Homework highlight #1
+
+
+---
+
+# Homework higlight #2
+
+---
+
+# Course organization
+
+- [Website](https://making-data-science-count.github.io/s21-intro-to-data-sci-methods-in-ed/)
+  - Syllabus
+  - Presentations
+  - Homework
+  - Videos (recordings of class and about specific topics)
+  
+- Slack: https://datascienceinedu.slack.com/home
+- Zoom: https://tennessee.zoom.us/j/98262405076
+
+- Email: jrosenb8@utk.edu and alishins@utk.edu
+
+---
+
+# Breakout rooms!
+
+Starting with whomever had the most sleep last night... 
+
+- Remind base group members of your name (and, if you like, your program)
+- What was one “win” you had from the homework?
+- What was one challenge you had from the homework?
+
+(10 minutes)
+
+---
+
+# Foundational R skills
+
+A general framework for you to use as a foundation and as a set of concepts to help you work through the class.
+
+The four core concepts we will use to build our framework are:
+
+1. Projects
+1. Packages
+1. Data
+1. Functions
+
+You will use each of these in most of your analyses with R.
+
+---
+
+# Course text
+
+&lt;img src="https://datascienceineducation.com/dsieur-cover-routledge.jpg" width="30%" style="display: block; margin: auto;" /&gt;
+
+http://datascienceineducation.com/
+
+https://github.com/data-edu/data-science-in-education
+
+---
+
+## 1. Projects
 
 Working Directories 
 
@@ -29,72 +102,79 @@ getwd()
 ```
 
 ```
-## [1] "/home/alishinski/Documents/work/s21-intro-data-sci/docs/slides"
+## [1] "/Users/joshuarosenberg/s21-intro-to-data-sci-methods-in-ed/slides"
 ```
 
 R Projects 
 
-Project options saved in .Rproj file
+Project options are saved in .Rproj file
 
-here package
+The here package helps you to navigate around in a project:
 
 
 ```r
 library(here)
-```
 
-```
-## here() starts at /home/alishinski/Documents/work/s21-intro-data-sci
-```
-
-```r
-# base project folder identified by here()
-here() 
-```
-
-```
-## [1] "/home/alishinski/Documents/work/s21-intro-data-sci"
-```
-
-```r
-# data subfolder within base folder
-here("data")
-```
-
-```
-## [1] "/home/alishinski/Documents/work/s21-intro-data-sci/data"
+# data file
+here("data", "fall=2018-data-file.csv")
 ```
 
 ---
 
-# Packages
+# 2. Packages
 
 1. What are packages? 
   + Code bundles that add functionality to R
+  + Examples: ggplot2, dplyr, rtweet, quanteda, lme4
 1. Where do we get packages?
-  + CRAN or github
+  + CRAN or GitHub
 1. How do we install packages?
   + install.packages("pkg-name")
 1. How do we know what packages to use?
   + Searching 
+  + People and news related to R (more later - there are *tons*)
   + CRAN task views
 1. How do we use packages?
-  + library("pkg-name")
+  + `library(pkgname)`
 
 ---
 
-## Data
+# 2. Installing another package
+
+Tidyverse, a collection of R packages.
+
+https://www.tidyverse.org/
+
+Install via the following (do this now):
+
+
+```r
+install.packages("tidyverse")
+```
+
+What issues have arisen?
+
+---
+
+# 3. Data
+
+So far, we have used *built-in data*. There is a lot of built-in data!
 
 Loading different types of data
 
-.csv
+Comma-separated values (`.csv`)
 
 
 ```r
 library(readr)
-#readr::read_csv(here("data", "filename.csv"))
+readr::read_csv(here("data", "filename.csv"))
 ```
-.xlsx
+
+---
+
+# 3. Data 
+
+`.xlsx`
 
 
 ```r
@@ -102,151 +182,289 @@ library(readxl)
 read_excel((here("data", "schedule.xlsx")))
 ```
 
-```
-## # A tibble: 15 x 5
-##    Date      Unit       Topic                    Homework `Assignment Due`      
-##    &lt;chr&gt;     &lt;chr&gt;      &lt;chr&gt;                    &lt;chr&gt;    &lt;chr&gt;                 
-##  1 Week 1  … 1: Gettin… Introductions to each o… HW1      &lt;NA&gt;                  
-##  2 &lt;NA&gt;      &lt;NA&gt;       &lt;NA&gt;                     &lt;NA&gt;     &lt;NA&gt;                  
-##  3 Week 2  … &lt;NA&gt;       Foundational skills: Pr… HW2      &lt;NA&gt;                  
-##  4 Week 3  … 2: Explor… Visualization data with… HW3      Exam 1                
-##  5 Week 4  … &lt;NA&gt;       More visualization with… HW4      Privacy Statement (In…
-##  6 Week 5  … &lt;NA&gt;       Wrangling and “tidying”… HW5      &lt;NA&gt;                  
-##  7 Week 6  … &lt;NA&gt;       Summarizing data descri… HW6      &lt;NA&gt;                  
-##  8 Week 7  … 3: Ethics  Surveillance and privacy HW8      Exam 2                
-##  9 Week 8  … &lt;NA&gt;       Strategic (and not stra… HW9      Privacy Statement (In…
-## 10 Week 9  … &lt;NA&gt;       Protecting anonymous da… HW10     &lt;NA&gt;                  
-## 11 Week 10 … 4: Making… Estimating parameters    HW10     Exam 3                
-## 12 Week 11 … &lt;NA&gt;       Making inferences about… HW11     &lt;NA&gt;                  
-## 13 Week 12 … &lt;NA&gt;       Communicating results e… HW12     &lt;NA&gt;                  
-## 14 Week 13 … 5: Lookin… A buffet of advanced me… HW13     Final presentation; P…
-## 15 Week 14 … &lt;NA&gt;       A buffet of advanced me… HW14     Feedback on final pre…
-```
+---
 
-.sav
+# 3. SPSS
+
+`.sav`
 
 
 ```r
 library(haven)
-#read_sav((here("file-name.sav")))
+read_sav((here("data:, file-name.sav")))
 ```
 
 ---
 
-## Functions
+# 3. Other data sources
+
+Google Sheets
+
+
+```r
+library(googlesheets4)
+```
+
+Web
+
+
+```r
+read_csv("https://github.com/data-edu/dataedu/raw/master/data-raw/wt01_online-science-motivation/raw/s12-course-data.csv")
+```
+
+---
+
+# 4. Functions
+
+- A function is a reusable piece of code that allows us to consistently repeat a programming task
+
+- Functions in R can be identified by a word followed by a set of parentheses, like so: `word()`. 
+
+More often than not, the word is a verb, such as `filter()`, suggesting that we’re about to perform an action. 
+
+Indeed, functions act like verbs: they tell R what to do with our data.
+
+The parentheses are where we can provide arguments.
+
+---
+
+# 4. Functions
+
+- What is the name of the *package* used below?
+- What is the name of the *data* used below?
+- What is the name of the function used below?*
 
 
 ```r
 library(dplyr)
-```
-
-```
-## 
-## Attaching package: 'dplyr'
-```
-
-```
-## The following objects are masked from 'package:stats':
-## 
-##     filter, lag
-```
-
-```
-## The following objects are masked from 'package:base':
-## 
-##     intersect, setdiff, setequal, union
-```
-
-```r
 #mtcars
 glimpse(mtcars)
 ```
 
+---
+
+# 4. Programming operators
+
+`select()`
+
+
+```r
+library(dplyr)
+
+storms %&gt;% 
+  select(name, year, month, day, hour, status)
 ```
-## Rows: 32
-## Columns: 11
-## $ mpg  &lt;dbl&gt; 21.0, 21.0, 22.8, 21.4, 18.7, 18.1, 14.3, 24.4, 22.8, 19.2, 17.8…
-## $ cyl  &lt;dbl&gt; 6, 6, 4, 6, 8, 6, 8, 4, 4, 6, 6, 8, 8, 8, 8, 8, 8, 4, 4, 4, 4, 8…
-## $ disp &lt;dbl&gt; 160.0, 160.0, 108.0, 258.0, 360.0, 225.0, 360.0, 146.7, 140.8, 1…
-## $ hp   &lt;dbl&gt; 110, 110, 93, 110, 175, 105, 245, 62, 95, 123, 123, 180, 180, 18…
-## $ drat &lt;dbl&gt; 3.90, 3.90, 3.85, 3.08, 3.15, 2.76, 3.21, 3.69, 3.92, 3.92, 3.92…
-## $ wt   &lt;dbl&gt; 2.620, 2.875, 2.320, 3.215, 3.440, 3.460, 3.570, 3.190, 3.150, 3…
-## $ qsec &lt;dbl&gt; 16.46, 17.02, 18.61, 19.44, 17.02, 20.22, 15.84, 20.00, 22.90, 1…
-## $ vs   &lt;dbl&gt; 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0…
-## $ am   &lt;dbl&gt; 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0…
-## $ gear &lt;dbl&gt; 4, 4, 4, 3, 3, 3, 3, 4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 4, 4, 4, 3, 3…
-## $ carb &lt;dbl&gt; 4, 4, 1, 1, 2, 1, 4, 2, 2, 4, 4, 3, 3, 3, 4, 4, 4, 1, 2, 1, 1, 2…
+
+```
+## # A tibble: 10,010 x 6
+##    name   year month   day  hour status             
+##    &lt;chr&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;              
+##  1 Amy    1975     6    27     0 tropical depression
+##  2 Amy    1975     6    27     6 tropical depression
+##  3 Amy    1975     6    27    12 tropical depression
+##  4 Amy    1975     6    27    18 tropical depression
+##  5 Amy    1975     6    28     0 tropical depression
+##  6 Amy    1975     6    28     6 tropical depression
+##  7 Amy    1975     6    28    12 tropical depression
+##  8 Amy    1975     6    28    18 tropical depression
+##  9 Amy    1975     6    29     0 tropical storm     
+## 10 Amy    1975     6    29     6 tropical storm     
+## # … with 10,000 more rows
 ```
 
 ---
 
-## Finding help
+# 4. `filter()`
 
 
 ```r
-?mean
-?dplyr::filter
+library(dplyr)
+
+storms %&gt;% 
+  filter(month == 8)
+```
+
+```
+## # A tibble: 2,400 x 13
+##    name   year month   day  hour   lat  long status category  wind pressure
+##    &lt;chr&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;  &lt;ord&gt;    &lt;int&gt;    &lt;int&gt;
+##  1 Caro…  1975     8    24    12  22.4 -69.8 tropi… -1          25     1011
+##  2 Caro…  1975     8    24    18  21.9 -71.1 tropi… -1          25     1011
+##  3 Caro…  1975     8    25     0  21.6 -72.5 tropi… -1          25     1010
+##  4 Caro…  1975     8    25     6  21.2 -73.8 tropi… -1          25     1010
+##  5 Caro…  1975     8    25    12  20.9 -75.1 tropi… -1          25     1011
+##  6 Caro…  1975     8    25    18  20.6 -76.4 tropi… -1          25     1011
+##  7 Caro…  1975     8    26     0  20.4 -77.7 tropi… -1          25     1011
+##  8 Caro…  1975     8    26     6  20.3 -79   tropi… -1          25     1011
+##  9 Caro…  1975     8    26    12  20.2 -80.3 tropi… -1          25     1012
+## 10 Caro…  1975     8    26    18  20.2 -81.6 tropi… -1          25     1012
+## # … with 2,390 more rows, and 2 more variables: ts_diameter &lt;dbl&gt;,
+## #   hu_diameter &lt;dbl&gt;
 ```
 
 ---
 
-## Trying out a new function and working through challenges
-
----
-
-# Basic programming operators
-
-Assignment operator
+# 4. `arrange()`
 
 
 ```r
-thing1 &lt;- "text"
-thing1
+library(dplyr)
+
+storms %&gt;% 
+  arrange(hour)
 ```
 
 ```
-## [1] "text"
-```
-
-```r
-thing2 &lt;- 2
-thing2
-```
-
-```
-## [1] 2
-```
-
-```r
-thing3 &lt;- c(1,2,3,4,5)
-thing3
-```
-
-```
-## [1] 1 2 3 4 5
-```
-
-```r
-thing4 &lt;- 4.5729
-thing4
-```
-
-```
-## [1] 4.5729
-```
-
-```r
-thing5 &lt;- TRUE
-thing5
-```
-
-```
-## [1] TRUE
+## # A tibble: 10,010 x 13
+##    name   year month   day  hour   lat  long status category  wind pressure
+##    &lt;chr&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;  &lt;ord&gt;    &lt;int&gt;    &lt;int&gt;
+##  1 Amy    1975     6    27     0  27.5 -79   tropi… -1          25     1013
+##  2 Amy    1975     6    28     0  31.5 -78.8 tropi… -1          25     1012
+##  3 Amy    1975     6    29     0  34.4 -75.8 tropi… 0           35     1004
+##  4 Amy    1975     6    30     0  34.3 -71.6 tropi… 0           50      998
+##  5 Amy    1975     7     1     0  36.2 -69.8 tropi… 0           60      984
+##  6 Amy    1975     7     2     0  37.4 -66.7 tropi… 0           60      984
+##  7 Amy    1975     7     3     0  37.7 -62.8 tropi… 0           55      986
+##  8 Amy    1975     7     4     0  42.5 -54.8 tropi… 0           50      986
+##  9 Caro…  1975     8    25     0  21.6 -72.5 tropi… -1          25     1010
+## 10 Caro…  1975     8    26     0  20.4 -77.7 tropi… -1          25     1011
+## # … with 10,000 more rows, and 2 more variables: ts_diameter &lt;dbl&gt;,
+## #   hu_diameter &lt;dbl&gt;
 ```
 
 ---
 
-# Basic programming operators
+# 4. Putting it together
+
+
+```r
+storms %&gt;% 
+  select(name, year, month, day, hour, status) %&gt;% 
+  filter(month == 8) %&gt;% 
+  arrange(hour)
+```
+
+```
+## # A tibble: 2,400 x 6
+##    name      year month   day  hour status             
+##    &lt;chr&gt;    &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;              
+##  1 Caroline  1975     8    25     0 tropical depression
+##  2 Caroline  1975     8    26     0 tropical depression
+##  3 Caroline  1975     8    27     0 tropical depression
+##  4 Caroline  1975     8    28     0 tropical depression
+##  5 Caroline  1975     8    29     0 tropical depression
+##  6 Caroline  1975     8    30     0 hurricane          
+##  7 Caroline  1975     8    31     0 hurricane          
+##  8 Doris     1975     8    30     0 tropical storm     
+##  9 Doris     1975     8    31     0 hurricane          
+## 10 Belle     1976     8     7     0 tropical storm     
+## # … with 2,390 more rows
+```
+
+---
+
+# 4. Assignment operator
+
+
+```r
+storms_in_august &lt;- storms %&gt;% 
+  select(name, year, month, day, hour, status) %&gt;% 
+  filter(month == 8) %&gt;% 
+  arrange(hour)
+```
+
+What is one thing that is different between `storms_in_august` and `storms` ?
+
+---
+
+# 4. Assignment operator
+
+
+```r
+storms
+```
+
+```
+## # A tibble: 10,010 x 13
+##    name   year month   day  hour   lat  long status category  wind pressure
+##    &lt;chr&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;  &lt;ord&gt;    &lt;int&gt;    &lt;int&gt;
+##  1 Amy    1975     6    27     0  27.5 -79   tropi… -1          25     1013
+##  2 Amy    1975     6    27     6  28.5 -79   tropi… -1          25     1013
+##  3 Amy    1975     6    27    12  29.5 -79   tropi… -1          25     1013
+##  4 Amy    1975     6    27    18  30.5 -79   tropi… -1          25     1013
+##  5 Amy    1975     6    28     0  31.5 -78.8 tropi… -1          25     1012
+##  6 Amy    1975     6    28     6  32.4 -78.7 tropi… -1          25     1012
+##  7 Amy    1975     6    28    12  33.3 -78   tropi… -1          25     1011
+##  8 Amy    1975     6    28    18  34   -77   tropi… -1          30     1006
+##  9 Amy    1975     6    29     0  34.4 -75.8 tropi… 0           35     1004
+## 10 Amy    1975     6    29     6  34   -74.8 tropi… 0           40     1002
+## # … with 10,000 more rows, and 2 more variables: ts_diameter &lt;dbl&gt;,
+## #   hu_diameter &lt;dbl&gt;
+```
+
+---
+
+# 4. Assignment operator
+
+
+```r
+storms_in_august
+```
+
+```
+## # A tibble: 2,400 x 6
+##    name      year month   day  hour status             
+##    &lt;chr&gt;    &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;              
+##  1 Caroline  1975     8    25     0 tropical depression
+##  2 Caroline  1975     8    26     0 tropical depression
+##  3 Caroline  1975     8    27     0 tropical depression
+##  4 Caroline  1975     8    28     0 tropical depression
+##  5 Caroline  1975     8    29     0 tropical depression
+##  6 Caroline  1975     8    30     0 hurricane          
+##  7 Caroline  1975     8    31     0 hurricane          
+##  8 Doris     1975     8    30     0 tropical storm     
+##  9 Doris     1975     8    31     0 hurricane          
+## 10 Belle     1976     8     7     0 tropical storm     
+## # … with 2,390 more rows
+```
+
+---
+
+# 4. Assignment operator
+
+
+```r
+ncol(storms)
+```
+
+```
+## [1] 13
+```
+
+Tricky question: How many columns are present in `storms` after the following 
+operation?
+
+
+```r
+storms %&gt;% 
+  select(name, year, status) 
+```
+
+---
+
+# 4. Assignment operators
+
+How many columns are in storms after running the following two lines of code?
+
+
+```r
+storms &lt;- storms %&gt;% 
+  select(name, year, status) 
+```
+
+---
+
+# 4. Basic programming operators
 
 Math
 
@@ -275,7 +493,7 @@ z &lt;- 4 / 2 ** 3
 
 ---
 
-# Basic programming operators
+# 4. Basic programming operators
 
 Logic
 
@@ -309,162 +527,41 @@ x | y
 ## [1] FALSE
 ```
 
-
 ---
 
-# Basic programming operators
+# Breakout rooms
 
-Subsetting and accessing objects
+Using `storms`: 
 
 
 ```r
-#mtcars
-# variables in data frame or tibble
-mtcars$mpg
+library(dplyr)
+
+storms
 ```
 
 ```
-##  [1] 21.0 21.0 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 17.8 16.4 17.3 15.2 10.4
-## [16] 10.4 14.7 32.4 30.4 33.9 21.5 15.5 15.2 13.3 19.2 27.3 26.0 30.4 15.8 19.7
-## [31] 15.0 21.4
+## # A tibble: 10,010 x 13
+##    name   year month   day  hour   lat  long status category  wind pressure
+##    &lt;chr&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;  &lt;ord&gt;    &lt;int&gt;    &lt;int&gt;
+##  1 Amy    1975     6    27     0  27.5 -79   tropi… -1          25     1013
+##  2 Amy    1975     6    27     6  28.5 -79   tropi… -1          25     1013
+##  3 Amy    1975     6    27    12  29.5 -79   tropi… -1          25     1013
+##  4 Amy    1975     6    27    18  30.5 -79   tropi… -1          25     1013
+##  5 Amy    1975     6    28     0  31.5 -78.8 tropi… -1          25     1012
+##  6 Amy    1975     6    28     6  32.4 -78.7 tropi… -1          25     1012
+##  7 Amy    1975     6    28    12  33.3 -78   tropi… -1          25     1011
+##  8 Amy    1975     6    28    18  34   -77   tropi… -1          30     1006
+##  9 Amy    1975     6    29     0  34.4 -75.8 tropi… 0           35     1004
+## 10 Amy    1975     6    29     6  34   -74.8 tropi… 0           40     1002
+## # … with 10,000 more rows, and 2 more variables: ts_diameter &lt;dbl&gt;,
+## #   hu_diameter &lt;dbl&gt;
 ```
 
-```r
-# rows by number
-mtcars[1:10,]
-```
+Use `dplyr::select()`, `dplyr::filter()`, and `dplyr::arrange()` using *different* arguments
+than those used in any of the above examples.
 
-```
-##                    mpg cyl  disp  hp drat    wt  qsec vs am gear carb
-## Mazda RX4         21.0   6 160.0 110 3.90 2.620 16.46  0  1    4    4
-## Mazda RX4 Wag     21.0   6 160.0 110 3.90 2.875 17.02  0  1    4    4
-## Datsun 710        22.8   4 108.0  93 3.85 2.320 18.61  1  1    4    1
-## Hornet 4 Drive    21.4   6 258.0 110 3.08 3.215 19.44  1  0    3    1
-## Hornet Sportabout 18.7   8 360.0 175 3.15 3.440 17.02  0  0    3    2
-## Valiant           18.1   6 225.0 105 2.76 3.460 20.22  1  0    3    1
-## Duster 360        14.3   8 360.0 245 3.21 3.570 15.84  0  0    3    4
-## Merc 240D         24.4   4 146.7  62 3.69 3.190 20.00  1  0    4    2
-## Merc 230          22.8   4 140.8  95 3.92 3.150 22.90  1  0    4    2
-## Merc 280          19.2   6 167.6 123 3.92 3.440 18.30  1  0    4    4
-```
-
-```r
-# rows by condition
-dplyr::filter(mtcars, mpg &lt; 20)
-```
-
-```
-##                      mpg cyl  disp  hp drat    wt  qsec vs am gear carb
-## Hornet Sportabout   18.7   8 360.0 175 3.15 3.440 17.02  0  0    3    2
-## Valiant             18.1   6 225.0 105 2.76 3.460 20.22  1  0    3    1
-## Duster 360          14.3   8 360.0 245 3.21 3.570 15.84  0  0    3    4
-## Merc 280            19.2   6 167.6 123 3.92 3.440 18.30  1  0    4    4
-## Merc 280C           17.8   6 167.6 123 3.92 3.440 18.90  1  0    4    4
-## Merc 450SE          16.4   8 275.8 180 3.07 4.070 17.40  0  0    3    3
-## Merc 450SL          17.3   8 275.8 180 3.07 3.730 17.60  0  0    3    3
-## Merc 450SLC         15.2   8 275.8 180 3.07 3.780 18.00  0  0    3    3
-## Cadillac Fleetwood  10.4   8 472.0 205 2.93 5.250 17.98  0  0    3    4
-## Lincoln Continental 10.4   8 460.0 215 3.00 5.424 17.82  0  0    3    4
-## Chrysler Imperial   14.7   8 440.0 230 3.23 5.345 17.42  0  0    3    4
-## Dodge Challenger    15.5   8 318.0 150 2.76 3.520 16.87  0  0    3    2
-## AMC Javelin         15.2   8 304.0 150 3.15 3.435 17.30  0  0    3    2
-## Camaro Z28          13.3   8 350.0 245 3.73 3.840 15.41  0  0    3    4
-## Pontiac Firebird    19.2   8 400.0 175 3.08 3.845 17.05  0  0    3    2
-## Ford Pantera L      15.8   8 351.0 264 4.22 3.170 14.50  0  1    5    4
-## Ferrari Dino        19.7   6 145.0 175 3.62 2.770 15.50  0  1    5    6
-## Maserati Bora       15.0   8 301.0 335 3.54 3.570 14.60  0  1    5    8
-```
-
-```r
-# cols by number
-mtcars[,c(1,2,4)]
-```
-
-```
-##                      mpg cyl  hp
-## Mazda RX4           21.0   6 110
-## Mazda RX4 Wag       21.0   6 110
-## Datsun 710          22.8   4  93
-## Hornet 4 Drive      21.4   6 110
-## Hornet Sportabout   18.7   8 175
-## Valiant             18.1   6 105
-## Duster 360          14.3   8 245
-## Merc 240D           24.4   4  62
-## Merc 230            22.8   4  95
-## Merc 280            19.2   6 123
-## Merc 280C           17.8   6 123
-## Merc 450SE          16.4   8 180
-## Merc 450SL          17.3   8 180
-## Merc 450SLC         15.2   8 180
-## Cadillac Fleetwood  10.4   8 205
-## Lincoln Continental 10.4   8 215
-## Chrysler Imperial   14.7   8 230
-## Fiat 128            32.4   4  66
-## Honda Civic         30.4   4  52
-## Toyota Corolla      33.9   4  65
-## Toyota Corona       21.5   4  97
-## Dodge Challenger    15.5   8 150
-## AMC Javelin         15.2   8 150
-## Camaro Z28          13.3   8 245
-## Pontiac Firebird    19.2   8 175
-## Fiat X1-9           27.3   4  66
-## Porsche 914-2       26.0   4  91
-## Lotus Europa        30.4   4 113
-## Ford Pantera L      15.8   8 264
-## Ferrari Dino        19.7   6 175
-## Maserati Bora       15.0   8 335
-## Volvo 142E          21.4   4 109
-```
-
-```r
-# cols by name
-dplyr::select(mtcars, mpg, cyl, hp)
-```
-
-```
-##                      mpg cyl  hp
-## Mazda RX4           21.0   6 110
-## Mazda RX4 Wag       21.0   6 110
-## Datsun 710          22.8   4  93
-## Hornet 4 Drive      21.4   6 110
-## Hornet Sportabout   18.7   8 175
-## Valiant             18.1   6 105
-## Duster 360          14.3   8 245
-## Merc 240D           24.4   4  62
-## Merc 230            22.8   4  95
-## Merc 280            19.2   6 123
-## Merc 280C           17.8   6 123
-## Merc 450SE          16.4   8 180
-## Merc 450SL          17.3   8 180
-## Merc 450SLC         15.2   8 180
-## Cadillac Fleetwood  10.4   8 205
-## Lincoln Continental 10.4   8 215
-## Chrysler Imperial   14.7   8 230
-## Fiat 128            32.4   4  66
-## Honda Civic         30.4   4  52
-## Toyota Corolla      33.9   4  65
-## Toyota Corona       21.5   4  97
-## Dodge Challenger    15.5   8 150
-## AMC Javelin         15.2   8 150
-## Camaro Z28          13.3   8 245
-## Pontiac Firebird    19.2   8 175
-## Fiat X1-9           27.3   4  66
-## Porsche 914-2       26.0   4  91
-## Lotus Europa        30.4   4 113
-## Ford Pantera L      15.8   8 264
-## Ferrari Dino        19.7   6 175
-## Maserati Bora       15.0   8 335
-## Volvo 142E          21.4   4 109
-```
-
-
-
----
-
-## Readings
-
-Textbook chapter - Foundational skills: https://datascienceineducation.com/c06.html
-Grammar of Graphics: http://vita.had.co.nz/papers/layered-grammar.pdf
+Create a new R Markdown document. Share in your base group's channel on Slack.
 
 ---
 
@@ -475,6 +572,38 @@ Grammar of Graphics: http://vita.had.co.nz/papers/layered-grammar.pdf
 1. Videos
 1. Cleaning data
 1. Social media / textual data / qualitative data
+
+---
+
+## Readings
+
+Two assigned readings for the next week:
+
+- Data Science in Education Using R (DSIEUR) chapter #3: https://datascienceineducation.com/c03.html
+- Grammar of Graphics: http://vita.had.co.nz/papers/layered-grammar.pdf
+
+---
+
+## Coming up
+
+### This week
+
+- Readings (by next class; Thursday, 2/4)
+- HW2
+- Optional office hours (Tuesday, 2/2, 4-4:30 pm; same Zoom room)
+
+### Next week
+
+- Exam 1
+
+---
+
+# Wrapping up
+
+In your base group's Slack channel:
+
+- What is one thing you took away from today?
+- What is something you want to learn more about? 
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
