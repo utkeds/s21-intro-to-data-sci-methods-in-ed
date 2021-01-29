@@ -330,7 +330,7 @@ storms <- storms %>%
 
 We've been using the pipe operator `%>%` from the magrittr package
 
-The pipe sends the results of a function (or object) from left side of pipe as the first argument of next function after pipe.
+The pipe sends the results of a function (or object) from left side of pipe to next function after pipe.
 
 So instead of this:
 
@@ -345,7 +345,9 @@ mtsubset <- dplyr::select(mtfilter, mpg, cyl, disp)
 We can do this:
 
 ```{r, eval = FALSE }
-mtcars %>% dplyr::filter(mtcars, mpg < 20) %>% dplyr::select(mpg, cyl, disp)
+mtcars %>% 
+  dplyr::filter(mtcars, mpg < 20) %>% 
+  dplyr::select(mpg, cyl, disp)
 ```
 
 
