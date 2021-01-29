@@ -41,17 +41,19 @@ exists("data")
 
 How many rows and columns does `data` have?
 
-```{r}
-
-```
-
-Get the last 10 rows and last 2 columns of `data`
+Put a way of finding out in the chunk below
 
 ```{r}
 
 ```
 
-Get the `content` and `session_id` variables from `data`
+Get the last 10 rows and last 2 columns of `data` in the chunk below
+
+```{r}
+
+```
+
+Get the `content` and `session_id` variables from `data` in the chunk below
 
 ```{r}
 
