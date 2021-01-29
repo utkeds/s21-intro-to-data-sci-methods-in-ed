@@ -131,12 +131,12 @@ Logical operators define relationships between conditions that are either TRUE
 or FALSE. R calls variables with a TRUE or FALSE value "logical," but they're
 otherwise known as "boolean." When you use the filter() function for example
 you're defining a logical condition. You give the condition to filter on based
-on variables in the data, such as mpg \< 20 or am == 1, and you are asking the
+on variables in the data, such as `mpg < 20` or `am == 1`, and you are asking the
 filter() function to return the rows for which that condition is TRUE, i.e. that
 the mpg value on that row is less than 20 or the am value on that row equals 1.
-Other logical operators can connect 2 conditions. You could use mpg \<20 & am
-== 1 to filter the rows meeting both conditions, and you can use mpg \< 20 | am
-== 1 to filter rows meeting one or more of the two conditions.
+Other logical operators can connect 2 conditions. You could use `mpg <20 & am
+== 1` to filter the rows meeting both conditions, and you can use `mpg < 20 | am
+== 1` to filter rows meeting one or more of the two conditions.
 
 ```{}
 # equivalent to
