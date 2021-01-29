@@ -20,6 +20,8 @@ last week's homework here: https://tennessee.zoom.us/rec/play/yJ1NDKe3Ln1b7odc0v
 Also, we expanded a bit on our explanation of projects and directories in a brief
 video: https://tennessee.zoom.us/rec/share/6Ch_B0VQSh4XOmRXw3Zum7cZ_M7HaVoYErPn8WPBP6Ylf3MKK1OrtMfa9-HmWVOR.7cl4Un1DdOnEFbu1
 
+All of the videos can be found on the website as well: https://making-data-science-count.github.io/s21-intro-to-data-sci-methods-in-ed/videos.html
+
 ## Loading the tidyverse suite of packages
 
 Next, load the tidyverse packages (or, more descriptively, the suite of packages)
