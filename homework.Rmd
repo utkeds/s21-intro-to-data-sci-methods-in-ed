@@ -3,5 +3,13 @@ title: "Homework"
 output: html_document
 ---
 
-- [Week 1](https://github.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed/blob/main/homework/homework-week-1.Rmd)
-- [Week 2](https://github.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed/blob/main/homework/homework-week-2.Rmd)
+## Week 1
+
+- [Week 1 HW](https://github.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed/blob/main/homework/homework-week-1.Rmd)
+
+## Week 2
+
+- [Week 2 HW](https://github.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed/blob/main/homework/homework-week-2.Rmd)
+- Two assigned readings:
+  - Data Science in Education Using R (DSIEUR) chapter #3: https://datascienceineducation.com/c03.html    
+  - Grammar of Graphics: http://vita.had.co.nz/papers/layered-grammar.pdf
