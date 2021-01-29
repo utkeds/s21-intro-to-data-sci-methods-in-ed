@@ -185,7 +185,7 @@ We've added a chunk of code below, but nothing more:
 
 ```
 
-## Reach
+## Reach 1
 
 Can you compose a series of functions that include the select(), filter(), and
 arrange functions? Recall that you can "pipe" the output from one function to the 
@@ -198,6 +198,24 @@ gss_cat %>%
 
 When content with the result, write a brief (1-2 sentence) interpretation of what 
 your code outputs next:
+
+
+## Reach 2
+
+Can you read a .csv file using the readr package, HINT: we talked about it in the slides today
+
+There is a .csv file called answer_export.csv, that you can find here: https://github.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed/tree/main/data
+
+Download it and assign it to the name data:
+
+```{r}
+library(readr)
+
+
+
+exists("data")
+```
+
 
 ## fin
 
