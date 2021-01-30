@@ -29,7 +29,8 @@ recommend poking around and familiarizing oneself with the tidyverse site!):
 
 https://www.tidyverse.org/
 
-Add your code below to load the tidyverse suite of packages. Check out your 
+Add your code below to load (hint: but not install, unless you were unable to 
+do this in class) the tidyverse suite of packages. Check out your 
 homework from last week if you need a reminder on how to do this. Remember to 
 run the chunk by clicking the green arrow to the right of the chunk.
 
@@ -37,7 +38,9 @@ run the chunk by clicking the green arrow to the right of the chunk.
 
 ```
 
-We'll be using the gss_cat dataset for this homework. 
+We'll be using the gss_cat dataset for this homework. It is built-in to the 
+tidyverse, so, to load it, just type its name in a code chunk and then run 
+the coe in that chunk.
 
 ## Examine data
 
@@ -206,8 +209,8 @@ report that you can share; this is how you'll submit homework for class!
 
 **Note:** Slightly differently from last week, please submit:
 
-- Submit the .Rmd file you used to render a report to Canvas
-- Upload the .html file you rendered to the #homework channel in Slack.
+- Submit the .html file you used to render a report to Canvas
+- Upload the .Rmd file you rendered to the #homework channel in Slack.
 
 :tada: :tada: :tada: 
 
