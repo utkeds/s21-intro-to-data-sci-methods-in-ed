@@ -15,7 +15,7 @@ First, ensure that this `.Rmd` file is saved *in the directory for the same proj
 created last week.* 
 
 If you need a refresher on projects, check out the video introducing
-last week's homework here: https://tennessee.zoom.us/rec/play/yJ1NDKe3Ln1b7odc0vI_MI8hNQcY9tX54JFZBx0_Y66VYU1gwe%5B%E2%80%A6%5Dv6qHyX4KBlPnqHssx9y.UsopmL1uFrV-A6R6?startTime=1611332611000
+last week's homework here: https://tennessee.zoom.us/rec/share/xLBmj7lqdmANkRVB2SvL4pBTX4hng3jpxw0znH5FWi2CIGHmfg5q_H9g5QkduT5s.WAV9rRzzyH9UXwZ7?startTime=1611332611000
 
 Also, we expanded a bit on our explanation of projects and directories in a brief
 video: https://tennessee.zoom.us/rec/share/6Ch_B0VQSh4XOmRXw3Zum7cZ_M7HaVoYErPn8WPBP6Ylf3MKK1OrtMfa9-HmWVOR.7cl4Un1DdOnEFbu1
@@ -188,7 +188,7 @@ We've added a chunk of code below, but nothing more:
 
 ```
 
-## Reach
+## Reach 1
 
 Can you compose a series of functions that include the select(), filter(), and
 arrange functions? Recall that you can "pipe" the output from one function to the 
@@ -201,6 +201,24 @@ gss_cat %>%
 
 When content with the result, write a brief (1-2 sentence) interpretation of what 
 your code outputs next:
+
+
+## Reach 2
+
+Can you read a .csv file using the readr package, HINT: we talked about it in the slides today
+
+There is a .csv file called answer_export.csv, that you can find here: https://github.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed/tree/main/data
+
+Download it and assign it to the name data:
+
+```{r}
+library(readr)
+
+
+
+exists("data")
+```
+
 
 ## fin
 

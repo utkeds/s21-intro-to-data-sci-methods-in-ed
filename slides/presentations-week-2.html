@@ -30,12 +30,9 @@ we can do fun and ambitious things this semester.
 
 ---
 
-# Homework highlight #1
+# Homework highlight
 
-
----
-
-# Homework higlight #2
+KS
 
 ---
 
@@ -468,7 +465,7 @@ storms &lt;- storms %&gt;%
 
 We've been using the pipe operator `%&gt;%` from the magrittr package
 
-The pipe sends the results of a function (or object) from left side of pipe as the first argument of next function after pipe.
+The pipe sends the results of a function (or object) from left side of pipe to next function after pipe.
 
 So instead of this:
 
@@ -485,7 +482,9 @@ We can do this:
 
 
 ```r
-mtcars %&gt;% dplyr::filter(mtcars, mpg &lt; 20) %&gt;% dplyr::select(mpg, cyl, disp)
+mtcars %&gt;% 
+  dplyr::filter(mtcars, mpg &lt; 20) %&gt;% 
+  dplyr::select(mpg, cyl, disp)
 ```
 
 
