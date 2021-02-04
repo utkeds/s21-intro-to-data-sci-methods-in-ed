@@ -238,12 +238,8 @@ colnames(data)
 
 Tidying data AKA wrangling data, cleaning data, etc.
 
-Data cleaning is 80% of the job
-Don't underestimate it, know what to expect
-
-also tables are your friend (more on that later with specific points about data cleaning)
-
-(what is tidying data?)
+* Data cleaning is 80% of the job
+* Don't underestimate it, know what to expect
 
 ---
 
@@ -257,7 +253,7 @@ also tables are your friend (more on that later with specific points about data 
     but every messy dataset is messy in its own way.” 
     –– Hadley Wickham
 
-What does tidy data mean
+What does 'tidy' data mean
 
 1. Every Column is a variable
 1. Every Row is an observation
@@ -273,10 +269,10 @@ Primary importance: the tools that we will use are built around tidy data.
 
 Examining data is the first step
 
-`View()` 
-`glimpse()`
-`colnames()` or `names()`
-`table()` or `tabyl()`
+* `View()` 
+* `glimpse()`
+* `colnames()` or `names()`
+* `table()` or `tabyl()`
 
 ---
 
@@ -379,12 +375,8 @@ data &lt;- readr::read_csv(here("data", "answer_export.csv"))
 ```
 
 ```r
-data_subset &lt;- data %&gt;%
-  rename(ID_num = id,
-         Response = content,
-         Session_num = session_id,
-         Question_num = question_id) %&gt;%
-  select(Response, Question_num)
+data_grp &lt;- data_subset %&gt;%
+  group_by(Question_num)
 ```
 
 ---
@@ -393,9 +385,7 @@ data_subset &lt;- data %&gt;%
 
 * Exam 1: postponed 1 week, will cover material through week 3
 * Homework 3: Will be available by the end of the day tomorrow
-
-
-
+* More demo videos on specific things, please share input on what you want to see on slack
 
 ---
 

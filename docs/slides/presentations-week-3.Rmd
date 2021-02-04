@@ -209,12 +209,8 @@ colnames(data)
 
 Tidying data AKA wrangling data, cleaning data, etc.
 
-Data cleaning is 80% of the job
-Don't underestimate it, know what to expect
-
-also tables are your friend (more on that later with specific points about data cleaning)
-
-(what is tidying data?)
+* Data cleaning is 80% of the job
+* Don't underestimate it, know what to expect
 
 ---
 
@@ -228,7 +224,7 @@ also tables are your friend (more on that later with specific points about data 
     but every messy dataset is messy in its own way.” 
     –– Hadley Wickham
 
-What does tidy data mean
+What does 'tidy' data mean
 
 1. Every Column is a variable
 1. Every Row is an observation
@@ -244,10 +240,10 @@ Primary importance: the tools that we will use are built around tidy data.
 
 Examining data is the first step
 
-`View()` 
-`glimpse()`
-`colnames()` or `names()`
-`table()` or `tabyl()`
+* `View()` 
+* `glimpse()`
+* `colnames()` or `names()`
+* `table()` or `tabyl()`
 
 ---
 
@@ -255,9 +251,9 @@ Examining data is the first step
 
 Deeper aspects of cleaning/tidying data
 
-* columns should be the right type (e.g. integer, double, factor, character, additional character types like date/time)
+* Columns should be the right type (e.g. integer, double, factor, character, additional character types like date/time)
 
-* values in column should only be valid values for whatever that variable is supposed to be (sometimes your data sources will pre-validate this, sometimes not)
+* Values in column should only be valid values for whatever that variable is supposed to be (sometimes your data sources will pre-validate this, sometimes not)
 
 * Missing data indicators for missing values (NA type)
 
