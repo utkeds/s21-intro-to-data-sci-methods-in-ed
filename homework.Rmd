@@ -13,3 +13,7 @@ output: html_document
 - Two assigned readings:
   - Data Science in Education Using R (DSIEUR) chapter #3: https://datascienceineducation.com/c03.html    
   - Grammar of Graphics: http://vita.had.co.nz/papers/layered-grammar.pdf
+  
+## Week 3
+
+- [Week 3 HW](https://github.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed/blob/main/homework/homework-week-3.Rmd)

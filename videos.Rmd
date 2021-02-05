@@ -3,9 +3,11 @@ title: "Videos"
 output: html_document
 ---
 
-### Class recordings (password required)
+### Class recordings (password required; see Slack)
+
 - [Week 1](https://tennessee.zoom.us/rec/share/rRprrDMdgVRM9xserfYhQnlmm8D4EBChSKQWS3ya1SYUCH4or2CY7qNFj3l214wk.KQDipfxXNZrY38ad)
 - [Week 2](https://tennessee.zoom.us/rec/share/bdjN_zHz7VqphHg8d3Y2DVmNlcRK2Ocms7gcTpRjBA0LXaS-5freubRWbko92kAP.iyhVOK7vsp73Ncmy)
+- [Week 3](https://tennessee.zoom.us/rec/share/IIDRdgajy2BQNDymE_73rL7dP4bVM72FxH_jnwKMg-wHcFcyH6z_-5zsZZqivbj2.5Hb3GVORhi7Vj-xI)
 
 ### Homework videos 
 
