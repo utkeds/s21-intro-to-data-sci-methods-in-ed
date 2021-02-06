@@ -20,6 +20,9 @@ Recall that the tidyverse package itself loads a number of packages, including:
 - stringr
 - forcats
 
+You could load these individually, but it can be handy to load them all with just 
+one function.
+
 ```{r}
 
 ```
