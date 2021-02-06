@@ -9,13 +9,26 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Loading, setting up
 
-## Load the packages dplyr, readr, magrittr, forecats, and stringr. If you don't have them, install them first.
+## Load the tidyverse and here packages
+
+## Load the tidyverse and here packages
+
+Recall that the tidyverse package itself loads a number of packages, including:
+
+- dplyr
+- readr
+- stringr
+- forcats
 
 ```{r}
 
 ```
 
 ## Read in the data answer_export.csv and save it using whatever name you want
+
+Be sure to use the here package
+
+Check out this week's slides for a recap: https://making-data-science-count.github.io/s21-intro-to-data-sci-methods-in-ed/presentations.html
 
 ```{r}
 
