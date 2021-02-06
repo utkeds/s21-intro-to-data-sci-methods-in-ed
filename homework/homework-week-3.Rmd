@@ -11,8 +11,6 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Load the tidyverse and here packages
 
-## Load the tidyverse and here packages
-
 Recall that the tidyverse package itself loads a number of packages, including:
 
 - dplyr
@@ -25,9 +23,13 @@ one function.
 
 ```{r}
 
+
+
 ```
 
 ## Read in the data answer_export.csv and save it using whatever name you want
+
+The data is here in case you don't already have it: https://github.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed/blob/main/data/answer_export.csv
 
 Be sure to use the here package
 
@@ -54,7 +56,7 @@ Add the code you use to do this below
 
 ```
 
-## Rename the columns using names of your choice in the dataset using a dplyr function
+## Rename the columns using names of your choice using a dplyr function
 
 ```{r}
 
@@ -64,11 +66,11 @@ Add the code you use to do this below
 
 We think that this column should only consist of the values 1, 2, 3, 4, and 5, so we want to get rid of other values.
 
-When you're filtering with dplyr, remember you have to write the filtering condition based on the column name. Recall last week we filtered the gss_cat dataset based on the variable `tvhours` looking for values of tvhours that were greater than 3 with the condition `tvhours > 3`. 
+When you're filtering with dplyr, remember you have to write the filtering condition based on the column name. Recall last week we filtered the `gss_cat` dataset based on the variable `tvhours` looking for values of `tvhours` that were greater than 3 with the condition `tvhours > 3`. 
 
-You can also set conditions based on specific values using the `==` operator. So in the previous example using `tvhours == 3`.
+You can also set conditions based on specific values using the `==` operator. So in the previous example using `tvhours == 3` would get us rows where `tvhours` was equal to 3.
 
-You can also use multiple conditions. Recall again last weeks homework, we asked you to add a second condtion to the filtering statement, something like `(tvhours > 3, age > 25)`. That statement would pick out rows meeting both conditions. You can also have multiple conditions that are mutually exclusive using the `|` operator. So we could have done something like `(tvhours > 3 | age > 25)` to filter rows meeting either of the two conditions. And you can keep chaining together with the `|` operator as many times as you need to. Why are we telling you all this? Oh no reason really.
+You can also use multiple conditions. Recall again last weeks homework, we asked you to add a second condition to the filtering statement, something like `(tvhours > 3, age > 25)`. That statement would pick out rows meeting both conditions. You can also have multiple conditions that are mutually exclusive using the `|` operator. So we could have done something like `(tvhours > 3 | age > 25)` to filter rows meeting either of the two conditions. And you can keep chaining together with the `|` operator as many times as you need to. Why are we telling you all this? Oh no reason really.
 
 Don't forget to assign the new filtered dataset to a new name.
 
@@ -78,12 +80,11 @@ Don't forget to assign the new filtered dataset to a new name.
 
 ## Convert the column formerly known as content to a numeric column
 
-The `mutate()` function in dplyr is used to add columns to datasets or modify existing ones. Type `?mutate` into the console to get more details. Here's an example of what that would look like:
+The `mutate()` function in dplyr is used to add columns to datasets or modify existing ones. Type `?mutate` into the console to get more details. Here's an example of what that would look like using the built in `mtcars` dataset:
 
 ```{r}
 mtcars_tons <- mtcars %>% mutate(wt = wt * 1000)
 mtcars_test <- mtcars %>% mutate(wt = as.character(wt))
-
 ```
 
 In that example I modified the `wt` column to be equal to the old value of `wt` multiplied by 1000 (which I think gives the true weight of the cars in pounds, but that's not important for this exercise).
@@ -98,7 +99,7 @@ Once again, don't forget to save the resulting dataset with a new name.
 
 ## Reach 1: Turn a character vector into a factor
 
-The variable that was originally called `question_id` should be a numeric variable. Let's convert it into a factor. Base R has the `as.factor()` function, but let's use the similar `as_factor()` function from the forecats package. Make sure you loaded that at the beginning.
+The variable that was originally called `question_id` should be a numeric variable. Let's convert it into a factor. Base R has the `as.factor()` function, but let's use the similar `as_factor()` function from the `forecats` package. Why do they have such similar functions? Because the forecats one tweaks the functionality a bit and is made to play nicely with the other tidyverse functions. Make sure you loaded that at the beginning.
 
 Make sure you assign the resulting data to a new name!
 
@@ -118,7 +119,8 @@ string_vector <- c("1, of course", "2", "3!   ")
 
 str_extract(string = string_vector, pattern = "[123]{1}")
 ```
-In the example, we used the pattern "[123]{1}" which means "find one instance of any of the characters 1, 2, or 3 in each string" to extract those values.
+
+In the example, we have the messy vector called `string_vector` and we used the pattern "[123]{1}" which means "find one instance of any of the characters 1, 2, or 3 in each string" to extract those values.
 
 So let's reload the dataset from the file and start from scratch.
 
@@ -129,7 +131,7 @@ Finally, use the `mutate()` function to change the column `content` to be the re
 ```{r}
 
 
-str_extract(string = , pattern = "[123]{1}")
+str_extract(string = , pattern = "[12345]{1}")
 
 
 
