@@ -62,7 +62,7 @@ Add the code you use to do this below
 
 ## Use a function from dplyr to filter the data based on the column that was originally named content
 
-We think that this column should only consist of the values 1, 2, 3, 4, and 5, so we want to get rid of other values.
+We think that this column should only consist of the values "1", "2", "3", "4", and "5", so we want to get rid of other values.
 
 When you're filtering with dplyr, remember you have to write the filtering condition based on the column name. Recall last week we filtered the gss_cat dataset based on the variable `tvhours` looking for values of tvhours that were greater than 3 with the condition `tvhours > 3`. 
 
@@ -109,7 +109,7 @@ Make sure you assign the resulting data to a new name!
 
 ## Reach 2: Strip out the numeric part of the character vector
 
-If you've been paying close attention, you may have noticed that there was a flaw in our data cleaning procedure for the "content" column. We got rid of any values outside of 1-5, but there were some rows that had valid answers in them, but were filtered out by our filter, such as "4, Agree." We can see that should be a 4, but we need a way to catch these cases. 
+If you've been paying close attention, you may have noticed that there was a flaw in our data cleaning procedure for the "content" column. We got rid of any values outside of "1", "2,", "3", "4", "5", but there were some rows that had valid answers in them, but were filtered out by our filter, such as "4, Agree." We can see that should be a 4, but we need a way to catch these cases. 
 
 This is where the stringr package comes in handy. The stringr package has many functions that you can use to deal with character vectors. One that is handy in this situation is `str_extract()`. You give this function a character vector and a pattern (using regular expression language, don't worry about that part right now) you want to extract, and it'll give you a new vector with the parts matching your pattern. Here's an example.
 
