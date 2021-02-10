@@ -44,8 +44,10 @@ glimpse(data)
 
 typeof()
 
-# type id
+log <- data$id %% 2 == 0
+typeof(log)
 
+# type id
 
 typeof(data$id)
 
@@ -54,7 +56,7 @@ typeof(data$id)
 int_id <- as.integer(data$id)
 typeof(int_id)
 int_id
-
+is.numeric(data$id)
 # char cols
 
 typeof(data$content)
@@ -62,3 +64,15 @@ typeof(data$session_id)
 
 # factors
 
+id_fact <- as_factor(data$session_id)
+id_fact
+typeof(id_fact)
+
+
+
+correct <- data %>% filter(content == 1 | content == 2 | content == 3 | content == 4 | content == 5)
+
+commas <- data %>% filter(content == 1, content == 2, content == 3, content == 4, content == 5)
+
+between <- data %>% filter(between(content,1,5))
+?between
