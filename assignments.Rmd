@@ -11,9 +11,11 @@ Weekly homework. To be submitted in the form of an R Markdown file (`.Rmd`) via 
 
 Interaction examinations following each unit. These provide a chance to reflect on and summarize what you did and learned during the unit. Don't worry, these aren't high-stress!
 
-## Personal statement on equity, privacy, and ethics
+## Personal statement on data ethics
 
 Write a personal statement on one’s perspective toward the role and nature of data, addressing how issues of equity, privacy, and ethics are central to data science in education (due approximately one-third of the way through the semester).
+
+[Link to assignment details](assignment-data-ethics.html)
 
 ## Curate data science resources (3)
 

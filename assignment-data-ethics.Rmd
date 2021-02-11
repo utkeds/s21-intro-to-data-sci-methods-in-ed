@@ -1,0 +1,43 @@
+---
+title: "Assignment - Data Ethics"
+output: html_document
+---
+
+# Personal Data Ethics Statement
+
+### Overview
+
+Write a personal statement on one’s perspective toward the role and nature of data, addressing how issues of equity, privacy, and ethics are central to data science in education.
+
+### Background
+
+**Required reading**
+
+- Required reading - Data Feminism, c1: https://data-feminism.mitpress.mit.edu/pub/frfa9szd/release/3
+
+**Optional readings/resources to consult**
+
+- [An argument for a Hippocratic Oath for data scientists](https://www.wired.com/story/should-data-scientists-adhere-to-a-hippocratic-oath/)
+- [Manifest-No](https://www.manifestno.com/home)
+- [Ethical Guidelines for the Association of Internet Researchers](https://aoir.org/reports/ethics3.pdf)
+- [Doing Data for Good Right](https://www.datakind.org/blog/doing-data-for-good-right)
+- [Sharing Our Views on Ethics: DataKind UK Releases Survey Results from Community](https://www.datakind.org/blog/datakind-uk-community-shares-views-on-ethics)
+- [ROpenSci's policies on data, ethics, and human subjects research](https://devguide.ropensci.org/policies.html#ethics-data-privacy-and-human-subjects-research)
+
+### Details
+
+- Write a one-two page (single-spaced; if double-spaced, then two-four pages) articulation of your ideas and commitments regarding data ethics; this will be a draft
+- Include at least one paragraph on each of the following:
+- An overview of your work (especially your research) and what kinds of data you use in it
+- Why data ethics can matter where it comes to your work
+- What principles (three or more) you wish to aspire to in your data analysis and data science-related work (for examples, consider the seven core principles from the Data Feminism, c1 reading, as well as the optional resources/resources); consider principles that outline what you will do as well as what you will not do (see Manifest-No for refusals of specific kinds of data practices)
+- Include three or more citations to publications or other resources (websites are okay); these can include any of the above resources as well as others that you identify or those with which you are already familiar
+- Recall that this is a draft; you will next read three of your peers’ data ethics statements and provide comments on them; you will then revise your statement
+- Then, near the end of the semester, you will create your final statement
+
+### Timeline and Due Dates
+
+- Draft due by Thursday, 3/4
+- Reading and providing feedback on peer’s statements, 3/11
+- Revising your statement based on your peer’s feedback, 3/18
+- Final statement due by Thursday, 4/22
