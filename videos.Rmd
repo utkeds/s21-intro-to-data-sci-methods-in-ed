@@ -18,3 +18,5 @@ output: html_document
 - [Using R Projects](https://tennessee.zoom.us/rec/share/6Ch_B0VQSh4XOmRXw3Zum7cZ_M7HaVoYErPn8WPBP6Ylf3MKK1OrtMfa9-HmWVOR.7cl4Un1DdOnEFbu1)
 
 - [Extra material from week 2 slides not covered in class](https://tennessee.zoom.us/rec/play/58gQ7qPUZcJykRzH0RaxRsCnvPyPMQbY-Aqji8mOv5_0ZVq4M32zV0Q0mED1PCNChSCmSIWPOG288_4V.aOWdsvvdQQubCvA2?autoplay=true&startTime=1611893850000)
+
+- [Vector types in R](https://tennessee.zoom.us/rec/play/U4qu4FZcAM6An6QE8yuWHE7l3M3QvvkaNndsiRxDKTF9NcBtMWs5l3rm6Xhm2ztrvi3l3wi2WCu2ahUt._yJXDuWJYfV4Twkh?continueMode=true)
