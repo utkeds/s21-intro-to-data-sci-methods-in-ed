@@ -33,12 +33,9 @@ Welcome to *week 4*!
 
 Starting with whomever has the least total letters in their first middle and last names... 
 
-*Looking back*:
+**Two questions**
 
 - What is one particular "messy data" problem have you encountered (or do you anticipate encountering) in your own work?
-
-*Looking ahead*:
-
 - What is an example of multiple, separate datasets that you might wish to combine together into a single dataset in your work? If you cannot immediately think of one, consider information that might be recorded or created in two different files, but which could be useful to combine.
 
 (10 minutes)
@@ -47,7 +44,7 @@ Starting with whomever has the least total letters in their first middle and las
 
 ### Review of last week's class
 
-Last week we discussed wrangling and tidying Data
+**Last week we discussed wrangling and tidying data**:
 
 1. Reading in Data
 1. Tidying data
@@ -57,7 +54,7 @@ Last week we discussed wrangling and tidying Data
 
 ### Homework highlights
 
-Effective and ineffective ways of filtering the data:
+**Effective and ineffective ways of filtering the data**
 
 
 ```r
@@ -113,16 +110,22 @@ data %&gt;%
 
 Check the output of functions you write carefully; you may find yourself *constantly* looking at and viewing your data
 
-How do I view my data? There are many ways:
+**How do I check/view my data?** 
+
+There are many ways:
 
 - `my_data` (just typing the name of your data will print info. about it!)
 - `glance(my_data)`
 - `str(my_data)`
 - `View(my_data)` (do not include in `.Rmd` document)
+- `skimr::skim(my_data)` (must install "skimr" first) 
+- `psych::describe()` (must install "psych" first)
 
 ---
 
 ### This week's topics
+
+**Overview**
 
 1. Tidy data: Data reshaping
 1. Working with multiple data frames: joins
@@ -133,6 +136,8 @@ We are by no means done with the data tidying tools we discussed last week, so d
 ---
 
 ### 1. Data reshaping
+
+**Outline**
 
 What is reshaping?
 
@@ -180,7 +185,7 @@ These are meant to be replaced by the "pivot" functions from `dplyr`, which are 
 
 ### 2. Data joining
 
-What are joins?
+**What are joins?**
 
 Why are joins important?
 
@@ -192,7 +197,8 @@ How do we know we're doing them right?
 
 ### 2. Data joining
 
-What are joins?
+**What are joins?**
+
 - When you have multiple data frames that you want to combine
 - Need to have overlap
 
@@ -205,7 +211,7 @@ Why are joins important?
 
 ### 2. Data joining
 
-Different types of joins
+**Different types of joins**
 
 * Main types
   + left join
@@ -226,7 +232,6 @@ Different types of joins
 * Columns from both
 * Matching rows from both
 * non-matching rows from X only
-
 ![Join gif](img/left-join.gif)
 
 
@@ -239,7 +244,6 @@ Different types of joins
 * Columns from both
 * Matching rows from both
 * non-matching rows from Y only
-
 ![Join gif](img/right-join.gif)
 ---
 
@@ -250,7 +254,6 @@ Different types of joins
 * Columns from both
 * Matching rows from both
 * non-matching rows from both
-
 ![Join gif](img/full-join.gif)
 
 ---
@@ -262,7 +265,6 @@ Different types of joins
 * Columns from both
 * Matching rows from both
 * non-matching rows from neither
-
 ![Join gif](img/inner-join.gif)
 
 ---
@@ -274,7 +276,6 @@ Different types of joins
 * Columns from X
 * Matching rows from both
 * non-matching rows from neither
-
 ![Join gif](img/semi-join.gif)
 
 ---
@@ -286,7 +287,6 @@ Different types of joins
 * Columns from X
 * No matching rows 
 * Only non-matching rows from X
-
 ![Join gif](img/anti-join.gif)
 ---
 
@@ -302,8 +302,6 @@ How do we know which one to choose?
 ---
 
 ### 2. Data joining
-
-Keys to implementing joins:
 
 Matching variables: 
 * Need to make sure matching variables are correct
@@ -322,7 +320,7 @@ Other issues to consider:
 
 ### 3. Grouped data operations and summary
 
-How do we look at summary information about our variables?
+** How do we look at summary information about our variables? **
 
 What do we mean by grouping?
 
@@ -356,9 +354,30 @@ Grouping is when we create groups in our data based on a categorical variable (o
 The `dplyr` function `group_by()` allows us to create grouped data frames.
 
 
+```r
+library(dplyr)
+
+storms %&gt;% 
+  group_by(name)
+```
+
+
+```
+## # A tibble: 5 x 13
+## # Groups:   name [1]
+##   name   year month   day  hour   lat  long status category  wind pressure
+##   &lt;chr&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;  &lt;ord&gt;    &lt;int&gt;    &lt;int&gt;
+## 1 Amy    1975     6    27     0  27.5 -79   tropi… -1          25     1013
+## 2 Amy    1975     6    27     6  28.5 -79   tropi… -1          25     1013
+## 3 Amy    1975     6    27    12  29.5 -79   tropi… -1          25     1013
+## 4 Amy    1975     6    27    18  30.5 -79   tropi… -1          25     1013
+## 5 Amy    1975     6    28     0  31.5 -78.8 tropi… -1          25     1012
+## # … with 2 more variables: ts_diameter &lt;dbl&gt;, hu_diameter &lt;dbl&gt;
+```
+
 ---
 
-### 3. Grouped data operations and summary
+### 3. Grouped data operations and summaries
 
 ** What can we do with grouped data? **
 
@@ -368,12 +387,93 @@ We can also do different sorts of data cleaning operations on grouped data.
 
 ---
 
+### 3. Grouped data operations and summaries
+
+**Finding the mean wind speed for storms**
+
+
+```r
+library(dplyr)
+
+storms %&gt;% 
+  group_by(name) %&gt;% 
+  summarize(mean_wind_speed = mean(wind))
+```
+
+
+```
+## # A tibble: 198 x 2
+##    name     mean_wind_speed
+##  * &lt;chr&gt;              &lt;dbl&gt;
+##  1 AL011993            27.5
+##  2 AL012000            25  
+##  3 AL021992            29  
+##  4 AL021994            24.2
+##  5 AL021999            28.8
+##  6 AL022000            29.2
+##  7 AL022001            25  
+##  8 AL022003            30  
+##  9 AL022006            38  
+## 10 AL031987            21.2
+## # … with 188 more rows
+```
+
+---
+
+### 3. Grouped data operations and summaries
+
+**Finding the mean wind speed for storms and arranging*
+
+
+```r
+library(dplyr)
+
+storms %&gt;% 
+  group_by(name) %&gt;% 
+  summarize(mean_wind_speed = mean(wind)) %&gt;% 
+  arrange(desc(mean_wind_speed))
+```
+
+
+```
+## # A tibble: 198 x 2
+##    name    mean_wind_speed
+##    &lt;chr&gt;             &lt;dbl&gt;
+##  1 Wilma              91.9
+##  2 Luis               89.2
+##  3 Hugo               88.1
+##  4 David              86.8
+##  5 Gonzalo            86.1
+##  6 Ike                83.2
+##  7 Igor               81.8
+##  8 Joaquin            81.8
+##  9 Rita               80.1
+## 10 Gilbert            79.6
+## # … with 188 more rows
+```
+
+
+---
 
 # Course Logistics
 
 * Exam 1: Available -   ; Due -   
-* Homework 4: 
-* Data Ethics Statement: 
+* Homework 4: (small change; post _one_ comment, feedback, or reflections on your homework when you post it to #homework on Slack)
+* [Personal Data Ethics Statement](https://making-data-science-count.github.io/s21-intro-to-data-sci-methods-in-ed/assignment-data-ethics.html): Check the assignments page; due 3/4; see assignments details for more information
+* Reading on tidying data: https://r4ds.had.co.nz/tidy-data.html
+
+---
+
+# Notes on asking questions
+
+Your #questions are great; keep it up; a few suggestions:
+
+- First, check to see whether someone else asked a question about a similar issue
+- When possible and relevant, provide either a) a screen shot or b) a link to your `.Rmd` document along with your question
+- Provide as much detail as possible; it's much more helpful to us and others for you to try to explain what's going on, even if you're not certain about the terminology
+- Consider searching (via Google) for the error message; it can be a bit an art to know what part of the message to Google
+- If you know the answer, feel free to respond to others!
+- If your question is resolved, be sure to post in Slack that you figured it out!
 
 ---
 

@@ -33,12 +33,9 @@ library(tidyr)
 
 Starting with whomever has the least total letters in their first middle and last names... 
 
-*Looking back*:
+**Two questions**
 
 - What is one particular "messy data" problem have you encountered (or do you anticipate encountering) in your own work?
-
-*Looking ahead*:
-
 - What is an example of multiple, separate datasets that you might wish to combine together into a single dataset in your work? If you cannot immediately think of one, consider information that might be recorded or created in two different files, but which could be useful to combine.
 
 (10 minutes)
@@ -47,7 +44,7 @@ Starting with whomever has the least total letters in their first middle and las
 
 ### Review of last week's class
 
-Last week we discussed wrangling and tidying Data
+**Last week we discussed wrangling and tidying data**:
 
 1. Reading in Data
 1. Tidying data
@@ -57,7 +54,7 @@ Last week we discussed wrangling and tidying Data
 
 ### Homework highlights
 
-Effective and ineffective ways of filtering the data:
+**Effective and ineffective ways of filtering the data**
 
 ```{r, eval = FALSE}
 data %>% 
@@ -107,17 +104,22 @@ data %>%
 
 Check the output of functions you write carefully; you may find yourself *constantly* looking at and viewing your data
 
-How do I view my data? There are many ways:
+**How do I check/view my data?** 
+
+There are many ways:
 
 - `my_data` (just typing the name of your data will print info. about it!)
 - `glance(my_data)`
 - `str(my_data)`
 - `View(my_data)` (do not include in `.Rmd` document)
-- others? `skimr::skim(my_data)`; `psych::describe()`
+- `skimr::skim(my_data)` (must install "skimr" first) 
+- `psych::describe()` (must install "psych" first)
 
 ---
 
 ### This week's topics
+
+**Overview**
 
 1. Tidy data: Data reshaping
 1. Working with multiple data frames: joins
@@ -128,6 +130,8 @@ We are by no means done with the data tidying tools we discussed last week, so d
 ---
 
 ### 1. Data reshaping
+
+**Outline**
 
 What is reshaping?
 
@@ -175,7 +179,7 @@ These are meant to be replaced by the "pivot" functions from `dplyr`, which are 
 
 ### 2. Data joining
 
-What are joins?
+**What are joins?**
 
 Why are joins important?
 
@@ -187,7 +191,8 @@ How do we know we're doing them right?
 
 ### 2. Data joining
 
-What are joins?
+**What are joins?**
+
 - When you have multiple data frames that you want to combine
 - Need to have overlap
 
@@ -200,7 +205,7 @@ Why are joins important?
 
 ### 2. Data joining
 
-Different types of joins
+**Different types of joins**
 
 * Main types
   + left join
@@ -221,7 +226,6 @@ Different types of joins
 * Columns from both
 * Matching rows from both
 * non-matching rows from X only
-
 ![Join gif](img/left-join.gif)
 
 
@@ -234,7 +238,6 @@ Different types of joins
 * Columns from both
 * Matching rows from both
 * non-matching rows from Y only
-
 ![Join gif](img/right-join.gif)
 ---
 
@@ -245,7 +248,6 @@ Different types of joins
 * Columns from both
 * Matching rows from both
 * non-matching rows from both
-
 ![Join gif](img/full-join.gif)
 
 ---
@@ -257,7 +259,6 @@ Different types of joins
 * Columns from both
 * Matching rows from both
 * non-matching rows from neither
-
 ![Join gif](img/inner-join.gif)
 
 ---
@@ -269,7 +270,6 @@ Different types of joins
 * Columns from X
 * Matching rows from both
 * non-matching rows from neither
-
 ![Join gif](img/semi-join.gif)
 
 ---
@@ -281,7 +281,6 @@ Different types of joins
 * Columns from X
 * No matching rows 
 * Only non-matching rows from X
-
 ![Join gif](img/anti-join.gif)
 ---
 
@@ -297,8 +296,6 @@ How do we know which one to choose?
 ---
 
 ### 2. Data joining
-
-Keys to implementing joins:
 
 Matching variables: 
 * Need to make sure matching variables are correct
@@ -317,7 +314,7 @@ Other issues to consider:
 
 ### 3. Grouped data operations and summary
 
-How do we look at summary information about our variables?
+** How do we look at summary information about our variables? **
 
 What do we mean by grouping?
 
@@ -350,10 +347,24 @@ Grouping is when we create groups in our data based on a categorical variable (o
 
 The `dplyr` function `group_by()` allows us to create grouped data frames.
 
+```{r, eval = FALSE}
+library(dplyr)
+
+storms %>% 
+  group_by(name)
+```
+
+```{r, echo = FALSE}
+library(dplyr)
+
+storms %>% 
+  group_by(name) %>% 
+  head(5)
+```
 
 ---
 
-### 3. Grouped data operations and summary
+### 3. Grouped data operations and summaries
 
 ** What can we do with grouped data? **
 
@@ -363,11 +374,71 @@ We can also do different sorts of data cleaning operations on grouped data.
 
 ---
 
+### 3. Grouped data operations and summaries
+
+**Finding the mean wind speed for storms**
+
+```{r, eval = FALSE}
+library(dplyr)
+
+storms %>% 
+  group_by(name) %>% 
+  summarize(mean_wind_speed = mean(wind))
+```
+
+```{r, echo = FALSE}
+library(dplyr)
+
+storms %>% 
+  group_by(name) %>% 
+  summarize(mean_wind_speed = mean(wind))
+```
+
+---
+
+### 3. Grouped data operations and summaries
+
+**Finding the mean wind speed for storms and arranging*
+
+```{r, eval = FALSE}
+library(dplyr)
+
+storms %>% 
+  group_by(name) %>% 
+  summarize(mean_wind_speed = mean(wind)) %>% 
+  arrange(desc(mean_wind_speed))
+```
+
+```{r, echo = FALSE}
+library(dplyr)
+
+storms %>% 
+  group_by(name) %>% 
+  summarize(mean_wind_speed = mean(wind)) %>% 
+  arrange(desc(mean_wind_speed))
+```
+
+
+---
+
 # Course Logistics
 
 * Exam 1: Available -   ; Due -   
-* Homework 4: 
-* Personal Data Ethics Statement: Check the assignments page; due 3/4; see assignments details for more information
+* Homework 4: (small change; post _one_ comment, feedback, or reflections on your homework when you post it to #homework on Slack)
+* [Personal Data Ethics Statement](https://making-data-science-count.github.io/s21-intro-to-data-sci-methods-in-ed/assignment-data-ethics.html): Check the assignments page; due 3/4; see assignments details for more information
+
+---
+
+# Notes on asking questions
+
+Your #questions are great; keep it up; a few suggestions:
+
+- First, check to see whether someone else asked a question about a similar issue
+- When possible and relevant, provide either a) a screen shot or b) a link to your `.Rmd` document along with your question
+- Provide as much detail as possible; it's much more helpful to us and others for you to try to explain what's going on, even if you're not certain about the terminology
+- Consider searching (via Google) for the error message; it can be a bit an art to know what part of the message to Google
+- If you know the answer, feel free to respond to others!
+- If your question is resolved, be sure to post in Slack that you figured it out!
 
 ---
 
