@@ -25,6 +25,7 @@ library(dplyr)
 library(readr)
 library(magrittr)
 library(tidyr)
+library(stringr)
 ```
 
 ---
@@ -78,37 +79,32 @@ data %>%
 --
 
 ```{r, eval = FALSE}
-data %>% 
-  filter(between(content, 1, 5))
+data %>% filter(between(content, 1, 5))
 ```
 
 --
 
 ```{r, eval = FALSE}
-data %>% 
-  filter(content %in% c("1", "2", "3", "4", "5"))
+data %>% filter(content %in% c("1", "2", "3", "4", "5"))
 ```
 
 --
 
 ```{r, eval = FALSE}
-library(stringr)
-
-data %>% 
-  filter(str_detect(content, "[1-5]"))
+data %>% filter(str_detect(content, "[1-5]"))
 ```
 
 ---
 
 ## Homework reminder
 
-Check the output of functions you write carefully; you may find yourself *constantly* looking at and viewing your data
+Check the output of functions you write carefully; you may find yourself *constantly* looking at and viewing your data!
 
 **How do I check/view my data?** 
 
 There are many ways:
 
-- `my_data` (just typing the name of your data will print info. about it!)
+- `my_data` (just typing the name of your data will print info about it!)
 - `glance(my_data)`
 - `str(my_data)`
 - `View(my_data)` (do not include in `.Rmd` document)
@@ -157,6 +153,21 @@ How do you reshape?
 
 ### 1. Data reshaping
 
+** What is reshaping? **
+
+* Reshaping involves moving data between "long"er and "wide"er formats
+
+```{r, out.width = "65%", echo = FALSE}
+knitr::include_graphics("img/original-dfs-tidy.png")
+```
+
+
+<!-- ![](img/original-dfs-tidy.png)-->
+
+---
+
+### 1. Data reshaping
+
 ** Why would you reshape? **
 
 One reason to reshape is to get data in a proper 'tidy' format.
@@ -174,6 +185,15 @@ The broader reason is that data can be in multiple shapes and you may need diffe
 The `tidyr` package offers the `gather()` and `spread()` functions.
 
 These are meant to be replaced by the "pivot" functions from `dplyr`, which are `pivot_longer()` and `pivot_wider()`
+
+
+---
+
+### 1. Data reshaping
+
+** How do you reshape? **
+
+![Join gif](img/tidyr-longer-wider.gif)
 
 ---
 
@@ -436,8 +456,8 @@ Your #questions are great; keep it up; a few suggestions:
 
 - First, check to see whether someone else asked a question about a similar issue
 - When possible and relevant, provide either a) a screen shot or b) a link to your `.Rmd` document along with your question
-- Provide as much detail as possible; it's much more helpful to us and others for you to try to explain what's going on, even if you're not certain about the terminology
-- Consider searching (via Google) for the error message; it can be a bit an art to know what part of the message to Google
+- Provide as much detail as possible; it's much more helpful to us and others if you explain what's going on, even if you're not certain about the terminology
+- Consider searching (via Google) for the error message.
 - If you know the answer, feel free to respond to others!
 - If your question is resolved, be sure to post in Slack that you figured it out!
 
