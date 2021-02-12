@@ -30,7 +30,7 @@ Write a personal statement on one’s perspective toward the role and nature of 
 - Include at least one paragraph on each of the following:
 - An overview of your work (especially your research) and what kinds of data you use in it
 - Why data ethics can matter where it comes to your work
-- What principles (three or more) you wish to aspire to in your data analysis and data science-related work (for examples, consider the seven core principles from the Data Feminism, c1 reading, as well as the optional resources/resources); consider principles that outline what you will do as well as what you will not do (see Manifest-No for refusals of specific kinds of data practices)
+- What principles (three or more) you wish to aspire to in your data analysis and data science-related work (for examples, consider the seven core principles from the Data Femgit inism, c1 reading, as well as the optional resources/resources); consider principles that outline what you will do as well as what you will not do (see Manifest-No for refusals of specific kinds of data practices)
 - Include three or more citations to publications or other resources (websites are okay); these can include any of the above resources as well as others that you identify or those with which you are already familiar
 - Recall that this is a draft; you will next read three of your peers’ data ethics statements and provide comments on them; you will then revise your statement
 - Then, near the end of the semester, you will create your final statement
