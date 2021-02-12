@@ -1,0 +1,95 @@
+---
+title: "HW Week 4 - Advanced Data Cleaning Skills"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+For this homework, we are going to be working with the ESM data that we used to demonstrate stuff to you in class.
+
+Hopefully you got a general idea of what those data sets contained during class today, but here's a bit of a reminder. The database data file contains responses, corresponding question numbers, unique identifiers for the survey and for the item level responses, and the course assignment that each survey corresponds to. What it doesn't have are unique identifiers of the person who sent it i.e. their phone number, or the date and time when it was sent. That's where the twilio data file comes in. It does have that information, and importantly, it also uses the same unique identifiers for the item level responses. It also has some junk in it that we don't want, like the messages where students initiated the surveys, and also some redundant information.
+
+To give a bit more context, students answered our 5 question survey ~11 times each, some as many as 18 times. So it would be interesting to look at the 5 survey questions, and see what people's average responses were to each one. In class we went over getting the mean by survey question overall, but this time we want to know how each person responded on average to each item. There's ~75 people in this dataset, and 5 survey items, so what we'd like to get is a summary data table that's 75 rows and 5 columns, with each entry being a person-item mean.
+
+This will involve a number of steps that we'll tackle one at a time, then at the end we can put everything together and you will marvel at what you've done.
+
+The first thing you will need to do is get the data. You'll need the 2 ESM data files:  twilio_data.csv and database_data.csv. Both can be acquired from the github repository here: https://github.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed/tree/main/data
+
+```{r}
+
+```
+
+The next thing we need to do is join the two data frames, since we need variables from both. We only want to keep the matching rows from both data sets and no non-matching rows. At each intermediate step in the process, starting now, you should assign your results to a name. We'll build this up iteratively, so each step will involve chaining the new step to what you did in the previous step.
+
+```{r}
+
+```
+
+Now that the data is joined, we will want to get rid of some of the variables that we won't need. So think about what our end goal is. We want a table of means by person and by item. We will need the answers to get means, so we'll need the content variable, and we'll need to know which question they go with so we'll need the question ID. Then we also need to know which person each response goes with, so that's the From variable with the anonymized phone numbers. Besides that, it would also be good to have a unique identifier so we could rejoin this data with the main set later, so we should keep the survey ID variable. In this step let's pare down our data set to just those important ones.
+
+```{r}
+
+```
+
+Now that we've gotten rid of the unimportant variables, that will make our next steps a bit simpler. There's more than one way to go from here, but let's think about our end goal again. We want means by item (and also by person), so one way forward would involve separating the content variable by item, so that each item has it's own variable. If we can do that, we can then group by person, summarize, and achieve our desired result. Separating the content variable by item is exactly what the pivot_longer() function can help us do. This one can be tricky, so we'll fill in some stuff for you, but you'll need to add the crucial bits, and connect it with what you've done before.
+
+```{r}
+#pivot_wider(id_cols = c(survey_id, From), names_prefix = "Question_", values_fn = first)
+```
+
+Awesome, now that you have those new variables for each question, all that's left to do is to group the data and then summarize on each of those 5 variables. With the summarize function, you can do several summaries, so it's just a matter of doing it for each one. Let's do that here.
+
+```{r}
+
+```
+
+So now you might be mad, because that didn't work and it gave you an obnoxiously long error message. Sorry about that. But maybe you also remember that we covered dealing with this exact issue in the lecture. And let's also drill down on what this means `argument is not numeric or logical: returning NA` you can't take the mean of something that's not a numeric vector (or logical vector, but don't worry about the logical part right now). So we'll need to fix that, but you already know how from the lecture and last week's homework, so go ahead and do that here.
+
+```{r}
+
+```
+
+Now that you have everything, just type in the name of your summary data table so we can see the print output.
+
+```{r}
+
+```
+
+If you made it all the way, congrats, you did a great job! If you couldn't get it quite 100% right, don't worry, you're probably at least 80-90% there, and we'll get you the rest of the way. 
+
+## fin
+
+Nice work! Once you've finished your work, click "Knit" at the top to render a 
+report that you can share; this is how you'll submit homework for class! 
+
+**Note:** Slightly differently from last week, please submit:
+
+- Submit the .html file you used to render a report to Canvas
+- Upload the .Rmd file you rendered to the #homework channel in Slack.
+
+:tada: :tada: :tada: 
+
+## Self-assessment and reflection
+
+Respond to the following three questions on a 1 (not at all) to 5 (very much) 
+scale by replacing the "x" below with your response:
+
+```{r}
+x = NULL
+tibble::tribble(
+  ~question,                                   ~response,
+  "How challenging was this homework?",        x,
+  "How interesting was this homework to you?", x,
+  "How valuable was this homework to you?",    x
+)
+```
+
+Include any other comments, feedback, or reflections on this homework below:
+
+
+
+If you like, you can post these other comments, feedback, or reflections in the 
+message you post to #homework in Slack to share what you've done.
