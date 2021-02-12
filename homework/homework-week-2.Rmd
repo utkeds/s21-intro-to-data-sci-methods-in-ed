@@ -51,7 +51,10 @@ clauses below. It may help to add some code to determine this; you may find it h
 to add code on the line following this line, if you like.
 
 ```{r}
+library(lubridate)
 
+storms %>%
+  mutate(date = make_date(year = year, month = month, day = day))
 ```
 
 Number of rows:
