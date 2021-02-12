@@ -128,6 +128,9 @@ the differences between the different types of joins! More on those here:
 
 https://making-data-science-count.github.io/s21-intro-to-data-sci-methods-in-ed/slides/presentations-week-4.html#1
 
+You'll need one of the join functions; you may find this help documentation helpful:
+https://dplyr.tidyverse.org/reference/join.html
+
 ```{r}
 
 ```
@@ -148,7 +151,10 @@ rejoin this data with the main set later; so we should keep the survey ID
 variable. 
 
 In this next step let's pare down our data set to just those important
-variables:
+variables; you should have an idea for what variable you'll need to use to select 
+variables, but, as a reminder, check out the slides from week 2:
+
+https://making-data-science-count.github.io/s21-intro-to-data-sci-methods-in-ed/slides/presentations-week-2.html#17
 
 ```{r}
 
@@ -169,13 +175,17 @@ you to get started, but you'll need to add the crucial bits, and connect it with
 what you've done before.
 
 ```{r}
-#pivot_wider(id_cols = c(survey_id, From), names_prefix = "Question_", values_fn = first)
+pivot_wider(id_cols = c(survey_id, From), names_prefix = "Question_", values_fn = first)
 ```
 
 Great! Now that you have those new variables for each question, all that's
 left to do is to group the data and then summarize on each of those five variables.
 With the summarize function, you can do several summaries, so it's just a matter
 of doing it for each one. Let's do that here.
+
+For some pointeres, check out these slides from this week here:
+
+https://making-data-science-count.github.io/s21-intro-to-data-sci-methods-in-ed/slides/presentations-week-4.html#30
 
 ```{r}
 
@@ -207,8 +217,14 @@ we'll help you the rest of the way.
 
 ## Reach
 
-Can you visualize the person-item means that you just calculated? Try to do so using ggplot in the 
-code chunk below:
+Can you create a visualization based on the summary statistics you calculated?
+
+Try to do so using ggplot in the code chunk below; there are (obviously) very many
+plots you can create, from a display of a single variable to relationships between 
+multiple variables; we're just looking for you to begin to explore different representations;
+you may find the ggplot2 cheat sheet here helpful:
+
+https://rstudio.com/resources/cheatsheets/
 
 ```{r}
 
