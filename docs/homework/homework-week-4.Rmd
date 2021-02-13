@@ -53,7 +53,7 @@ end we can put everything together and you will (maybe?) marvel at what you've d
 
 ## Downloading the data and saving them to the data directory
 
-The first thing you will need to do is get the data. You'll need the 2 ESM data
+The first thing you will need to do is get the data. You'll need the two ESM data
 files: 
 
 - `twilio_data.csv` 
@@ -64,8 +64,8 @@ https://github.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed
 
 To save them, simply run the following code chunk. But, first, load two packages:
 
-tidyverse
-here
+- tidyverse
+- here
 
 Remember, you don't need to *install* these packages, as you should already have both 
 installed (though, if you don't, you'll need to do just that). Instead, you need to 
@@ -75,6 +75,16 @@ Do this - load these two packages - in the next chunk:
 
 ```{r}
 
+```
+
+Then, let's download the files next.
+
+```{r}
+download.file("https://raw.githubusercontent.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed/main/data/twilio_data.csv",
+              destfile = here("data", "twilio_data.csv"))
+
+download.file("https://raw.githubusercontent.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed/main/data/database_data.csv",
+              destfile = here("data", "database_data.csv"))
 ```
 
 Let's break down what's going on:
@@ -91,14 +101,6 @@ Another important note is that when you read these files, you'll need to specify
 where they're stored. More on this in a moment.
 
 See the New Folder button in the files pane to do this.
-
-```{r}
-download.file("https://raw.githubusercontent.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed/main/data/twilio_data.csv",
-              destfile = here("data", "twilio_data.csv"))
-
-download.file("https://raw.githubusercontent.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed/main/data/database_data.csv",
-              destfile = here("data", "database_data.csv"))
-```
 
 If you saw two message with "trying URL" and then the URL and some information 
 about the file and the word "downloaded", you should be good to go! We recommend
@@ -169,7 +171,7 @@ separating the content variable by item, so that each item
 has it's own variable. If we can do that, we can then group by person,
 summarize, and achieve our desired result. 
 
-Separating the content variable by item is exactly what the `pivot_longer()` 
+Separating the content variable by item is exactly what the `pivot_wider()` 
 function can help us do. This one can be tricky, so we'll fill in some parts for
 you to get started, but you'll need to add the crucial bits, and connect it with 
 what you've done before.
@@ -245,7 +247,7 @@ below *as well as to Slack when you post your homework*.
 Respond to the following three questions on a 1 (not at all) to 5 (very much) 
 scale by replacing the "x" below with your response:
 
-```{r}
+```{r, reflection}
 x = NULL
 tibble::tribble(
   ~question,                                   ~response,
@@ -258,5 +260,4 @@ tibble::tribble(
 Include any other comments, feedback, or reflections on this homework below:
 
 
-
-Please post your comment(s), feedback, or reflections in Slack when you share your Rmd file!
+Important note: Please post your comment(s), feedback, or reflections in Slack when you share your Rmd file!
