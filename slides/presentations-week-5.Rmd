@@ -64,6 +64,7 @@ Starting with XXX
 
 1. Introduction to data viz
 2. A bit more tidying data along the way
+3. Data ethics
 
 We are by no means done with the data tidying tools we discussed last week, so don't feel like you should already have those completely mastered yet.
 
@@ -82,6 +83,18 @@ How do you reshape?
 ---
 
 ### 2. A bit more on data viz
+
+**Outline**
+
+What is reshaping?
+
+Why would you reshape?
+
+How do you reshape?
+
+---
+
+### 3. Data ethics
 
 **Outline**
 
