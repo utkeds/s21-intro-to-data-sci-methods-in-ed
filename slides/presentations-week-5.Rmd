@@ -1,0 +1,123 @@
+---
+title: "HW Week 5 - Introduction to Data Viz" 
+subtitle: ""
+author: "Joshua Rosenberg, Alex Lishinski"
+date: "February 11, 2021"
+output:
+  xaringan::moon_reader:
+    css: [theme.css]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+# Welcome!
+
+Welcome to *week 5*!
+
+**Record the meeting** 
+
+```{r, include = FALSE}
+library(here)
+library(dplyr)
+library(readr)
+library(magrittr)
+library(tidyr)
+library(stringr)
+```
+
+---
+
+# Breakout rooms!
+
+Starting with XXX
+
+**Two questions**
+
+- 
+- 
+
+(10 minutes)
+
+---
+
+### Review of last week's class
+
+**Last week we discussed wrangling and tidying data**:
+
+1.
+
+---
+
+### Homework highlights
+
+---
+
+
+---
+
+### This week's topics
+
+**Overview**
+
+1. Introduction to data viz
+2. A bit more tidying data along the way
+
+We are by no means done with the data tidying tools we discussed last week, so don't feel like you should already have those completely mastered yet.
+
+---
+
+### 1. Intro to Data Viz
+
+**Outline**
+
+What is reshaping?
+
+Why would you reshape?
+
+How do you reshape?
+
+---
+
+### 2. A bit more on data viz
+
+**Outline**
+
+What is reshaping?
+
+Why would you reshape?
+
+How do you reshape?
+
+---
+
+# Course Logistics
+
+* Exam 1: Available - Tomorrow; Due - Before our next class begins  
+* Homework 4: (small change; post _one_ comment, feedback, or reflections on your homework when you post it to #homework on Slack)
+* [Personal Data Ethics Statement](https://making-data-science-count.github.io/s21-intro-to-data-sci-methods-in-ed/assignment-data-ethics.html): Check the assignments page; due 3/4; see assignments details for more information
+* Reading on tidying data: https://r4ds.had.co.nz/tidy-data.html
+
+---
+
+# Notes on asking questions
+
+Your #questions are great; keep it up; a few suggestions:
+
+- First, check to see whether someone else asked a question about a similar issue
+- When possible and relevant, provide either a) a screen shot or b) a link to your `.Rmd` document along with your question
+- Provide as much detail as possible; it's much more helpful to us and others if you explain what's going on, even if you're not certain about terminology
+- Consider Googleing the error message.
+- If you know the answer, feel free to respond to others!
+- If your question is resolved, be sure to post in Slack that you figured it out!
+
+---
+
+# Wrapping up
+
+In your base group's Slack channel:
+
+- What is one thing you took away from today?
+- What is something you want to learn more about? 

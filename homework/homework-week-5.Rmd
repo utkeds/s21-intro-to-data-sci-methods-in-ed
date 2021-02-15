@@ -1,0 +1,88 @@
+---
+title: "HW Week 5 - Introduction to Data Viz"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Background 
+
+For this homework, we are going to be working with the Experience Sampling
+Method - ESM - data that we used in class.
+
+Here's a bit of an overview and a reminder of this dataset. The database
+contains responses, corresponding question numbers, unique identifiers for the
+survey and for the item level responses, and the course assignment that each
+survey corresponds to. What it does not have are unique identifiers of the
+person who sent it, i.e.:
+
+- their phone number 
+- the date and time when it was sent
+- and, if we wanted later, other information, such as information about their major
+
+That's where the Twilio (ESM) data file comes in it does have that information,
+and importantly, it also uses the same unique identifiers for the ESM responses. 
+
+It also has some junk in it that we *don't* want, like the messages
+where students initiated but didn't take the survey.
+
+To provide just a bit more context, students answered our five ESM survey items \~11 times
+each, with some doing so as many as 18 times. 
+
+So, it might be interesting to look at the five survey questions, and see what 
+ average responses were for each question for each student.
+
+In class we went over getting the mean by survey question overall, but this time we
+want to know how each person responded on average to each item. There's \~75
+people in this dataset, and, again five survey items.
+
+**So, just to sum up, we have around 75 students each responding around 11 times 
+to five questions. What we'd like to get is a summary data table that's 75 rows 
+and 5 columns, with each entry being each person's average response for each of the 
+five questions.** 
+
+There's a lot here, and if you have questions about any of this, please message us
+over in the #questions channel on Slack. You'll note that this is entirely data 
+tidying/processing, but is very much the kind of thing that you may wish to do as 
+the descriptive part of an analysis for a research project.
+
+This task will involve a number of steps that we'll tackle one at a time, then at the
+end we can put everything together and you will (maybe?) marvel at what you've done.
+
+## Downloading the data and saving them to the data directory
+
+```{r}
+
+```
+
+## fin
+
+You know the drill; render and please submit:
+
+- Submit the .html file you used to render a report to Canvas
+- Upload the .Rmd file you rendered to the #homework channel in Slack.
+
+One difference from last week: Please post a comment, feedback, or reflection
+below *as well as to Slack when you post your homework*.
+
+## Self-assessment and reflection
+
+Respond to the following three questions on a 1 (not at all) to 5 (very much) 
+scale by replacing the "x" below with your response:
+
+```{r, reflection}
+x = NULL
+tibble::tribble(
+  ~question,                                   ~response,
+  "How challenging was this homework?",        x,
+  "How interesting was this homework to you?", x,
+  "How valuable was this homework to you?",    x
+)
+```
+
+Include any other comments, feedback, or reflections on this homework below:
+
+
+Important note: Please post your comment(s), feedback, or reflections in Slack when you share your Rmd file!
