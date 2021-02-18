@@ -100,13 +100,13 @@ class: inverse, center, middle
 
 **Outline**
 
-1. Why visualize data?
-1. How can we visualize data in R?
-1. And, how can we make our visualizations aesthetically pleasing?
+A. Why visualize data?
+B. How can we visualize data in R?
+C. And, how can we make our visualizations aesthetically pleasing?
 
 ---
 
-# 1. Why visualize data?
+# 1A: Why visualize data?
 
 One answer: 
 
@@ -119,7 +119,7 @@ One answer:
 
 ---
 
-# 1. Why visualize data?
+# 1A: Why visualize data?
 
 These four different data sets have the same correlation (type `anscombe` in R to view the data), but are very different
 
@@ -129,7 +129,7 @@ knitr::include_graphics("https://socviz.co/dataviz-pdfl_files/figure-html4/ch-01
 
 ---
 
-# 1. Why visualize data
+# 1A: Why visualize data
 
 Another reason to visualize data is to *communicate with others*; you can use visualizations to communicate your findings or results. In example:
 
@@ -146,7 +146,7 @@ https://apreshill.github.io/ohsu-biodatavis/slides.html#33
 
 ---
 
-### 2. How to visualize data
+# 1B: How to visualize data
 
 One way to think about visualizing data is in terms of the _type_ of visualization you create:
 
@@ -159,7 +159,7 @@ One way to think about visualizing data is in terms of the _type_ of visualizati
 
 ---
 
-### 2. How to visualize data
+# 1B: How to visualize data
 
 Another way to think about visualizing data is in terms of the elements that make up a plot.
 
@@ -174,7 +174,7 @@ Why a grammar of graphics?
 
 ---
 
-### 2. How to visualize data?
+# 1B: How to visualize data?
 
 One view of visualizations is that they consist of four components:
 
@@ -185,7 +185,7 @@ One view of visualizations is that they consist of four components:
 
 ---
 
-### 2. How to visualize data?
+# 1B: How to visualize data?
 
 Let's see how this might appear:
 
@@ -211,7 +211,7 @@ data %>%
 
 ---
 
-### 2. How to visualize data?
+# 1B: How to visualize data?
 
 ```{r, echo = FALSE, eval = TRUE}
 data %>%
@@ -222,7 +222,7 @@ data %>%
 
 ---
 
-### 2. How to visualize data
+# 1B: How to visualize data
 
 You can easily create different plots by:
 
@@ -231,7 +231,7 @@ You can easily create different plots by:
 
 ---
 
-### 2 How to visualize data
+# 1B: How to visualize data
 
 **Example A**
 
@@ -241,7 +241,7 @@ You can easily create different plots by:
 
 ```
 
-### 2. How to visualize data
+# 1B: How to visualize data
 
 **Example B**
 
@@ -253,7 +253,7 @@ You can easily create different plots by:
 
 ---
 
-### 3. How to make visualizations aesthetically pleasing
+# 1C: How to make visualizations aesthetically pleasing
 
 _Theming and fine-tuning_
 
@@ -291,7 +291,7 @@ class: inverse, center, middle
 
 ---
 
-### How does tidying data relate to data viz?
+### 2: How does tidying data relate to data viz?
 
 Often, we have to make changes to our data frame in order to create the visualization we would like to create.
 
@@ -310,13 +310,13 @@ class: inverse, center, middle
 ---
 
 
-### Why data ethics?
+### 3: Why data ethics?
 
 With great power comes great responsibility
 
 ---
 
-### Examples of positive and negative data ethics
+### 3: Examples of positive and negative data ethics
 
 <!-- Josh to add -->
 
