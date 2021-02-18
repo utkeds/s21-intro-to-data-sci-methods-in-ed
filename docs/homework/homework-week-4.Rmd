@@ -109,7 +109,7 @@ checking the data directory to make sure that both files are there.
 ## Reading the data
 
 Now, you'll need to read the data. We'll do this for the first file; you do this 
-for the second dilw
+for the second file.
 
 ```{r}
 twilio_data <- read_csv(here("data", "twilio_data.csv"))
