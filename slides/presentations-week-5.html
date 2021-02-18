@@ -33,12 +33,21 @@ Welcome to *week 5*!
 
 Starting with whomever is most advanced in one's graduate program:
 
-**Two questions**
+**One question:**
 
 - What kinds of visualization do you find useful/interesting?
-- 
 
-(10 minutes)
+**One reflection/discussion:**
+
+Below, what is the a) data, b) function(s), c) argument name(s), and d) argument(s)?
+
+
+```r
+state_data_final &lt;- state_data_merge %&gt;% 
+  complete(state, year = 2011:2020) %&gt;% 
+  group_by(state) %&gt;% 
+  fill(adopted, year_month)
+```
 
 ---
 
@@ -46,13 +55,23 @@ Starting with whomever is most advanced in one's graduate program:
 
 **Last week we discussed wrangling and tidying data**:
 
-1.
+1. Reshaping data
+  - `pivot_wide()` and `pivot_long()`
+1. Joining data
+  - `left_join()`, `inner_join()`, and others
+1. Grouped data operations with dplyr
+  - `group_by()` and `summarize()`
+
+**Reading**
+
+* Reading on tidying data: https://r4ds.had.co.nz/tidy-data.html
 
 ---
 
 ### Homework highlights
 
----
+&lt;!-- Josh to add --&gt;
+
 
 
 ---
@@ -62,10 +81,16 @@ Starting with whomever is most advanced in one's graduate program:
 **Overview**
 
 1. Introduction to data viz
-2. A bit more tidying data along the way
+2. A bit more tidying data
 3. Data ethics
 
-We are by no means done with the data tidying tools we discussed last week, so don't feel like you should already have those completely mastered yet.
+We are by no means done with the data tidying functions we discussed last week!
+
+---
+
+class: inverse, center, middle
+
+# Part 1/3: Introduction to data viz
 
 ---
 
@@ -73,57 +98,222 @@ We are by no means done with the data tidying tools we discussed last week, so d
 
 **Outline**
 
-What is reshaping?
-
-Why would you reshape?
-
-How do you reshape?
+1. Why visualize data?
+1. How can we visualize data in R?
+1. And, how can we make our visualizations aesthetically pleasing?
 
 ---
 
-### 2. A bit more on data viz
+# 1. Why visualize data?
 
-**Outline**
+One answer: 
 
-What is reshaping?
+"You should look at your data." ([Healy, 2018](https://socviz.co/))
 
-Why would you reshape?
+*To elaborate on this*:
 
-How do you reshape?
+- Visualizations allow to _understand the structure and nature of your data_, and to begin to understand what might relate to what else
+- Just like we want to be constantly looking at our data in its spreadsheet/table/data frame format (e.g., `str()`, `glimpse()`, and `View()`), visualizing our data can help us to make sure our data contains what we think it does-and it can alert us to when it does not
 
 ---
 
-### 3. Data ethics
+# 1. Why visualize data?
 
-**Outline**
+These four different data sets have the same correlation (type `anscombe` in R to view the data), but are very different
 
-What is reshaping?
+&lt;img src="https://socviz.co/dataviz-pdfl_files/figure-html4/ch-01-anscombe-1.png" width="65%" style="display: block; margin: auto;" /&gt;
 
-Why would you reshape?
+---
 
-How do you reshape?
+# 1. Why visualize data
+
+Another reason to visualize data is to *communicate with others*; you can use visualizations to communicate your findings or results. In example:
+
+&lt;img src="https://apreshill.github.io/ohsu-biodatavis/slides_files/figure-html/bar1-1.png" width="50%" style="display: block; margin: auto;" /&gt;
+---
+
+&lt;img src="https://apreshill.github.io/ohsu-biodatavis/slides_files/figure-html/bar8-1.png" width="75%" style="display: block; margin: auto;" /&gt;
+
+https://apreshill.github.io/ohsu-biodatavis/slides.html#33
+
+---
+
+### 2. How to visualize data
+
+One way to think about visualizing data is in terms of the _type_ of visualization you create:
+
+- Histogram
+- Density plot
+- Scatter plot
+- Bar chart
+- Pie chart ([gasp!](https://socviz.co/refineplots.html))
+- Time series plot/line chart
+
+---
+
+### 2. How to visualize data
+
+Another way to think about visualizing data is in terms of the elements that make up a plot.
+
+The *grammar of graphics* ([Wickham, 2010](https://www.tandfonline.com/doi/abs/10.1198/jcgs.2009.07098), [Wilkinson, 2012](https://link.springer.com/chapter/10.1007/978-3-642-21551-3_13)) has a particular answer to the question of what a plot includes:
+
+Why a grammar of graphics?
+
+- gain insight into complex figures
+- reveal deeper relationships between what may appear to be unrelated visualizations
+- more flexibly and creatively visualize data--including in ways that do not fit well into one type of plot
+- suggest what makes a good figure
+
+---
+
+### 2. How to visualize data?
+
+One view of visualizations is that they consist of four components:
+
+1. Data
+2. One or more geometric objects (shape, point, line, etc.)
+3. A mapping between variables in the data and the geometric objects and their characteristics (including their size and color)
+4. A theme
+
+---
+
+### 2. How to visualize data?
+
+Let's see how this might appear:
+
+
+
+
+```r
+data
+```
+
+```
+## # A tibble: 1,620 x 2
+##    name  value
+##    &lt;chr&gt; &lt;dbl&gt;
+##  1 A     16.6 
+##  2 A      7.02
+##  3 A      6.55
+##  4 A      7.84
+##  5 A      5.04
+##  6 A      6.54
+##  7 A      7.94
+##  8 A     13.9 
+##  9 A      5.10
+## 10 A     10.1 
+## # … with 1,610 more rows
+```
+
+
+```r
+data %&gt;%
+  ggplot(aes(x = name, y = value, fill = name)) +
+    geom_boxplot() +
+    geom_jitter()
+```
+
+---
+
+### 2. How to visualize data?
+
+![](presentations-week-5_files/figure-html/unnamed-chunk-10-1.png)&lt;!-- --&gt;
+
+---
+
+### 2. How to visualize data
+
+You can easily create different plots by:
+
+- Changing the aesthetic _mapping_ between variables in the data and geometric objects
+- Changing the geometric objects
+
+---
+
+### 2 How to visualize data
+
+**Example A**
+
+&lt;!-- Josh to add --&gt;
+
+
+
+### 2. How to visualize data
+
+**Example B**
+
+&lt;!-- Josh to add --&gt;
+
+
+
+---
+
+### 3. How to make visualizations aesthetically pleasing
+
+_Theming and fine-tuning_
+
+
+```r
+data %&gt;%
+  ggplot(aes(x = name, y = value, fill = name)) +
+    geom_boxplot() +
+    geom_jitter(color="black", size=0.4, alpha=0.9) +
+    theme(
+      legend.position="none",
+      plot.title = element_text(size=11)
+    ) +
+  theme_bw()
+```
+
+---
+
+![](presentations-week-5_files/figure-html/unnamed-chunk-14-1.png)&lt;!-- --&gt;
+
+---
+
+class: inverse, center, middle
+
+# Part 2/3: A bit more tidying data
+
+---
+
+### How does tidying data relate to data viz?
+
+Often, we have to make changes to our data frame in order to create the visualization we would like to create.
+
+---
+
+
+
+---
+
+class: inverse, center, middle
+
+# Part 3/3: Data ethics
+
+---
+
+
+### Why data ethics?
+
+With great power comes great responsibility
+
+---
+
+### Examples of positive and negative data ethics
+
+&lt;!-- Josh to add --&gt;
+
+- Positive:
+- Negative: 
 
 ---
 
 # Course Logistics
 
-* Exam 1: Available - Tomorrow; Due - Before our next class begins  
-* Homework 4: (small change; post _one_ comment, feedback, or reflections on your homework when you post it to #homework on Slack)
-* [Personal Data Ethics Statement](https://making-data-science-count.github.io/s21-intro-to-data-sci-methods-in-ed/assignment-data-ethics.html): Check the assignments page; due 3/4; see assignments details for more information
-* Reading on tidying data: https://r4ds.had.co.nz/tidy-data.html
-
----
-
-# Notes on asking questions
-
-Your #questions are great; keep it up; a few suggestions:
-
-- First, check to see whether someone else asked a question about a similar issue
-- When possible and relevant, provide either a) a screen shot or b) a link to your `.Rmd` document along with your question
-- Provide as much detail as possible; it's much more helpful to us and others if you explain what's going on, even if you're not certain about terminology
-- Consider Googleing the error message.
-- If you know the answer, feel free to respond to others!
-- If your question is resolved, be sure to post in Slack that you figured it out!
+* Exam 1: Recap
+* Homework 5: 
+* Reading: 
 
 ---
 
