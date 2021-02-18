@@ -342,18 +342,6 @@ data %>%
 
 ### 1C: How to make visualizations aesthetically pleasing
 
-_Theming and fine-tuning_
-
-```{r, echo = TRUE, eval = FALSE}
-data %>%
-  ggplot(aes(x = value, y = name, fill = name)) +
-  geom_jitter(color = "gray") +
-  geom_violin() +
-  theme_minimal()
-```
-
----
-
 ```{r, echo = FALSE, eval = TRUE, fig.align='center'}
 data %>%
   ggplot(aes(x = value, y = name, fill = name)) +
