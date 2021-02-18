@@ -56,23 +56,83 @@ state_data_final &lt;- state_data_merge %&gt;%
 **Last week we discussed wrangling and tidying data**:
 
 1. Reshaping data
-  - `pivot_wide()` and `pivot_long()`
+- `pivot_wide()` and `pivot_long()`
 1. Joining data
-  - `left_join()`, `inner_join()`, and others
+- `left_join()`, `inner_join()`, and others
 1. Grouped data operations with dplyr
-  - `group_by()` and `summarize()`
+- `group_by()` and `summarize()`
+
+---
+
+### Review of last week's class
 
 **Reading**
 
-* Reading on tidying data: https://r4ds.had.co.nz/tidy-data.html
+* From R for Data Science: https://r4ds.had.co.nz/tidy-data.html
+* tidy data:
+* every variable has its own column
+* every observation has its own row
+* every value has its own cell
+
+* tidy data makes it easier to use similar tools (even with very different datasets and types of data)
+* tidy data works well with R
+
+---
+
+### Review of last week's class
+
+**TB cases*
+
+- Where is the year variable represented?
+- Where is the cases variable represented?
+- How many observations does each row represent?
+
+
+```r
+library(tidyverse)
+
+table4a
+```
+
+```
+## # A tibble: 3 x 3
+##   country     `1999` `2000`
+## * &lt;chr&gt;        &lt;int&gt;  &lt;int&gt;
+## 1 Afghanistan    745   2666
+## 2 Brazil       37737  80488
+## 3 China       212258 213766
+```
+### Review of last week's class
+
+* tidy data:
+* every variable has its own column
+* every observation has its own row
+
+
+```r
+table4a %&gt;% 
+  pivot_longer(c(`1999`, `2000`), names_to = "year", values_to = "cases")
+```
+
+```
+## # A tibble: 6 x 3
+##   country     year   cases
+##   &lt;chr&gt;       &lt;chr&gt;  &lt;int&gt;
+## 1 Afghanistan 1999     745
+## 2 Afghanistan 2000    2666
+## 3 Brazil      1999   37737
+## 4 Brazil      2000   80488
+## 5 China       1999  212258
+## 6 China       2000  213766
+```
 
 ---
 
 ### Homework highlights
 
-&lt;!-- Josh to add --&gt;
+What do you notice? What do you wonder about?
 
-
+&lt;img src="img/week-4-hw-example.png" width="100%" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -104,7 +164,7 @@ C. And, how can we make our visualizations aesthetically pleasing?
 
 ---
 
-# 1A: Why visualize data?
+### 1A: Why visualize data?
 
 One answer: 
 
@@ -117,7 +177,7 @@ One answer:
 
 ---
 
-# 1A: Why visualize data?
+### 1A: Why visualize data?
 
 These four different data sets have the same correlation (type `anscombe` in R to view the data), but are very different
 
@@ -125,7 +185,7 @@ These four different data sets have the same correlation (type `anscombe` in R t
 
 ---
 
-# 1A: Why visualize data
+### 1A: Why visualize data
 
 Another reason to visualize data is to *communicate with others*; you can use visualizations to communicate your findings or results. In example:
 
@@ -138,7 +198,7 @@ https://apreshill.github.io/ohsu-biodatavis/slides.html#33
 
 ---
 
-# 1B: How to visualize data
+### 1B: How to visualize data
 
 One way to think about visualizing data is in terms of the _type_ of visualization you create:
 
@@ -151,7 +211,7 @@ One way to think about visualizing data is in terms of the _type_ of visualizati
 
 ---
 
-# 1B: How to visualize data
+### 1B: How to visualize data
 
 Another way to think about visualizing data is in terms of the elements that make up a plot.
 
@@ -166,7 +226,7 @@ Why a grammar of graphics?
 
 ---
 
-# 1B: How to visualize data?
+### 1B: How to visualize data?
 
 One view of visualizations is that they consist of four components:
 
@@ -177,7 +237,7 @@ One view of visualizations is that they consist of four components:
 
 ---
 
-# 1B: How to visualize data?
+### 1B: How to visualize data?
 
 Let's see how this might appear:
 
@@ -190,84 +250,120 @@ data
 
 ```
 ## # A tibble: 1,620 x 2
-##    name  value
-##    &lt;chr&gt; &lt;dbl&gt;
-##  1 A     10.8 
-##  2 A      7.40
-##  3 A     16.3 
-##  4 A      7.36
-##  5 A     11.1 
-##  6 A     11.6 
-##  7 A     12.3 
-##  8 A      5.85
-##  9 A     10.0 
-## 10 A     10.5 
+##    name       value
+##    &lt;chr&gt;      &lt;dbl&gt;
+##  1 Question 1  3.21
+##  2 Question 1  4.35
+##  3 Question 1  3.52
+##  4 Question 1  3.89
+##  5 Question 1  3.33
+##  6 Question 1  2.22
+##  7 Question 1  5.51
+##  8 Question 1  3.44
+##  9 Question 1  3.44
+## 10 Question 1  1.88
 ## # … with 1,610 more rows
 ```
 
 
 ```r
 data %&gt;%
-  ggplot(aes(x = name, y = value, fill = name)) +
-    geom_boxplot() +
-    geom_jitter()
+  ggplot(aes(x = name, y = value)) +
+  geom_boxplot()
 ```
 
 ---
 
-# 1B: How to visualize data?
+### 1B: How to visualize data?
 
-![](presentations-week-5_files/figure-html/unnamed-chunk-10-1.png)&lt;!-- --&gt;
+![](presentations-week-5_files/figure-html/unnamed-chunk-12-1.png)&lt;!-- --&gt;
 
 ---
 
-# 1B: How to visualize data
+### 1B: How to visualize data
 
-You can easily create different plots by:
+- The previous slide contained a u potentially _useful_ plot
+- However, we might be able to improve both its interpretability and its aesthetic
+
+
+&lt;img src="https://d33wubrfki0l68.cloudfront.net/21d683072b0c21cbd9b41fc0e37a587ad26b9525/cbf41/wp-content/uploads/2018/08/data-visualization-2.1.png" width="62%" style="display: block; margin: auto;" /&gt;
+
+https://github.com/rstudio/cheatsheets/raw/master/data-visualization-2.1.pdf
+
+---
+
+### 1B: How to visualize data?
+
+![](presentations-week-5_files/figure-html/unnamed-chunk-14-1.png)&lt;!-- --&gt;
+
+---
+
+### 1B: How to visualize data?
+
+![](presentations-week-5_files/figure-html/unnamed-chunk-15-1.png)&lt;!-- --&gt;
+
+---
+
+### 1B: How to visualize data
+
+You can create different plots by:
 
 - Changing the aesthetic _mapping_ between variables in the data and geometric objects
 - Changing the geometric objects
 
 ---
 
-# 1B: How to visualize data
+### 1B: How to visualize data?
 
-**Example A**
-
-&lt;!-- Josh to add --&gt;
-
-
-
-# 1B: How to visualize data
-
-**Example B**
-
-&lt;!-- Josh to add --&gt;
-
-
+![](presentations-week-5_files/figure-html/unnamed-chunk-16-1.png)&lt;!-- --&gt;
 
 ---
 
-# 1C: How to make visualizations aesthetically pleasing
+### 1B: How to visualize data?
+
+![](presentations-week-5_files/figure-html/unnamed-chunk-17-1.png)&lt;!-- --&gt;
+
+---
+
+### 1C: How to make visualizations aesthetically pleasing
 
 _Theming and fine-tuning_
 
 
 ```r
 data %&gt;%
-  ggplot(aes(x = name, y = value, fill = name)) +
-    geom_boxplot() +
-    geom_jitter(color="black", size=0.4, alpha=0.9) +
-    theme(
-      legend.position="none",
-      plot.title = element_text(size=11)
-    ) +
-  theme_bw()
+  ggplot(aes(x = value, y = name, fill = name)) +
+  geom_jitter(color = "gray") +
+  geom_violin() +
+  theme_minimal()
 ```
 
 ---
 
-![](presentations-week-5_files/figure-html/unnamed-chunk-14-1.png)&lt;!-- --&gt;
+&lt;img src="presentations-week-5_files/figure-html/unnamed-chunk-19-1.png" style="display: block; margin: auto;" /&gt;
+
+---
+
+_Theming and fine-tuning_
+
+
+```r
+data %&gt;%
+  ggplot(aes(x = value, y = name, fill = name)) +
+  geom_jitter(color = "gray") +
+  geom_violin() +
+  theme_minimal() +
+  scale_fill_brewer("", type = "qual") +
+  ylab(NULL) +
+  xlab(NULL) +
+  theme(text = element_text(size = 16, family = "Times"),
+        legend.position = "none") +
+  ggtitle("Distributions for the Five Questions")
+```
+
+---
+
+&lt;img src="presentations-week-5_files/figure-html/unnamed-chunk-21-1.png" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -283,8 +379,47 @@ Often, we have to make changes to our data frame in order to create the visualiz
 
 ---
 
+### 2: How does tidying data relate to data viz?
+
+**Making a new variable prior to plotting the data**
 
 
+```r
+pred_frame %&gt;% 
+  mutate(isTeacher = ifelse(isTeacher == 0, "Non-Teachers", "Teachers")) %&gt;% 
+  ggplot(aes(year_of_post_centered + 2016, prediction)) +
+  geom_line(aes(color = type_of_tweet), 
+            size = 1.3) +
+  geom_text(aes(label = label, color = type_of_tweet),
+           family = "Times New Roman",
+           data = label_frame) +
+  facet_wrap(~isTeacher, ncol = 1) +
+  scale_x_continuous("Year", breaks = seq(2010, 2020, 2)) +
+  labs(x = "Year", 
+       y = "Standardized Model-Predicted Sentiment Score")
+```
+
+---
+
+### 2: How does tidying data relate to data viz?
+
+&lt;img src="img/interactions.png" width="60%" style="display: block; margin: auto;" /&gt;
+
+---
+
+### 2: How does tidying data relate to data viz?
+
+_Other data tidying steps_ we might take prior to visualizing data:
+
+  - **recoding** variables
+  - **creating a factor** (so that we can order elements of a plot as we wish for them
+  to be ordered)
+  - **grouping** and **summarizing** to plot a summary statistic
+  - realizing that your data processing and tidying was not quite sufficient,
+  so **returning to those stages** before finalizing your visualization
+  - **re-running our analysis** (`.Rmd` file) because we discovered an issue with our 
+  data
+  
 ---
 
 class: inverse, center, middle
@@ -293,27 +428,49 @@ class: inverse, center, middle
 
 ---
 
+### 3: Why data ethics?
+
+With great data powers comes great responsibility!
+
+- Ethics matter, especially when we are working with vulnerable populations (or data about them)
+- And, ethical concerns may extned beyond what our Institutional Review Board considers
+
+---
 
 ### 3: Why data ethics?
 
-With great power comes great responsibility
+"... Surveillance photos were taken from the building on the upper right and captured images of more than 1.700 students, faculty members and other passers-by walking on the path near the West Lawn, the large grassy area on the left."
+
+&lt;img src="https://www.denverpost.com/wp-content/uploads/2019/05/uccs.png?w=1018" width="45%" style="display: block; margin: auto;" /&gt;
+
+https://www.denverpost.com/2019/05/27/cu-colorado-springs-facial-recognition-research/
 
 ---
 
 ### 3: Examples of positive and negative data ethics
 
-&lt;!-- Josh to add --&gt;
+- Positive: Privacy threat modeling and plan mitigation strategies ([Lundberg et al., 2019](https://journals.sagepub.com/doi/abs/10.1177/2378023118813023))
 
-- Positive:
-- Negative: 
+- Negative: Identifying individual participants through social media posts included in presentations and publications
 
 ---
 
 # Course Logistics
 
-* Exam 1: Recap
-* Homework 5: 
-* Reading: 
+* Exam 1: [Recap](https://utk.instructure.com/courses/121991/quizzes/183019/statistics)
+* Homework 5: Due by Tuesday, 1/23
+* Reading: Considerations for using social media data in learning design and technology research ([Greenhalgh et al., 2020](http://www.researchmerge.com/uploads/7/5/3/5/75356681/chapter_5_research_methods_in_learning_design_and_technology_pre-print.pdf))
+
+---
+
+# Random
+
+- [Analyzing educational data with open science best practices, R, and OSF](https://zoom.us/webinar/register/1216134199427/WN_OpHYNc0PQhSkOVPSB3Qaa)
+- Continue to express your work/challenges with R as precisely as possible, e.g.:
+  - A data frame versus a data file
+  - The name for a data frame 
+  
+- How do I format code in Slack? Try enclosing code in back tick marks ` ` ` `
 
 ---
 
@@ -321,8 +478,10 @@ With great power comes great responsibility
 
 In your base group's Slack channel:
 
-- What is one thing you took away from today?
+- What is one thing you learned today?
 - What is something you want to learn more about? 
+- _Also_, in GIF form (type `/giphy` in Slack, and then a random term), summarize how you are feeling
+about R
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
