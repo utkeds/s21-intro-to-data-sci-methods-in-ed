@@ -82,9 +82,9 @@ state_data_final <- state_data_merge %>%
 
 * From R for Data Science: https://r4ds.had.co.nz/tidy-data.html
 * tidy data:
-* every variable has its own column
-* every observation has its own row
-* every value has its own cell
+  * every variable has its own column
+  * every observation has its own row
+  * every value has its own cell
 
 * tidy data makes it easier to use similar tools (even with very different datasets and types of data)
 * tidy data works well with R
@@ -152,9 +152,9 @@ class: inverse, center, middle
 
 **Outline**
 
-A. Why visualize data?
-B. How can we visualize data in R?
-C. And, how can we make our visualizations aesthetically pleasing?
+A. Why visualize data?  
+B. How can we visualize data in R?  
+C. And, how can we make our visualizations aesthetically pleasing?  
 
 ---
 
@@ -491,10 +491,16 @@ https://www.denverpost.com/2019/05/27/cu-colorado-springs-facial-recognition-res
 
 # Course Logistics
 
+**This week**
 * Exam 1: [Recap](https://utk.instructure.com/courses/121991/quizzes/183019/statistics)
 * Homework 5: Due by Tuesday, 1/23
-* Reading: Considerations for using social media data in learning design and technology research ([Greenhalgh et al., 2020](http://www.researchmerge.com/uploads/7/5/3/5/75356681/chapter_5_research_methods_in_learning_design_and_technology_pre-print.pdf))
-* Start to think about what you may want to do for a final project; something that
+* Readings
+  * 1: Considerations for using social media data in learning design and technology research ([Greenhalgh et al., 2020](http://www.researchmerge.com/uploads/7/5/3/5/75356681/chapter_5_research_methods_in_learning_design_and_technology_pre-print.pdf))
+  * 2: Data visualization ([Wickham & Grolemund, 2018](https://r4ds.had.co.nz/data-visualisation.html))
+  
+**Coming up**
+* [Data ethics](https://making-data-science-count.github.io/s21-intro-to-data-sci-methods-in-ed/assignment-data-ethics.html)
+* *Just begin* to think and to ask questions about what you may want to do for [a final project](https://making-data-science-count.github.io/s21-intro-to-data-sci-methods-in-ed/assignments.html); something that
 will advance your research and allow you to exhibit and extend what you do in class
 
 ---
