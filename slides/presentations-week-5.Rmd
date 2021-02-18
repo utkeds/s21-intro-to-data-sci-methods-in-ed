@@ -32,11 +32,11 @@ library(stringr)
 
 # Breakout rooms!
 
-Starting with XXX
+Starting with whomever is most advanced in one's graduate program:
 
 **Two questions**
 
-- 
+- What kinds of visualization do you find useful/interesting?
 - 
 
 (10 minutes)
