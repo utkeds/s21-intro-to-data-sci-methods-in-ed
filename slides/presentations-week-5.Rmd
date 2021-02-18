@@ -104,6 +104,9 @@ library(tidyverse)
 
 table4a
 ```
+
+---
+
 ### Review of last week's class
 
 * tidy data:
