@@ -20,3 +20,5 @@ output: html_document
 - [Extra material from week 2 slides not covered in class](https://tennessee.zoom.us/rec/play/58gQ7qPUZcJykRzH0RaxRsCnvPyPMQbY-Aqji8mOv5_0ZVq4M32zV0Q0mED1PCNChSCmSIWPOG288_4V.aOWdsvvdQQubCvA2?autoplay=true&startTime=1611893850000)
 
 - [Vector types in R](https://tennessee.zoom.us/rec/play/U4qu4FZcAM6An6QE8yuWHE7l3M3QvvkaNndsiRxDKTF9NcBtMWs5l3rm6Xhm2ztrvi3l3wi2WCu2ahUt._yJXDuWJYfV4Twkh?continueMode=true)
+
+- [Homework 4 solution walkthrough](https://tennessee.zoom.us/rec/share/4ZYWWBQYkA4_4YWP_-twc_F229EXtOHCb3H7CcLkWK0krYwrnGFB9y4-grcwNVtR.WnvBsBar64vEQSwE)

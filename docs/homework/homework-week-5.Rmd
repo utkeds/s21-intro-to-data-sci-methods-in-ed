@@ -25,7 +25,7 @@ Note that - like for last week - you will need to have created a `data` director
 the same directory in which this file is saved for this to work.
 
 ```{r}
-download.file("https://github.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed/blob/main/data/tidykids.csv",
+download.file("https://raw.githubusercontent.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed/main/data/tidykids.csv",
               destfile = here("data", "tidykids.csv"))
 ```
 
@@ -46,7 +46,7 @@ to the name tidykids. Take a look at your homework from last week for a tip on t
 
 Finally, in the code chunk below, show how you would inspect the data you just loaded - 
 does it appear as you think it should appear? What do you notice from taking a first 
-look at your data?ti
+look at your data?
 
 ```{r}
 
@@ -69,7 +69,7 @@ find the most interesting)! in the next code chunk; we've written some
 code to get you started:
 
 ```{r}
-tidykids_variable <- filter(tidykids, variable == "")
+tidykids_variable <- filter()
 ```
 
 Next, let's take one more look at our data, just to make sure that the above code
@@ -106,7 +106,7 @@ of one variable:
 
 The code below creates a plot - but one without any geometric shapes, so it's not very 
 interesting (you can run the code to see what we mean!). To this code below, add
-one of the above geometries. Recall that we add layers to ggplot2s (so, any line
+one of the above geoms. Recall that we add layers to ggplot2s (so, any line
 after the line on which we call ggplot()) through a different operator than we otherwise
 use in R (the pipe operator). Instead, we use the + operator. Take a look [at the 
 slides for this week](https://making-data-science-count.github.io/s21-intro-to-data-sci-methods-in-ed/presentations.html) if you need a pointer on this.
@@ -126,15 +126,15 @@ the x aesthetic.
 
 ```
 
-Next, select a different geometry than the one you selected; choose which variable
+Next, select a different geom than the one you selected; choose which variable
 you wish to represent (by specifying it as mapping to the x aesthetic), too:
 
 ```{r}
 
 ```
 
-Finally - for this portion of the homework - choose one more geometry 
-(other than one you have already used), and create a plot using that geometry below:
+Finally - for this portion of the homework - choose one more geom
+(other than one you have already used), and create a plot using that geom below:
 
 ```{r}
 
@@ -162,7 +162,7 @@ elements utilized in the plots above) in the chunk below:
 # Visualizing two variables
 
 Visualizing two variables invites a number of additional considerations. We will
-focus on only one geometry for now, adding others over the next few weeks:
+focus on only one geom for now, adding others over the next few weeks:
 
 - geom_col()
 
@@ -195,7 +195,7 @@ my_data %>%
 The above code is not quite useful to you for at least two reasons:
 
 1. The data and variables are named differently than those you are using
-2. We are using a different geometry
+2. We are using a different geom
 
 But, using the above as a starting point, can you reorder the columns in the
 first visualization that you made using geom_col in the code chunk below:

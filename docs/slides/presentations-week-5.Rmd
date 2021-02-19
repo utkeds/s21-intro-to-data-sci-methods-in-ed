@@ -26,6 +26,7 @@ library(readr)
 library(magrittr)
 library(tidyr)
 library(stringr)
+library(ggplot2)
 ```
 
 ---
