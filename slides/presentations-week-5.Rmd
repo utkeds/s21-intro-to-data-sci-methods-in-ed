@@ -1,8 +1,8 @@
 ---
-title: "HW Week 5 - Introduction to Data Viz" 
+title: "Week 5 - Introduction to Data Viz" 
 subtitle: ""
 author: "Joshua Rosenberg, Alex Lishinski"
-date: "February 11, 2021"
+date: "February 18, 2021"
 output:
   xaringan::moon_reader:
     css: [theme.css]
@@ -26,6 +26,7 @@ library(readr)
 library(magrittr)
 library(tidyr)
 library(stringr)
+library(ggplot2)
 ```
 
 ---
