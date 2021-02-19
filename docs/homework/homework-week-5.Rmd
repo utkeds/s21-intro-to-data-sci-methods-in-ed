@@ -46,7 +46,7 @@ to the name tidykids. Take a look at your homework from last week for a tip on t
 
 Finally, in the code chunk below, show how you would inspect the data you just loaded - 
 does it appear as you think it should appear? What do you notice from taking a first 
-look at your data?
+look at your data?ti
 
 ```{r}
 

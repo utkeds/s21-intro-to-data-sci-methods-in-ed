@@ -21,3 +21,7 @@ output: html_document
 ## Week 4
 
 - [Week 4 HW](https://github.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed/blob/main/homework/homework-week-4.Rmd)
+
+## Week 5
+
+- [Week 5 HW](https://github.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed/blob/main/homework/homework-week-5.Rmd)
