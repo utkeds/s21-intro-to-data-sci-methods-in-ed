@@ -74,7 +74,8 @@ load them in this session.
 Do this - load these two packages - in the next chunk:
 
 ```{r}
-
+library(tidyverse)
+library(here)
 ```
 
 Then, let's download the files next.
@@ -113,7 +114,7 @@ for the second file.
 
 ```{r}
 twilio_data <- read_csv(here("data", "twilio_data.csv"))
-
+database_data <- read_csv(here("data", "database_data.csv"))
 ```
 
 ## Joining the data
@@ -134,7 +135,7 @@ You'll need one of the join functions; you may find this help documentation help
 https://dplyr.tidyverse.org/reference/join.html
 
 ```{r}
-
+joined <- inner_join(database_data, twilio_data)
 ```
 
 Now that the data is joined, we will want to get rid of some of the variables
@@ -159,7 +160,8 @@ variables, but, as a reminder, check out the slides from week 2:
 https://making-data-science-count.github.io/s21-intro-to-data-sci-methods-in-ed/slides/presentations-week-2.html#17
 
 ```{r}
-
+joined <- inner_join(database_data, twilio_data) %>%
+  select(survey_id, From, content, question_id)
 ```
 
 Now that we've gotten rid of the unimportant variables, that will make our next
@@ -177,7 +179,9 @@ you to get started, but you'll need to add the crucial bits, and connect it with
 what you've done before.
 
 ```{r}
-pivot_wider(id_cols = c(survey_id, From), names_prefix = "Question_", values_fn = first)
+joined <- inner_join(database_data, twilio_data) %>%
+  select(survey_id, From, content, question_id) %>%
+  pivot_wider(id_cols = c(survey_id, From), names_prefix = "Question_", values_fn = first, values_from = content, names_from = question_id)
 ```
 
 Great! Now that you have those new variables for each question, all that's
@@ -190,7 +194,12 @@ For some pointeres, check out these slides from this week here:
 https://making-data-science-count.github.io/s21-intro-to-data-sci-methods-in-ed/slides/presentations-week-4.html#30
 
 ```{r}
-
+joined <- inner_join(database_data, twilio_data) %>%
+  select(survey_id, From, content, question_id) %>%
+  mutate(content = as.numeric(str_extract(content, "[12345]{1}"))) %>%
+  pivot_wider(id_cols = c(survey_id, From), names_prefix = "Question_", values_fn = first, values_from = content, names_from = question_id) %>%
+ group_by(From) %>%
+  summarize(Q1M = mean(Question_1))
 ```
 
 So now you might be mad, because that didn't work and it gave you an obnoxiously
@@ -203,14 +212,19 @@ you already know how from the lecture and last week's homework, so go ahead and
 do that below.
 
 ```{r}
-
+joined <- inner_join(database_data, twilio_data) %>%
+  select(survey_id, From, content, question_id) %>%
+  mutate(content = as.numeric(str_extract(content, "[12345]{1}"))) %>%
+  pivot_wider(id_cols = c(survey_id, From), names_prefix = "Question_", values_fn = first, values_from = content, names_from = question_id) %>%
+  group_by(From) %>%
+  summarize(Q1M = mean(Question_1, na.rm = TRUE), Q2M = mean(Question_2), Q3M = mean(Question_3), Q4M = mean(Question_4), Q5M = mean(Question_5))
 ```
 
 Now that you have everything, just type in the name of your summary data table so 
 we can see the print output.
 
 ```{r}
-
+joined
 ```
 
 If you made it all the way, congrats, you did a great job! If you couldn't get
