@@ -38,11 +38,11 @@ Starting with whomever most wants to go first:
 
 **One question:**
 
-
+- What is a weird, unusual, or surprising situation you encountered when using R in the last week?
 
 **One reflection/discussion:**
 
-
+- What is a specific visualization you would like to create - and why?
 
 ---
 
@@ -193,7 +193,6 @@ Why a grammar of graphics?
 ---
 
 ### 1A: Grammar of Graphics
-
 
 ---
 
