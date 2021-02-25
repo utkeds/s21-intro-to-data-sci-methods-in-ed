@@ -3,8 +3,9 @@
   <head>
     <title>Week 6 - Further into Data Viz</title>
     <meta charset="utf-8" />
-    <meta name="author" content="Joshua Rosenberg, Alex Lishinski" />
+    <meta name="author" content="Alex Lishinski and Joshua Rosenberg" />
     <meta name="date" content="2021-02-25" />
+    <script src="libs/header-attrs-2.6/header-attrs.js"></script>
     <link rel="stylesheet" href="theme.css" type="text/css" />
   </head>
   <body>
@@ -12,7 +13,7 @@
 class: center, middle, inverse, title-slide
 
 # Week 6 - Further into Data Viz
-### Joshua Rosenberg, Alex Lishinski
+### Alex Lishinski and Joshua Rosenberg
 ### February 25, 2021
 
 ---
@@ -34,11 +35,11 @@ Starting with whomever most wants to go first:
 
 **One question:**
 
-- What is a weird, unusual, or surprising situation you encountered when using R in the last week?
+- What is a weird, unusual, or surprising situation that you encountered when using R in the last week?
 
 **One reflection/discussion:**
 
-- What is a specific visualization you would like to create - and why?
+- The [Greenhalgh et al. (2020)](http://www.researchmerge.com/uploads/7/5/3/5/75356681/chapter_5_research_methods_in_learning_design_and_technology_pre-print.pdf) chapter outlines six considerations related to conducting ethical research. Which of these six do you think is *important but insufficiently emphasized* in your area of research?
 
 ---
 
@@ -109,6 +110,8 @@ data %&gt;%
 ### Homework highlights
 
 What do you notice? What do you wonder about?
+
+&lt;img src="img/wk-6-hw.png" width="80%" /&gt;
 
 ---
 
@@ -195,7 +198,7 @@ _Keep it simple_
 
 _Use color to draw attention_
 
-&lt;img src="presentations-week-6_files/figure-html/unnamed-chunk-7-1.png" width="60%" /&gt;
+&lt;img src="presentations-week-6_files/figure-html/unnamed-chunk-8-1.png" width="60%" /&gt;
 
 ---
 
@@ -205,7 +208,7 @@ _Use color to draw attention_
 
 _Use color to draw attention_
 
-&lt;img src="presentations-week-6_files/figure-html/unnamed-chunk-8-1.png" width="60%" /&gt;
+&lt;img src="presentations-week-6_files/figure-html/unnamed-chunk-9-1.png" width="60%" /&gt;
 
 ---
 
@@ -239,7 +242,7 @@ _Data_
 ggplot(mtcars)
 ```
 
-&lt;img src="presentations-week-6_files/figure-html/unnamed-chunk-10-1.png" width="50%" /&gt;
+&lt;img src="presentations-week-6_files/figure-html/unnamed-chunk-11-1.png" width="50%" /&gt;
 
 
 ---
@@ -254,7 +257,7 @@ ggplot(mtcars) +
   geom_point(aes(x = disp, y = mpg))
 ```
 
-&lt;img src="presentations-week-6_files/figure-html/unnamed-chunk-11-1.png" width="50%" /&gt;
+&lt;img src="presentations-week-6_files/figure-html/unnamed-chunk-12-1.png" width="50%" /&gt;
 
 
 ---
@@ -270,7 +273,7 @@ ggplot(mtcars) +
   geom_smooth(aes(x = disp, y = mpg), method = "loess")
 ```
 
-&lt;img src="presentations-week-6_files/figure-html/unnamed-chunk-12-1.png" width="50%" /&gt;
+&lt;img src="presentations-week-6_files/figure-html/unnamed-chunk-13-1.png" width="50%" /&gt;
 
 ---
 
@@ -286,7 +289,7 @@ ggplot(mtcars) +
   geom_point(aes(x = disp, y = mpg, color = am), size = 6)
 ```
 
-&lt;img src="presentations-week-6_files/figure-html/unnamed-chunk-14-1.png" width="50%" /&gt;
+&lt;img src="presentations-week-6_files/figure-html/unnamed-chunk-15-1.png" width="50%" /&gt;
 ---
 
 ### 1B: Understanding visualizations by layer
@@ -299,7 +302,7 @@ ggplot(mtcars) +
   geom_point(aes(x = disp, y = mpg, shape = am), size = 6)
 ```
 
-&lt;img src="presentations-week-6_files/figure-html/unnamed-chunk-15-1.png" width="50%" /&gt;
+&lt;img src="presentations-week-6_files/figure-html/unnamed-chunk-16-1.png" width="50%" /&gt;
 
 ---
 
@@ -313,7 +316,7 @@ ggplot(mtcars) +
   geom_point(aes(x = disp, y = mpg, size = hp))
 ```
 
-&lt;img src="presentations-week-6_files/figure-html/unnamed-chunk-16-1.png" width="50%" /&gt;
+&lt;img src="presentations-week-6_files/figure-html/unnamed-chunk-17-1.png" width="50%" /&gt;
 
 ---
 
@@ -393,7 +396,7 @@ _Fivethirtyeight style_
 base_plot + theme_fivethirtyeight()
 ```
 
-&lt;img src="presentations-week-6_files/figure-html/unnamed-chunk-18-1.png" width="50%" /&gt;
+&lt;img src="presentations-week-6_files/figure-html/unnamed-chunk-19-1.png" width="50%" /&gt;
 
 ---
 
@@ -528,7 +531,7 @@ ggplot(na.omit(tidykids_reg)) +
   ylab("Adj per child")
 ```
 
-&lt;img src="presentations-week-6_files/figure-html/unnamed-chunk-20-1.png" width="50%" /&gt;
+&lt;img src="presentations-week-6_files/figure-html/unnamed-chunk-21-1.png" width="50%" /&gt;
 
 
 ---
@@ -544,7 +547,7 @@ ggplot(tidykids_reg) +
   geom_jitter(aes(timeblock, inf_adj_perchild))
 ```
 
-&lt;img src="presentations-week-6_files/figure-html/unnamed-chunk-21-1.png" width="50%" /&gt;
+&lt;img src="presentations-week-6_files/figure-html/unnamed-chunk-22-1.png" width="50%" /&gt;
 
 ---
 
@@ -560,7 +563,7 @@ ggplot(tidykids_reg) +
   geom_jitter(aes(timeblock, inf_adj_perchild))
 ```
 
-&lt;img src="presentations-week-6_files/figure-html/unnamed-chunk-22-1.png" width="50%" /&gt;
+&lt;img src="presentations-week-6_files/figure-html/unnamed-chunk-23-1.png" width="50%" /&gt;
 
 
 ---
@@ -601,7 +604,7 @@ summ_df %&gt;%
     geom_col(aes(state.region, mean_perchild))
 ```
 
-&lt;img src="presentations-week-6_files/figure-html/unnamed-chunk-24-1.png" width="50%" /&gt;
+&lt;img src="presentations-week-6_files/figure-html/unnamed-chunk-25-1.png" width="50%" /&gt;
 
 ---
 
@@ -630,22 +633,26 @@ When we do `group_by()` and `summarize()` we can plot summary statistics
 # Course Logistics
 
 **This week**
+<<<<<<< HEAD
 * Exam 1: [Recap](https://utk.instructure.com/courses/121991/quizzes/183019/statistics)
+=======
+
+>>>>>>> origin/main
 * Homework 6: Available tommorow by noon; Due by Thursday, 3/4
 * Readings
-  * 1:
-  * 2: 
+  * 1: https://clauswilke.com/dataviz/histograms-density-plots.html
+  * 2: https://clauswilke.com/dataviz/visualizing-proportions.html
   
 **Coming up**
 * [Data ethics](https://making-data-science-count.github.io/s21-intro-to-data-sci-methods-in-ed/assignment-data-ethics.html)
-* *Just begin* to think and to ask questions about what you may want to do for [a final project](https://making-data-science-count.github.io/s21-intro-to-data-sci-methods-in-ed/assignments.html); something that
-will advance your research and allow you to exhibit and extend what you do in class
+* *Just begin* to think and to ask questions about what you may want to do for [a final project](https://making-data-science-count.github.io/s21-intro-to-data-sci-methods-in-ed/assignments.html); something that will advance your research and allow you to exhibit and extend what you do in class
 
 ---
 
 # Random
 
-
+- https://educationdata.urban.org/documentation/schools.html
+- https://leanpub.com/tidyverseskillsdatascience
 
 ---
 
