@@ -1,0 +1,55 @@
+---
+title: "Final Project"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Individual Final Project
+
+### Overview
+
+Complete an individually-designed project that can take different forms (R Markdown Report, interactive Shiny app, interactive dashboard, etc.) related to identifying and solving a data-related problem in education using R. 
+
+### Details
+
+The scope of the project must involve making substantial progress toward a research-related goal.
+
+These goals can take a number of different forms, including:
+
+- Accessing, cleaning, and initially describing the dimensions of a new data source (e.g., data from Twitter)
+- Analyzing data in a new way and writing the results up in a brief report
+- Analyzing an existing data set that you have in ways that would be difficult to do without some of the techniques in this class/without the sue of R
+- Creating an interactive data visualization or dashboard
+- ... (let's discuss your ideas!)
+
+We are more focused on the process you take than the specifics of your project, as we discuss next.
+
+### Process and Timeline and Due Dates
+
+A draft is due approximately two-thirds of the way through the semester, and your final project is due in presentation (screen recording via Zoom) form at the very end of the semester.
+
+- Initial ideas posted in a class-wide Google Doc, 3/18
+  - Feedback provided to peers in your base group (by 3/25)
+- Revised ideas posted in a class-wide Google Doc, 4/1
+  - Feedback from your instructors
+- Final project
+  - submission of a product (likely a rendered `.Rmd` file, but possibly something), 4/22
+  - 5-10 minute recording of your work; why you chose to work on this, what you did, and what you want to do next, 4/30
+
+### Other resources
+
+Available data sets:
+
+- Your own!
+- Education data package: https://github.com/UrbanInstitute/education-data-package-r
+- Data from Twitter: https://developer.twitter.com/en/solutions/academic-research
+- Data from Facebook: https://help.crowdtangle.com/en/articles/4302208-crowdtangle-for-academics-and-researchers
+- Other ideas for data sets?
+
+### How to submit
+
+- Please submit a Google Docs link for this assignment on Canvas. Also, please post that link to the #data-ethics-statement channel on Slack (you may have to browse and then add the channel to access it). Be sure that the sharing settings are such that anyone with the link can comment on the document. 
+

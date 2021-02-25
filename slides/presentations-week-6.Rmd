@@ -640,7 +640,7 @@ When we do `group_by()` and `summarize()` we can plot summary statistics
   
 **Coming up**
 * [Data ethics](https://making-data-science-count.github.io/s21-intro-to-data-sci-methods-in-ed/assignment-data-ethics.html)
-* *Just begin* to think and to ask questions about what you may want to do for [a final project](https://making-data-science-count.github.io/s21-intro-to-data-sci-methods-in-ed/assignments.html); something that will advance your research and allow you to exhibit and extend what you do in class
+* [Final project](https://making-data-science-count.github.io/s21-intro-to-data-sci-methods-in-ed/assignments-final-projects.html)
 
 ---
 
@@ -657,5 +657,3 @@ In your base group's Slack channel:
 
 - What is one thing you learned today?
 - What is something you want to learn more about? 
-- _Also_, in GIF form (type `/giphy` in Slack, and then a random term), summarize how you are feeling
-about R
