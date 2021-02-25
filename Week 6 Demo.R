@@ -81,5 +81,6 @@ summ_df$timepoint <- recode(summ_df$assign, `Lab 1a` = 1, `Lab 1b` = 3, `Lab 2a`
 
 
 
+# When a factor can be important
 
 

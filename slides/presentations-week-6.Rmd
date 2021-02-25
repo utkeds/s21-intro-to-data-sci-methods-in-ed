@@ -195,10 +195,6 @@ Why a grammar of graphics?
 
 ---
 
-### 1A: Grammar of Graphics
-
----
-
 ### 1A: More Data Viz Ideas
 
 #### Some general principles for effective data viz
