@@ -23,7 +23,7 @@ boxplot(content ~ question_id, data = joined_long)
 
 # better versions with ggplot
 
-ggplot(joined_long) +
+pl <- ggplot(joined_long) +
   geom_histogram(aes(x = content), fill = "red", color = "blue") + 
   xlab("Answer") +
   ylab("") +
