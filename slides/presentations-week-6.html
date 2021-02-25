@@ -116,9 +116,8 @@ What do you notice? What do you wonder about?
 
 **Overview**
 
-1. Data viz ideas
-2. Data viz details
-3. Data viz operations
+1. Data viz ideas and details
+3. Data viz and tidying operations
 
 ---
 
@@ -458,41 +457,11 @@ ggplot(mtcars) +
 
 class: inverse, center, middle
 
-# Part 2/3: Data Viz Details
+# Part 2/2: Data Viz and Tidying
 
 ---
 
-### 2. Data Viz Details 
-
-**Outline**
-
-A.
-B.
-C.
-
-
----
-
-### 2A: 
-
-
----
-
-### 2B: 
-
----
-
-### 2C: 
-
----
-
-class: inverse, center, middle
-
-# Part 3/3: Data Viz and Tidying
-
----
-
-### 3: How does tidying data relate to data viz?
+### 2: How does tidying data relate to data viz?
 
 Often, we have to make changes to our data frame in order to create the visualization we would like to create.
 
@@ -511,7 +480,7 @@ _Other data tidying steps_ we might take prior to visualizing data:
   
 ---
 
-### 3: How does tidying data relate to data viz?
+### 2: How does tidying data relate to data viz?
 
 Sometimes we need to recode a variable or add a new one
 
@@ -547,7 +516,7 @@ tidykids_reg$timeblock &lt;- recode(tidykids_reg$year,
 
 ---
 
-### 3: How does tidying data relate to data viz?
+### 2: How does tidying data relate to data viz?
 
 Sometimes we need to recode a variable for plotting
 
@@ -564,7 +533,7 @@ ggplot(na.omit(tidykids_reg)) +
 
 ---
 
-### 3: How does tidying data relate to data viz?
+### 2: How does tidying data relate to data viz?
 
 Creating and reordering factors is often useful 
 
@@ -579,7 +548,7 @@ ggplot(tidykids_reg) +
 
 ---
 
-### 3: How does tidying data relate to data viz?
+### 2: How does tidying data relate to data viz?
 
 Creating and reordering factors is often useful
 
@@ -596,7 +565,7 @@ ggplot(tidykids_reg) +
 
 ---
 
-### 3: How does tidying data relate to data viz?
+### 2: How does tidying data relate to data viz?
 
 When we do `group_by()` and `summarize()` we can plot summary statistics
 
@@ -621,7 +590,7 @@ summ_df
 
 ---
 
-### 3: How does tidying data relate to data viz?
+### 2: How does tidying data relate to data viz?
 
 When we do `group_by()` and `summarize()` we can plot summary statistics
 
@@ -636,7 +605,7 @@ summ_df %&gt;%
 
 ---
 
-### 3: How does tidying data relate to data viz?
+### 2: How does tidying data relate to data viz?
 
 When we do `group_by()` and `summarize()` we can plot summary statistics
 
@@ -662,7 +631,7 @@ When we do `group_by()` and `summarize()` we can plot summary statistics
 
 **This week**
 * Exam 1: [Recap](https://utk.instructure.com/courses/121991/quizzes/183019/statistics)
-* Homework 6: Due by Tuesday, 3/2
+* Homework 6: Available tommorow by noon; Due by Thursday, 3/4
 * Readings
   * 1:
   * 2: 

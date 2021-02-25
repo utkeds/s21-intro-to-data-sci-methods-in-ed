@@ -82,3 +82,20 @@ ggplot(summ_df) +
   ggtitle("I feel challenged")
 
 
+# When a factor can be important
+
+# try this first, explain why not right
+
+joined %>% group_by(assign) %>%
+ggplot() +
+  geom_boxplot(aes(timepoint, Question_1))
+
+library(forcats)
+
+joined_new <- joined %>% 
+  mutate(timepoint = as.factor(timepoint))
+
+joined_new %>%
+  group_by(assign) %>%
+  ggplot() +
+    geom_boxplot(aes(timepoint, Question_1)) 
