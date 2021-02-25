@@ -1,6 +1,9 @@
 /*fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400&display=swap');
 
+.pull-left { float: left; width: 40%; font-size: 0.5rem;}
+.pull-right { float: right; width: 60%; }
+
 body {
 	font-family: "PingFang SC", "Lantinghei SC", "Microsoft Yahei", "Hiragino Sans GB", "Microsoft Sans Serif", "WenQuanYi Micro Hei", sans;
 	color: #21252A;
@@ -18,6 +21,7 @@ h1, h2, h3, h4, h5, h6 {
 .remark-inline-code {
 	font-family: 'Source Code Pro', monospace;
 	color: #22ABF6;
+	/* font-size: 0.8rem; */
 }
 
 .remark-code-line-highlighted {
@@ -29,6 +33,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: 'Source Code Pro', monospace;
 	color: #434c56;
 	background: #ebf8fe;
+	font-size: 0.8rem;
 }
 
 .hljs-comment {
@@ -86,7 +91,7 @@ a:focus {
 
 .remark-slide-content {
 	background-color: #fff;
-	font-size: 1.6rem;
+	font-size: 1.4rem;
 	font-weight: 100;
 }
 

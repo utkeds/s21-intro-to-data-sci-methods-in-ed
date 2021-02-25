@@ -34,11 +34,11 @@ Starting with whomever most wants to go first:
 
 **One question:**
 
-
+- What is a weird, unusual, or surprising situation you encountered when using R in the last week?
 
 **One reflection/discussion:**
 
-
+- What is a specific visualization you would like to create - and why?
 
 ---
 
@@ -168,7 +168,6 @@ Why a grammar of graphics?
 
 ### 1A: Grammar of Graphics
 
-
 ---
 
 ### 1A: More Data Viz Ideas
@@ -248,7 +247,7 @@ ggplot(mtcars)
 
 ### 1B: Understanding visualizations by layer
 
-One geom
+_One geom_
 
 
 ```r
@@ -263,7 +262,7 @@ ggplot(mtcars) +
 
 ### 1B: Understanding visualizations by layer
 
-Additional Geoms
+_Additional Geoms_
 
 
 ```r
@@ -278,8 +277,7 @@ ggplot(mtcars) +
 
 ### 1B: Understanding visualizations by layer
 
-Additional Aesthetic Parameters: Color
-
+_Additional Aesthetic Parameters: Color_
 
 
 
@@ -294,12 +292,12 @@ ggplot(mtcars) +
 
 ### 1B: Understanding visualizations by layer
 
-Additional Aesthetic Parameters: Shape 
+_Additional Aesthetic Parameters: Shape_ 
 
 
 ```r
-ggplot(mtcars, aes(x = disp, y = mpg, shape = am), size = 6) +
-  geom_point()
+ggplot(mtcars) +
+  geom_point(aes(x = disp, y = mpg, shape = am), size = 6)
 ```
 
 &lt;img src="presentations-week-6_files/figure-html/unnamed-chunk-15-1.png" width="50%" /&gt;
@@ -308,7 +306,7 @@ ggplot(mtcars, aes(x = disp, y = mpg, shape = am), size = 6) +
 
 ### 1B: Understanding visualizations by layer
 
-Additional Aesthetic Parameters: Size
+_Additional Aesthetic Parameters: Size_
 
 
 ```r
@@ -322,10 +320,12 @@ ggplot(mtcars) +
 
 ### 1B: Understanding visualizations by layer
 
-Theme: labels
+_Theme: labels_
 
+.pull-left[
 
 ```r
+# code chunk here
 ggplot(mtcars) +
   geom_point(aes(x = disp, y = mpg, color = am), size = 6) +
   geom_smooth(aes(x = disp, y = mpg), method = "loess") + 
@@ -333,18 +333,23 @@ ggplot(mtcars) +
   ylab("Miles per Gallon") +
   scale_color_discrete(name = "Transmission", labels = c("manual", "auto"))
 ```
+]
 
-&lt;img src="presentations-week-6_files/figure-html/unnamed-chunk-17-1.png" width="50%" /&gt;
+.pull-right[
+&lt;img src="presentations-week-6_files/figure-html/label-out-1.png" width="90%" /&gt;
+]
 
 
 ---
 
 ### 1B: Understanding visualizations by layer
 
-Theme: overall
+_Theme: overall_
 
+.pull-left[
 
 ```r
+# code chunk here
 ggplot(mtcars) +
   geom_point(aes(x = disp, y = mpg, color = am), size = 6) +
   geom_smooth(aes(x = disp, y = mpg), method = "loess") + 
@@ -353,8 +358,11 @@ ggplot(mtcars) +
   scale_color_discrete(name = "Transmission", labels = c("manual", "auto")) +
   theme_bw()
 ```
+]
 
-&lt;img src="presentations-week-6_files/figure-html/unnamed-chunk-18-1.png" width="50%" /&gt;
+.pull-right[
+&lt;img src="presentations-week-6_files/figure-html/theming-out-1.png" width="90%" /&gt;
+]
 
 ---
 
@@ -374,6 +382,7 @@ base_plot &lt;- ggplot(mtcars) +
   scale_color_discrete(name = "Transmission", labels = c("manual", "auto"))
 ```
 
+
 ---
 
 ### 1B: Understanding visualizations by layer
@@ -385,7 +394,7 @@ _Fivethirtyeight style_
 base_plot + theme_fivethirtyeight()
 ```
 
-&lt;img src="presentations-week-6_files/figure-html/unnamed-chunk-20-1.png" width="50%" /&gt;
+&lt;img src="presentations-week-6_files/figure-html/unnamed-chunk-18-1.png" width="50%" /&gt;
 
 ---
 
@@ -401,10 +410,12 @@ You can create different plots by:
 
 ### 1C: Understanding mapping data to geoms
 
-Changing the mapping
+_Changing the mapping_
 
+.pull-left[
 
 ```r
+# code chunk here
 ggplot(mtcars) +
   geom_point(aes(y = disp, x = mpg, color = am), size = 6) +
   geom_smooth(aes(y = disp, x = mpg), method = "loess") + 
@@ -413,17 +424,22 @@ ggplot(mtcars) +
   scale_color_discrete(name = "Transmission", labels = c("manual", "auto")) +
   theme_bw()
 ```
+]
 
-&lt;img src="presentations-week-6_files/figure-html/unnamed-chunk-21-1.png" width="50%" /&gt;
+.pull-right[
+&lt;img src="presentations-week-6_files/figure-html/mapping-out-1.png" width="90%" /&gt;
+]
 
 ---
 
 ### 1C: Understanding mapping data to geoms
 
-Changing geoms
+_Changing geoms_
 
+.pull-left[
 
 ```r
+# code chunk here
 ggplot(mtcars) +
   geom_rug(aes(x = disp, y = mpg, color = am), size = 6) +
   geom_smooth(aes(x = disp, y = mpg), method = "loess") + 
@@ -432,31 +448,11 @@ ggplot(mtcars) +
   scale_color_discrete(name = "Transmission", labels = c("manual", "auto")) +
   theme_bw()
 ```
+]
 
-&lt;img src="presentations-week-6_files/figure-html/unnamed-chunk-22-1.png" width="50%" /&gt;
-
-
-
----
-
-### 1C: Understanding mapping data to geoms
-
-
----
-
-### 1C: Understanding mapping data to geoms
-
----
-
-### 1C: Understanding mapping data to geoms
-
----
-
-### 1C: Understanding mapping data to geoms
-
----
-
-### 1C: Understanding mapping data to geoms
+.pull-right[
+&lt;img src="presentations-week-6_files/figure-html/geoms-out-1.png" width="90%" /&gt;
+]
 
 ---
 
@@ -517,22 +513,148 @@ _Other data tidying steps_ we might take prior to visualizing data:
 
 ### 3: How does tidying data relate to data viz?
 
-Sometimes we need to recode a variable
+Sometimes we need to recode a variable or add a new one
+
+
+```r
+tidykids &lt;- read_csv(here("data", "tidykids.csv"))
+```
+
+```
+## 
+## ── Column specification ────────────────────────────────────────────────────────
+## cols(
+##   state = col_character(),
+##   variable = col_character(),
+##   year = col_double(),
+##   raw = col_double(),
+##   inf_adj = col_double(),
+##   inf_adj_perchild = col_double()
+## )
+```
+
+```r
+state_region &lt;- data.frame(state.name, state.region)
+
+tidykids_reg &lt;- left_join(tidykids, state_region, by = c("state" = "state.name"))
+
+tidykids_reg$timeblock &lt;- recode(tidykids_reg$year, 
+       `1997` = "1997-2001", `1998` = "1997-2001", `1999` = "1997-2001", `2000` = "1997-2001", `2001` = "1997-2001", 
+       `2002` = "2002-2006", `2003` = "2002-2006", `2004` = "2002-2006", `2005` = "2002-2006", `2006` = "2002-2006",
+       `2007` = "2007-2011", `2008` = "2007-2011", `2009` = "2007-2011", `2010` = "2007-2011", `2011` = "2007-2011", 
+       `2012` = "2012-2016", `2013` = "2012-2016", `2014` = "2012-2016", `2015` = "2012-2016", `2016` = "2012-2016")
+```
 
 ---
 
 ### 3: How does tidying data relate to data viz?
 
+Sometimes we need to recode a variable for plotting
 
-Reordering factors is often a good way to get what we want
+
+```r
+ggplot(na.omit(tidykids_reg)) +
+  geom_jitter(aes(x = state.region, y = inf_adj_perchild)) +
+  xlab("Region") + 
+  ylab("Adj per child")
+```
+
+&lt;img src="presentations-week-6_files/figure-html/unnamed-chunk-20-1.png" width="50%" /&gt;
 
 
 ---
 
 ### 3: How does tidying data relate to data viz?
 
-When we do `group_by()` and `summarize()` 
+Creating and reordering factors is often useful 
 
+```r
+tidykids_reg &lt;- tidykids_reg %&gt;%
+  mutate(timeblock = factor(timeblock))
+ggplot(tidykids_reg) +
+  geom_jitter(aes(timeblock, inf_adj_perchild))
+```
+
+&lt;img src="presentations-week-6_files/figure-html/unnamed-chunk-21-1.png" width="50%" /&gt;
+
+---
+
+### 3: How does tidying data relate to data viz?
+
+Creating and reordering factors is often useful
+
+
+```r
+tidykids_reg$timeblock &lt;- fct_relevel(tidykids_reg$timeblock, c("2012-2016", "2007-2011", "2002-2006", "1997-2001"))
+
+ggplot(tidykids_reg) +
+  geom_jitter(aes(timeblock, inf_adj_perchild))
+```
+
+&lt;img src="presentations-week-6_files/figure-html/unnamed-chunk-22-1.png" width="50%" /&gt;
+
+
+---
+
+### 3: How does tidying data relate to data viz?
+
+When we do `group_by()` and `summarize()` we can plot summary statistics
+
+
+```r
+summ_df &lt;- na.omit(tidykids_reg) %&gt;%
+  group_by(state.region) %&gt;%
+  summarize(mean_perchild = mean(inf_adj_perchild, na.rm = T))
+
+summ_df
+```
+
+```
+## # A tibble: 4 x 2
+##   state.region  mean_perchild
+## * &lt;fct&gt;                 &lt;dbl&gt;
+## 1 Northeast             1.06 
+## 2 South                 0.855
+## 3 North Central         0.834
+## 4 West                  0.865
+```
+
+---
+
+### 3: How does tidying data relate to data viz?
+
+When we do `group_by()` and `summarize()` we can plot summary statistics
+
+
+```r
+summ_df %&gt;%
+  ggplot() +
+    geom_col(aes(state.region, mean_perchild))
+```
+
+&lt;img src="presentations-week-6_files/figure-html/unnamed-chunk-24-1.png" width="50%" /&gt;
+
+---
+
+### 3: How does tidying data relate to data viz?
+
+When we do `group_by()` and `summarize()` we can plot summary statistics
+
+.pull-left[
+
+```r
+# code chunk here
+  summ_df %&gt;%
+    ggplot() +
+      geom_bar(aes(state.region, mean_perchild), stat = "identity", fill = 6) +
+      geom_errorbar(aes(x = state.region, ymin=mean_perchild-(1.96*sd(mean_perchild)), ymax=mean_perchild+(1.96*sd(mean_perchild))), width=.2,
+                position=position_dodge(.9))
+```
+]
+
+.pull-right[
+&lt;img src="presentations-week-6_files/figure-html/group-out-1.png" width="90%" /&gt;
+]
 
 ---
 
