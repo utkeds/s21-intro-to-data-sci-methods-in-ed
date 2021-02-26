@@ -25,10 +25,24 @@ Once you've loaded it, familiarize yourself with the different variables in the 
 
 # Using the `count()` function
 
-As we discussed in class, the `count()` function can be a useful way to summarize data for plotting. Below, we would like you to create a barplot showing the number of vehicles per manufacturer, using the `count()` function and `geom_col()`.
+As we discussed in class, the `count()` function can be a useful way to summarize data for plotting. Here's an example of how this works:
+
+```{r}
+mpg %>% count(year)
+```
+
+Below, we would like you to create a barplot showing the number of vehicles per manufacturer, using the `count()` function and `geom_col()`.
 
 ```{r}
 
+
+```
+
+# Plotting summary statistics
+
+As we discussed in class, the combination of `group_by()` and `summarize()` can be used to generate summary dataframes which you can then use to plot summary statistics. Below, we would like you to generate a summary dataframe and plot the summary statistics you create. You can use whatever variables from the data you see fit. Refer back to the slides and video from this week's (and last week's) class for examples of how to do this if you're not sure.
+
+```{r}
 
 ```
 
