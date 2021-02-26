@@ -164,7 +164,7 @@ knitr::include_graphics("img/wk-6-hw.png")
 
 class: inverse, center, middle
 
-# Part 1/3: Data Viz Ideas
+# Part 1/2: Data Viz Ideas
 
 ---
 
@@ -192,10 +192,6 @@ Why a grammar of graphics?
 - reveal deeper relationships between what may appear to be unrelated visualizations
 - more flexibly and creatively visualize data--including in ways that do not fit well into one type of plot
 - suggest what makes a good figure
-
----
-
-### 1A: Grammar of Graphics
 
 ---
 

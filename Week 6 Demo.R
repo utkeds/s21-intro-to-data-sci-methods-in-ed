@@ -23,7 +23,7 @@ boxplot(content ~ question_id, data = joined_long)
 
 # better versions with ggplot
 
-pl <- ggplot(joined_long) +
+ggplot(joined_long) +
   geom_histogram(aes(x = content), fill = "red", color = "blue") + 
   xlab("Answer") +
   ylab("") +
@@ -50,16 +50,33 @@ ggplot(jdf) +
 
 # join with pivot
 
+joined <- dplyr::inner_join(database, twilio) %>% 
+  dplyr::select(content, question_id, survey_id, From, assign) %>%
+  dplyr::mutate(content = as.numeric(str_extract(content, "[12345]{1}"))) %>%
+  tidyr::pivot_wider(id_cols = c(survey_id, From, assign), names_from = question_id, 
+                     values_from = content, names_prefix = "Question_", values_fn = first)
 
-# group and summarize by number            
+
+# group and summarize by number        
+
+summ_df <- joined %>% group_by(From) %>%
+  summarize(assign = first(assign), Q1M = mean(Question_1), Q2M = mean(Question_2), Q3M = mean(Question_3), Q4M = mean(Question_4), Q5M = mean(Question_5))
 
 
 # simple histogram
 
+hist(joined$Question_3)
+
 # histogram of means
+
+hist(summ_df$Q3M, breaks = 30)
 
 # better histogram of means
 
+ggplot(summ_df) +
+  geom_histogram(aes(x = Q3M), fill = "red", color = "blue", bins = 50) +
+  xlab("Frustration Level 1-5") +
+  ggtitle("Histogram: Frustration Level")
 
 
 # recode time points
@@ -76,11 +93,28 @@ summ_df$timepoint <- recode(summ_df$assign, `Lab 1a` = 1, `Lab 1b` = 3, `Lab 2a`
 
 # group and summarize by assignment
 
+summ_df <- joined %>% group_by(assign) %>%
+  summarize(Q1M = mean(Question_1, na.rm = T), Q2M = mean(Question_2), Q3M = mean(Question_3), Q4M = mean(Question_4), Q5M = mean(Question_5))
+
 
 # plot assignment against timepoint
 
+ggplot(summ_df) +
+  geom_col(aes(timepoint, Q1M), fill = "blue") +
+  ylab("Mean") +
+  xlab("Survey Number") +
+  ggtitle("I feel challenged")
 
 
 # When a factor can be important
 
+joined %>%
+  ggplot() +
+  geom_jitter(aes(timepoint, Question_1))
 
+joined_new <- joined %>% 
+  mutate(timepoint = as.factor(timepoint))
+
+joined_new %>%
+  ggplot() +
+    geom_jitter(aes(timepoint, Question_1, color = timepoint))
