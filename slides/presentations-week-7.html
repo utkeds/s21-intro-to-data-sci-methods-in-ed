@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>Week 7 - Further into Data Viz (p. 2)</title>
+    <title>Week 7 - Still further into Data Viz</title>
     <meta charset="utf-8" />
     <meta name="author" content="Joshua Rosenberg and Alex Lishinski" />
     <meta name="date" content="2021-03-04" />
-    <script src="libs/header-attrs-2.6/header-attrs.js"></script>
     <link rel="stylesheet" href="theme.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
-# Week 7 - Further into Data Viz (p. 2)
+# Week 7 - Still further into Data Viz
 ### Joshua Rosenberg and Alex Lishinski
 ### March 4, 2021
 
@@ -25,13 +24,11 @@ class: center, middle, inverse, title-slide
 
 Welcome to *week 7*!
 
+&lt;img src="img/morpheus.jpg" width="70%" style="display: block; margin: auto;" /&gt;
+
 **Record the meeting** 
 
 
-```r
-library(here)
-library(tidyverse)
-```
 
 ---
 
@@ -76,7 +73,34 @@ Starting with whomever likes spicy food the most . . .
 
 ### Homework highlights
 
-Alex to add
+&lt;img src="img/time-series-story.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+---
+
+### Homework highlights
+
+&lt;img src="img/bigten538.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+
+---
+
+### Homework highlights
+
+&lt;img src="img/hw_hightlight_wk6_3.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+
+---
+
+### Homework highlights
+
+&lt;img src="img/w6_hw_highlight.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+
+---
+
+### Homework highlights
+
+&lt;img src="img/hw_highlight_wk6_2.png" width="100%" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -127,7 +151,7 @@ tidykids %&gt;%
 
 **Assigning a color to a geom**
 
-&lt;img src="presentations-week-7_files/figure-html/unnamed-chunk-5-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="presentations-week-7_files/figure-html/unnamed-chunk-11-1.png" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -152,7 +176,7 @@ tidykids %&gt;%
 
 **Mapping a color to a geom**
 
-&lt;img src="presentations-week-7_files/figure-html/unnamed-chunk-7-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="presentations-week-7_files/figure-html/unnamed-chunk-13-1.png" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -199,7 +223,7 @@ See the result on the next slide.
 
 **Removing the title from a scale**
 
-&lt;img src="presentations-week-7_files/figure-html/unnamed-chunk-9-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="presentations-week-7_files/figure-html/unnamed-chunk-15-1.png" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -213,7 +237,7 @@ p +
   scale_color_brewer()
 ```
 
-&lt;img src="presentations-week-7_files/figure-html/unnamed-chunk-10-1.png" width="400px" style="display: block; margin: auto;" /&gt;
+&lt;img src="presentations-week-7_files/figure-html/unnamed-chunk-16-1.png" width="400px" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -244,7 +268,7 @@ p +
   scale_color_brewer(type = "qual")
 ```
 
-&lt;img src="presentations-week-7_files/figure-html/unnamed-chunk-11-1.png" width="400px" style="display: block; margin: auto;" /&gt;
+&lt;img src="presentations-week-7_files/figure-html/unnamed-chunk-17-1.png" width="400px" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -258,7 +282,7 @@ p +
   scale_color_brewer(type = "qual", palette = 2)
 ```
 
-&lt;img src="presentations-week-7_files/figure-html/unnamed-chunk-12-1.png" width="400px" style="display: block; margin: auto;" /&gt;
+&lt;img src="presentations-week-7_files/figure-html/unnamed-chunk-18-1.png" width="400px" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -272,7 +296,7 @@ p +
   scale_color_manual(values = c("#FF8200", "#58595B", "8D2048"))
 ```
 
-&lt;img src="presentations-week-7_files/figure-html/unnamed-chunk-13-1.png" width="400px" style="display: block; margin: auto;" /&gt;
+&lt;img src="presentations-week-7_files/figure-html/unnamed-chunk-19-1.png" width="400px" style="display: block; margin: auto;" /&gt;
 
 
 ---
@@ -304,7 +328,7 @@ See the result on the next slide.
 
 **What might we change?**
 
-&lt;img src="presentations-week-7_files/figure-html/unnamed-chunk-15-1.png" width="500px" style="display: block; margin: auto;" /&gt;
+&lt;img src="presentations-week-7_files/figure-html/unnamed-chunk-21-1.png" width="500px" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -324,7 +348,7 @@ tidykids %&gt;%
   ylab("Mean Inflation-Adjusted Spending Per Child")
 ```
 
-&lt;img src="presentations-week-7_files/figure-html/unnamed-chunk-16-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="presentations-week-7_files/figure-html/unnamed-chunk-22-1.png" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -348,7 +372,7 @@ tidykids %&gt;%
 
 ### B. Grouping and stacking bar charts
 
-&lt;img src="presentations-week-7_files/figure-html/unnamed-chunk-18-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="presentations-week-7_files/figure-html/unnamed-chunk-24-1.png" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -394,7 +418,7 @@ tidykids %&gt;%
   ylab("Mean Inflation-Adjusted Spending Per Child")
 ```
 
-&lt;img src="presentations-week-7_files/figure-html/unnamed-chunk-20-1.png" width="500px" style="display: block; margin: auto;" /&gt;
+&lt;img src="presentations-week-7_files/figure-html/unnamed-chunk-26-1.png" width="500px" style="display: block; margin: auto;" /&gt;
 ---
 
 ### C. Faceting plots
@@ -419,7 +443,7 @@ tidykids %&gt;%
 
 ### C. Faceting plots
 
-&lt;img src="presentations-week-7_files/figure-html/unnamed-chunk-22-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="presentations-week-7_files/figure-html/unnamed-chunk-28-1.png" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -442,7 +466,7 @@ tidykids %&gt;%
 
 ### C. Faceting plots
 
-&lt;img src="presentations-week-7_files/figure-html/unnamed-chunk-24-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="presentations-week-7_files/figure-html/unnamed-chunk-30-1.png" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -467,7 +491,7 @@ tidykids %&gt;%
 
 ### C. Faceting plots
 
-&lt;img src="presentations-week-7_files/figure-html/unnamed-chunk-26-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="presentations-week-7_files/figure-html/unnamed-chunk-32-1.png" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -510,7 +534,7 @@ tidykids %&gt;%
 In your base group's Slack channel:
 
 - What is one thing you learned today?
-- What is something you want to learn more about? 
+- What is something you want to learn more about?
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>

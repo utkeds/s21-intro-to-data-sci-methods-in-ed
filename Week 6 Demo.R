@@ -118,3 +118,21 @@ joined_new <- joined %>%
 joined_new %>%
   ggplot() +
     geom_jitter(aes(timepoint, Question_1, color = timepoint))
+
+
+
+
+
+data(mpg)
+ 
+ggplot(mpg) +
+  geom_bar(aes(manufacturer, cty)) + 
+  geom_bar(aes(manufacturer, hwy), position = "dodge")
+
+
+mpg_long <- pivot_longer(mpg, cols = c(hwy,cty), names_to = "category", values_to = "mpg")
+
+
+
+s <- ggplot(mpg, aes(fl, fill = drv))
+s + geom_bar(position = "dodge")

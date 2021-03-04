@@ -1,5 +1,5 @@
 ---
-title: "Week 7 - Further into Data Viz (p. 2)" 
+title: "Week 7 - Still further into Data Viz" 
 subtitle: ""
 author: "Joshua Rosenberg and Alex Lishinski"
 date: "March 4, 2021"
@@ -21,9 +21,13 @@ knitr::opts_chunk$set(echo = TRUE, fig.align = "center", message = FALSE)
 
 Welcome to *week 7*!
 
+```{r echo = FALSE, out.width = "70%"}
+knitr::include_graphics("img/morpheus.jpg")
+```
+
 **Record the meeting** 
 
-```{r, include = TRUE}
+```{r, include = TRUE, echo = FALSE}
 library(here)
 library(tidyverse)
 ```
@@ -71,7 +75,44 @@ Starting with whomever likes spicy food the most . . .
 
 ### Homework highlights
 
-Alex to add
+```{r echo = FALSE, out.width = "100%"}
+knitr::include_graphics("img/time-series-story.png")
+```
+
+---
+
+### Homework highlights
+
+```{r echo = FALSE, out.width = "100%"}
+knitr::include_graphics("img/bigten538.png")
+```
+
+
+---
+
+### Homework highlights
+
+```{r echo = FALSE, out.width = "100%"}
+knitr::include_graphics("img/hw_hightlight_wk6_3.png")
+```
+
+
+---
+
+### Homework highlights
+
+```{r echo = FALSE, out.width = "100%"}
+knitr::include_graphics("img/w6_hw_highlight.png")
+```
+
+
+---
+
+### Homework highlights
+
+```{r echo = FALSE, out.width = "100%"}
+knitr::include_graphics("img/hw_highlight_wk6_2.png")
+```
 
 ---
 
@@ -536,7 +577,9 @@ tidykids %>%
 * Homework 7: Available tomorrow by noon; Due by Thursday, 3/11
 
 * Readings
-  * Alex to add?
+  * https://r4ds.had.co.nz/graphics-for-communication.html
+  * https://clauswilke.com/dataviz/figure-titles-captions.html
+  * https://clauswilke.com/dataviz/color-pitfalls.html
 
 * [Final project](https://making-data-science-count.github.io/s21-intro-to-data-sci-methods-in-ed/assignments-final-projects.html)
 
@@ -554,3 +597,6 @@ In your base group's Slack channel:
 
 - What is one thing you learned today?
 - What is something you want to learn more about? 
+- Give us your feelings in GIF form!
+
+We really appreciate being able to see these reactions and get this feedback!
