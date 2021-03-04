@@ -555,6 +555,16 @@ tidykids %>%
 
 ---
 
+### Live coding
+
+Let's head over to the following file for a demonstration:
+
+`week-7-demo.R` 
+
+*Why `.R` instead of `.Rmd`?
+
+---
+
 ### Data ethics statement
 
 * Next, you will proviide feedback on your base group member's data ethics statement
@@ -566,10 +576,12 @@ tidykids %>%
 
 ### Course Logistics
 
-- interactive visualizations?
-  - ggvis
-- updated schedule
-- videos
+- Interactive visualizations?
+  - gganimate: https://gganimate.com/articles/gganimate.html
+  - magick: https://cran.r-project.org/web/packages/magick/vignettes/intro.html
+  - Shiny: https://shiny.rstudio.com/
+- Updated schedule
+- Updated record of videos
 
 ---
 
@@ -591,6 +603,7 @@ tidykids %>%
 ### Random
 
 * Webinar on open science: https://cos-io.zoom.us/webinar/register/1216134199427/WN_OpHYNc0PQhSkOVPSB3Qaag
+* xaringan: https://bookdown.org/yihui/rmarkdown/xaringan.html
 
 ---
 
