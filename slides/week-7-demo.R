@@ -3,6 +3,10 @@ library(readxl)
 library(janitor)
 
 ngss_adoption <- read_excel("data/ngss-adoption.xlsx")
+ngss_states <- read_excel("data/ngss-adoption-states.xlsx")
+
+ngss_adoption %>% 
+  left_join(ngss_states
 
 ngss_adoption <- ngss_adoption %>% 
   janitor::clean_names()
