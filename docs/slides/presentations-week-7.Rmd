@@ -119,7 +119,7 @@ knitr::include_graphics("img/ngss-7.png")
 ---
 
 
-### 2 overarching goals of learning data viz in R
+### Two overarching goals of learning data viz in R
 
 * Conceptual framework of visualization
 + Grammar of graphics and different mappings of data onto visual elements
@@ -269,15 +269,15 @@ tidykids %>%
 **Use a scale function to modify a scale**
 
 * `scale_color_*`
-* `scale_color_discrete`
-* `scale_color_continous`
-* `scale_color_brewer`
-* `scale_color_manual()`
+    * `scale_color_discrete`  
+    * `scale_color_continous`  
+    * `scale_color_brewer`  
+    * `scale_color_manual()`  
 * `scale_fill_*`
-* `scale_fill_discrete`
-* `scale_fill_continous`
-* `scale_fill_brewer`
-* `scale_color_manual()`
+    * `scale_fill_discrete`  
+    * `scale_fill_continous`  
+    * `scale_fill_brewer`  
+    * `scale_color_manual()`  
 
 ---
 
@@ -380,7 +380,6 @@ https://brand.utk.edu/standards/colors/
 p + 
   scale_color_manual(values = c("#FF8200", "#58595B", "8D2048"))
 ```
-
 
 ---
 
@@ -631,15 +630,21 @@ Let's head over to the following file for a demonstration:
 
 ---
 
-### Course Logistics
+### Where to next with respect to data viz?
 
 - Interactive visualizations?
   - gganimate: https://gganimate.com/articles/gganimate.html
   - magick: https://cran.r-project.org/web/packages/magick/vignettes/intro.html
-  - Shiny: https://shiny.rstudio.com/
-- Updated schedule
-- Updated record of videos
-
+  - Shiny: https://shiny.rstudio.com
+  
+- Books:
+  - https://socviz.co/
+  - https://clauswilke.com/dataviz
+  
+- Resources
+  - http://rweekly.org/
+  - https://github.com/rfordatascience/tidytuesday; [#tidytuesday on Twitter](https://twitter.com/hashtag/tidytuesday?lang=en)
+  
 ---
 
 ```{r, out.width="50%", echo = FALSE}
