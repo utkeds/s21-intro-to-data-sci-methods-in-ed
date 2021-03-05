@@ -19,7 +19,7 @@ this in the console `?storms`. Note that the back tick marks are simply to forma
 code in R Markdown - you do not include these when you run the code. 
 
 Note how this appears differently in output; in fact, since Slack allows us to
-use Markdown, you can also use back ticks like this to format code in Slack!)
+use Markdown, you can also use back ticks like this to format code in Slack!).
 
 # Loading data
 
