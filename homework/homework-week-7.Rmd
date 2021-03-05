@@ -1,5 +1,5 @@
 ---
-title: "HW Week 7 - Introduction to Data Viz"
+title: "Homework Week 7 - Still further into Data Viz"
 output: html_document
 ---
 
@@ -201,7 +201,6 @@ web for examples of its use. Use `facet_grid()` to facet by two different variab
 ```{r}
 
 ```
-
 
 ## fin
 
