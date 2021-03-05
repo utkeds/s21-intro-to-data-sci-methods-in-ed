@@ -41,8 +41,8 @@ through the last year with data available in the data, and save the results back
 to a new object to use for the remainder of this homework.
 
 ```{r}
-storms <- storms %>% 
-  filter(year >= 2006)
+
+
 ```
 
 # Using Color
@@ -117,12 +117,10 @@ What do you notice? Add a note about below:
 
 - 
 
-Next, replace year with status, and run the code:
+Next, replace year in the code above with status, and run the new code:
 
 ```{r}
-storms %>% 
-  group_by(year) %>% 
-  summarize(mean_wind = mean(wind))
+
 ```
 
 What do you notice now? Add a note about this below:
@@ -152,11 +150,7 @@ Finally, specify that the fill aesthetic is equal to the location variable; see
 the slides for an example of using the fill aesthetic.
 
 ```{r}
-storms %>% 
-  group_by(year, status) %>% 
-  summarize(mean_wind = mean(wind)) %>% 
-  ggplot(aes(x = year, y = mean_wind, fill = status)) +
-  geom_col()
+
 ```
 
 Finally, dodge the plots by year. To do so, add an argument to dodge the columns
@@ -202,7 +196,7 @@ used in the above plot:
 For the second reach, replace your use of `facet_wrap()` in any of the above plots
 you have created with `facet_grid()`; check out the documentation on `facet_grid()`
 here (https://ggplot2.tidyverse.org/reference/facet_grid.html) or by searching the
-web for examples of its use.
+web for examples of its use. Use `facet_grid()` to facet by two different variables.
 
 ```{r}
 
