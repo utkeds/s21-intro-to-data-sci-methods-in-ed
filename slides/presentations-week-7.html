@@ -371,7 +371,19 @@ See the result on the next slide.
 
 **What might we change?**
 
-&lt;img src="presentations-week-7_files/figure-html/unnamed-chunk-28-1.png" width="500px" style="display: block; margin: auto;" /&gt;
+
+```r
+tidykids %&gt;% 
+  filter(variable == "PK12ed",
+         state %in% c("Tennessee", "Kentucky")) %&gt;% 
+  ggplot(aes(x = year, y = inf_adj_perchild, fill = state)) +
+  geom_col() +
+  theme_minimal() +
+  theme(text = element_text(size = 14)) +
+  scale_fill_brewer(type = "qual", palette = 7) +
+  xlab("") +
+  ylab("Mean Inflation-Adjusted Spending Per Child")
+```
 
 ---
 

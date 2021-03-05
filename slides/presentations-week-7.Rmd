@@ -409,7 +409,7 @@ See the result on the next slide.
 
 **What might we change?**
 
-```{r, eval = TRUE, echo = FALSE, message = FALSE, out.width="500px"}
+```{r, eval = FALSE, echo = TRUE, message = FALSE, out.width="500px"}
 tidykids %>% 
   filter(variable == "PK12ed",
          state %in% c("Tennessee", "Kentucky")) %>% 
