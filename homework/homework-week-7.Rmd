@@ -127,7 +127,7 @@ What do you notice now? Add a note about this below:
 
 - 
 
-Finally, group by both year and location; add both to your `group_by` function.
+Finally, group by both year and status; add both to your `group_by` function.
 
 If you need a tip regarding how to group by multiple variables, check the code 
 used in some of the slides, or the help documentation (by running `?group_by()`
