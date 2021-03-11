@@ -7,6 +7,7 @@
 body {
 	font-family: "PingFang SC", "Lantinghei SC", "Microsoft Yahei", "Hiragino Sans GB", "Microsoft Sans Serif", "WenQuanYi Micro Hei", sans;
 	color: #21252A;
+	/*font-size: 0.8rem; */
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -33,7 +34,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: 'Source Code Pro', monospace;
 	color: #434c56;
 	background: #ebf8fe;
-	font-size: 0.8rem;
+	/*font-size: 0.5rem; */
 }
 
 .hljs-comment {
@@ -73,7 +74,7 @@ h2, h3 {
 }
 
 table {
-	font-size: 1.2rem;
+	font-size: 0.6rem;
 }
 
 a {
@@ -91,7 +92,7 @@ a:focus {
 
 .remark-slide-content {
 	background-color: #fff;
-	font-size: 1.4rem;
+	font-size: 1.2rem;
 	font-weight: 100;
 }
 
@@ -150,7 +151,7 @@ a:focus {
 }
 
 .title-slide h1 {
-	font-size: 7rem;
+	font-size: 6rem;
 }
 
 .title-slide h1, 
@@ -218,4 +219,12 @@ a.footer-icon-link:hover {
 	font-weight: 0.2rem;
 	border-top: 1px solid #a8b1bd;
 	bottom: 1rem;
+}
+
+.big {
+  font-size: 0.9rem;
+}
+
+.remark-code {
+	font-size: 0.8rem;
 }
