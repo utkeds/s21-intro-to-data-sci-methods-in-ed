@@ -1,6 +1,6 @@
-name: "An Intro. to DS in Edu."
+name: "Introduction to Data Science Methods in Education"
 navbar:
-  title: "DS in Edu"
+  title: "Intro. to DS Methods in Edu"
   left:
     - text: "Home"
       href: index.html
@@ -19,5 +19,4 @@ navbar:
     - text: "GitHub Repository"
       href: https://github.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed
 output_dir: "docs"
-exclude: ["tutorials-week-1.Rmd"]
       
