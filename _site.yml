@@ -10,7 +10,7 @@ navbar:
       href: schedule.html
     - text: "Presentations"
       href: presentations.html
-    - text: "Homework"
+    - text: "Homework and Readings"
       href: homework.html
     - text: "Assignments"
       href: assignments.html

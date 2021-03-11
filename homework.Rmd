@@ -1,36 +1,54 @@
 ---
-title: "Homework"
+title: "Homework and Readings"
 output: html_document
 ---
 
 ## Week 1
 
 - [Week 1 HW](https://github.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed/blob/main/homework/homework-week-1.Rmd)
+- Reading: none
 
 ## Week 2
 
 - [Week 2 HW](https://github.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed/blob/main/homework/homework-week-2.Rmd)
-- Two assigned readings:
+- Readings:
   - Data Science in Education Using R (DSIEUR) chapter #3: https://datascienceineducation.com/c03.html    
   - Grammar of Graphics: http://vita.had.co.nz/papers/layered-grammar.pdf
   
 ## Week 3
 
 - [Week 3 HW](https://github.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed/blob/main/homework/homework-week-3.Rmd)
+- Reading: none
 
 ## Week 4
 
 - [Week 4 HW](https://github.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed/blob/main/homework/homework-week-4.Rmd)
+* Reading: https://r4ds.had.co.nz/tidy-data.html
 
 ## Week 5
 
 - [Week 5 HW](https://github.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed/blob/main/homework/homework-week-5.Rmd)
+* Readings
+  * Considerations for using social media data in learning design and technology research ([Greenhalgh et al., 2020](http://www.researchmerge.com/uploads/7/5/3/5/75356681/chapter_5_research_methods_in_learning_design_and_technology_pre-print.pdf))
+  * Data visualization ([Wickham & Grolemund, 2018](https://r4ds.had.co.nz/data-visualisation.html))
 
 ## Week 6
 
 - [Week 6 HW](https://github.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed/blob/main/homework/homework-week-6.Rmd)
+- Readings:
+  * https://clauswilke.com/dataviz/histograms-density-plots.html
+  * https://clauswilke.com/dataviz/visualizing-proportions.html
 
-## Week 6
+## Week 7
 
 - [Week 7 HW](https://github.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed/blob/main/homework/homework-week-7.Rmd)
+* Readings
+  * https://r4ds.had.co.nz/graphics-for-communication.html
+  * https://clauswilke.com/dataviz/figure-titles-captions.html
+  * https://clauswilke.com/dataviz/color-pitfalls.html
 
+## Week 8
+
+- [Week 8 HW]()
+- Reading
+  - https://r4ds.had.co.nz/exploratory-data-analysis.html
