@@ -59,19 +59,30 @@ Starting with whomever has the most bandwidth at home/outside of school (and wor
 
 ---
 
-### Josh's Anecdote
+### Sometimes, a table says it better
 
 From webinar: https://jrosen48.github.io/airs-ngss-survey/
-https://www.youtube.com/watch?v=WxdWzTIzYmI
 
-https://www.youtube.com/watch?v=WxdWzTIzYmI
+Recording: https://www.youtube.com/watch?v=WxdWzTIzYmI
+
+---
+
+
+&lt;img src="img/w8-anecdote.png" width="80%" style="display: block; margin: auto;" /&gt;
 
 ---
 
 ### Homework highlights
 
+&lt;img src="img/w8-ex1.png" width="90%" style="display: block; margin: auto;" /&gt;
+---
 
 
+&lt;img src="img/w8-ex2.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+---
+
+&lt;img src="img/w8-ex3.png" width="100%" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -349,7 +360,7 @@ library(visdat)
 vis_dat(storms)
 ```
 
-&lt;img src="presentations-week-8_files/figure-html/unnamed-chunk-12-1.png" width="50%" style="display: block; margin: auto;" /&gt;
+&lt;img src="presentations-week-8_files/figure-html/unnamed-chunk-15-1.png" width="50%" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -366,7 +377,7 @@ storms_2 &lt;- storms %&gt;% mutate(day = as.numeric(day))
 vis_compare(storms, storms_2)
 ```
 
-&lt;img src="presentations-week-8_files/figure-html/unnamed-chunk-13-1.png" width="50%" style="display: block; margin: auto;" /&gt;
+&lt;img src="presentations-week-8_files/figure-html/unnamed-chunk-16-1.png" width="50%" style="display: block; margin: auto;" /&gt;
 
 
 ---
@@ -577,21 +588,17 @@ mtcars %&gt;% correlate() %&gt;%
 
 ### B. Inspecting data frames and correlations
 
-corrr package - Adds some useful features: visualizing correlations
-
 
 ```r
 mtcars %&gt;% correlate() %&gt;%
   rplot()
 ```
 
-&lt;img src="presentations-week-8_files/figure-html/unnamed-chunk-20-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="presentations-week-8_files/figure-html/unnamed-chunk-23-1.png" width="80%" style="display: block; margin: auto;" /&gt;
 
 ---
 
 ### B. Inspecting data frames and correlations
-
-corrr package - Adds some useful features: visualizing correlations
 
 
 ```r
@@ -600,7 +607,7 @@ mtcars %&gt;% correlate() %&gt;%
   rplot()
 ```
 
-&lt;img src="presentations-week-8_files/figure-html/unnamed-chunk-21-1.png" width="65%" style="display: block; margin: auto;" /&gt;
+&lt;img src="presentations-week-8_files/figure-html/unnamed-chunk-24-1.png" width="65%" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -613,7 +620,7 @@ visdat package does correlation heatmaps as well:
 mtcars %&gt;% vis_cor()
 ```
 
-&lt;img src="presentations-week-8_files/figure-html/unnamed-chunk-22-1.png" width="65%" style="display: block; margin: auto;" /&gt;
+&lt;img src="presentations-week-8_files/figure-html/unnamed-chunk-25-1.png" width="65%" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -1109,7 +1116,7 @@ tab_model(model)
 ```r
 library(apaTables)
 apa.cor.table(attitude)
-apa.cor.table(attitude, filename="ex.CorTable1.doc")
+apa.cor.table(attitude, filename="ex-CorTable1.doc")
 ```
 
 ---
@@ -1128,6 +1135,9 @@ _We're at the middle of the semester_
 2.  What should we do more?
 3.  What should we do less?
 
+Please consider responding this short mid-semester survey/feedback form (completely anonymous):
+https://forms.gle/wuHkb7TgeZs7HoXd8
+
 ---
 
 # Logistics
@@ -1136,15 +1146,16 @@ _We're at the middle of the semester_
 
 * Homework 8: Available tomorrow by noon; **Due by Thursday, 3/18**
 
-
 * Readings
 https://r4ds.had.co.nz/exploratory-data-analysis.html
+
+* Schedule updated: https://making-data-science-count.github.io/s21-intro-to-data-sci-methods-in-ed/schedule.html
 
 ---
 
 # Final Project
 
-* [Final project](https://making-data-science-count.github.io/s21-intro-to-data-sci-methods-in-ed/assignments-final-projects.html)
+* [Final project](https://making-data-science-count.github.io/s21-intro-to-data-sci-methods-in-ed/assignments-final-projects.htm)
 
 ---
 

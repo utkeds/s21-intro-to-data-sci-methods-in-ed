@@ -57,19 +57,37 @@ Starting with whomever has the most bandwidth at home/outside of school (and wor
 
 ---
 
-### Josh's Anecdote
+### Sometimes, a table says it better
 
 From webinar: https://jrosen48.github.io/airs-ngss-survey/
-https://www.youtube.com/watch?v=WxdWzTIzYmI
 
-https://www.youtube.com/watch?v=WxdWzTIzYmI
+Recording: https://www.youtube.com/watch?v=WxdWzTIzYmI
+
+---
+
+
+```{r echo = FALSE, out.width = "80%"}
+knitr::include_graphics("img/w8-anecdote.png")
+```
 
 ---
 
 ### Homework highlights
 
+```{r echo = FALSE, out.width = "90%"}
+knitr::include_graphics("img/w8-ex1.png")
+```
+---
+
+
 ```{r echo = FALSE, out.width = "100%"}
-#knitr::include_graphics()
+knitr::include_graphics("img/w8-ex2.png")
+```
+
+---
+
+```{r echo = FALSE, out.width = "100%"}
+knitr::include_graphics("img/w8-ex3.png")
 ```
 
 ---
@@ -279,9 +297,7 @@ mtcars %>% correlate() %>%
 
 ### B. Inspecting data frames and correlations
 
-corrr package - Adds some useful features: visualizing correlations
-
-```{r}
+```{r, out.width="80%"}
 mtcars %>% correlate() %>%
   rplot()
 ```
@@ -289,8 +305,6 @@ mtcars %>% correlate() %>%
 ---
 
 ### B. Inspecting data frames and correlations
-
-corrr package - Adds some useful features: visualizing correlations
 
 ```{r, out.width="65%"}
 mtcars %>% correlate() %>%
@@ -427,7 +441,7 @@ tab_model(model)
 ```{r, eval = FALSE}
 library(apaTables)
 apa.cor.table(attitude)
-apa.cor.table(attitude, filename="ex.CorTable1.doc")
+apa.cor.table(attitude, filename="ex-CorTable1.doc")
 ```
 
 ---
@@ -446,6 +460,9 @@ _We're at the middle of the semester_
 2.  What should we do more?
 3.  What should we do less?
 
+Please consider responding this short mid-semester survey/feedback form (completely anonymous):
+https://forms.gle/wuHkb7TgeZs7HoXd8
+
 ---
 
 # Logistics
@@ -454,15 +471,16 @@ _We're at the middle of the semester_
 
 * Homework 8: Available tomorrow by noon; **Due by Thursday, 3/18**
 
-
 * Readings
 https://r4ds.had.co.nz/exploratory-data-analysis.html
+
+* Schedule updated: https://making-data-science-count.github.io/s21-intro-to-data-sci-methods-in-ed/schedule.html
 
 ---
 
 # Final Project
 
-* [Final project](https://making-data-science-count.github.io/s21-intro-to-data-sci-methods-in-ed/assignments-final-projects.html)
+* [Final project](https://making-data-science-count.github.io/s21-intro-to-data-sci-methods-in-ed/assignments-final-projects.htm)
 
 ---
 
