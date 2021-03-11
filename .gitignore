@@ -2,3 +2,7 @@
 .Rhistory
 .RData
 .Ruserdata
+
+data/~$schedule.xlsx
+
+data/.DS_Store
