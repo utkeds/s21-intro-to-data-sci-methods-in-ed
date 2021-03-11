@@ -10,3 +10,4 @@ output: html_document
 - Week 5: [RMD](https://github.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed/blob/main/slides/presentations-week-5.Rmd), [HTML](slides/presentations-week-5.html), [PDF](slides/presentations-week-5.pdf)
 - Week 6: [RMD](https://github.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed/blob/main/slides/presentations-week-6.Rmd), [HTML](slides/presentations-week-6.html), [PDF](slides/presentations-week-6.pdf)
 - Week 7: [RMD](https://github.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed/blob/main/slides/presentations-week-7.Rmd), [HTML](slides/presentations-week-7.html), [PDF](slides/presentations-week-7.pdf)
+- Week 8: [RMD](https://github.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed/blob/main/slides/presentations-week-8.Rmd), [HTML](slides/presentations-week-8.html), [PDF](slides/presentations-week-8.pdf)
