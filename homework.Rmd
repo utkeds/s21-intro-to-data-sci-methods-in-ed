@@ -49,6 +49,6 @@ output: html_document
 
 ## Week 8
 
-- [Week 8 HW]()
+- Week 8 HW
 - Reading
   - https://r4ds.had.co.nz/exploratory-data-analysis.html
