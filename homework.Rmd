@@ -30,7 +30,10 @@ output: html_document
 
 - [Week 6 HW](https://github.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed/blob/main/homework/homework-week-6.Rmd)
 
-## Week 6
+## Week 7
 
 - [Week 7 HW](https://github.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed/blob/main/homework/homework-week-7.Rmd)
 
+## Week 8
+
+- [Week 8 HW](https://github.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed/blob/main/homework/homework-week-8.Rmd)
