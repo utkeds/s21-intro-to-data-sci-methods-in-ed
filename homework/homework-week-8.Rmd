@@ -9,15 +9,21 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Background 
 
-This week we will use a real data set of course data from 614 undergraduate students. The data consists of students' scores on different course assignments, as well as several background variables collected for research purposes.
+This week we will use a real data set of course data from 614 undergraduate
+students. The data consists of students' scores on different course assignments,
+as well as several background variables collected for research purposes.
 
-The data set can be downloaded from the github repo here: https://github.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed/blob/main/data/undergrad_data.csv
+The data set can be downloaded from the github repo here:
+<https://github.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed/blob/main/data/undergrad_data.csv>
 
-The data consists of an identifier, columns on project scores, a total course points column, columns on exam scores, scores on a pre and post problem solving ability test, 5 personality trait variables, and 4 motivation variables.
+The data consists of an identifier, columns on project scores, a total course
+points column, columns on exam scores, scores on a pre and post problem solving
+ability test, 5 personality trait variables, and 4 motivation variables.
 
 # Loading data
 
-Download the .csv file and then load it in this chunk. But first, load the packages you will need (you can always come back and add more):
+Download the .csv file and then load it in this chunk. But first, load the
+packages you will need (you can always come back and add more):
 
 ```{r}
 
@@ -38,17 +44,26 @@ What are some observations you made about the data from your exploration?
 
 # Data Report 
 
-We would now like you to use the undergrad data to produce a report including the following elements:
+We would now like you to use the undergrad data to produce a report including
+the following elements:
 
 # Summary table
 
-Make a nicely styled summary table using the `kable()` function from the `knitr` package, using whichever summary function you want (check the slides from this week to see the different options we discussed). But first be sure to exclude any variables where it doesn't make sense to have a numeric summary, e.g. character variables.
+Make a nicely styled summary table using the `kable()` function from the `knitr`
+package, using whichever summary function you want (check the slides from this
+week to see the different options we discussed). But first be sure to exclude
+any variables where it doesn't make sense to have a numeric summary, e.g.
+character variables.
 
 ```{r}
 
 ```
 
-Now please use the `kableExtra` package to make some additional formatting tweaks. highlight the lowest and highest values of some column of your choice using the `row_spec()` or `cell_spec()` functions, and then make one other formatting addition of your choice, like a title or a footnote or whatever you want.
+Now please use the `kableExtra` package to make some additional formatting
+tweaks. highlight the lowest and highest values of some column of your choice
+using the `row_spec()` or `cell_spec()` functions, and then make one other
+formatting addition of your choice, like a title or a footnote or whatever you
+want.
 
 ```{r}
 
@@ -56,13 +71,15 @@ Now please use the `kableExtra` package to make some additional formatting tweak
 
 # Correlation Matrix
 
-Make a correlation matrix, including only the 11 individual project score variables, and style that output nicely. 
+Make a correlation matrix, including only the 11 individual project score
+variables, and style that output nicely. 
 
 ```{r}
 
 ```
 
-Now use the `corrr` package to produce a correlation heat map for the correlation matrix you just made, and use the lower triangle only. 
+Now use the `corrr` package to produce a correlation heat map for the
+correlation matrix you just made, and use the lower triangle only.
 
 ```{r}
 
@@ -70,23 +87,34 @@ Now use the `corrr` package to produce a correlation heat map for the correlatio
 
 # Regression model
 
-Run a regression model using `lm()` with the `Total_Pts` variable as the dependent variable, plus whichever independent variables you want. If you have questions about how to use `lm()` to specify models, just Google "lm syntax r".
+Run a regression model using `lm()` with the `Total_Pts` variable as the
+dependent variable, plus whichever independent variables you want. If you have
+questions about how to use `lm()` to specify models, you can search (the web)
+for "lm syntax r"; a number of good tutorials and resources will appear, and
+we can recommend a few if you would like to ask us for recommendations.
 
 ```{r}
 
 ```
 
-Now use the `sjPlot` package to create a nice output table for your `lm()` model as we showed in class. 
+Now use the `sjPlot` package to create a nice output table for your `lm()` model
+as we showed in class. 
 
 ```{r}
 
 ```
 
-Now we have one last task for you that may be a bit harder. We would like you to create a composite variable by creating a sum of the 3 exam score variables in the data set. 
+Now we have one last task for you that may be a bit harder. We would like you to
+create a composite variable by creating a sum of the three exam score variables in
+the data set.
 
-We didn't cover this in class, but here's a stackoverflow post where a few different answers using different methods are provided: https://stackoverflow.com/questions/10945703/calculate-row-means-on-subset-of-columns
+We didn't cover this in class, but here's a Stack Overflow post where a few
+different answers using different methods are provided:
+<https://stackoverflow.com/questions/10945703/calculate-row-means-on-subset-of-columns>
 
-Now make a new `lm()` model, using this composite variable as the dependent variable, and generate the output table using the `sjPlot` package just as in the last step.
+Now make a new `lm()` model, using this composite variable as the dependent
+variable, and generate the output table using the `sjPlot` package just as in
+the last step.
 
 ```{r}
 
@@ -94,7 +122,8 @@ Now make a new `lm()` model, using this composite variable as the dependent vari
 
 # Reach 1
 
-Use the `apaTables` package to make a regression table of your `lm()` model from above in the APA format.
+Use the `apaTables` package to make a regression table of your `lm()` model from
+above in the APA format.
 
 ```{r}
 
@@ -102,9 +131,10 @@ Use the `apaTables` package to make a regression table of your `lm()` model from
 
 # Reach 2
 
-Remake the correlation matrix from above using only the values that are not equal to 0. Also generate the significance values of the correlations.
+Remake the correlation matrix from above using only the values that are not
+equal to 0. Also generate the significance values of the correlations.
 
-http://www.sthda.com/english/wiki/correlation-matrix-a-quick-start-guide-to-analyze-format-and-visualize-a-correlation-matrix-using-r-software#correlation-matrix-with-significance-levels-p-value
+<http://www.sthda.com/english/wiki/correlation-matrix-a-quick-start-guide-to-analyze-format-and-visualize-a-correlation-matrix-using-r-software#correlation-matrix-with-significance-levels-p-value>
 
 ```{r}
 
