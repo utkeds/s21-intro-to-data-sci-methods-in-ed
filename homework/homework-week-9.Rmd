@@ -1,0 +1,95 @@
+---
+title: "Homework Week 9 - From Soup to Nuts"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Background 
+
+This homework is different in nature than those to this point; it is more open-
+ended in nature, and it asks you to step back and to synthesize and apply all of
+the great work you have done so far in this course. 
+
+There are three requirements:
+
+1. Load a data set of your choosing. This can be data that you have already collected,
+or, it can be a publicly available data set (regardless of how you load it). In addition, 
+we have a few example data sets that you can use; all are 
+available in this folder on GitHub: https://github.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed/tree/main/data
+
+These are briefly described below:
+
+- Twitter data on the #rstats hashtag:
+  - rtweet-on-twitter.csv
+
+- Posts from K-12 districts and schools on Facebook from 2019:
+  - districts-schools-fb-2019.csv
+
+- The tidykids data set; described in HW5: https://github.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed/blob/main/homework/homework-week-5.Rmd
+  - tidykids.csv
+
+- Two files related to states' adoption of the NGSS
+  - ngss-adoption-states.xlsx
+  - ngss-adoption.xlsx
+
+- Four files related to a study of undergraduate students' interest in CS1 (introductory computer science courses); described in HW4: https://github.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed/blob/main/homework/homework-week-4.Rmd
+  - answer_export.csv
+  - twilio_data.csv
+  - undergrad_data.csv
+  - database_data.csv
+
+Again you can use any data set you find interesting. A key for us is that it is not a built-in data set (i.e., the mpg or storms data sets that are built-in to R); we want to see that you can
+identify, access/load, and use a data set of your choosing. You can reach out to us with any questions at all about whether a data set you have is suitable; even smaller data sets are fine
+with us!
+
+2. Please create a visualization of one or more of the variables in your data. Focus on 
+telling a story about your data; this can be done through attention to the the labels you use
+as well as other features of the plot - what geoms or features you use, how you use colors
+or themes, etc. 
+
+3. Please create a table representing your data or a summary of your data; a simple table is
+satisfactory. Consider summary statistics that you calculate yourself or do so using a package
+from HW8 (https://github.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed/blob/main/homework/homework-week-8.Rmd), correlation tables, or in any other way. Please use the kable package (described in HW8) to format your table; it is okay if you do not add any options to style your table like in HW8, but, the reach for this week is do this this. 
+
+You can consider the kableExtra package: https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html
+
+4. Finally, add a brief (3-4 sentence) description of the work you did. You can add this above, 
+below, or between the visualization and table you create. 
+
+Please add your work in code chunks and text below.
+
+## My work
+
+
+
+## fin
+
+Render and submit:
+- Submit the .html file you used to render a report to Canvas - Upload the .Rmd
+file you rendered to the #homework channel in Slack.
+One difference from last week: Please post a comment, feedback, or reflection
+below *as well as to Slack when you post your homework*.
+
+## Self-assessment and reflection
+
+Respond to the following three questions on a 1 (not at all) to 5 (very much)
+scale by replacing the "x" below with your response:
+
+```{r, reflection}
+x = NULL
+tibble::tribble(
+  ~question,                                   ~response,
+  "How challenging was this homework?",        x,
+  "How interesting was this homework to you?", x,
+  "How valuable was this homework to you?",    x
+)
+```
+
+Include any other comments, feedback, or reflections on this homework below:
+
+
+Important note: Please post your comment(s), feedback, or reflections in Slack
+when you share your Rmd file!
