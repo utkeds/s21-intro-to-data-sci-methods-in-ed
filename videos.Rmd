@@ -32,3 +32,5 @@ output: html_document
 - [Vector types in R](https://tennessee.zoom.us/rec/play/U4qu4FZcAM6An6QE8yuWHE7l3M3QvvkaNndsiRxDKTF9NcBtMWs5l3rm6Xhm2ztrvi3l3wi2WCu2ahUt._yJXDuWJYfV4Twkh?continueMode=true)
 
 - [Homework 4 solution walkthrough](https://tennessee.zoom.us/rec/share/4ZYWWBQYkA4_4YWP_-twc_F229EXtOHCb3H7CcLkWK0krYwrnGFB9y4-grcwNVtR.WnvBsBar64vEQSwE)
+
+- [Homework 8 solution walkthrough](https://tennessee.zoom.us/rec/share/TEryKqSo7zyZx53uQ_RZBDgE4ybumOoGGVOzDvYx9i_shMnPocuQVur0gGJhnSQ.-I9nQGVkY7d57ir_)
