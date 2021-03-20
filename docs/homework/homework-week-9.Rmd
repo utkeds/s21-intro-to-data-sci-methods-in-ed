@@ -81,9 +81,7 @@ how and whether the output of your code end up in the final document. For
 example:
 
 ``` {r, include=FALSE}
-```
 
-``` 
 ```
 
 In the chunk above I added the chunk option `include=FALSE` to tell R not to
@@ -91,8 +89,7 @@ include that chunk in my document, although what that means is a bit more
 nuanced. There are many chunk options that you can use to control what your
 output looks like. The most relevant for our purposes here are `include`,
 `results`, `echo`, `warning`, and `message`. The default value for all of these
-is `TRUE` but you can change the behavior of your document in useful ways by
-changing them to `FALSE`
+is `TRUE` (except `results`) but you can change the behavior of your document in useful ways by changing them to `FALSE`
 
   - `include=FALSE` will hide the code itself as well as the results from the
     document.
