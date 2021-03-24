@@ -52,3 +52,9 @@ output: html_document
 - [Week 8 HW](https://github.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed/blob/main/homework/homework-week-8.Rmd)
 - Reading
   - https://r4ds.had.co.nz/exploratory-data-analysis.html
+
+## Week 9
+
+- [Week 9 HW](https://github.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed/blob/main/homework/homework-week-9.Rmd)
+- Video on chunk options
+  - https://tennessee.zoom.us/rec/share/wCxEUXjYysY5Zb2mjpyNUMzP6W-rgyf9bOA6scu-tVOggeR6TQEXW3gvhG9R5Eov.FLxCdBmt3fgxLgiy
