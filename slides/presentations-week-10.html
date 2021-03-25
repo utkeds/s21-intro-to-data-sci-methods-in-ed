@@ -5,7 +5,6 @@
     <meta charset="utf-8" />
     <meta name="author" content="Joshua Rosenberg and Alex Lishinski" />
     <meta name="date" content="2021-03-15" />
-    <script src="libs/header-attrs-2.6/header-attrs.js"></script>
     <link rel="stylesheet" href="theme.css" type="text/css" />
   </head>
   <body>
@@ -53,21 +52,119 @@ Starting with XXX
 
 ### Homework highlights
 
+&lt;img src="img/hw9_highlight1.png" width="90%" style="display: block; margin: auto;" /&gt;
 
 
-Alex to add
+---
+
+
+### Homework highlights
+
+&lt;img src="img/hw9_highlight2.png" width="90%" style="display: block; margin: auto;" /&gt;
+
 
 ---
 
 ### Exam recap
 
-Alex to add
+* Overall everyone did quite well!
+
+* Many questions 100% correct
+
+* A couple of items to highlight
+
+---
+
+### Exam recap
+
+_A couple of items to highlight_
+
+Which of the following is one use case for the kable package?
+
+* To format tables included in RMarkdown documents and reports, (Correct answer) 56 %	
+* To easily create plots of your data, (Incorrect answer)	6 %	
+* To create a correlation matrix, (Incorrect answer) 6 %	
+* To automatically calculate summary statistics for a data frame, (Incorrect answer) 31 %	
+
+---
+
+### Exam recap
+
+_A couple of items to highlight_
+
+For this question, we use "left data frame" to refer to the first data frame passed to the join function, and "right data frame" to refer to the second data frame passed to the join function.
+
+For example, below, df1 is the left data frame, and df2 is the right data frame.
+
+left_join(df1, df2)
+
+See here (and the slides) for a description of different joins: https://datascienceineducation.com/c07.html#joining-the-data
+
+Which function would you use if you wanted to join the left and right data frame based on a key (a variable present in both data frames), joining those rows in the right data frame to those that match a key in the left data frame, and keeping all of the rows in the left data frame?
+
+* anti_join() 0%
+* left_join() (Correct answer) 63%
+* right_join() 13%
+* semi_join() 25%
+
+---
+
+### Exam recap
+
+_A couple of items to highlight_
+
+Which of the following have we not considered to be a data visualization layer?
+
+* mapping between data and geometric object 0%
+* theme 0%
+* data 38%
+* geometric object 13%
+* title (correct answer) 50%
 
 ---
 
 ### Mid-semester feedback 
 
-Alex to add
+*Thanks everyone who took the time to give feedback!*
+
+_What should we keep doing?_
+
+* Homeworks
+* In class demos
+
+---
+
+### Mid-semester feedback 
+
+*Thanks everyone who took the time to give feedback!*
+
+_What should we do more of?_
+
+* Opportunities to try things in class
+* Better explanation in HW
+
+---
+
+### Mid-semester feedback 
+
+*Thanks everyone who took the time to give feedback!*
+
+_What should we do less?_
+
+* Base groups (not that much time)
+* Showing too much stuff in demos (in too short time)
+* Live coding Base R vs homework (Rstudio)
+
+---
+
+### Mid-semester feedback 
+
+*Thanks everyone who took the time to give feedback!*
+
+_Other comments?_
+
+* More frequent quizzes/checks
+* Ability to use different data sets
 
 ---
 
@@ -146,6 +243,158 @@ Today, we'll focus on the linear regression model, but will also touch on the fo
 ### B. A buffet of models
 
 There is a _lot_ we can do with a linear regression model!
+
+
+```r
+d &lt;- read_csv("https://raw.githubusercontent.com/data-edu/dataedu/master/data-raw/wt01_online-science-motivation/processed/sci_mo_processed.csv")
+
+d
+```
+
+```
+## # A tibble: 603 x 30
+##    student_id course_id   total_points_possi… total_points_ear… percentage_earn…
+##         &lt;dbl&gt; &lt;chr&gt;                     &lt;dbl&gt;             &lt;dbl&gt;            &lt;dbl&gt;
+##  1      43146 FrScA-S216…                3280              2220            0.677
+##  2      44638 OcnA-S116-…                3531              2672            0.757
+##  3      47448 FrScA-S216…                2870              1897            0.661
+##  4      47979 OcnA-S216-…                4562              3090            0.677
+##  5      48797 PhysA-S116…                2207              1910            0.865
+##  6      51943 FrScA-S216…                4208              3596            0.855
+##  7      52326 AnPhA-S216…                4325              2255            0.521
+##  8      52446 PhysA-S116…                2086              1719            0.824
+##  9      53447 FrScA-S116…                4655              3149            0.676
+## 10      53475 FrScA-S116…                1710              1402            0.820
+## # … with 593 more rows, and 25 more variables: subject &lt;chr&gt;, semester &lt;chr&gt;,
+## #   section &lt;chr&gt;, Gradebook_Item &lt;chr&gt;, Grade_Category &lt;lgl&gt;,
+## #   FinalGradeCEMS &lt;dbl&gt;, Points_Possible &lt;dbl&gt;, Points_Earned &lt;dbl&gt;,
+## #   Gender &lt;chr&gt;, q1 &lt;dbl&gt;, q2 &lt;dbl&gt;, q3 &lt;dbl&gt;, q4 &lt;dbl&gt;, q5 &lt;dbl&gt;, q6 &lt;dbl&gt;,
+## #   q7 &lt;dbl&gt;, q8 &lt;dbl&gt;, q9 &lt;dbl&gt;, q10 &lt;dbl&gt;, TimeSpent &lt;dbl&gt;,
+## #   TimeSpent_hours &lt;dbl&gt;, TimeSpent_std &lt;dbl&gt;, int &lt;dbl&gt;, pc &lt;dbl&gt;, uv &lt;dbl&gt;
+```
+
+---
+
+### B. A buffet of models
+
+Estimating a model; seeing the result:
+
+
+```r
+lm(FinalGradeCEMS ~ TimeSpent_hours, data = d)
+```
+
+```
+## 
+## Call:
+## lm(formula = FinalGradeCEMS ~ TimeSpent_hours, data = d)
+## 
+## Coefficients:
+##     (Intercept)  TimeSpent_hours  
+##         65.8085           0.3648
+```
+---
+
+### B. A buffet of models
+
+Saving the output to an _object_ and printing a summary of the results
+
+
+```r
+m1 &lt;- lm(FinalGradeCEMS ~ TimeSpent_hours, data = d)
+summary(m1)
+```
+
+```
+## 
+## Call:
+## lm(formula = FinalGradeCEMS ~ TimeSpent_hours, data = d)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -67.136  -7.805   4.723  14.471  30.317 
+## 
+## Coefficients:
+##                 Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)     65.80851    1.49120   44.13   &lt;2e-16 ***
+## TimeSpent_hours  0.36484    0.03889    9.38   &lt;2e-16 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 20.71 on 571 degrees of freedom
+##   (30 observations deleted due to missingness)
+## Multiple R-squared:  0.1335,	Adjusted R-squared:  0.132 
+## F-statistic: 87.99 on 1 and 571 DF,  p-value: &lt; 2.2e-16
+```
+
+---
+
+### B. A buffet of models
+
+Making the model more complex
+
+
+```r
+m2 &lt;- lm(FinalGradeCEMS ~ TimeSpent_hours + int + Gender, data = d)
+summary(m2)
+```
+
+```
+## 
+## Call:
+## lm(formula = FinalGradeCEMS ~ TimeSpent_hours + int + Gender, 
+##     data = d)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -66.593  -7.382   4.761  14.534  30.618 
+## 
+## Coefficients:
+##                 Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)     69.61325    7.06075   9.859   &lt;2e-16 ***
+## TimeSpent_hours  0.36962    0.04198   8.804   &lt;2e-16 ***
+## int             -0.99359    1.58756  -0.626    0.532    
+## GenderM         -0.54962    2.06489  -0.266    0.790    
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 21.03 on 499 degrees of freedom
+##   (100 observations deleted due to missingness)
+## Multiple R-squared:  0.1375,	Adjusted R-squared:  0.1323 
+## F-statistic: 26.51 on 3 and 499 DF,  p-value: 6.362e-16
+```
+
+
+---
+
+### B. A buffet of models
+
+
+```r
+lm()
+```
+
+---
+
+### B. A buffet of models
+
+*t*-test
+
+
+
+---
+
+### B. A buffet of models
+
+ANOVA
+
+
+
+---
+
+### B. A buffet of models
+
+Multi-level model
 
 
 

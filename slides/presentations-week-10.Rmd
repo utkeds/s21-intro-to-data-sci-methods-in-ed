@@ -54,22 +54,122 @@ Starting with XXX
 ### Homework highlights
 
 ```{r echo = FALSE, out.width = "90%"}
-
+knitr::include_graphics("img/hw9_highlight1.png")
 ```
 
-Alex to add
+
+---
+
+
+### Homework highlights
+
+```{r echo = FALSE, out.width = "90%"}
+knitr::include_graphics("img/hw9_highlight2.png")
+```
+
 
 ---
 
 ### Exam recap
 
-Alex to add
+* Overall everyone did quite well!
+
+* Many questions 100% correct
+
+* A couple of items to highlight
+
+---
+
+### Exam recap
+
+_A couple of items to highlight_
+
+Which of the following is one use case for the kable package?
+
+* To format tables included in RMarkdown documents and reports, (Correct answer) 56 %	
+* To easily create plots of your data, (Incorrect answer)	6 %	
+* To create a correlation matrix, (Incorrect answer) 6 %	
+* To automatically calculate summary statistics for a data frame, (Incorrect answer) 31 %	
+
+---
+
+### Exam recap
+
+_A couple of items to highlight_
+
+For this question, we use "left data frame" to refer to the first data frame passed to the join function, and "right data frame" to refer to the second data frame passed to the join function.
+
+For example, below, df1 is the left data frame, and df2 is the right data frame.
+
+left_join(df1, df2)
+
+See here (and the slides) for a description of different joins: https://datascienceineducation.com/c07.html#joining-the-data
+
+Which function would you use if you wanted to join the left and right data frame based on a key (a variable present in both data frames), joining those rows in the right data frame to those that match a key in the left data frame, and keeping all of the rows in the left data frame?
+
+* anti_join() 0%
+* left_join() (Correct answer) 63%
+* right_join() 13%
+* semi_join() 25%
+
+---
+
+### Exam recap
+
+_A couple of items to highlight_
+
+Which of the following have we not considered to be a data visualization layer?
+
+* mapping between data and geometric object 0%
+* theme 0%
+* data 38%
+* geometric object 13%
+* title (correct answer) 50%
 
 ---
 
 ### Mid-semester feedback 
 
-Alex to add
+*Thanks everyone who took the time to give feedback!*
+
+_What should we keep doing?_
+
+* Homeworks
+* In class demos
+
+---
+
+### Mid-semester feedback 
+
+*Thanks everyone who took the time to give feedback!*
+
+_What should we do more of?_
+
+* Opportunities to try things in class
+* Better explanation in HW
+
+---
+
+### Mid-semester feedback 
+
+*Thanks everyone who took the time to give feedback!*
+
+_What should we do less?_
+
+* Base groups (not that much time)
+* Showing too much stuff in demos (in too short time)
+* Live coding Base R vs homework (Rstudio)
+
+---
+
+### Mid-semester feedback 
+
+*Thanks everyone who took the time to give feedback!*
+
+_Other comments?_
+
+* More frequent quizzes/checks
+* Ability to use different data sets
 
 ---
 
@@ -191,7 +291,7 @@ summary(m2)
 
 ### B. A buffet of models
 
-```{r}
+```{r, eval = FALSE}
 
 lm()
 ```
