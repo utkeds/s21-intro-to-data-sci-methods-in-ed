@@ -1,6 +1,7 @@
------
-
-## title: "Homework Week 9 - From Soup to Nuts" output: html\_document
+---
+title: "Homework Week 9 - From Soup to Nuts"
+output: html_document 
+---
 
 ``` {r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
