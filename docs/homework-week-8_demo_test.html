@@ -13,21 +13,13 @@
 
 <title>Homework Week 8 - Data Exploration and Summary</title>
 
+<script src="site_libs/header-attrs-2.6/header-attrs.js"></script>
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
-<style>h1 {font-size: 34px;}
-       h1.title {font-size: 38px;}
-       h2 {font-size: 30px;}
-       h3 {font-size: 24px;}
-       h4 {font-size: 18px;}
-       h5 {font-size: 16px;}
-       h6 {font-size: 12px;}
-       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
-       pre:not([class]) { background-color: white }</style>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -44,6 +36,11 @@
     </style>
 
 <style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
 <script type="text/javascript">
 if (window.hljs) {
   hljs.configure({languages: []});
@@ -56,6 +53,32 @@ if (window.hljs) {
 
 
 
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
 
 
 
@@ -66,6 +89,10 @@ if (window.hljs) {
   max-width: 940px;
   margin-left: auto;
   margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
 }
 img {
   max-width:100%;
@@ -82,13 +109,40 @@ button.code-folding-btn:focus {
 summary {
   display: list-item;
 }
-pre code {
-  padding: 0;
-}
 </style>
 
 
 <style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
 .dropdown-submenu {
   position: relative;
 }
@@ -116,7 +170,7 @@ pre code {
   margin-right: -10px;
 }
 .dropdown-submenu:hover>a:after {
-  border-left-color: #adb5bd;
+  border-left-color: #ffffff;
 }
 .dropdown-submenu.pull-left {
   float: none;
@@ -128,7 +182,7 @@ pre code {
 }
 </style>
 
-<script type="text/javascript">
+<script>
 // manage active state of menu based on current page
 $(document).ready(function () {
   // active menu anchor
@@ -139,23 +193,10 @@ $(document).ready(function () {
   var menuAnchor = $('a[href="' + href + '"]');
 
   // mark it active
-  menuAnchor.tab('show');
+  menuAnchor.parent().addClass('active');
 
   // if it's got a parent navbar menu mark it active as well
   menuAnchor.closest('li.dropdown').addClass('active');
-
-  // Navbar adjustments
-  var navHeight = $(".navbar").first().height() + 15;
-  var style = document.createElement('style');
-  var pt = "padding-top: " + navHeight + "px; ";
-  var mt = "margin-top: -" + navHeight + "px; ";
-  var css = "";
-  // offset scroll position for anchor links (for fixed navbar)
-  for (var i = 1; i <= 6; i++) {
-    css += ".section h" + i + "{ " + pt + mt + "}\n";
-  }
-  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
-  document.head.appendChild(style);
 });
 </script>
 
@@ -167,6 +208,7 @@ $(document).ready(function () {
   max-height: 500px;
   min-height: 44px;
   overflow-y: auto;
+  background: white;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
@@ -274,7 +316,7 @@ $(document).ready(function () {
   </div><!--/.container -->
 </div><!--/.navbar -->
 
-<div id="header">
+<div class="fluid-row" id="header">
 
 
 
@@ -303,171 +345,75 @@ library(skimr)
 library(psych)
 
 ug_data &lt;- read_csv(here(&quot;data&quot;, &quot;undergrad_data.csv&quot;))</code></pre>
-<pre><code>## Warning: Missing column names filled in:
-## &#39;X1&#39; [1]</code></pre>
-<pre><code>## 
-## ── Column specification ───────────────────
-## cols(
-##   .default = col_double(),
-##   Stud_ID = col_character()
-## )
-## ℹ Use `spec()` for the full column specifications.</code></pre>
+<pre><code>## Warning: Missing column names filled in: &#39;X1&#39; [1]</code></pre>
 <p>Once you’ve loaded it, familiarize yourself with the different variables in the data set using the methods for inspecting and exploring a new data set we have discussed, particularly using the <code>visdat</code> package.</p>
 <pre class="r"><code>vis_dat(ug_data)</code></pre>
-<p><img src="homework-week-8_demo_test_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p><img src="homework-week-8_demo_test_files/figure-html/unnamed-chunk-2-1.png" width="672" style="display: block; margin: auto;" /></p>
 <pre class="r"><code>glimpse(ug_data)</code></pre>
 <pre><code>## Rows: 614
 ## Columns: 29
-## $ X1              &lt;dbl&gt; 1, 2, 3, 4, 5, 6,…
-## $ Stud_ID         &lt;chr&gt; &quot;e75ab8254&quot;, &quot;07e…
-## $ PROJ_TOTAL      &lt;dbl&gt; 347, 427, 393, 39…
-## $ Proj01          &lt;dbl&gt; 14, 14, 14, 14, 1…
-## $ Proj02          &lt;dbl&gt; 19, 20, 18, 18, 2…
-## $ Proj03          &lt;dbl&gt; 13, 20, 16, 19, 1…
-## $ Proj04          &lt;dbl&gt; 25, 38, 37, 0, 36…
-## $ Proj05          &lt;dbl&gt; 27, 45, 42, 43, 8…
-## $ Proj06          &lt;dbl&gt; 35, 42, 44, 43, 3…
-## $ Proj07          &lt;dbl&gt; 40, 41, 45, 50, 0…
-## $ Proj08          &lt;dbl&gt; 47, 50, 41, 50, 4…
-## $ Proj09          &lt;dbl&gt; 44, 52, 50, 52, 5…
-## $ Proj10          &lt;dbl&gt; 35, 53, 37, 53, 4…
-## $ Proj11          &lt;dbl&gt; 48, 52, 49, 55, 5…
-## $ Total_Pts       &lt;dbl&gt; 622, 902, 829, 83…
-## $ Exam1           &lt;dbl&gt; 60, 80, 96, 80, 7…
-## $ Exam2           &lt;dbl&gt; 60, 125, 115, 120…
-## $ Exam3           &lt;dbl&gt; 55, 170, 125, 135…
-## $ Prob_solve_pre  &lt;dbl&gt; 3.500000, 16.0000…
-## $ Prob_solve_post &lt;dbl&gt; 4.666667, 15.0000…
-## $ extraversion    &lt;dbl&gt; 52, 29, 55, 25, 5…
-## $ agreeableness   &lt;dbl&gt; 51, 50, 59, 29, 5…
-## $ conscient.      &lt;dbl&gt; 47, 54, 46, 38, 6…
-## $ stability       &lt;dbl&gt; 43, 58, 53, 37, 5…
-## $ openness        &lt;dbl&gt; 42, 38, 48, 53, 4…
-## $ Metacog.        &lt;dbl&gt; 65, 31, NA, 34, 5…
-## $ SelfEfficacy    &lt;dbl&gt; 50, 32, NA, 48, 4…
-## $ IntGoalOrient   &lt;dbl&gt; 25, 13, NA, 14, 1…
-## $ ExtGoalOrient   &lt;dbl&gt; 26, 16, NA, 26, 2…</code></pre>
+## $ X1              &lt;dbl&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, …
+## $ Stud_ID         &lt;chr&gt; &quot;e75ab8254&quot;, &quot;07ee7a263&quot;, &quot;9c02eb000&quot;, &quot;52fb2d1ca&quot;, &quot;a4d76f570&quot;, &quot;94ea75daa&quot;, &quot;5e9c38d44&quot;, &quot;e5a5608e8&quot;, &quot;f2abdba22&quot;…
+## $ PROJ_TOTAL      &lt;dbl&gt; 347, 427, 393, 397, 316, 435, 375, 398, 350, 354, 295, 440, 52, 441, 385, 370, 332, 279, 406, 340, 372, 410, 448, 4…
+## $ Proj01          &lt;dbl&gt; 14, 14, 14, 14, 14, 14, 13, 14, 14, 13, 13, 14, 14, 14, 14, 10, 14, 14, 14, 15, 14, 15, 15, 15, 15, 15, 15, 13, 13,…
+## $ Proj02          &lt;dbl&gt; 19, 20, 18, 18, 20, 20, 20, 17, 18, 18, 20, 20, 12, 20, 20, 18, 18, 20, 20, 20, 13, 20, 20, 20, 20, 18, 19, 20, 20,…
+## $ Proj03          &lt;dbl&gt; 13, 20, 16, 19, 12, 19, 20, 19, 18, 17, 20, 20, 0, 20, 10, 18, 18, 18, 16, 20, 15, 20, 20, 10, 20, 14, 10, 20, 17, …
+## $ Proj04          &lt;dbl&gt; 25, 38, 37, 0, 36, 36, 36, 39, 37, 32, 34, 40, 26, 38, 27, 37, 35, 32, 37, 40, 28, 39, 40, 25, 40, 0, 40, 40, 33, 3…
+## $ Proj05          &lt;dbl&gt; 27, 45, 42, 43, 8, 45, 43, 45, 44, 40, 43, 45, 0, 44, 38, 29, 43, 43, 41, 32, 44, 44, 45, 45, 45, 37, 4, 39, 39, 43…
+## $ Proj06          &lt;dbl&gt; 35, 42, 44, 43, 34, 45, 38, 41, 0, 33, 41, 45, 0, 45, 34, 43, 0, 0, 45, 43, 43, 45, 45, 45, 40, 42, 31, 45, 45, 45,…
+## $ Proj07          &lt;dbl&gt; 40, 41, 45, 50, 0, 50, 46, 49, 45, 16, 50, 50, 0, 50, 50, 40, 43, 0, 50, 44, 50, 50, 50, 50, 48, 44, 0, 14, 49, 50,…
+## $ Proj08          &lt;dbl&gt; 47, 50, 41, 50, 41, 50, 40, 20, 43, 39, 19, 48, 0, 48, 42, 34, 39, 43, 38, 21, 0, 45, 50, 49, 46, 44, 0, 4, 45, 50,…
+## $ Proj09          &lt;dbl&gt; 44, 52, 50, 52, 52, 55, 50, 55, 51, 52, 55, 55, 0, 55, 51, 49, 35, 51, 47, 50, 55, 27, 53, 48, 53, 55, 0, 34, 52, 5…
+## $ Proj10          &lt;dbl&gt; 35, 53, 37, 53, 49, 46, 22, 47, 40, 40, 0, 48, 0, 53, 45, 40, 47, 42, 45, 0, 55, 50, 55, 48, 55, 28, 0, 30, 34, 55,…
+## $ Proj11          &lt;dbl&gt; 48, 52, 49, 55, 50, 55, 47, 52, 40, 54, 0, 55, 0, 54, 54, 52, 40, 16, 53, 55, 55, 55, 55, 53, 55, 51, 0, 40, 45, 55…
+## $ Total_Pts       &lt;dbl&gt; 622, 902, 829, 831, 757, 929, 822, 783, 696, 810, 640, 877, 52, 959, 840, 753, 642, 641, 876, 744, 760, 816, 945, 8…
+## $ Exam1           &lt;dbl&gt; 60, 80, 96, 80, 76, 84, 76, 64, 52, 76, 76, 80, 0, 88, 80, 68, 60, 68, 84, 84, 68, 80, 88, 60, 84, 72, 68, 68, 64, …
+## $ Exam2           &lt;dbl&gt; 60, 125, 115, 120, 120, 135, 135, 110, 90, 105, 90, 115, 0, 145, 140, 80, 80, 90, 135, 120, 110, 115, 150, 110, 95,…
+## $ Exam3           &lt;dbl&gt; 55, 170, 125, 135, 145, 175, 136, 111, 105, 175, 80, 150, 0, 185, 135, 135, 70, 105, 151, 110, 110, 111, 160, 136, …
+## $ Prob_solve_pre  &lt;dbl&gt; 3.500000, 16.000000, 7.000000, 10.000000, 2.333333, 8.000000, 3.833333, 5.333333, NA, 10.000000, 0.000000, 3.333333…
+## $ Prob_solve_post &lt;dbl&gt; 4.666667, 15.000000, 5.000000, 14.500000, 13.000000, 15.000000, 8.000000, NA, NA, 5.333333, 2.000000, 7.000000, NA,…
+## $ extraversion    &lt;dbl&gt; 52, 29, 55, 25, 50, 37, 38, NA, 58, 47, 45, 32, NA, 42, 47, 40, 42, 41, 47, 24, 34, 47, 60, 41, 50, NA, NA, 51, 36,…
+## $ agreeableness   &lt;dbl&gt; 51, 50, 59, 29, 50, 54, 50, NA, 65, 42, 69, 56, NA, 59, 37, 39, 53, 43, 62, 47, 44, 41, 60, 37, 44, NA, NA, 56, 54,…
+## $ conscient.      &lt;dbl&gt; 47, 54, 46, 38, 60, 50, 63, NA, 50, 42, 56, 50, NA, 68, 45, 40, 58, 40, 55, 41, 48, 48, 53, 38, 38, NA, NA, 40, NA,…
+## $ stability       &lt;dbl&gt; 43, 58, 53, 37, 59, 56, 43, NA, 46, 34, 38, NA, NA, 24, 51, 43, 59, 43, 47, 31, 36, 38, 48, 51, 62, NA, NA, 55, NA,…
+## $ openness        &lt;dbl&gt; 42, 38, 48, 53, 43, 47, 44, NA, 48, 42, 66, 49, NA, 57, 41, 40, 50, 38, 53, 48, 36, 40, 68, 31, 51, NA, NA, 63, 52,…
+## $ Metacog.        &lt;dbl&gt; 65, 31, NA, 34, 54, 47, 53, 65, 55, 48, 67, 55, 60, 57, 43, 46, 53, NA, 43, 42, 58, 42, 58, 40, 39, 40, 53, 42, 40,…
+## $ SelfEfficacy    &lt;dbl&gt; 50, 32, NA, 48, 48, 49, 45, 56, 21, 42, 56, 45, 40, 46, 44, 38, 43, NA, 48, 43, 26, 43, 48, 32, 48, 32, 18, 47, 32,…
+## $ IntGoalOrient   &lt;dbl&gt; 25, 13, NA, 14, 19, 23, 23, 25, 9, 22, 28, 26, 22, 17, 19, 20, 20, NA, 25, 20, 22, 20, 21, 4, 20, 16, 9, 19, 19, 16…
+## $ ExtGoalOrient   &lt;dbl&gt; 26, 16, NA, 26, 22, 22, 18, 25, 18, 28, 22, 28, 25, 24, 23, 16, 14, NA, 24, 26, 24, 24, 27, 19, 19, 16, 28, 21, 16,…</code></pre>
 <pre class="r"><code>summary(ug_data)</code></pre>
-<pre><code>##        X1          Stud_ID         
-##  Min.   :  1.0   Length:614        
-##  1st Qu.:154.2   Class :character  
-##  Median :307.5   Mode  :character  
-##  Mean   :307.5                     
-##  3rd Qu.:460.8                     
-##  Max.   :614.0                     
-##                                    
-##    PROJ_TOTAL        Proj01    
-##  Min.   :  0.0   Min.   : 0.0  
-##  1st Qu.:354.0   1st Qu.:14.0  
-##  Median :407.0   Median :15.0  
-##  Mean   :370.7   Mean   :13.8  
-##  3rd Qu.:437.0   3rd Qu.:15.0  
-##  Max.   :450.0   Max.   :15.0  
-##                                
-##      Proj02          Proj03     
-##  Min.   : 0.00   Min.   : 0.00  
-##  1st Qu.:18.00   1st Qu.:14.00  
-##  Median :20.00   Median :18.00  
-##  Mean   :17.84   Mean   :15.49  
-##  3rd Qu.:20.00   3rd Qu.:20.00  
-##  Max.   :20.00   Max.   :20.00  
-##                                 
-##      Proj04          Proj05     
-##  Min.   : 0.00   Min.   : 0.00  
-##  1st Qu.:30.00   1st Qu.:34.00  
-##  Median :38.00   Median :43.00  
-##  Mean   :31.95   Mean   :35.67  
-##  3rd Qu.:40.00   3rd Qu.:45.00  
-##  Max.   :40.00   Max.   :45.00  
-##                                 
-##      Proj06          Proj07  
-##  Min.   : 0.00   Min.   : 0  
-##  1st Qu.:38.00   1st Qu.:43  
-##  Median :43.00   Median :49  
-##  Mean   :37.16   Mean   :42  
-##  3rd Qu.:45.00   3rd Qu.:50  
-##  Max.   :45.00   Max.   :50  
-##                              
-##      Proj08          Proj09     
-##  Min.   : 0.00   Min.   : 0.00  
-##  1st Qu.:40.00   1st Qu.:50.00  
-##  Median :48.00   Median :54.00  
-##  Mean   :40.17   Mean   :47.39  
-##  3rd Qu.:50.00   3rd Qu.:55.00  
-##  Max.   :50.00   Max.   :55.00  
-##                                 
-##      Proj10          Proj11     
-##  Min.   : 0.00   Min.   : 0.00  
-##  1st Qu.:40.00   1st Qu.:51.00  
-##  Median :50.00   Median :55.00  
-##  Mean   :42.56   Mean   :46.71  
-##  3rd Qu.:54.00   3rd Qu.:55.00  
-##  Max.   :55.00   Max.   :55.00  
-##                                 
-##    Total_Pts         Exam1       
-##  Min.   :  0.0   Min.   :  0.00  
-##  1st Qu.:722.0   1st Qu.: 64.00  
-##  Median :814.5   Median : 72.00  
-##  Mean   :763.5   Mean   : 71.81  
-##  3rd Qu.:880.8   3rd Qu.: 84.00  
-##  Max.   :982.0   Max.   :100.00  
-##                                  
-##      Exam2           Exam3      
-##  Min.   :  0.0   Min.   :  0.0  
-##  1st Qu.: 95.0   1st Qu.:101.0  
-##  Median :115.0   Median :125.5  
-##  Mean   :111.6   Mean   :121.4  
-##  3rd Qu.:130.0   3rd Qu.:150.0  
-##  Max.   :150.0   Max.   :190.0  
-##                                 
-##  Prob_solve_pre   Prob_solve_post
-##  Min.   : 0.000   Min.   : 0.00  
-##  1st Qu.: 5.917   1st Qu.: 6.50  
-##  Median : 9.500   Median :11.33  
-##  Mean   : 9.543   Mean   :10.76  
-##  3rd Qu.:13.000   3rd Qu.:15.00  
-##  Max.   :22.000   Max.   :22.00  
-##  NA&#39;s   :43       NA&#39;s   :63     
-##   extraversion   agreeableness  
-##  Min.   :10.00   Min.   :22.00  
-##  1st Qu.:34.00   1st Qu.:43.00  
-##  Median :40.00   Median :50.00  
-##  Mean   :40.03   Mean   :49.02  
-##  3rd Qu.:46.00   3rd Qu.:56.00  
-##  Max.   :67.00   Max.   :70.00  
-##  NA&#39;s   :74      NA&#39;s   :90     
-##    conscient.     stability    
-##  Min.   :22.0   Min.   :11.00  
-##  1st Qu.:40.0   1st Qu.:38.00  
-##  Median :47.0   Median :44.00  
-##  Mean   :46.8   Mean   :43.51  
-##  3rd Qu.:52.0   3rd Qu.:51.00  
-##  Max.   :70.0   Max.   :68.00  
-##  NA&#39;s   :88     NA&#39;s   :110    
-##     openness        Metacog.    
-##  Min.   :23.00   Min.   :16.00  
-##  1st Qu.:41.00   1st Qu.:41.00  
-##  Median :48.00   Median :47.00  
-##  Mean   :47.85   Mean   :46.86  
-##  3rd Qu.:53.00   3rd Qu.:53.00  
-##  Max.   :69.00   Max.   :70.00  
-##  NA&#39;s   :85      NA&#39;s   :67     
-##   SelfEfficacy   IntGoalOrient  
-##  Min.   : 8.00   Min.   : 4.00  
-##  1st Qu.:36.00   1st Qu.:16.00  
-##  Median :44.00   Median :20.00  
-##  Mean   :42.17   Mean   :19.57  
-##  3rd Qu.:48.00   3rd Qu.:23.00  
-##  Max.   :56.00   Max.   :28.00  
-##  NA&#39;s   :67      NA&#39;s   :67     
-##  ExtGoalOrient  
-##  Min.   : 4.00  
-##  1st Qu.:19.00  
-##  Median :23.00  
-##  Mean   :22.06  
-##  3rd Qu.:25.50  
-##  Max.   :28.00  
-##  NA&#39;s   :67</code></pre>
+<pre><code>##        X1          Stud_ID            PROJ_TOTAL        Proj01         Proj02          Proj03          Proj04          Proj05     
+##  Min.   :  1.0   Length:614         Min.   :  0.0   Min.   : 0.0   Min.   : 0.00   Min.   : 0.00   Min.   : 0.00   Min.   : 0.00  
+##  1st Qu.:154.2   Class :character   1st Qu.:354.0   1st Qu.:14.0   1st Qu.:18.00   1st Qu.:14.00   1st Qu.:30.00   1st Qu.:34.00  
+##  Median :307.5   Mode  :character   Median :407.0   Median :15.0   Median :20.00   Median :18.00   Median :38.00   Median :43.00  
+##  Mean   :307.5                      Mean   :370.7   Mean   :13.8   Mean   :17.84   Mean   :15.49   Mean   :31.95   Mean   :35.67  
+##  3rd Qu.:460.8                      3rd Qu.:437.0   3rd Qu.:15.0   3rd Qu.:20.00   3rd Qu.:20.00   3rd Qu.:40.00   3rd Qu.:45.00  
+##  Max.   :614.0                      Max.   :450.0   Max.   :15.0   Max.   :20.00   Max.   :20.00   Max.   :40.00   Max.   :45.00  
+##                                                                                                                                   
+##      Proj06          Proj07       Proj08          Proj09          Proj10          Proj11        Total_Pts         Exam1       
+##  Min.   : 0.00   Min.   : 0   Min.   : 0.00   Min.   : 0.00   Min.   : 0.00   Min.   : 0.00   Min.   :  0.0   Min.   :  0.00  
+##  1st Qu.:38.00   1st Qu.:43   1st Qu.:40.00   1st Qu.:50.00   1st Qu.:40.00   1st Qu.:51.00   1st Qu.:722.0   1st Qu.: 64.00  
+##  Median :43.00   Median :49   Median :48.00   Median :54.00   Median :50.00   Median :55.00   Median :814.5   Median : 72.00  
+##  Mean   :37.16   Mean   :42   Mean   :40.17   Mean   :47.39   Mean   :42.56   Mean   :46.71   Mean   :763.5   Mean   : 71.81  
+##  3rd Qu.:45.00   3rd Qu.:50   3rd Qu.:50.00   3rd Qu.:55.00   3rd Qu.:54.00   3rd Qu.:55.00   3rd Qu.:880.8   3rd Qu.: 84.00  
+##  Max.   :45.00   Max.   :50   Max.   :50.00   Max.   :55.00   Max.   :55.00   Max.   :55.00   Max.   :982.0   Max.   :100.00  
+##                                                                                                                               
+##      Exam2           Exam3       Prob_solve_pre   Prob_solve_post  extraversion   agreeableness     conscient.     stability    
+##  Min.   :  0.0   Min.   :  0.0   Min.   : 0.000   Min.   : 0.00   Min.   :10.00   Min.   :22.00   Min.   :22.0   Min.   :11.00  
+##  1st Qu.: 95.0   1st Qu.:101.0   1st Qu.: 5.917   1st Qu.: 6.50   1st Qu.:34.00   1st Qu.:43.00   1st Qu.:40.0   1st Qu.:38.00  
+##  Median :115.0   Median :125.5   Median : 9.500   Median :11.33   Median :40.00   Median :50.00   Median :47.0   Median :44.00  
+##  Mean   :111.6   Mean   :121.4   Mean   : 9.543   Mean   :10.76   Mean   :40.03   Mean   :49.02   Mean   :46.8   Mean   :43.51  
+##  3rd Qu.:130.0   3rd Qu.:150.0   3rd Qu.:13.000   3rd Qu.:15.00   3rd Qu.:46.00   3rd Qu.:56.00   3rd Qu.:52.0   3rd Qu.:51.00  
+##  Max.   :150.0   Max.   :190.0   Max.   :22.000   Max.   :22.00   Max.   :67.00   Max.   :70.00   Max.   :70.0   Max.   :68.00  
+##                                  NA&#39;s   :43       NA&#39;s   :63      NA&#39;s   :74      NA&#39;s   :90      NA&#39;s   :88     NA&#39;s   :110    
+##     openness        Metacog.      SelfEfficacy   IntGoalOrient   ExtGoalOrient  
+##  Min.   :23.00   Min.   :16.00   Min.   : 8.00   Min.   : 4.00   Min.   : 4.00  
+##  1st Qu.:41.00   1st Qu.:41.00   1st Qu.:36.00   1st Qu.:16.00   1st Qu.:19.00  
+##  Median :48.00   Median :47.00   Median :44.00   Median :20.00   Median :23.00  
+##  Mean   :47.85   Mean   :46.86   Mean   :42.17   Mean   :19.57   Mean   :22.06  
+##  3rd Qu.:53.00   3rd Qu.:53.00   3rd Qu.:48.00   3rd Qu.:23.00   3rd Qu.:25.50  
+##  Max.   :69.00   Max.   :70.00   Max.   :56.00   Max.   :28.00   Max.   :28.00  
+##  NA&#39;s   :85      NA&#39;s   :67      NA&#39;s   :67      NA&#39;s   :67      NA&#39;s   :67</code></pre>
 <p>What are some observations you made about the data from your exploration?</p>
 </div>
 <div id="data-report" class="section level1">
@@ -3148,36 +3094,25 @@ ExtGoalOrient
   select(-1)
 
 correlate(proj_data)</code></pre>
-<pre><code>## 
-## Correlation method: &#39;pearson&#39;
-## Missing treated using: &#39;pairwise.complete.obs&#39;</code></pre>
 <pre><code>## # A tibble: 11 x 12
-##    term  Proj01 Proj02 Proj03 Proj04 Proj05
-##    &lt;chr&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;
-##  1 Proj… NA      0.341  0.287  0.233  0.277
-##  2 Proj…  0.341 NA      0.423  0.414  0.343
-##  3 Proj…  0.287  0.423 NA      0.476  0.439
-##  4 Proj…  0.233  0.414  0.476 NA      0.453
-##  5 Proj…  0.277  0.343  0.439  0.453 NA    
-##  6 Proj…  0.253  0.387  0.426  0.498  0.561
-##  7 Proj…  0.294  0.385  0.411  0.446  0.514
-##  8 Proj…  0.279  0.383  0.428  0.493  0.509
-##  9 Proj…  0.200  0.362  0.417  0.474  0.508
-## 10 Proj…  0.203  0.304  0.375  0.446  0.502
-## 11 Proj…  0.306  0.368  0.396  0.455  0.498
-## # … with 6 more variables: Proj06 &lt;dbl&gt;,
-## #   Proj07 &lt;dbl&gt;, Proj08 &lt;dbl&gt;,
-## #   Proj09 &lt;dbl&gt;, Proj10 &lt;dbl&gt;,
-## #   Proj11 &lt;dbl&gt;</code></pre>
+##    term   Proj01 Proj02 Proj03 Proj04 Proj05 Proj06 Proj07 Proj08 Proj09 Proj10 Proj11
+##    &lt;chr&gt;   &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;
+##  1 Proj01 NA      0.341  0.287  0.233  0.277  0.253  0.294  0.279  0.200  0.203  0.306
+##  2 Proj02  0.341 NA      0.423  0.414  0.343  0.387  0.385  0.383  0.362  0.304  0.368
+##  3 Proj03  0.287  0.423 NA      0.476  0.439  0.426  0.411  0.428  0.417  0.375  0.396
+##  4 Proj04  0.233  0.414  0.476 NA      0.453  0.498  0.446  0.493  0.474  0.446  0.455
+##  5 Proj05  0.277  0.343  0.439  0.453 NA      0.561  0.514  0.509  0.508  0.502  0.498
+##  6 Proj06  0.253  0.387  0.426  0.498  0.561 NA      0.621  0.650  0.649  0.616  0.658
+##  7 Proj07  0.294  0.385  0.411  0.446  0.514  0.621 NA      0.611  0.620  0.568  0.658
+##  8 Proj08  0.279  0.383  0.428  0.493  0.509  0.650  0.611 NA      0.681  0.628  0.660
+##  9 Proj09  0.200  0.362  0.417  0.474  0.508  0.649  0.620  0.681 NA      0.653  0.652
+## 10 Proj10  0.203  0.304  0.375  0.446  0.502  0.616  0.568  0.628  0.653 NA      0.714
+## 11 Proj11  0.306  0.368  0.396  0.455  0.498  0.658  0.658  0.660  0.652  0.714 NA</code></pre>
 <p>Now use the <code>corrr</code> package to produce a correlation heat map for the correlation matrix you just made, and use the lower triangle only.</p>
 <pre class="r"><code>correlate(proj_data) %&gt;% 
   shave() %&gt;%
   rplot()</code></pre>
-<pre><code>## 
-## Correlation method: &#39;pearson&#39;
-## Missing treated using: &#39;pairwise.complete.obs&#39;</code></pre>
-<pre><code>## Don&#39;t know how to automatically pick scale for object of type noquote. Defaulting to continuous.</code></pre>
-<p><img src="homework-week-8_demo_test_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p><img src="homework-week-8_demo_test_files/figure-html/unnamed-chunk-6-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
 <div id="regression-model" class="section level1">
 <h1>Regression model</h1>
@@ -3382,11 +3317,11 @@ tibble::tribble(
   &quot;How valuable was this homework to you?&quot;,    x
 )</code></pre>
 <pre><code>## # A tibble: 3 x 2
-##   question                         response
-##   &lt;chr&gt;                            &lt;list&gt;  
-## 1 How challenging was this homewo… &lt;NULL&gt;  
-## 2 How interesting was this homewo… &lt;NULL&gt;  
-## 3 How valuable was this homework … &lt;NULL&gt;</code></pre>
+##   question                                  response
+##   &lt;chr&gt;                                     &lt;list&gt;  
+## 1 How challenging was this homework?        &lt;NULL&gt;  
+## 2 How interesting was this homework to you? &lt;NULL&gt;  
+## 3 How valuable was this homework to you?    &lt;NULL&gt;</code></pre>
 <p>Include any other comments, feedback, or reflections on this homework below:</p>
 <p>Important note: Please post your comment(s), feedback, or reflections in Slack when you share your Rmd file!</p>
 </div>
@@ -3419,7 +3354,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open');
+    $(this).parent().toggleClass('nav-tabs-open')
   });
 });
 </script>

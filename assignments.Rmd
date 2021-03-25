@@ -17,16 +17,14 @@ Write a personal statement on one’s perspective toward the role and nature of 
 
 [Link to assignment details](assignment-data-ethics.html)
 
-## Curate data science resources (3)
+## Curating a data science resource
 
-Curate data science resources as a part of a class resource throughout the semester.
+Curate a data science resource as a part of a class resource throughout the semester.
+
+[Link to assignment details](assignment-curating-a-data-science-resource.html)
 
 ## Individual final project
 
 Complete an individually-designed project that can take different forms (R Markdown Report, interactive Shiny app, interactive dashboard, etc.) related to identifying and solving a data-related problem in education using R (due approximately two-thirds of the way through the semester).
 
 [Link to assignment details](assignment-final-project.html)
-
-## Portfolio
-
-Develop a portfolio with your work from throughout the semester. 
