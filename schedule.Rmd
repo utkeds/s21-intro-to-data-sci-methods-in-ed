@@ -9,10 +9,8 @@ options(knitr.kable.NA = '')
 library(readxl)
 library(tidyverse)
 
-
 read_excel(
-  here::here("data", "schedule.xlsx")
-) %>% 
+  here::here("data", "schedule.xlsx")) %>% 
   slice(-2) %>% 
   separate(Date, c("Week", "Date"), " - ") %>% 
   knitr::kable()

@@ -1,0 +1,27 @@
+---
+title: "Curated Resources"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+*Instructions*: Copy everything from the first level-2 header (line 12 of this document, beginning with ##) through the 
+section with advice on how to use. Then, replace the header with your description, add the requested info, and commit your changes!
+
+## Template: replace this header with a short (10 words or less) summary of the resource you identified
+
+Link to resource: [add link here]
+
+### What this resource is
+
+- 2-4 sentence overview of this resource is: what it does, describes/illuminates, or otherwise assists with.
+
+### Who will find this resource helpful
+
+- 2-4 sentence description of who will find this resource helpful; consider things such as what one is looking to do or how much experience one has with R.
+
+### Advice on how to use
+
+- 2-4 sentences providing advice on how to use the resource. For an R package, this could be tips on how to get started. For articles/blogs (or resources like these), this could be instructions on where to begin to read (or how to navigate the resource).
