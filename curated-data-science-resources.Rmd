@@ -13,6 +13,7 @@ section with advice on how to use. Then, replace the header with your descriptio
 ## Template: replace this header with a short (10 words or less) summary of the resource you identified
 
 Link to resource: [add link here]
+[Add your name here]
 
 ### What this resource is
 
