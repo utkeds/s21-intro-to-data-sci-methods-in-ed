@@ -35,9 +35,14 @@ library(tidyverse)
 
 # Breakout rooms!
 
-Starting with whoever has consumed the most caffeine today . . . 
+Starting with whoever has consumed the least caffeine (in chocolate, tea, or coffee) today . . . 
 
-- How are you feeling about your final project? What are you feeling confident about? What are you worried about?
+- What was the most familiar to you about the code / techniques used in the walkthrough on illuminating inequities in education through analyzing large-scale data sets? 
+- What was the least familiar to you? 
+
+Prepare one-three responses to each of the above questions to share with the whole class!
+
+https://datascienceineducation.com/c09.html
 
 ---
 
@@ -458,7 +463,6 @@ Using the `caret` package:
 knitr::include_graphics("img/aprilfools.gif")
 ```
 
-
 ---
 
 # Logistics
@@ -467,14 +471,18 @@ knitr::include_graphics("img/aprilfools.gif")
 
 * Homework 10: Available tomorrow by noon tomorrow; **Due by Thursday, 4/8**
 
-* Reading:
+* Reading: * https://www.tmwr.org/base-r.html#formula
 
 ---
 
-# Final Project
+# Assignment updates
 
 * [Final project](https://making-data-science-count.github.io/s21-intro-to-data-sci-methods-in-ed/assignments-final-projects.html)
-  * 
+  * We will provide feedback to you within the next week (before our next class on Thursday, April 8)
+  * We recommending getting started!
+  * We recommend having starting in earnest within the next two-three weeks (depending on your need for feedback)
+  
+* [Curating a data science resource](https://making-data-science-count.github.io/s21-intro-to-data-sci-methods-in-ed/assignment-curating-a-data-science-resource.html)
 
 ---
 
