@@ -3,13 +3,15 @@ title: "Assignments"
 output: html_document
 ---
 
-## Homework (14)
+## Homework (12-14)
 
-Weekly homework. To be submitted in the form of an R Markdown file (`.Rmd`) via Canvas.
+Weekly homework. To be submitted in the form of an R Markdown file (`.Rmd`) via Canvas. There are a few weeks in which we may not have homework for different reasons; why the number of homeworks is listed as 12-14.
 
-## Interactive examinations (4)
+## Interactive examinations (3)
 
 Interaction examinations following each unit. These provide a chance to reflect on and summarize what you did and learned during the unit. Don't worry, these aren't high-stress!
+
+Available in Canvas.
 
 ## Personal statement on data ethics
 
