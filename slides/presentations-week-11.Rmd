@@ -482,8 +482,16 @@ knitr::include_graphics("img/aprilfools.gif")
   * We recommending getting started!
   * We recommend having starting in earnest within the next two-three weeks (depending on your need for feedback)
   
+---
+
 * [Curating a data science resource](https://making-data-science-count.github.io/s21-intro-to-data-sci-methods-in-ed/assignment-curating-a-data-science-resource.html)
 
+### Random
+
+* Do you have an interest in a class on social network analysis (more of a general theoretical and methodological approach that can be brought to bear on the analysis of face-to-face and digital networks) and the analysis of social media data? If so, please let us know.
+
+* Are you interested in a graduate-level certificate in educational data science? 
+  * https://docs.google.com/document/d/e/2PACX-1vRhJTuCQfpEx9uZl57pucjyr_quIR9Vv5ZZdxvu4GSrdD5lkIQyUTsWX5NyuHiPivvOMPtkLmoLoi1X/pub
 ---
 
 ### Wrapping up
