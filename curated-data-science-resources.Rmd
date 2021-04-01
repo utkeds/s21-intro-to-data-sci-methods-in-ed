@@ -26,3 +26,20 @@ Link to resource: [add link here]
 ### Advice on how to use
 
 - 2-4 sentences providing advice on how to use the resource. For an R package, this could be tips on how to get started. For articles/blogs (or resources like these), this could be instructions on where to begin to read (or how to navigate the resource).
+
+## My resource
+
+Link to resource: [add link here]
+[Add your name here]
+
+### What this resource is
+
+- 2-4 sentence overview of this resource is: what it does, describes/illuminates, or otherwise assists with.
+
+### Who will find this resource helpful
+
+- 2-4 sentence description of who will find this resource helpful; consider things such as what one is looking to do or how much experience one has with R.
+
+### Advice on how to use
+
+- 2-4 sentences providing advice on how to use the resource. For an R package, this could be tips on how to get started. For articles/blogs (or resources like these), this could be instructions on where to begin to read (or how to navigate the resource).
