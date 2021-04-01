@@ -3,7 +3,7 @@ title: "Schedule"
 output: html_document
 ---
 
-```{r, echo = FALSE, message = FALSE}
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
 options(knitr.kable.NA = '')
 
 library(readxl)
