@@ -36,3 +36,5 @@ output: html_document
 - [Homework 8 solution walkthrough](https://tennessee.zoom.us/rec/share/TEryKqSo7zyZx53uQ_RZBDgE4ybumOoGGVOzDvYx9i_shMnPocuQVur0gGJhnSQ.-I9nQGVkY7d57ir_)
 
 - [Homework 9 supplementary explanation - code chunks](https://tennessee.zoom.us/rec/share/wCxEUXjYysY5Zb2mjpyNUMzP6W-rgyf9bOA6scu-tVOggeR6TQEXW3gvhG9R5Eov.FLxCdBmt3fgxLgiy )
+
+- [Week 11 demo](https://tennessee.zoom.us/rec/share/BxDFhbdafdxV6_FMl-fgtph3XZAZc_GwFaeYvzPYkswetiZF_BPtr6gjZCyRYbVV.IxdzaU4zmC_Y7uRl)
