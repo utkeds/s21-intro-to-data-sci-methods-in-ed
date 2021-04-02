@@ -58,3 +58,16 @@ output: html_document
 - [Week 9 HW](https://github.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed/blob/main/homework/homework-week-9.Rmd)
 - Video on chunk options
   - https://tennessee.zoom.us/rec/share/wCxEUXjYysY5Zb2mjpyNUMzP6W-rgyf9bOA6scu-tVOggeR6TQEXW3gvhG9R5Eov.FLxCdBmt3fgxLgiy
+  
+## Week 10
+
+- No homework!
+- Readings:
+  * https://datascienceineducation.com/c09.html
+  * https://moderndive.com/5-regression.html
+  
+## Week 11
+- Week 11 Homework
+- Reading:
+  * https://www.tmwr.org/base-r.html#formula
+  

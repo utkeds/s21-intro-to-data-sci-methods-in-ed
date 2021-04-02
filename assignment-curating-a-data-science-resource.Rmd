@@ -1,5 +1,5 @@
 ---
-title: "Final Project"
+title: "Curating a Data Science Resource"
 output: html_document
 ---
 
@@ -11,45 +11,19 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### Overview
 
-Complete an individually-designed project that can take different forms (R Markdown Report, interactive Shiny app, interactive dashboard, etc.) related to identifying and solving a data-related problem in education using R. 
+This assignment involves identifying and describing a data science resource as a part of a class resource throughout the semester.
 
 ### Details
 
-The scope of the project must involve making substantial progress toward a research-related goal.
+While you work on your final project, you are very likely going to be doing some independent research. This independent research may lead you to resources, R packages, or even individuals who you found very helpful. This assignment is an opportunity for you, individually, and us, as a class, to share these resources with each other, students in future classes, and anyone interested!
 
-These goals can take a number of different forms, including:
+### Process, Timeline and Due Date, and How to Submit
 
-- Accessing, cleaning, and initially describing the dimensions of a new data source (e.g., data from Twitter)
-- Analyzing data in a new way and writing the results up in a brief report
-- Analyzing an existing data set that you have in ways that would be difficult to do without some of the techniques in this class/without the sue of R
-- Creating an interactive data visualization or dashboard
-- ... (let's discuss your ideas!)
+- By 5/5 (anytime before is fine!), add your resource to the R Markdown document in the repository for this website:
+  https://github.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed/blob/main/curated-data-science-resources.Rmd
 
-We are more focused on the process you take than the specifics of your project, as we discuss next.
+- To add this, you will need to first create a GitHub account. You can do so here: http://github.com/
 
-### Process and Timeline and Due Dates
+- Then, make your edit directly in the document. Review the Week 11 recording for instructions on how to do this (and do not hesitate to reach out with any questions; using GitHub is tricky!)
 
-A draft is due approximately two-thirds of the way through the semester, and your final project is due in presentation (screen recording via Zoom) form at the very end of the semester.
-
-- Initial ideas posted in a class-wide Google Slides presentation, 3/18; do so here: https://docs.google.com/presentation/d/1KWU5bhxZmV63vkNtQNxHo-2YI_iYJmSW2oOZ_jtFeP0/edit?usp=sharing
-  - Feedback provided to peers in your base group (by 3/25)
-- Revised ideas posted in a class-wide Google Doc, 4/1; do so here: https://docs.google.com/document/d/1kzSDRQ_J7d13TdVBMHRPWOcWStSOArCsXbjjUqmhlPM/edit?usp=sharing
-  - Feedback from your instructors on this version
-- Final project
-  - submission of a product (likely a rendered `.Rmd` file, but possibly something), 4/22
-  - 5-10 minute recording of your work; why you chose to work on this, what you did, and what you want to do next, 4/30
-
-### Other resources
-
-Available data sets:
-
-- Your own!
-- Education data package: https://github.com/UrbanInstitute/education-data-package-r
-- Data from Twitter: https://developer.twitter.com/en/solutions/academic-research
-- Data from Facebook: https://help.crowdtangle.com/en/articles/4302208-crowdtangle-for-academics-and-researchers
-- Other ideas for data sets?
-
-### How to submit
-
-- Please submit a Google Docs link for this assignment on Canvas. Also, please post that link to the #data-ethics-statement channel on Slack (you may have to browse and then add the channel to access it). Be sure that the sharing settings are such that anyone with the link can comment on the document. 
-
+- Once you've done this, we'll review your "pull request", and you're good to go!
