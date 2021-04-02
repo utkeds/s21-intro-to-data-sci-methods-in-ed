@@ -1,0 +1,62 @@
+---
+title: "Homework Week 11 - From Soup to delta R^2"
+output: html_document 
+---
+
+``` {r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Background
+
+In homework 9, we asked you to pick a dataset and do some descriptive analyses on it. For this homework we are going to ask you to take what you did and add to it. We would like you to use that data again to do some regression modeling. If the data set you chose is not suitable for regression, you can use the `undergraduate_data.csv` data that we used in homework 8, and for the examples in class.
+
+Steps:
+
+1. Copy and paste your code from homework 9 into this file.
+
+2. Examine your data and choose a variable that you think would be a suitable dependent variable in a regression model. This is one that you think it might make sense to predict as a function of (some of) the other variables in your data set. 
+
+3. Use `lm()` to fit a regression model using the dependent variable you just chose, and one to two other variables from your data set that you think are the MOST important in predicting the dependent variable. It's okay if you're not sure, or end up being wrong, just use your best judgment. 
+
+4. Use `tidy()` from the `broom` package to make a table of your model coefficients, and `glance()` to make a table of the model fit indices. Then use the `kable()` function from the `knitr` package to format these tables in your output. You can add a title to these tables and clean up the column names if you'd like but you need not. Examine your tables, and write out what you see in the results. Specifically, make a note of whether your predictors are significantly related to your dependent variable, and look at the $R^2%$ value in the model fit table and interpret this as the % of variance explained by your model
+
+5. Go back to your data set and choose 1-2 more variables that you think _might_ be related to your dependent variables. Create a new regression model that uses the same variables as the previous model, but with the addition of these new independent variables. Generate the same tables in the last step, format them with `kable()` and include them in your output. Do the same interpretation of your results as in the last step.
+
+6. Use the `modelCompare()` function from the `lmSupport` package to compare the two models. You may need to use the method involving the `model.frame()` function discussed in the slides and the demo to ensure your models are fit on the same data. If so go back and change the code above to make this work. Include the printed output from this function in your output, and write some text to interpret whether the additions to your model have significantly improved it.
+
+7. As last time, we want you to make this into more of a clean report. So do the same things we asked you to do last time using chunk options to hide your code and only show the output we have specifically asked for. Also delete all this instructional text from your document, and insert descriptive headings using the # symbol (similar to the heading below that says "My work") to indicate where you are performing each step. We want to end up with only your headings, output, and text descriptions in the final output. (Keep the self-assessment and reflection section at the end).
+
+## My work
+
+
+
+## fin
+
+Render and submit:
+
+  - Submit the .html file you used to render a report to Canvas - Upload the
+    .Rmd file you rendered to the \#homework channel in Slack. One difference
+    from last week: Please post a comment, feedback, or reflection below *as
+    well as to Slack when you post your homework*.
+
+## Self-assessment and reflection
+
+Respond to the following three questions on a 1 (not at all) to 5 (very much)
+scale by replacing the "x" below with your response:
+
+``` {r, reflection}
+x = NULL
+tibble::tribble(
+  ~question,                                   ~response,
+  "How challenging was this homework?",        x,
+  "How interesting was this homework to you?", x,
+  "How valuable was this homework to you?",    x
+)
+```
+
+Include any other comments, feedback, or reflections on this homework below:
+
+
+Important note: Please post your comment(s), feedback, or reflections in Slack
+when you share your Rmd file!
