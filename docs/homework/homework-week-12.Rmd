@@ -1,0 +1,34 @@
+---
+title: "Homework Week 11 - From Soup to delta R^2"
+output: html_document 
+---
+
+``` {r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Background
+
+In this assignment, you'll be working with Twitter data - multiple files that you 
+will load and process.
+
+## Self-assessment and reflection
+
+Respond to the following three questions on a 1 (not at all) to 5 (very much)
+scale by replacing the "x" below with your response:
+
+``` {r, reflection}
+x = NULL
+tibble::tribble(
+  ~question,                                   ~response,
+  "How challenging was this homework?",        x,
+  "How interesting was this homework to you?", x,
+  "How valuable was this homework to you?",    x
+)
+```
+
+Include any other comments, feedback, or reflections on this homework below:
+
+
+Important note: Please post your comment(s), feedback, or reflections in Slack
+when you share your Rmd file!
