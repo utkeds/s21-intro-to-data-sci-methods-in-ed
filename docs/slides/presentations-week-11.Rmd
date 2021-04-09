@@ -481,7 +481,7 @@ knitr::include_graphics("img/aprilfools.gif")
   * We will provide feedback to you within the next week (before our next class on Thursday, April 8)
   * We recommending getting started!
   * We recommend having starting in earnest within the next two-three weeks (depending on your need for feedback)
-  
+
 ---
 
 * [Curating a data science resource](https://making-data-science-count.github.io/s21-intro-to-data-sci-methods-in-ed/assignment-curating-a-data-science-resource.html)
