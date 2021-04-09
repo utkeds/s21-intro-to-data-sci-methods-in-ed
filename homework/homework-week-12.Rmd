@@ -9,8 +9,76 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Background
 
-In this assignment, you'll be working with Twitter data - multiple files that you 
-will load and process.
+In this homework, we'll extend what we discussed in this week's class on a) writing
+functions and b) strategies for applying a function multiple times.
+
+The slides for this week are here:
+https://making-data-science-count.github.io/s21-intro-to-data-sci-methods-in-ed/slides/presentations-week-12.html#1
+
+## Functions
+
+As discussed in class, functions take some input and return some output. There are many kinds 
+of functions, and some nuance around this definition, but, generally, it describes the core of what 
+functions do within R---and within other programming languages!
+
+In class, we presented a "skeleton" of a function. Below, we make that skeleton even more
+of one - we even removed its name! 
+
+For this part of the homeworm, imagine that the R Core Team (who developed and maintains
+R, but not R packages) *forgot* to write a function for calculating the mean of some values.
+
+If necessary, for an intuitive description of how to calculate the mean, see this webpage: https://www.mathsisfun.com/mean.html#:~:text=How%20to%20Find%20the%20Mean,sum%20divided%20by%20the%20count.
+
+In your function, you'll need to write three things:
+
+1. The name of your function (something other than mean, for reasons we'll mention momentarily)
+2. What inputs your function takes
+3. What operations, or steps, to take to transform the input 
+
+You can do this below. One important note - the last line of your function will be
+what is returned by the function (by default). It is critically important that the last
+line of your function does not include an assignment operator. Check the slides for an
+example of this.
+
+```{r}
+___ <- function(___) {
+  ___
+}
+```
+
+Once you've written your function, you're free to test (and use!) it. 
+
+Below, first, the use of the mean function is demonstrated using the storms dataset:
+
+```{r}
+library(tidyverse)
+
+mean(storms$wind)
+```
+
+Note how the $ operator is a way of indexing (similar to selecting with the `select()` function)
+a variable in a data frame. It is slightly different from select() in that select returns a data frame
+including the specified variables, whereas the $ returns only that single variable: technically,
+it returns a vector (for that single variable).
+
+Below, check that your function returns the same result as the mean function built-in to R. If they are
+identical, proceed! If not, consider why there may be differences, and work to de-bug your function.
+
+```{r}
+
+```
+
+## Iteration
+
+Next, we'll iterate with the function we wrote. First, read the tidykids dataset (directly from the URL
+to it on GitHub), naming the dataset d (for data; you can, of course, name it something
+different if you like!). 
+
+```{r}
+d <- read_csv("https://github.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed/raw/main/data/tidykids.csv")
+```
+
+
 
 ## Self-assessment and reflection
 

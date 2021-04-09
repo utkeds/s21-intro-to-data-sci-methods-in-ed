@@ -67,7 +67,13 @@ output: html_document
   * https://moderndive.com/5-regression.html
   
 ## Week 11
-- Week 11 Homework
+
+- [Week 11 HW](https://github.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed/blob/main/homework/homework-week-11.Rmd)
 - Reading:
   * https://www.tmwr.org/base-r.html#formula
   
+## Week 12
+
+- [Week 12 HW](https://github.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed/blob/main/homework/homework-week-12.Rmd)
+- Reading:
+  * https://datascienceineducation.com/c10.html

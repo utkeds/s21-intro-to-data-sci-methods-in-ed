@@ -19,7 +19,7 @@ knitr::opts_chunk$set(echo = TRUE, fig.align = "center", message = FALSE)
 
 # Welcome!
 
-Welcome to *week 11*!
+Welcome to *week 12*!
 
 ```{r echo = FALSE, out.width = "70%"}
 ```
@@ -54,7 +54,7 @@ https://www.tmwr.org/base-r.html
 This code represents the regression of `hp` upon `mpg`:
 
 ```{r, eval = FALSE}
-mpg ~ hp
+lm(mpg ~ hp, data = my_data)
 ```
 
 This code often corresponds to the underlying mathematical/statistical equation:
@@ -94,9 +94,9 @@ A brief description of chunk options!
 
 **Record the meeting** 
 
-A. Functions
-B. Iteration (or, _applying_ functions)
-(C. On creating maps using ggplot2)
+A. Functions  
+B. Iteration (or, _applying_ functions)  
+(C. On creating maps using ggplot2)  
 
 ---
 
@@ -165,7 +165,7 @@ presently, its *M* and *SD* are:
 ```{r}
 mpg %>% 
   summarize(mean_cty = mean(cty),
-            sd_hwy = sd(hwy))
+            sd_cty = sd(cty))
 ```
 ---
 
@@ -254,7 +254,7 @@ standardize_variable <- function(variable, remove_na_values = FALSE) {
 
 ### A. Functions
 
-What if we wanted to scale the variables cty, hwy, and cyl? Imagine that drv has a missing (`NA`) value.
+What if we wanted to scale the variables cty, hwy, and cyl? Imagine that cyl has a missing (`NA`) value.
 
 ```{r}
 mpg %>% 

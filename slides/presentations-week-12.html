@@ -23,7 +23,7 @@ class: center, middle, inverse, title-slide
 
 # Welcome!
 
-Welcome to *week 11*!
+Welcome to *week 12*!
 
 
 
@@ -55,7 +55,7 @@ This code represents the regression of `hp` upon `mpg`:
 
 
 ```r
-mpg ~ hp
+lm(mpg ~ hp, data = my_data)
 ```
 
 This code often corresponds to the underlying mathematical/statistical equation:
@@ -94,9 +94,9 @@ A brief description of chunk options!
 
 **Record the meeting** 
 
-A. Functions
-B. Iteration (or, _applying_ functions)
-(C. On creating maps using ggplot2)
+A. Functions  
+B. Iteration (or, _applying_ functions)  
+(C. On creating maps using ggplot2)  
 
 ---
 
@@ -233,14 +233,14 @@ presently, its *M* and *SD* are:
 ```r
 mpg %&gt;% 
   summarize(mean_cty = mean(cty),
-            sd_hwy = sd(hwy))
+            sd_cty = sd(cty))
 ```
 
 ```
 ## # A tibble: 1 x 2
-##   mean_cty sd_hwy
+##   mean_cty sd_cty
 ##      &lt;dbl&gt;  &lt;dbl&gt;
-## 1     16.9   5.95
+## 1     16.9   4.26
 ```
 ---
 
@@ -356,7 +356,7 @@ standardize_variable &lt;- function(variable, remove_na_values = FALSE) {
 
 ### A. Functions
 
-What if we wanted to scale the variables cty, hwy, and cyl? Imagine that drv has a missing (`NA`) value.
+What if we wanted to scale the variables cty, hwy, and cyl? Imagine that cyl has a missing (`NA`) value.
 
 
 ```r
