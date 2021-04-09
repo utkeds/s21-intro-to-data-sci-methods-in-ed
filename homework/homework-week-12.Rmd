@@ -1,5 +1,5 @@
 ---
-title: "Homework Week 11 - From Soup to delta R^2"
+title: "Homework Week 12 - Functions"
 output: html_document 
 ---
 
@@ -24,7 +24,7 @@ functions do within R---and within other programming languages!
 In class, we presented a "skeleton" of a function. Below, we make that skeleton even more
 of one - we even removed its name! 
 
-For this part of the homeworm, imagine that the R Core Team (who developed and maintains
+For this part of the homework, imagine that the R Core Team (who developed and maintains
 R, but not R packages) *forgot* to write a function for calculating the mean of some values.
 
 If necessary, for an intuitive description of how to calculate the mean, see this webpage: https://www.mathsisfun.com/mean.html#:~:text=How%20to%20Find%20the%20Mean,sum%20divided%20by%20the%20count.
