@@ -1,5 +1,5 @@
 ---
-title: "Homework Week 11 - From Soup to delta R^2"
+title: "Homework Week 12 - Functions"
 output: html_document 
 ---
 
@@ -24,7 +24,7 @@ functions do within R---and within other programming languages!
 In class, we presented a "skeleton" of a function. Below, we make that skeleton even more
 of one - we even removed its name! 
 
-For this part of the homeworm, imagine that the R Core Team (who developed and maintains
+For this part of the homework, imagine that the R Core Team (who developed and maintains
 R, but not R packages) *forgot* to write a function for calculating the mean of some values.
 
 If necessary, for an intuitive description of how to calculate the mean, see this webpage: https://www.mathsisfun.com/mean.html#:~:text=How%20to%20Find%20the%20Mean,sum%20divided%20by%20the%20count.
@@ -75,8 +75,11 @@ districts on Facebook dataset (directly from the URL to it on GitHub), naming
 the dataset d (for data; you can, of course, name it something different if you
 like!). 
 
+URL to the dataset:
+https://github.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed/raw/main/data/district-schools-fb-2019.csv
+
 ```{r, warning = FALSE}
-d <- read_csv("https://github.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed/raw/main/data/district-schools-fb-2019.csv")
+
 ```
 
 Once you've read the dataset, you'll see 20,000 rows and around 30 columns. A number
@@ -106,6 +109,7 @@ new column in your data.
 d %>% 
   summarize_at(vars(___), ___)
 ```
+
 If the above worked correctly, you should see the mean values for each of the types of interactions. 
 
 ## Reach 1
