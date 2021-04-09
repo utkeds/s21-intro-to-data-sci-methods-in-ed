@@ -70,15 +70,81 @@ identical, proceed! If not, consider why there may be differences, and work to d
 
 ## Iteration
 
-Next, we'll iterate with the function we wrote. First, read the tidykids dataset (directly from the URL
-to it on GitHub), naming the dataset d (for data; you can, of course, name it something
-different if you like!). 
+Next, we'll iterate with the function we wrote. First, read the schools and
+districts on Facebook dataset (directly from the URL to it on GitHub), naming
+the dataset d (for data; you can, of course, name it something different if you
+like!). 
 
-```{r}
-d <- read_csv("https://github.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed/raw/main/data/tidykids.csv")
+```{r, warning = FALSE}
+d <- read_csv("https://github.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed/raw/main/data/district-schools-fb-2019.csv")
 ```
 
+Once you've read the dataset, you'll see 20,000 rows and around 30 columns. A number
+of the columns are numeric and represent interactions with the post:
 
+- Likes
+- Comments
+- Shares
+- Love
+- Wow
+- Haha
+- Sad
+- Angry
+- Care
+
+For this portion of the homework, your task is to summarize these columns to find the
+mean (using the function that you wrote to calculate the mean)---with iteration!
+
+To do so, use the summarize_at() function (related to the mutate_at function we discussed
+in class); check out the slides (linked above!).
+
+Below, note the general structure of summarize_at, which works in a parallel manner
+as mutate_at, except it returns as output a single summary statistic, rather than a 
+new column in your data.
+
+```{r}
+d %>% 
+  summarize_at(vars(___), ___)
+```
+If the above worked correctly, you should see the mean values for each of the types of interactions. 
+
+## Reach 1
+
+For this reach, use the summarize_if() function to summarize all of the variables
+that are numeric (or, in R's terminology, are "doubles"). To do so, replace the
+use of vars() within your summarize_at() function with a logical condition (hint: 
+try is.numeric).
+
+```{r}
+
+```
+
+## Reach 2
+
+For this reach, plot the mean number of interactions using ggplot2. You may
+find it helpful to use the pivot_longer() function to transform your data to be in 
+"long" form; when done, this will yield a data frame with two columns:
+
+- one indicating the name of the interaction
+- the other indicating the mean number of interactions
+
+This will work much more easily with ggplot2. 
+
+Another possible consideration: use the reorder() function withing the aes() part of your
+ggplot2 function to reorder the bars.
+
+```{r}
+
+```
+
+## Reach 3
+
+For this reach, expand on your mean function by adding an argument to remove missing values.
+Check the slides for an example of this!
+
+```{r}
+
+```
 
 ## Self-assessment and reflection
 
@@ -96,7 +162,6 @@ tibble::tribble(
 ```
 
 Include any other comments, feedback, or reflections on this homework below:
-
 
 Important note: Please post your comment(s), feedback, or reflections in Slack
 when you share your Rmd file!
