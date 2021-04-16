@@ -28,11 +28,13 @@ Here you will find the three COVID vaccine data sets that were discussed in clas
 
 https://github.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed/tree/main/data/COVID
 
-Get these 3 files. Then use map() to apply the read_csv() function to each of them, or to be more precise, apply read_csv() to each of the file names, because that is what read_csv() takes as input. You can get the file names in more than one way, as discussed in class, the list.files() function can be a useful tool for this purpose, just keep in mind that read_csv() needs the rest of the file path that follows your working directory, i.e. what shows up if you do getwd().
+Get these 3 files and save them into your project directory. Then use map() to apply the read_csv() function to each of them, or to be more precise, apply read_csv() to each of the file names, because that is what read_csv() takes as input. We have provided a character vector with the names of the files, so if you have these files saved to the main directory for your project this should work. You will then need to provide the code that will use map() to apply the read_csv() function to each element of this vector.
 
-You'll also notice that one of these files is missing its column names, so that is an additional complication you'll have to deal with. The read_csv() function has an argument to deal with this case, but you'll need to account for this when you use map(). One way could be to write your own function that deals with different cases that you would then pass to map(), but you could also just ignore column names for every file and put them in post hoc. There are surely other ways too, and it's your choice, you just need to end up with a list of data frames that each have correctly labeled columns.
 
 ```{r}
+
+file_names <- c("COVID-19Janssen.csv", "COVID19_Vaccine_Moderna.csv", "Pfizer.csv")
+
 
 
 ```
