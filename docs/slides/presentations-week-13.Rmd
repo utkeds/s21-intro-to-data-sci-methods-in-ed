@@ -52,18 +52,53 @@ Prepare one-three responses to each of the above questions to share with the who
 
 - The purrr package offers tools to do multiple iterations of operations
 
-
 ---
 
 ## Checking-in on final projects
 
-JOSH TO ADD IF THERE IS ANYTHING 
+Responses to feedback - we will be checking tomorrow!
+
+Reminder - final project and recording due by May 5
 
 ---
 
 ## Homework highlights
 
-JOSH TO ADD
+
+```{r, echo=FALSE, out.width="80%"}
+knitr::include_graphics("img/w13-f2.png")
+```
+
+---
+
+## Homework highlights
+
+```{r, echo=FALSE, out.width="80%" }
+knitr::include_graphics("img/w13-f1.png")
+```
+
+---
+
+## Homework highlights
+
+```{r, echo=FALSE, out.width="80%"}
+knitr::include_graphics("img/w13-f3.png")
+```
+
+---
+
+## Chunk options
+
+*For a single chunk*:
+
+- eval = FALSE
+- echo = FALSE
+- warning = FALSE
+- message = FALSE
+
+*For the entire document*:
+
+- knitr::opts_chunk$set(echo = FALSE, echo = FALSE, warning = FALSE, message = FALSE)
 
 ---
 
@@ -125,7 +160,7 @@ Example: COVID vaccine data - Read in the data
 
 One way to load data:
 
-```{r}
+```{r, eval= FALSE}
 pfi <- read_csv(here("data", "COVID", "COVID-19_Vaccine_Distribution_Allocations_by_Jurisdiction_-_Pfizer.csv"))
 mod <- read_csv(here("data", "COVID", "COVID-19_Vaccine_Distribution_Allocations_by_Jurisdiction_-_Moderna.csv"))
 jan <- read_csv(here("data", "COVID", "COVID-19_Vaccine_Distribution_Allocations_by_Jurisdiction_-_Janssen.csv"))
@@ -138,7 +173,7 @@ jan
 
 Example: COVID vaccine data - Read in the data
 
-```{r}
+```{r, eval = FALSE}
 vaccines <- c("Pfizer", "Moderna", "Janssen")
 file_base <- "/COVID-19_Vaccine_Distribution_Allocations_by_Jurisdiction_-_"
 file_ext <- ".csv"
@@ -179,7 +214,7 @@ Error: Can't rename columns that don't exist. x Column `2nd Dose Allocations` do
 
 Example: COVID vaccine data - Rename the data
 
-```{r}
+```{r, eval = FALSE}
 rename_vaccine_data <- function(dat){
   if(ncol(dat) == 4){
     dat <- dat %>% rename("State" = "Jurisdiction",
@@ -345,17 +380,13 @@ https://joshuamrosenberg.com/post/2020/06/08/basic-sf-functionality-for-analyzin
 
 ### Data Science Certificate
 
-JOSH TO ADD
-
-
+https://docs.google.com/document/d/1shNL9fY-vhBKK-zJw_V_iVhAKDtZ1Wqen4maJFnswQ4/edit
 
 ---
 
-### Github
+### Curating a data science resource
 
-JOSH TO ADD
-
-
+https://making-data-science-count.github.io/s21-intro-to-data-sci-methods-in-ed/assignment-curating-a-data-science-resource.html
 
 ---
 
