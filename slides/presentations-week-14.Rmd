@@ -1,5 +1,5 @@
 ---
-title: "Week 13 - Basic advanced techniques" 
+title: "Week 14 - More advanced methods" 
 subtitle: ""
 author: "Joshua Rosenberg and Alex Lishinski"
 date: "April 16, 2021"
@@ -19,10 +19,7 @@ knitr::opts_chunk$set(echo = TRUE, fig.align = "center", message = FALSE)
 
 # Welcome!
 
-Welcome to *week 13*!
-
-```{r echo = FALSE, out.width = "70%"}
-```
+Welcome to *week 14* - our last week of class!
 
 **Record the meeting** 
 
@@ -37,20 +34,20 @@ library(mice)
 
 # Breakout rooms!
 
-Starting with whomever has the most pets:
+Starting with XXX
 
-- What is something about R you've learned working on your final project that goes beyond what we've covered in class?
+- XXX
 
 Prepare one-three responses to each of the above questions to share with the whole class!
 
 
 ---
 
-## A recap of last week (on functional programming)
+## A recap of last week
 
-- R has built in functions from packages, but you can write your own too!
+- The map() functions can help you to read in multiple files
 
-- The purrr package offers tools to do multiple iterations of operations
+- Cases with missing values can still be used
 
 ---
 
