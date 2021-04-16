@@ -160,7 +160,7 @@ Example: COVID vaccine data - Read in the data
 
 One way to load data:
 
-```{r}
+```{r, eval= FALSE}
 pfi <- read_csv(here("data", "COVID", "COVID-19_Vaccine_Distribution_Allocations_by_Jurisdiction_-_Pfizer.csv"))
 mod <- read_csv(here("data", "COVID", "COVID-19_Vaccine_Distribution_Allocations_by_Jurisdiction_-_Moderna.csv"))
 jan <- read_csv(here("data", "COVID", "COVID-19_Vaccine_Distribution_Allocations_by_Jurisdiction_-_Janssen.csv"))
@@ -173,7 +173,7 @@ jan
 
 Example: COVID vaccine data - Read in the data
 
-```{r}
+```{r, eval = FALSE}
 vaccines <- c("Pfizer", "Moderna", "Janssen")
 file_base <- "/COVID-19_Vaccine_Distribution_Allocations_by_Jurisdiction_-_"
 file_ext <- ".csv"
@@ -214,7 +214,7 @@ Error: Can't rename columns that don't exist. x Column `2nd Dose Allocations` do
 
 Example: COVID vaccine data - Rename the data
 
-```{r}
+```{r, eval = FALSE}
 rename_vaccine_data <- function(dat){
   if(ncol(dat) == 4){
     dat <- dat %>% rename("State" = "Jurisdiction",

@@ -77,3 +77,10 @@ output: html_document
 - [Week 12 HW](https://github.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed/blob/main/homework/homework-week-12.Rmd)
 - Reading:
   * https://datascienceineducation.com/c10.html
+  
+## Week 13
+
+- [Week 13 HW](https://github.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed/blob/main/homework/homework-week-13.Rmd)
+- Readings:
+  * https://r4ds.had.co.nz/iteration.html#the-map-functions
+  * https://www.statisticssolutions.com/multiple-imputation-for-missing-data/
