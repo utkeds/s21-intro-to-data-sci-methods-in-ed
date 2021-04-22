@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Week 14 - Digital research methods</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Joshua Rosenberg and Alex Lishinski" />
+    <meta name="date" content="2021-04-16" />
+    <script src="libs/header-attrs-2.6/header-attrs.js"></script>
+    <link rel="stylesheet" href="theme.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Week 14 - Digital research methods
+### Joshua Rosenberg and Alex Lishinski
+### April 16, 2021
+
+---
+
+
+
+
+# Welcome!
+
+Welcome to *week 14* - our last week of class!
+
+**Record the meeting** 
+
+
+
+---
+
+# Breakout rooms!
+
+Starting with XXX
+
+- XXX
+
+Prepare one-three responses to each of the above questions to share with the whole class!
+
+
+---
+
+## A recap of last week
+
+- The map() functions can help you to read in multiple files
+
+- Cases with missing values can still be used
+
+---
+
+## Homework highlights
+
+&lt;!-- Alex to add --&gt;
+
+
+
+---
+
+### Topics for today
+
+**Record the meeting** 
+
+- A. Introduction to digital research methods: Network and text analysis
+- B. Looking ahead: where to next?
+- C. Some (data-based) reflections
+
+---
+
+### A. Digital research methods
+
+Now is a good time to be studying social media (or exploring social media data as a hobby)
+
+Facebook and Twitter have programs that allow accesss to researchers, including
+graduate students:
+
+- Facebook and Instagram: https://research.fb.com/blog/2020/07/crowdtangle-opens-public-application-for-academics/
+- Twitter: https://developer.twitter.com/en/solutions/academic-research
+
+---
+
+### A. Digital research methods
+
+There is a general _pattern_ for how to access social media (and other!) data using R:
+
+1. Apply for access to an "Application Programming Interface", or API, for a platform (or website)
+1. Receive an API key automatically/within a few days
+1. Use/enter the API key within R
+1. Access data
+
+---
+
+### A. Digital research methods
+
+**An example**
+
+AERA was recognized as quite unsuccessful this year; the organizers offered a full refund
+to all attendees due to technical difficulties
+
+A parody account helped to bring levity to the situation: https://twitter.com/AeraHelpers
+
+But, just how negative were posts about AERA on social media (Twitter)? We can use digital (or data sicence) research methods, those that would be hard or impossible to do without coding/using R.
+
+
+```r
+library(academictwitteR)
+
+all_ngsschat_tweets &lt;- get_hashtag_tweets("#AERA21", "2010-01-01T00:00:00Z", "2020-12-31T00:00:00Z", bearer_token = "replace with your token from https://developer.twitter.com")
+```
+
+---
+
+### A. Digital research methods
+
+There are a number of ways to "hide" your token so you don't have to repeatedly type it.
+
+
+```r
+library(usethis)
+edit_r_environ() # bearer_token = "xxx"
+
+all_ngsschat_tweets &lt;- get_hashtag_tweets("#AERA21", "2010-01-01T00:00:00Z", "2020-12-31T00:00:00Z", bearer_token = Sys.getenv("bearer_token"))
+```
+
+---
+
+### A. Digital research methods
+
+Once we have the data, there are a number of things we can do. Let's collect data
+for a different hashtag; in fact, a collection of hashtags.
+
+
+```r
+hashtags_to_search &lt;- c(str_c("#AERA", 14:21), str_c("AERA20", 14:21)) %&gt;% 
+  str_c(collapse = " OR ")
+
+hashtags_to_search
+```
+
+```
+## [1] "#AERA14 OR #AERA15 OR #AERA16 OR #AERA17 OR #AERA18 OR #AERA19 OR #AERA20 OR #AERA21 OR AERA2014 OR AERA2015 OR AERA2016 OR AERA2017 OR AERA2018 OR AERA2019 OR AERA2020 OR AERA2021"
+```
+
+
+```r
+all_aera_tweets &lt;- c(str_c("#AERA", 14:21), str_c("AERA20", 14:21)) %&gt;% 
+  map(get_hashtag_tweets, "2010-01-01T00:00:00Z", "2021-04-17T00:00:00Z", bearer_token = Sys.getenv("bearer_token"), data_path = "twitter-data-aera/")
+```
+
+---
+
+### A. Digital research methods
+
+
+
+**Big idea: We can treat text like other types of data**
+
+
+```r
+all_aera_tweets
+```
+
+```
+## # A tibble: 178,868 x 90
+##    user_id  status_id   created_at          screen_name text             source 
+##    &lt;chr&gt;    &lt;chr&gt;       &lt;dttm&gt;              &lt;chr&gt;       &lt;chr&gt;            &lt;chr&gt;  
+##  1 2818093… 1016839228… 2018-07-11 00:18:58 anna_phd    "@cherisemcb @A… TweetD…
+##  2 2818093… 1099634886… 2019-02-24 11:39:21 anna_phd    "Heads up on a … Twitte…
+##  3 2818093… 1381054607… 2021-04-11 01:20:51 anna_phd    "Woo hoo! Congr… Twitte…
+##  4 2818093… 1105622750… 2019-03-13 00:12:59 anna_phd    "Hi #literacies… TweetD…
+##  5 2818093… 6380223560… 2015-08-30 16:15:58 anna_phd    "reviewing for … TweetD…
+##  6 2818093… 1380752856… 2021-04-10 05:21:48 anna_phd    "Join us tomorr… Twitte…
+##  7 2818093… 1114611207… 2019-04-06 19:29:55 anna_phd    "@bnquist @amys… Twitte…
+##  8 2818093… 1113385943… 2019-04-03 10:21:09 anna_phd    "Poster sent to… Twitte…
+##  9 2818093… 4524365842… 2014-04-05 13:24:22 anna_phd    "\"In an interc… TweetD…
+## 10 2818093… 4528792794… 2014-04-06 18:43:28 anna_phd    "Thinking about… TweetD…
+## # … with 178,858 more rows, and 84 more variables: display_text_width &lt;dbl&gt;,
+## #   reply_to_status_id &lt;chr&gt;, reply_to_user_id &lt;chr&gt;,
+## #   reply_to_screen_name &lt;chr&gt;, is_quote &lt;lgl&gt;, is_retweet &lt;lgl&gt;,
+## #   favorite_count &lt;int&gt;, retweet_count &lt;int&gt;, quote_count &lt;int&gt;,
+## #   reply_count &lt;int&gt;, hashtags &lt;list&gt;, symbols &lt;list&gt;, urls_url &lt;list&gt;,
+## #   urls_t.co &lt;list&gt;, urls_expanded_url &lt;list&gt;, media_url &lt;list&gt;,
+## #   media_t.co &lt;list&gt;, media_expanded_url &lt;list&gt;, media_type &lt;list&gt;,
+## #   ext_media_url &lt;list&gt;, ext_media_t.co &lt;list&gt;, ext_media_expanded_url &lt;list&gt;,
+## #   ext_media_type &lt;chr&gt;, mentions_user_id &lt;list&gt;, mentions_screen_name &lt;list&gt;,
+## #   lang &lt;chr&gt;, quoted_status_id &lt;chr&gt;, quoted_text &lt;chr&gt;,
+## #   quoted_created_at &lt;dttm&gt;, quoted_source &lt;chr&gt;, quoted_favorite_count &lt;int&gt;,
+## #   quoted_retweet_count &lt;int&gt;, quoted_user_id &lt;chr&gt;, quoted_screen_name &lt;chr&gt;,
+## #   quoted_name &lt;chr&gt;, quoted_followers_count &lt;int&gt;,
+## #   quoted_friends_count &lt;int&gt;, quoted_statuses_count &lt;int&gt;,
+## #   quoted_location &lt;chr&gt;, quoted_description &lt;chr&gt;, quoted_verified &lt;lgl&gt;,
+## #   retweet_status_id &lt;chr&gt;, retweet_text &lt;chr&gt;, retweet_created_at &lt;dttm&gt;,
+## #   retweet_source &lt;chr&gt;, retweet_favorite_count &lt;int&gt;,
+## #   retweet_retweet_count &lt;int&gt;, retweet_user_id &lt;chr&gt;,
+## #   retweet_screen_name &lt;chr&gt;, retweet_name &lt;chr&gt;,
+## #   retweet_followers_count &lt;int&gt;, retweet_friends_count &lt;int&gt;,
+## #   retweet_statuses_count &lt;int&gt;, retweet_location &lt;chr&gt;,
+## #   retweet_description &lt;chr&gt;, retweet_verified &lt;lgl&gt;, place_url &lt;chr&gt;,
+## #   place_name &lt;chr&gt;, place_full_name &lt;chr&gt;, place_type &lt;chr&gt;, country &lt;chr&gt;,
+## #   country_code &lt;chr&gt;, geo_coords &lt;list&gt;, coords_coords &lt;list&gt;,
+## #   bbox_coords &lt;list&gt;, status_url &lt;chr&gt;, name &lt;chr&gt;, location &lt;chr&gt;,
+## #   description &lt;chr&gt;, url &lt;chr&gt;, protected &lt;lgl&gt;, followers_count &lt;int&gt;,
+## #   friends_count &lt;int&gt;, listed_count &lt;int&gt;, statuses_count &lt;int&gt;,
+## #   favourites_count &lt;int&gt;, account_created_at &lt;dttm&gt;, verified &lt;lgl&gt;,
+## #   profile_url &lt;chr&gt;, profile_expanded_url &lt;chr&gt;, account_lang &lt;lgl&gt;,
+## #   profile_banner_url &lt;chr&gt;, profile_background_url &lt;chr&gt;,
+## #   profile_image_url &lt;chr&gt;
+```
+
+---
+
+### A. Digital research methods
+
+**Big idea: We can treat text like other types of data**
+
+
+```r
+library(tidytext)
+
+all_aera_tweets_words &lt;- all_aera_tweets %&gt;% 
+  select(created_at, text) %&gt;% 
+  unnest_tokens(word, text)
+
+all_aera_tweets_words
+```
+
+```
+## # A tibble: 4,257,813 x 2
+##    created_at          word      
+##    &lt;dttm&gt;              &lt;chr&gt;     
+##  1 2018-07-11 00:18:58 cherisemcb
+##  2 2018-07-11 00:18:58 aeraticl  
+##  3 2018-07-11 00:18:58 a2        
+##  4 2018-07-11 00:18:58 i         
+##  5 2018-07-11 00:18:58 too       
+##  6 2018-07-11 00:18:58 am        
+##  7 2018-07-11 00:18:58 interested
+##  8 2018-07-11 00:18:58 in        
+##  9 2018-07-11 00:18:58 broadening
+## 10 2018-07-11 00:18:58 my        
+## # … with 4,257,803 more rows
+```
+
+---
+
+### A. Digital research methods
+
+**Sentiment analysis is as straightforward as _joining_ a pre-identified collection of positive and negative words - a dictionary**
+
+
+```r
+all_aera_tweets_words %&gt;%
+  inner_join(get_sentiments("bing"))
+```
+
+```
+## # A tibble: 177,791 x 3
+##    created_at          word     sentiment
+##    &lt;dttm&gt;              &lt;chr&gt;    &lt;chr&gt;    
+##  1 2018-07-11 00:18:58 work     positive 
+##  2 2018-07-11 00:18:58 work     positive 
+##  3 2018-07-11 00:18:58 love     positive 
+##  4 2018-07-11 00:18:58 fresh    positive 
+##  5 2021-04-11 01:20:51 woo      positive 
+##  6 2021-04-11 01:20:51 winning  positive 
+##  7 2021-04-11 01:20:51 best     positive 
+##  8 2021-04-11 01:20:51 award    positive 
+##  9 2019-03-13 00:12:59 thrilled positive 
+## 10 2019-03-13 00:12:59 bad      negative 
+## # … with 177,781 more rows
+```
+---
+
+### A. Digital research methods
+
+**A different dictionary; from these, we can summarize and visualize the sentiment scores**
+
+
+```r
+all_aera_tweets_words %&gt;%
+  inner_join(get_sentiments("afinn"))
+```
+
+```
+## # A tibble: 186,189 x 3
+##    created_at          word       value
+##    &lt;dttm&gt;              &lt;chr&gt;      &lt;dbl&gt;
+##  1 2018-07-11 00:18:58 interested     2
+##  2 2018-07-11 00:18:58 love           3
+##  3 2018-07-11 00:18:58 fresh          1
+##  4 2019-02-24 11:39:21 hope           2
+##  5 2021-04-11 01:20:51 woo            3
+##  6 2021-04-11 01:20:51 congrats       2
+##  7 2021-04-11 01:20:51 winning        4
+##  8 2021-04-11 01:20:51 best           3
+##  9 2021-04-11 01:20:51 award          3
+## 10 2019-03-13 00:12:59 thrilled       5
+## # … with 186,179 more rows
+```
+---
+
+### A. One way of representing the results
+
+**Using the bing dictionary; see academic-twitter-example.R**
+
+&lt;img src="img/aera-sentiment-by-year.png" width="70%" style="display: block; margin: auto;" /&gt;
+
+---
+
+### A. Digital research methods
+
+This analysis invites a number of questions:
+
+- Was AERA really not that much more negative than in years past? Or, is there sone difference?
+- Is there an effect of the dictionary selected; is the "bing" dictionary not detecting the _type_ of negativity in these short, social media-based posts?
+- Were negative posts this year interacted with more than positive posts?
+- Could a qualitative analysis reveal nuances between positive and negative labeled posts?
+- How does AERA compare to other conferences, like [LAK](https://twitter.com/markwarschauer/status/1383127840313413633), that appeared to have been better received?
+
+---
+
+### A. Digital research methods
+
+Some completed and ongoing projects Josh has (and others in class have!) worked on:
+
+Rosenberg, J. M., Reid, J., Dyer, E., Koehler, M. J., Fischer, C., &amp; McKenna, T. J. (2020). Idle chatter or compelling conversation? The potential of the social media-based #NGSSchat network as a support for science education reform efforts. Journal of Research in Science Teaching, 57(9), 1322-1355. https://onlinelibrary.wiley.com/doi/10.1002/tea.21660
+
+Greenhalgh, S. P., Rosenberg, J. M., Koehler, M. J., Akcaoglu, M., &amp; Staudt Willet, K. B. (2020). Identifying multiple learning spaces within a single teacher-focused Twitter hashtag. Computers &amp; Education, 148(4). https://doi.org/10.1016/j.compedu.2020.103809
+
+Greenhalgh, S. P., Staudt Willet, K. B., Rosenberg, J. M., &amp; Koehler, M. J. (2018). Tweet, and we shall find: Using digital methods to locate participants in educational hashtags. TechTrends, 62(5), 501-508. https://doi.org/10.1007/s11528-018-0313-6
+
+Kimmons, R., Rosenberg, J., &amp; Allman, B. (2021). Trends in Educational Technology: What Facebook, Twitter, and Scopus Can Tell us about Current Research and Practice. TechTrends, 1-12. https://link.springer.com/article/10.1007/s11528-021-00589-6
+
+Understanding public sentiment about educational reforms: The Next Generation Science Standards on Twitter. https://osf.io/xymsd/ 
+
+"We are trying to communicate the best we can": Districts’ communication on Twitter during the COVID-19 pandemic. https://osf.io/qpu8v/
+
+Is student privacy “quick and easy”? Investigating student images and names on K-12 educational institution’s Facebook postings. https://osf.io/5tpb9/
+
+### B. Looking ahead
+
+There are so many things you can do! 
+
+Some broad suggestions, first:
+
+- It’s normal to feel overwhelmed while learning skills like R and data science; adopt a long-term, growth approach (or mindset) to learning R
+- Surround yourself with resources
+- Ask for help!
+  - Peers and us (we're part of your R network now!)
+- Share with others
+  - Peers and us!
+- Welcome others
+
+---
+
+### B. Looking ahead
+
+We also have some specific suggestions:
+
+- Ask and receive help via the RStudio Community: https://community.rstudio.com/
+- create a blog with blogdown: https://bookdown.org/yihui/blogdown/
+- Twitter and [#rstats](https://twitter.com/hashtag/rstats?lang=en)
+- [R Weekly](http://rweekly.org/)
+- R for Data Science: https://r4ds.had.co.nz/
+- Twitter users:
+  - @ivelasq
+  - @kierisi
+  - @ry_estrellado
+  - @efreer20
+  - @hadleywickham
+- Other resources: https://datascienceineducation.com/c18.html
+
+---
+
+### B. Looking ahead
+
+- Research presentations and papers that you lead or co-author
+- Workshops/training opportunities at UTK and beyond
+- Job opportunities (Skill with R is in-demand at present)
+- Other courses at UTK
+  - . . . including those offered within TPTE (Josh and Alex's department; consider the graduate certificate)
+
+---
+
+### C. Some reflections
+
+Teaching this class has been an amazing experience
+
+We are really thankful for your ambition, persistence, and positivity
+
+Kudos to you all
+
+---
+
+### C. Some reflections
+
+We are learning, too; we learned a lot
+
+- We want to make the class longer
+- Students can do ambitious work early on
+- Emphasize "big things" you can do early on, with data wrangling being a means to achieve those larger goals
+- Keeping homework relatively narrow, while emphasizing broader, self-directed projects earlier may be a positive change we can make
+- Small technical issues can present big headaches; use R Studio Cloud early on
+- Slack worked well, overall
+- Asking questions is _always_ good; we should emphasize this more
+- We worked to be responsive to your feedback, but would solicit even more feedback
+
+---
+
+### C. Some reflections
+
+&lt;img src="img/class-mean-responses.png" width="70%" style="display: block; margin: auto;" /&gt;
+
+---
+
+### C. Some reflections
+
+Take-aways from the homework reflections:
+
+- Interest and value remained relatively high for most of you (with substantial between-individual and some between-assignment variation)
+- Challenge was moderate throughout, with some peaks that we may wish to avoid (or provide support/instruction around)
+- Your comments when submitting the homework were great as a barometer for us
+- The same is true for your end-of-class check-outs
+- Data science is hard; teaching it is fun and hard in some ways, too; thanks for 
+sticking it through and for remaining positive and upbeat
+- We are excited about what you will do next
+
+---
+
+### Data Science Certificate
+
+A bit more detail:
+
+&lt;!-- Josh to add --&gt;
+
+https://docs.google.com/document/d/1shNL9fY-vhBKK-zJw_V_iVhAKDtZ1Wqen4maJFnswQ4/edit
+
+---
+
+# Logistics
+
+**This week**
+
+* Homework 14: Available tomorrow by noon; **Due by Thursday, 4/29**
+
+* Readings:
+  * Big Magic With R: Creating Learning Beyond Fear: https://alison.rbind.io/talk/2018-cascadia-bigmagic/
+  
+---
+
+# Final project recordings/presentations
+
+- We recommend using Zoom and recording to the Cloud - then sharing the link.
+
+- We'll ask you to view and comment on your base group member's presentations by Sunday, May 9 (just over four days); you can comment on anyone else's, too!
+
+---
+
+## Schedule
+
+- The revised data ethics statement is due April 29
+- The product for your final project and a recording that will serve as your presentation of it are both due by the end of the day on May 5
+- The curating a resource assignment is due by the same date/time as the final project - May 5
+
+---
+
+## TN Voice student feedback and consent to participate in research
+
+We really value your honest input:https://utk.campuslabs.com/eval-home/ (4/29 deadline)
+
+We appreciate you considering allowing us to use your work for data science education research; consent to participate: 
+
+&lt;!-- Josh to add --&gt;
+
+---
+
+### Wrapping up
+
+In your base group's Slack channel:
+
+- What is one thing you learned _this semester_?
+- What is something you want to learn more about? 
+- Share your feelings in GIF form!
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

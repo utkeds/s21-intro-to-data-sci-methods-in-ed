@@ -10,3 +10,9 @@ data/.DS_Store
 twitter-data/
 
 .DS_Store
+
+docs/data/aera-tweets-unproc.rds
+
+docs/data/aera-tweets.rds
+
+docs/data/aera-tweets.rds.zip
