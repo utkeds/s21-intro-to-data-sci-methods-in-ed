@@ -50,9 +50,51 @@ Starting with whomever likes classical music the most:
 
 ## Homework highlights
 
-&lt;!-- Alex to add --&gt;
+
+```r
+library(readr)
+covid_data &lt;- c("https://raw.githubusercontent.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed/main/data/COVID/COVID-19Janssen.csv", "https://raw.githubusercontent.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed/main/data/COVID/COVID19_Vaccine_Moderna.csv",
+"https://raw.githubusercontent.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed/main/data/COVID/Pfizer.csv")
+mydata&lt;-map_df(covid_data,read_csv)
+```
 
 
+```r
+janssen &lt;-mydata[1:378,c(1,2,3,8)]
+moderna &lt;-mydata[379:1449,4:7]
+pfizer &lt;-mydata[1450:2583,c(1,2,3,8)]
+
+janssen &lt;- janssen %&gt;% 
+  rename(
+    State = Jurisdiction,
+    Week = `Week of Allocations`,
+    First_Dose = `1st Dose Allocations`,
+    Second_Dose = `2nd Dose Allocations`
+  )
+pfizer &lt;- pfizer %&gt;% 
+  rename(
+    State = Jurisdiction,
+    Week = `Week of Allocations`,
+    First_Dose = `1st Dose Allocations`,
+    Second_Dose = `2nd Dose Allocations`
+  )
+```
+
+---
+
+## Exam 3
+
+Great job! 
+
+&lt;img src="img/exam_3-1.png" width="80%" style="display: block; margin: auto;" /&gt;
+
+---
+
+## Exam 3
+
+Great job! 
+
+&lt;img src="img/exam_3-2.png" width="80%" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -98,7 +140,7 @@ to all attendees due to technical difficulties
 
 A parody account helped to bring levity to the situation: https://twitter.com/AeraHelpers
 
-But, just how negative were posts about AERA on social media (Twitter)? We can use digital (or data sicence) research methods, those that would be hard or impossible to do without coding/using R.
+But, just how negative were posts about AERA on social media (Twitter)? We can use digital (or data science) research methods, those that would be hard or impossible to do without coding/using R.
 
 
 ```r
@@ -387,7 +429,7 @@ We also have some specific suggestions:
 
 - Teaching this class has been an amazing experience
 
--We are really thankful for your ambition, persistence, and positivity
+- We are really thankful for your ambition, persistence, and positivity
 
 - Kudos to you all
 
@@ -427,7 +469,16 @@ sticking it through and for remaining upbeat
 
 ---
 
-### Data Science Certificate
+### C. Some reflections
+
+**Other highlights**
+
+- Kudos to everyone dealing with the pandemic; it has been a challenging time - at best
+- Special kudos to our mathematics teachers
+- Special kudos to anyone who was caring for oneself or others this semester
+- Let's move forward knowing that we can get through this challenging time, hopefully stronger in some ways
+
+## Data Science Certificate
 
 A bit more detail on our plans:
 
@@ -449,7 +500,7 @@ https://docs.google.com/document/d/1shNL9fY-vhBKK-zJw_V_iVhAKDtZ1Wqen4maJFnswQ4/
 
 ---
 
-# Logistics
+## Logistics
 
 **This week**
 
@@ -462,11 +513,17 @@ https://docs.google.com/document/d/1shNL9fY-vhBKK-zJw_V_iVhAKDtZ1Wqen4maJFnswQ4/
 
 # Final project recordings/presentations
 
+- Strict deadline of 11:59 pm ET on 5/5
+
 - We recommend using Zoom and recording to the Cloud - then sharing the link in the #final-projects channel.
 
 - Also, _you will share your recording with the members of your base group_
 
 - We'll ask you to view and comment on your base group member's presentations by Sunday, May 9 (just over four days); you can comment on anyone else's, too!
+
+- Office hours:
+  - Josh: next two Tuesdays (4/27 and 5/4), 4-5 pm
+  - Alex: Wednesdays (4/28), 12-2 pm
 
 ---
 
@@ -493,13 +550,15 @@ science education research, with specifics only shared with your permission; pos
 
 ---
 
-### Wrapping up
+## Wrapping up
 
 In your base group's Slack channel:
 
 - What is one thing you learned _this semester_?
 - What is something you want to learn more about? 
 - Share your feelings in GIF form!
+
+**Please stay in touch**!
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
