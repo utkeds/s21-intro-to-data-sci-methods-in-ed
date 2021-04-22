@@ -11,11 +11,51 @@ knitr::opts_chunk$set(echo = TRUE)
 
 In this homework, we'll carry out a text analysis. For reference, the slides from class are here:
 
-XX
+https://making-data-science-count.github.io/s21-intro-to-data-sci-methods-in-ed/slides/presentations-week-14.html#1
 
-A relevant tutorial is here:
+A relevant resource for the tidytext package is here
 
-XX
+https://www.tidytextmining.com
+
+We'll focus on term frequencies, though you'll have a chance to carry out a sentiment analysis, too, for a reach.
+
+## Term frequencies
+
+First, download the file aera-tweets-2019-2020-2021.csv from the repository. It is available
+here: https://github.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed/tree/main/data/aera-tweets-2019-2020-2021.csv. Save it to the directory you're using for this project and
+read this file in to R using the read_csv() function loaded from the tidyverse in the next code chunk.
+
+```{r}
+d <- read_csv("../data/aera-tweets-2019-2020-2021.csv")
+
+d
+```
+
+Next, load (and, if you haven't at this point, install) the tidytext package.
+
+Then, use the unnest_tokens() function to "unnest" the terms in the "text" column. 
+
+Save the result to a new object (preferably one with a different name than the name
+you used when you read in the data).
+
+If you need help, consider the documentation for unnest_tokens here: 
+https://juliasilge.github.io/tidytext/reference/unnest_tokens.html
+
+```{r}
+library(tidytext)
+
+dd <- d %>% 
+  unnest_tokens(term, text)
+```
+
+What terms are most frequent? To answer this question, use the count() function, counting
+up the values of the column in your data set representing the terms. You may find the
+sort argument for count handy; check out ?count to see how to use it.
+
+```{r}
+dd %>% 
+  count(term, sort = TRUE)
+```
 
 ## Reach 1
 
