@@ -49,16 +49,6 @@ Starting with whomever likes classical music the most:
 
 ---
 
-## Homework highlights
-
-<!-- Alex to add -->
-
-```{r, echo=FALSE, out.width="80%"}
-# knitr::include_graphics("")
-```
-
----
-
 ### Topics for today
 
 **Record the meeting** 
