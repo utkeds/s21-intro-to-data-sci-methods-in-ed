@@ -21,19 +21,21 @@ We'll focus on term frequencies, though you'll have a chance to carry out a sent
 
 ## Term frequencies
 
-First, download the file aera-tweets-2019-2020-2021.csv from the repository. It is available
-here: https://github.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed/tree/main/data/aera-tweets-2019-2020-2021.csv. Save it to the directory you're using for this project and
+First, download the file qual-data.csv from the repository. It is available
+here: https://github.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed/tree/main/data/qual-data.csv. Save it to the directory you're using for this project and
 read this file in to R using the read_csv() function loaded from the tidyverse in the next code chunk.
 
 ```{r}
-d <- read_csv("../data/aera-tweets-2019-2020-2021.csv")
+d <- read_csv("../data/qual-data.csv")
 
 d
 ```
 
 Next, load (and, if you haven't at this point, install) the tidytext package.
 
-Then, use the unnest_tokens() function to "unnest" the terms in the "text" column. 
+Then, use the unnest_tokens() function to "unnest" the terms in the column representing
+the text response in the data you loaded. We recommend naming the new column "word",
+as this will make a later step more straightforward.
 
 Save the result to a new object (preferably one with a different name than the name
 you used when you read in the data).
@@ -45,7 +47,7 @@ https://juliasilge.github.io/tidytext/reference/unnest_tokens.html
 library(tidytext)
 
 dd <- d %>% 
-  unnest_tokens(term, text)
+  unnest_tokens(word, Response)
 ```
 
 What terms are most frequent? To answer this question, use the count() function, counting
@@ -54,12 +56,40 @@ sort argument for count handy; check out ?count to see how to use it.
 
 ```{r}
 dd %>% 
-  count(term, sort = TRUE)
+  count(word, sort = TRUE)
 ```
+
+Last, use a list of stopwords to filter the most frequent words; copy the code
+you used above, but join (using anti_join) the built-in (to tidytext) data frame of
+stopwords, or common words, named stop_words.
+
+```{r}
+dd %>% 
+  count(word, sort = TRUE) %>% 
+  anti_join(stop_words)
+```
+
+What do you notice? And, what do you notice is different between the two sets of output, and why?
+
+Please add two or more thoughts below:
+
+- 
+- 
 
 ## Reach 1
 
-For this reach, use the imputed data sets you created above to fit a regression model, and pool the estimates and generate a summary table.
+For this reach, create a plot of the most frequent words. Tip - you may want to
+_filter_ the top words, otherwise the plot may represent too many terms to be
+able to be easily interpreted!
+
+```{r}
+
+```
+
+## Reach 2
+
+For this reach, carry out a sentiment analysis. See the instructions here:
+https://www.tidytextmining.com/sentiment.html (and check the slides for an example).
 
 ```{r}
 
