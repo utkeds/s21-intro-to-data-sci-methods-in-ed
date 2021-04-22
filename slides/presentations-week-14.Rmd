@@ -364,11 +364,11 @@ https://docs.google.com/document/d/1shNL9fY-vhBKK-zJw_V_iVhAKDtZ1Wqen4maJFnswQ4/
 
 ---
 
-## TN Voice student feedback and consent to participate in research
+## Requests
 
-We really value your honest input:https://utk.campuslabs.com/eval-home/ (4/29 deadline)
+1. We really value your honest input (TN Voice: https://utk.campuslabs.com/eval-home/ (4/29 deadline)
 
-We appreciate you considering allowing us to use your work for data science education research; consent to participate: 
+2. We also appreciate you considering allowing us to use your work for data science education research; consent to participate; we'd also love your suggestions for how to improve the class in a very short end-of-class survey: 
 
 <!-- Josh to add -->
 
