@@ -9,69 +9,17 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Background
 
-In this homework, we'll extend what we discussed in this week's class on 
+In this homework, we'll carry out a text analysis. For reference, the slides from class are here:
 
-a) iterating functions with purrr and b) imputing missing data
+XX
 
-The slides for this week are here:
-https://making-data-science-count.github.io/s21-intro-to-data-sci-methods-in-ed/slides/presentations-week-13.html#1
+A relevant tutorial is here:
 
-## Iterating Functions
-
-This extends our discussion last week on functions. Functions are a familiar tool from packages to apply different sorts of operations to data, and last week we showed you how you could write your own functions to do custom operations that aren't available in packages. This could be because you need an operation that is tailored specifically to your data, or it's not available in the right way in existing packages. Either way the reason you want to write a function is because you don't want to repeat yourself if you're doing the same operations repeatedly. Functions you will write can, and often will be, chained together combinations of other functions from packages. The idea behind writing the function is that you will have to use that particular combination multiple times, so you write a function to not have to repeat that same code multiple times. Well the idea of iterating functions takes this to another level of abstraction. You call your own functions the same way that you do ones from packages, but if you're repeating this too many times then you want a way to repeat your functions, which are themselves ways to repeat other chains of operations. Resisting the temptation to insert a picture of Xzibit into the homework at this point was a truly Herculean effort that I hope you appreciate.
-
-This is where the purrr package comes in with the map functions. The map functions apply the same function over and over while saving you the effort of having to write out the function each time. Of course this expediency comes with the added overhead of making sure that your function can be applied consistently each time, or alternatively having a way of dealing with variation in your inputs, but all magic comes with a price.
-
-For this task we would like you to use map to iterate on the task of loading a number of data sets. 
-
-Here you will find the three COVID vaccine data sets that were discussed in class:
-
-https://github.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed/tree/main/data/COVID
-
-Get these 3 files and save them into your project directory. Then use map() to apply the read_csv() function to each of them, or to be more precise, apply read_csv() to each of the file names, because that is what read_csv() takes as input. We have provided a character vector with the names of the files, so if you have these files saved to the main directory for your project this should work. You will then need to provide the code that will use map() to apply the read_csv() function to each element of this vector.
-
-
-```{r}
-
-file_names <- c("COVID-19Janssen.csv", "COVID19_Vaccine_Moderna.csv", "Pfizer.csv")
-
-
-
-```
-
-
-## Imputing Missing Data
-
-Multiple imputation is a very powerful tool that you can use to deal with missing data. The concepts and mechanisms behind it can take time to fully grasp, but the mechanics of it are relatively simple.
-
-1. Create imputed data sets filling in missing values 
-2. Estimate the model of interest on each of these imputed data sets
-3. Pool the estimates from these models using the appropriate correction formulas.
-
-There are certain assumptions that this process relies on that may not always be met, and there are definitely complicated things going on behind the scenes in these steps, but that's the basic outline of the process.
-
-For this exercise, we would like you to get through step 1 of this process, although ironically that will involve 2 tasks.
-
-The data set that we'll ask you to use is the undergraduate data set that we've been working with in class and previous homeworks.
-
-Using the MICE package (which is just lowercase mice for purposes of installing and loading), you'll need 
-to create a visualization of the missing data pattern, and then to create 17 imputed datasets.
-
-```{r}
-
-```
+XX
 
 ## Reach 1
 
 For this reach, use the imputed data sets you created above to fit a regression model, and pool the estimates and generate a summary table.
-
-```{r}
-
-```
-
-## Reach 2
-
-Fit the same regression model that you did in the last step, but with the standard lm() with listwise deletion, and compare the estimates to those generated in your multiple imputation model.
 
 ```{r}
 
