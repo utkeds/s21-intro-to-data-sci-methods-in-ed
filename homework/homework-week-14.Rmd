@@ -19,6 +19,9 @@ https://www.tidytextmining.com
 
 We'll focus on term frequencies, though you'll have a chance to carry out a sentiment analysis, too, for a reach.
 
+We'll be using a data frame representing responses from students to the question, 
+"What major factors led you into teaching?".
+
 ## Term frequencies
 
 First, download the file qual-data.csv from the repository. It is available
@@ -30,6 +33,9 @@ d <- read_csv("../data/qual-data.csv")
 
 d
 ```
+
+Take a look at the responses; what do you notice? Keep these things in mind as you interpret
+the output from the methods you use below.
 
 Next, load (and, if you haven't at this point, install) the tidytext package.
 
@@ -69,7 +75,11 @@ dd %>%
   anti_join(stop_words)
 ```
 
-What do you notice? And, what do you notice is different between the two sets of output, and why?
+What do you notice? And, how does what you notice align with and capture what you
+noticed from reading the responses earlier - and what does not align or capture
+the nature of those responses? This is a chance to reflect on how data science or
+computational methods are not necessarily a panacea - they reveal some things, while
+overlooking or even obscuring others!
 
 Please add two or more thoughts below:
 
