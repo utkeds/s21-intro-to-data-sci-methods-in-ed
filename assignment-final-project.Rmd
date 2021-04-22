@@ -74,7 +74,10 @@ To submit this document, add a link here, and please share the document with us:
   
 **Stage 3**
 - Final project
-  - submission of a product (likely a rendered `.Rmd` file, but possibly something) and a 5-10 minute recording of your work; why you chose to work on this, what you did, and what you want to do next, 5/5
+  - submission of a product (likely a rendered `.Rmd` file, but possibly something) and a 5-10 minute recording of your work; why you chose to work on this, what you did, and what you want to do next, 5/5 - _strict deadline_
+  - We recommend using Zoom and recording to the Cloud - then sharing the link in the #final-projects channel.
+  - Also, _you will share your recording with the members of your base group_
+  - We'll ask you to view and comment on your base group member's presentations by Sunday, May 9 (just over four days); you can comment on anyone else's, too!
 
 ### Other resources
 
