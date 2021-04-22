@@ -84,3 +84,10 @@ output: html_document
 - Readings:
   * https://r4ds.had.co.nz/iteration.html#the-map-functions
   * https://www.statisticssolutions.com/multiple-imputation-for-missing-data/
+  
+## Week 14
+
+- [Week 14 HW](https://github.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed/blob/main/homework/homework-week-14.Rmd)
+
+- Reading:
+  * https://alison.rbind.io/talk/2018-cascadia-bigmagic/
