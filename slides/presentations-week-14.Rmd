@@ -49,6 +49,16 @@ Starting with whomever likes classical music the most:
 
 ---
 
+## Homework highlights
+
+<!-- Alex to add -->
+
+```{r, echo=FALSE, out.width="80%"}
+# knitr::include_graphics("")
+```
+
+---
+
 ### Topics for today
 
 **Record the meeting** 
@@ -401,3 +411,5 @@ In your base group's Slack channel:
 - What is one thing you learned _this semester_?
 - What is something you want to learn more about? 
 - Share your feelings in GIF form!
+
+**Please stay in touch**!
