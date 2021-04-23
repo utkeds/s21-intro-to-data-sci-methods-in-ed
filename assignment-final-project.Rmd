@@ -74,10 +74,8 @@ To submit this document, add a link here, and please share the document with us:
   
 **Stage 3**
 - Final project
-  - submission of a product (likely a rendered `.Rmd` file, but possibly something) and a 5-10 minute recording of your work; why you chose to work on this, what you did, and what you want to do next, 5/5 - _strict deadline_
-  - We recommend using Zoom and recording to the Cloud - then sharing the link in the #final-projects channel.
-  - Also, _you will share your recording with the members of your base group_
-  - We'll ask you to view and comment on your base group member's presentations by Sunday, May 9 (just over four days); you can comment on anyone else's, too!
+  - Submission of a product (likely a rendered `.Rmd` file, but possibly something) and a 5-10 minute recording of your work; why you chose to work on this, what you did, and what you want to do next, 5/5 - _strict deadline_
+  - We recommend using Zoom and recording to the Cloud - then using that link to share your recording (more details below)
 
 ### Other resources
 
@@ -91,5 +89,9 @@ Available data sets:
 
 ### How to submit
 
-- Please submit a Google Docs link for this assignment on Canvas. Also, please post that link to the #data-ethics-statement channel on Slack (you may have to browse and then add the channel to access it). Be sure that the sharing settings are such that anyone with the link can comment on the document. 
-
+- **Final Product** Please submit _an HTML file_ for this assignment on Canvas. If you used a different format (other than Rmd), you may submit a relevant product (e.g., an attachment or a link to a Shiny app).
+- **Recording**: 
+  - Share the link to your recording in the #final-projects channel.
+  - Please also share the product (the .Rmd version if you used R Markdown, or whatever format your final project took)
+  - Also, _you will share your recording with the members of your base group_
+    - Lastly, and importantly, we ask you to view and comment on your base group member's presentations by Sunday, May 9 (just over four days); you can comment on anyone else's, too!

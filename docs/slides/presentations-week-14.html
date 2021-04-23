@@ -146,7 +146,7 @@ But, just how negative were posts about AERA on social media (Twitter)? We can u
 ```r
 library(academictwitteR)
 
-all_ngsschat_tweets &lt;- get_hashtag_tweets("#AERA21", "2010-01-01T00:00:00Z", "2020-12-31T00:00:00Z", bearer_token = "replace with your token from https://developer.twitter.com")
+aera_21_tweets &lt;- get_hashtag_tweets("#AERA21", "2010-01-01T00:00:00Z", "2021-04-22T00:00:00Z", bearer_token = "replace with your token from https://developer.twitter.com")
 ```
 
 ---
@@ -160,7 +160,7 @@ There are a number of ways to "hide" your token so you don't have to repeatedly 
 library(usethis)
 edit_r_environ() # bearer_token = "xxx"
 
-all_ngsschat_tweets &lt;- get_hashtag_tweets("#AERA21", "2010-01-01T00:00:00Z", "2020-12-31T00:00:00Z", bearer_token = Sys.getenv("bearer_token"))
+aera_21_tweets &lt;- get_hashtag_tweets("#AERA21", "2010-01-01T00:00:00Z", "2020-12-31T00:00:00Z", bearer_token = Sys.getenv("bearer_token"))
 ```
 
 ---
@@ -184,8 +184,7 @@ hashtags_to_search
 
 
 ```r
-all_aera_tweets &lt;- c(str_c("#AERA", 14:21), str_c("AERA20", 14:21)) %&gt;% 
-  map(get_hashtag_tweets, "2010-01-01T00:00:00Z", "2021-04-17T00:00:00Z", bearer_token = Sys.getenv("bearer_token"), data_path = "twitter-data-aera/")
+all_aera_tweets &lt;- get_hashtag_tweets(hashtags_to_search, "2010-01-01T00:00:00Z", "2021-04-17T00:00:00Z", bearer_token = Sys.getenv("bearer_token"), data_path = "twitter-data-aera/")
 ```
 
 ---
@@ -352,7 +351,7 @@ all_aera_tweets_words %&gt;%
 
 This analysis invites a number of questions:
 
-- Was AERA really not that much more negative than in years past? Or, is there sone difference?
+- Was AERA really not that much more negative than in years past? Or, is there some difference?
 - Is there an effect of the dictionary selected; is the "bing" dictionary not detecting the _type_ of negativity in these short, social media-based posts?
 - Were negative posts this year interacted with more than positive posts?
 - Could a qualitative analysis reveal nuances between positive and negative labeled posts?

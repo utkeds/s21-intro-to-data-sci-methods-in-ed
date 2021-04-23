@@ -146,7 +146,7 @@ But, just how negative were posts about AERA on social media (Twitter)? We can u
 ```r
 library(academictwitteR)
 
-all_ngsschat_tweets &lt;- get_hashtag_tweets("#AERA21", "2010-01-01T00:00:00Z", "2020-12-31T00:00:00Z", bearer_token = "replace with your token from https://developer.twitter.com")
+aera_21_tweets &lt;- get_hashtag_tweets("#AERA21", "2010-01-01T00:00:00Z", "2021-04-22T00:00:00Z", bearer_token = "replace with your token from https://developer.twitter.com")
 ```
 
 ---
@@ -160,7 +160,7 @@ There are a number of ways to "hide" your token so you don't have to repeatedly 
 library(usethis)
 edit_r_environ() # bearer_token = "xxx"
 
-all_ngsschat_tweets &lt;- get_hashtag_tweets("#AERA21", "2010-01-01T00:00:00Z", "2020-12-31T00:00:00Z", bearer_token = Sys.getenv("bearer_token"))
+aera_21_tweets &lt;- get_hashtag_tweets("#AERA21", "2010-01-01T00:00:00Z", "2020-12-31T00:00:00Z", bearer_token = Sys.getenv("bearer_token"))
 ```
 
 ---
@@ -184,8 +184,7 @@ hashtags_to_search
 
 
 ```r
-all_aera_tweets &lt;- c(str_c("#AERA", 14:21), str_c("AERA20", 14:21)) %&gt;% 
-  map(get_hashtag_tweets, "2010-01-01T00:00:00Z", "2021-04-17T00:00:00Z", bearer_token = Sys.getenv("bearer_token"), data_path = "twitter-data-aera/")
+all_aera_tweets &lt;- get_hashtag_tweets(hashtags_to_search, "2010-01-01T00:00:00Z", "2021-04-17T00:00:00Z", bearer_token = Sys.getenv("bearer_token"), data_path = "twitter-data-aera/")
 ```
 
 ---
@@ -203,36 +202,49 @@ all_aera_tweets
 
 ```
 ## # A tibble: 178,868 x 90
-##    user_id  status_id  created_at          screen_name text      source display_text_wi… reply_to_status… reply_to_user_id
-##    &lt;chr&gt;    &lt;chr&gt;      &lt;dttm&gt;              &lt;chr&gt;       &lt;chr&gt;     &lt;chr&gt;             &lt;dbl&gt; &lt;chr&gt;            &lt;chr&gt;           
-##  1 2818093… 101683922… 2018-07-11 00:18:58 anna_phd    "@cheris… Tweet…              220 101683797700200… 54638676        
-##  2 2818093… 109963488… 2019-02-24 11:39:21 anna_phd    "Heads u… Twitt…              144 &lt;NA&gt;             &lt;NA&gt;            
-##  3 2818093… 138105460… 2021-04-11 01:20:51 anna_phd    "Woo hoo… Twitt…              140 &lt;NA&gt;             &lt;NA&gt;            
-##  4 2818093… 110562275… 2019-03-13 00:12:59 anna_phd    "Hi #lit… Tweet…              211 &lt;NA&gt;             &lt;NA&gt;            
-##  5 2818093… 638022356… 2015-08-30 16:15:58 anna_phd    "reviewi… Tweet…              140 &lt;NA&gt;             &lt;NA&gt;            
-##  6 2818093… 138075285… 2021-04-10 05:21:48 anna_phd    "Join us… Twitt…               90 &lt;NA&gt;             &lt;NA&gt;            
-##  7 2818093… 111461120… 2019-04-06 19:29:55 anna_phd    "@bnquis… Twitt…              139 &lt;NA&gt;             &lt;NA&gt;            
-##  8 2818093… 111338594… 2019-04-03 10:21:09 anna_phd    "Poster … Twitt…              140 &lt;NA&gt;             &lt;NA&gt;            
-##  9 2818093… 452436584… 2014-04-05 13:24:22 anna_phd    "\"In an… Tweet…              120 &lt;NA&gt;             &lt;NA&gt;            
-## 10 2818093… 452879279… 2014-04-06 18:43:28 anna_phd    "Thinkin… Tweet…              140 &lt;NA&gt;             &lt;NA&gt;            
-## # … with 178,858 more rows, and 81 more variables: reply_to_screen_name &lt;chr&gt;, is_quote &lt;lgl&gt;, is_retweet &lt;lgl&gt;,
-## #   favorite_count &lt;int&gt;, retweet_count &lt;int&gt;, quote_count &lt;int&gt;, reply_count &lt;int&gt;, hashtags &lt;list&gt;, symbols &lt;list&gt;,
-## #   urls_url &lt;list&gt;, urls_t.co &lt;list&gt;, urls_expanded_url &lt;list&gt;, media_url &lt;list&gt;, media_t.co &lt;list&gt;,
-## #   media_expanded_url &lt;list&gt;, media_type &lt;list&gt;, ext_media_url &lt;list&gt;, ext_media_t.co &lt;list&gt;,
-## #   ext_media_expanded_url &lt;list&gt;, ext_media_type &lt;chr&gt;, mentions_user_id &lt;list&gt;, mentions_screen_name &lt;list&gt;,
-## #   lang &lt;chr&gt;, quoted_status_id &lt;chr&gt;, quoted_text &lt;chr&gt;, quoted_created_at &lt;dttm&gt;, quoted_source &lt;chr&gt;,
-## #   quoted_favorite_count &lt;int&gt;, quoted_retweet_count &lt;int&gt;, quoted_user_id &lt;chr&gt;, quoted_screen_name &lt;chr&gt;,
-## #   quoted_name &lt;chr&gt;, quoted_followers_count &lt;int&gt;, quoted_friends_count &lt;int&gt;, quoted_statuses_count &lt;int&gt;,
-## #   quoted_location &lt;chr&gt;, quoted_description &lt;chr&gt;, quoted_verified &lt;lgl&gt;, retweet_status_id &lt;chr&gt;, retweet_text &lt;chr&gt;,
-## #   retweet_created_at &lt;dttm&gt;, retweet_source &lt;chr&gt;, retweet_favorite_count &lt;int&gt;, retweet_retweet_count &lt;int&gt;,
-## #   retweet_user_id &lt;chr&gt;, retweet_screen_name &lt;chr&gt;, retweet_name &lt;chr&gt;, retweet_followers_count &lt;int&gt;,
-## #   retweet_friends_count &lt;int&gt;, retweet_statuses_count &lt;int&gt;, retweet_location &lt;chr&gt;, retweet_description &lt;chr&gt;,
-## #   retweet_verified &lt;lgl&gt;, place_url &lt;chr&gt;, place_name &lt;chr&gt;, place_full_name &lt;chr&gt;, place_type &lt;chr&gt;, country &lt;chr&gt;,
-## #   country_code &lt;chr&gt;, geo_coords &lt;list&gt;, coords_coords &lt;list&gt;, bbox_coords &lt;list&gt;, status_url &lt;chr&gt;, name &lt;chr&gt;,
-## #   location &lt;chr&gt;, description &lt;chr&gt;, url &lt;chr&gt;, protected &lt;lgl&gt;, followers_count &lt;int&gt;, friends_count &lt;int&gt;,
-## #   listed_count &lt;int&gt;, statuses_count &lt;int&gt;, favourites_count &lt;int&gt;, account_created_at &lt;dttm&gt;, verified &lt;lgl&gt;,
-## #   profile_url &lt;chr&gt;, profile_expanded_url &lt;chr&gt;, account_lang &lt;lgl&gt;, profile_banner_url &lt;chr&gt;,
-## #   profile_background_url &lt;chr&gt;, profile_image_url &lt;chr&gt;
+##    user_id  status_id   created_at          screen_name text             source 
+##    &lt;chr&gt;    &lt;chr&gt;       &lt;dttm&gt;              &lt;chr&gt;       &lt;chr&gt;            &lt;chr&gt;  
+##  1 2818093… 1016839228… 2018-07-11 00:18:58 anna_phd    "@cherisemcb @A… TweetD…
+##  2 2818093… 1099634886… 2019-02-24 11:39:21 anna_phd    "Heads up on a … Twitte…
+##  3 2818093… 1381054607… 2021-04-11 01:20:51 anna_phd    "Woo hoo! Congr… Twitte…
+##  4 2818093… 1105622750… 2019-03-13 00:12:59 anna_phd    "Hi #literacies… TweetD…
+##  5 2818093… 6380223560… 2015-08-30 16:15:58 anna_phd    "reviewing for … TweetD…
+##  6 2818093… 1380752856… 2021-04-10 05:21:48 anna_phd    "Join us tomorr… Twitte…
+##  7 2818093… 1114611207… 2019-04-06 19:29:55 anna_phd    "@bnquist @amys… Twitte…
+##  8 2818093… 1113385943… 2019-04-03 10:21:09 anna_phd    "Poster sent to… Twitte…
+##  9 2818093… 4524365842… 2014-04-05 13:24:22 anna_phd    "\"In an interc… TweetD…
+## 10 2818093… 4528792794… 2014-04-06 18:43:28 anna_phd    "Thinking about… TweetD…
+## # … with 178,858 more rows, and 84 more variables: display_text_width &lt;dbl&gt;,
+## #   reply_to_status_id &lt;chr&gt;, reply_to_user_id &lt;chr&gt;,
+## #   reply_to_screen_name &lt;chr&gt;, is_quote &lt;lgl&gt;, is_retweet &lt;lgl&gt;,
+## #   favorite_count &lt;int&gt;, retweet_count &lt;int&gt;, quote_count &lt;int&gt;,
+## #   reply_count &lt;int&gt;, hashtags &lt;list&gt;, symbols &lt;list&gt;, urls_url &lt;list&gt;,
+## #   urls_t.co &lt;list&gt;, urls_expanded_url &lt;list&gt;, media_url &lt;list&gt;,
+## #   media_t.co &lt;list&gt;, media_expanded_url &lt;list&gt;, media_type &lt;list&gt;,
+## #   ext_media_url &lt;list&gt;, ext_media_t.co &lt;list&gt;, ext_media_expanded_url &lt;list&gt;,
+## #   ext_media_type &lt;chr&gt;, mentions_user_id &lt;list&gt;, mentions_screen_name &lt;list&gt;,
+## #   lang &lt;chr&gt;, quoted_status_id &lt;chr&gt;, quoted_text &lt;chr&gt;,
+## #   quoted_created_at &lt;dttm&gt;, quoted_source &lt;chr&gt;, quoted_favorite_count &lt;int&gt;,
+## #   quoted_retweet_count &lt;int&gt;, quoted_user_id &lt;chr&gt;, quoted_screen_name &lt;chr&gt;,
+## #   quoted_name &lt;chr&gt;, quoted_followers_count &lt;int&gt;,
+## #   quoted_friends_count &lt;int&gt;, quoted_statuses_count &lt;int&gt;,
+## #   quoted_location &lt;chr&gt;, quoted_description &lt;chr&gt;, quoted_verified &lt;lgl&gt;,
+## #   retweet_status_id &lt;chr&gt;, retweet_text &lt;chr&gt;, retweet_created_at &lt;dttm&gt;,
+## #   retweet_source &lt;chr&gt;, retweet_favorite_count &lt;int&gt;,
+## #   retweet_retweet_count &lt;int&gt;, retweet_user_id &lt;chr&gt;,
+## #   retweet_screen_name &lt;chr&gt;, retweet_name &lt;chr&gt;,
+## #   retweet_followers_count &lt;int&gt;, retweet_friends_count &lt;int&gt;,
+## #   retweet_statuses_count &lt;int&gt;, retweet_location &lt;chr&gt;,
+## #   retweet_description &lt;chr&gt;, retweet_verified &lt;lgl&gt;, place_url &lt;chr&gt;,
+## #   place_name &lt;chr&gt;, place_full_name &lt;chr&gt;, place_type &lt;chr&gt;, country &lt;chr&gt;,
+## #   country_code &lt;chr&gt;, geo_coords &lt;list&gt;, coords_coords &lt;list&gt;,
+## #   bbox_coords &lt;list&gt;, status_url &lt;chr&gt;, name &lt;chr&gt;, location &lt;chr&gt;,
+## #   description &lt;chr&gt;, url &lt;chr&gt;, protected &lt;lgl&gt;, followers_count &lt;int&gt;,
+## #   friends_count &lt;int&gt;, listed_count &lt;int&gt;, statuses_count &lt;int&gt;,
+## #   favourites_count &lt;int&gt;, account_created_at &lt;dttm&gt;, verified &lt;lgl&gt;,
+## #   profile_url &lt;chr&gt;, profile_expanded_url &lt;chr&gt;, account_lang &lt;lgl&gt;,
+## #   profile_banner_url &lt;chr&gt;, profile_background_url &lt;chr&gt;,
+## #   profile_image_url &lt;chr&gt;
 ```
 
 ---
@@ -339,7 +351,7 @@ all_aera_tweets_words %&gt;%
 
 This analysis invites a number of questions:
 
-- Was AERA really not that much more negative than in years past? Or, is there sone difference?
+- Was AERA really not that much more negative than in years past? Or, is there some difference?
 - Is there an effect of the dictionary selected; is the "bing" dictionary not detecting the _type_ of negativity in these short, social media-based posts?
 - Were negative posts this year interacted with more than positive posts?
 - Could a qualitative analysis reveal nuances between positive and negative labeled posts?

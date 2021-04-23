@@ -13,75 +13,100 @@ In this homework, we'll carry out a text analysis. For reference, the slides fro
 
 https://making-data-science-count.github.io/s21-intro-to-data-sci-methods-in-ed/slides/presentations-week-14.html#1
 
-A relevant resource for the tidytext package is here
-
-https://www.tidytextmining.com
-
 We'll focus on term frequencies, though you'll have a chance to carry out a sentiment analysis, too, for a reach.
 
 We'll be using a data frame representing responses from students to the question, 
-"What major factors led you into teaching?".
+*"What major factors led you into teaching?"*.
 
 ## Term frequencies
 
 First, download the file qual-data.csv from the repository. It is available
-here: https://github.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed/tree/main/data/qual-data.csv. Save it to the directory you're using for this project and
-read this file in to R using the read_csv() function loaded from the tidyverse in the next code chunk.
+here: https://github.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed/tree/main/data/qual-data.csv. 
+
+Save it to the directory you're using for this project and read this file in to R 
+using the read_csv() function loaded from the tidyverse in the next code chunk.
 
 ```{r}
-d <- read_csv("../data/qual-data.csv")
 
-d
 ```
 
-Take a look at the responses; what do you notice? Keep these things in mind as you interpret
-the output from the methods you use below.
+Take a look at the responses. What do you notice (you may need to tab over in the
+data frame to view the text response)? Keep these things you notice in mind as 
+you interpret the output from the methods you use below.
 
-Next, load (and, if you haven't at this point, install) the tidytext package.
+Next, load (before which, if you haven't yet, install) the tidytext package.
 
 Then, use the unnest_tokens() function to "unnest" the terms in the column representing
-the text response in the data you loaded. We recommend naming the new column "word",
-as this will make a later step more straightforward.
+the text response. 
 
-Save the result to a new object (preferably one with a different name than the name
-you used when you read in the data).
+unnest_tokens() works as follows:
+
+The first argument represents the name of the new column that will be created in your
+data; the second argument represents the name of the column in your data frame 
+with the text data you want to "unnest" (or, to separate the "tokens", which in this
+and many cases are words, but which can also be sentences, paragraphs, or other 
+such units). 
+
+We recommend naming the new column "word", as this will make _a later step_ a bit
+more straightforward. 
+
+Save the result to a new object - preferably one with a different name than the name
+you used when you read in the data.
 
 If you need help, consider the documentation for unnest_tokens here: 
 https://juliasilge.github.io/tidytext/reference/unnest_tokens.html
 
+Or, check out the example in the slides. 
+
 ```{r}
-library(tidytext)
 
-dd <- d %>% 
-  unnest_tokens(word, Response)
 ```
-
 What terms are most frequent? To answer this question, use the count() function, counting
-up the values of the column in your data set representing the terms. You may find the
-sort argument for count handy; check out ?count to see how to use it.
+up the values of the column in your data that represents the terms.
+
+count() is handy, but it's especially handy when it's followed by arrange(), which 
+will provide the frequencies in order. 
+
+A shortcut is to use the sort argument for count; check out ?count to learn more.
 
 ```{r}
-dd %>% 
-  count(word, sort = TRUE)
+
 ```
+This is perhaps somewhat interesting, but so many of the words are simply those that 
+are common across all of the responses! A solution is to use a list of stopwords,
+common words based on some criteria.
+
+The goal is to use a specific type of join - one that doesn't match on a common key,
+but instead removes rows associated with a common key. anti_join() does just this.
 
 Last, use a list of stopwords to filter the most frequent words; copy the code
 you used above, but join (using anti_join) the built-in (to tidytext) data frame of
 stopwords, or common words, named stop_words.
 
+To use anti_join, add the following code of code after the code you wrote in the above
+chunk:
+
+anti_join(stop_words)
+
+Since you're likely using the %>%, you'll have to add a %>% to the line before this 
+line to "pipe" the results of your previous step to anti_join(). Another key to keep 
+in mind is that stop_words has a column named word; it is important that the column 
+in the data frame you are joining also has a column named word.
+
+For some pointers, see the use of anti_join here: https://www.tidytextmining.com/tidytext.html
+
 ```{r}
-dd %>% 
-  count(word, sort = TRUE) %>% 
-  anti_join(stop_words)
+
 ```
 
-What do you notice? And, how does what you notice align with and capture what you
-noticed from reading the responses earlier - and what does not align or capture
-the nature of those responses? This is a chance to reflect on how data science or
-computational methods are not necessarily a panacea - they reveal some things, while
-overlooking or even obscuring others!
+What do you notice? What could you say about teachers' answer to the question, 
+*"What major factors led you into teaching?"*? How does what you notice align with 
+and capture what you noticed from reading the responses earlier
 
-Please add two or more thoughts below:
+This is a chance to reflect on how data science or computational methods are not 
+necessarily a panacea - they reveal some things, while overlooking or even obscuring others!
+
+Please add two (or more) thoughts/answers to the prompts above next.
 
 - 
 - 
