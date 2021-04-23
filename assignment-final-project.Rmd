@@ -74,8 +74,14 @@ To submit this document, add a link here, and please share the document with us:
   
 **Stage 3**
 - Final project
-  - Submission of a product (likely a rendered `.Rmd` file, but possibly something) and a 5-10 minute recording of your work; why you chose to work on this, what you did, and what you want to do next, 5/5 - _strict deadline_
-  - We recommend using Zoom and recording to the Cloud - then using that link to share your recording (more details below)
+  - Submission of a product (likely a rendered `.Rmd` file, but possibly something) and a five-ten minute recording of your work; why you chose to work on this, what you did, and what you want to do next, 5/5 - _strict deadline_
+    - In your five-ten minute recording, please describe:
+      - The topic of your project
+      - Why you chose this topic - what problem it solve or question it helped/helps you to answer
+      - What you did, including the learning/independent work you had to do to be able to achieve what you did
+      - What you are most proud of about your final project
+      - What you still want to know more about/what you want to do next having completed your final project
+    - We recommend using Zoom and recording to the Cloud - then using that link to share your recording (more details below)
 
 ### Other resources
 
