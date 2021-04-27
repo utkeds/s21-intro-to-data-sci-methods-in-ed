@@ -10,19 +10,19 @@ knitr::opts_chunk$set(echo = TRUE)
 *Instructions*: Copy everything from the first level-2 header (line 12 of this document, beginning with ##) through the 
 section with advice on how to use. Then, replace the header with your description, add the requested info, and commit your changes!
 
-## Template: replace this header with a short (10 words or less) summary of the resource you identified
+## Multiple Mean Imputation for Factored or Numerical Data 
 
-Link to resource: [add link here]
-[Add your name here]
+Link to resource: [https://datascienceplus.com/handling-missing-data-with-mice-package-a-simple-approach/ ]
+[Marissa Bartmess]
 
 ### What this resource is
 
-- 2-4 sentence overview of this resource is: what it does, describes/illuminates, or otherwise assists with.
+- This article walks you through imputation with factor and numerical data and also shows you how to save the imputations to a completed new dataset for use. Also gives you code to use to check your new dataset for missingness (to make sure your imputations worked!)
 
 ### Who will find this resource helpful
 
-- 2-4 sentence description of who will find this resource helpful; consider things such as what one is looking to do or how much experience one has with R.
+- Any R novice will find this article helpful. It goes step by step and you can even copy their example code from the website and paste the code into your RMD documents with ease.
 
 ### Advice on how to use
 
-- 2-4 sentences providing advice on how to use the resource. For an R package, this could be tips on how to get started. For articles/blogs (or resources like these), this could be instructions on where to begin to read (or how to navigate the resource).
+- You will need the dplyr and mice packages installed and loaded to follow along with this tutorial. You will also use the sapply function (part of base R). 
