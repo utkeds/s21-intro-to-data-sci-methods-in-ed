@@ -21,6 +21,7 @@ While you work on your final project, you are very likely going to be doing some
 
 - By 5/5 (anytime before is fine!), add your resource to the R Markdown document in the repository for this website:
   https://github.com/making-data-science-count/s21-intro-to-data-sci-methods-in-ed/blob/main/curated-data-science-resources.Rmd
+  - A screencast on this process is here: https://www.screencast.com/t/tkLqZp1kzdM
 
 - To add this, you will need to first create a GitHub account. You can do so here: http://github.com/
 
