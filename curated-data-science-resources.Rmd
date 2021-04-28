@@ -26,3 +26,20 @@ Link to resource: [add link here]
 ### Advice on how to use
 
 - 2-4 sentences providing advice on how to use the resource. For an R package, this could be tips on how to get started. For articles/blogs (or resources like these), this could be instructions on where to begin to read (or how to navigate the resource).
+
+## Template: RWeekly for staying up to date about R-related news
+
+Link to resource: https://rweekly.org/
+Joshua Rosenberg
+
+### What this resource is
+
+- dsafsdfds
+
+### Who will find this resource helpful
+
+- asdfsdafsd
+
+### Advice on how to use
+
+- sdfsdsdf
