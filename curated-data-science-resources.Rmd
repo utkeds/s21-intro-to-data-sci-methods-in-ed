@@ -26,3 +26,21 @@ Link to resource: [add link here]
 ### Advice on how to use
 
 - 2-4 sentences providing advice on how to use the resource. For an R package, this could be tips on how to get started. For articles/blogs (or resources like these), this could be instructions on where to begin to read (or how to navigate the resource).
+
+
+## Template: R-bloggers is a good source for R begginers to learn new skills
+
+Link to resource: https://www.r-bloggers.com
+Justin Rose
+
+### What this resource is
+
+- This source has a tremendous amount of different blogs or articles to help R begginners. For instance, it has a blog about using Twitter API within R to collect tweets. It also has a blog about a tutorials to help individuals know how to conduct logistic regression in R. As you can see, this source has an article about various different things to help you use R to your full capacity. 
+
+### Who will find this resource helpful
+
+- Honestly, if you are looking for any tips relating to almost anything wihtin R, this would be a good source. It does not only cover specific programs within R. It does it best to cover everything that you are trying to do within the program. 
+
+### Advice on how to use
+
+- The front page of this source has all the most recent articles written for the site. If you are looking for tutorials, the tutorials tab is conveniently located at the top of the page. Lastly, there is also a section for R related jobs. 
