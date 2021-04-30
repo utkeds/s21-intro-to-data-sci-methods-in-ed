@@ -27,8 +27,7 @@ Link to resource: [add link here]
 
 - 2-4 sentences providing advice on how to use the resource. For an R package, this could be tips on how to get started. For articles/blogs (or resources like these), this could be instructions on where to begin to read (or how to navigate the resource).
 
-
-## Template: R-bloggers is a good source for R begginers to learn new skills
+## R-bloggers is a good source for R begginers to learn new skills
 
 Link to resource: https://www.r-bloggers.com
 Justin Rose
@@ -44,3 +43,20 @@ Justin Rose
 ### Advice on how to use
 
 - The front page of this source has all the most recent articles written for the site. If you are looking for tutorials, the tutorials tab is conveniently located at the top of the page. Lastly, there is also a section for R related jobs. 
+
+## Multiple Mean Imputation for Factored or Numerical Data
+
+Link to resource: [https://datascienceplus.com/handling-missing-data-with-mice-package-a-simple-approach/ ]
+[Marissa Bartmess]
+
+### What this resource is
+
+- This article walks you through imputation with factor and numerical data and also shows you how to save the imputations to a completed new dataset for use. Also gives you code to use to check your new dataset for missingness (to make sure your imputations worked!)
+
+### Who will find this resource helpful
+
+-Any R novice will find this article helpful. It goes step by step and you can even copy their example code from the website and paste the code into your RMD documents with ease.
+### Advice on how to use
+
+- You will need the dplyr and mice packages installed and loaded to follow along with this tutorial. You will also use the sapply function (part of base R). 
+
