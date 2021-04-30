@@ -10,19 +10,20 @@ knitr::opts_chunk$set(echo = TRUE)
 *Instructions*: Copy everything from the first level-2 header (line 12 of this document, beginning with ##) through the 
 section with advice on how to use. Then, replace the header with your description, add the requested info, and commit your changes!
 
-## Template: replace this header with a short (10 words or less) summary of the resource you identified
+## Financial Analysis Package, data access and cool graphs
 
-Link to resource: [add link here]
-[Add your name here]
+Link to resource: https://cran.r-project.org/web/packages/quantmod/index.html
+
+Mason Boyd 
 
 ### What this resource is
 
-- 2-4 sentence overview of this resource is: what it does, describes/illuminates, or otherwise assists with.
+- Quantmod is a package that makes analyzing financial information easier in R. First of all, it allows you to pull financial information straight form Yahoo finance. This data is already in a time series format, which means that it doesn't need to be converted. That's helpful so that you can do further analysis or plotting for time series data. This package also includes some different financial plots, one of which look like it can do a normal line chart of stock data (this can be open, close, high, or low data), but it can also add what looks to be like a kernal density plot line as well. The kernal density allows you to see the trajectory of the stock a little more clearly. 
 
 ### Who will find this resource helpful
 
-- 2-4 sentence description of who will find this resource helpful; consider things such as what one is looking to do or how much experience one has with R.
+- Anyone interested in examining financial data in R will find this useful. Using the quantmod package was not difficult at all and it makes access and analyzing data really simple. The complicated R comes when you try to do deeper analyses on stock data, including forecasting. 
 
 ### Advice on how to use
 
-- 2-4 sentences providing advice on how to use the resource. For an R package, this could be tips on how to get started. For articles/blogs (or resources like these), this could be instructions on where to begin to read (or how to navigate the resource).
+- Honestly, I have read so many sources about how to use quantmod. Specifically, I looked up the correct code to use the getSymbols function that allows you to pull the data, as well as how to correctly structure the beginning date you want to pull the data from. Also, just google some of the graphs that you can use using the quantmod packages. You will find tons of resources and it appears to be a really popular package. 
