@@ -60,3 +60,19 @@ Link to resource: [https://datascienceplus.com/handling-missing-data-with-mice-p
 
 - You will need the dplyr and mice packages installed and loaded to follow along with this tutorial. You will also use the sapply function (part of base R). 
 
+## Cheat Sheet on Data Wrangling Using the Tidyverse
+
+Link to resource: https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf
+Sarah Narvaiz
+
+### What this resource is
+
+- This is quite literal a one-page (front and back) cheat sheet on using different functions in R within the Tidyvese for data wrangling purposes. It's helpful to have bookmarked, saved on your computer, or printed and tacked in your study space. It shows you the different functions within the tidyverse and how they can be used for wrangling/tidying data with examples. 
+
+### Who will find this resource helpful
+
+- Any person who is new to the Tidyverse and any person who is not new to the tidyverse but who sometimes forget the structure of a function or the different types of functions within the Tidyverse which can be used for tidying data.
+
+### Advice on how to use
+
+- This is a cheat sheet that would be permitted to be used during a coding exam. It's succinct but has quite a bit of information. If additional description for the tidyverse function is needed, the user could type ?[function] in their console to get additional information. This resource is a good and quick go-to for a refresher and brief understanding. 
