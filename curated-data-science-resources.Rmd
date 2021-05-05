@@ -76,3 +76,22 @@ Sarah Narvaiz
 ### Advice on how to use
 
 - This is a cheat sheet that would be permitted to be used during a coding exam. It's succinct but has quite a bit of information. If additional description for the tidyverse function is needed, the user could type ?[function] in their console to get additional information. This resource is a good and quick go-to for a refresher and brief understanding. 
+
+## Weekly Data Science Challenge
+
+Link to resource: https://github.com/rfordatascience/tidytuesday#readme
+Will Andershock
+
+### What this resource is
+
+- R for Data Science's Tidy Tuesday is a page on GitHub that provides a weekly data science challenge. The group provides data sets and challenges people to use their imagination and to challenge themselves to create something new. Additionally, Tidy Tuesday is a community and people respond to one another and help each other with their coding problems 
+
+### Who will find this resource helpful
+
+- Anyone in our Data Science class who wants to continue developing their R skills will find this helpful. Tidy Tuesday is a great way to developing a coding portfolio as well!
+
+### Advice on how to use
+
+- I reccomend checking out the Tidy Tuesday website (https://www.tidytuesday.com/) and joining the slack page. That way you will be able to connect with people and ask for help if needed.
+
+## Tidy Tuesday is a great resource to continue developing R skills
