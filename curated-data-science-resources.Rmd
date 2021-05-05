@@ -76,3 +76,21 @@ Sarah Narvaiz
 ### Advice on how to use
 
 - This is a cheat sheet that would be permitted to be used during a coding exam. It's succinct but has quite a bit of information. If additional description for the tidyverse function is needed, the user could type ?[function] in their console to get additional information. This resource is a good and quick go-to for a refresher and brief understanding. 
+
+
+## YouTube Playlist of R Data Visualization  
+
+Link to resource: https://www.youtube.com/playlist?list=PLr5uaPu5L7xLZiscc70d9mOUgnmLktr4C  
+Emily McDonald 
+
+### What this resource is
+
+- This is a YouTube Playlist by dataslice of six short videos about Data Visualizations in R. I found the video about creating a word cloud in R using wordcloud2 very helpful for my final project. The playlist includes the following topics: drag-and-drop ggplot2 graphs, ways to improve ggplot2 graphs, animate graphs with gganimate, interactive graphs with plotly, choropleth and scatter maps with plotly, and word clouds with wordcloud2. These short videos range in time from about 6 minutes to about 14 minutes. 
+
+### Who will find this resource helpful
+
+- This playlist will be helpful for beginners in data visualization that are looking for different or unique ways to represent data with R. I think some of the video topics are niche data visualizations so some of the video topics may not be applicable for all. 
+
+### Advice on how to use
+
+- This resource is a playlist of videos about different data visualization topics. I would recommend that the viewer of the playlist buildalong in R while watching the video. It will be helpful to pause and rewatch parts of the video. Quick YouTube Tip: Use the "J" key to rewind 10 seconds, use the "K" key to pause, and use the "L" key to jump forward 10 sections. 
