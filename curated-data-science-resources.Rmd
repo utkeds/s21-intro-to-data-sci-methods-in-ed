@@ -10,22 +10,31 @@ knitr::opts_chunk$set(echo = TRUE)
 *Instructions*: Copy everything from the first level-2 header (line 12 of this document, beginning with ##) through the 
 section with advice on how to use. Then, replace the header with your description, add the requested info, and commit your changes!
 
-## Template: replace this header with a short (10 words or less) summary of the resource you identified
+## Bone Mineral Density measurements of common North American taxa, and Statistics for Archaeologists
 
-Link to resource: [add link here]
-[Add your name here]
+Link to resources: Journal of Archaeological Science (2001) 28, 817–832
+doi:10.1006/jasc.2000.0600, available online at http://www.idealibrary.com
+
+Intertaxonomic Variability in Patterns of Bone Density and the Differential Representationof Bovid, Cervid, and Equid Elements in the Archaeological RecordAuthor(s): Y. M. Lam, Xingbin Chen, O. M. PearsonSource: American Antiquity, Vol. 64, No. 2 (Apr., 1999), pp. 343-362Published by: Society for American ArchaeologyStable URL: http://www.jstor.org/stable/2694283Accessed
+
+http://people.tamu.edu/~dcarlson/quant/Drennan/index.html
+
+[Matt Hoover]
 
 ### What this resource is
 
-- 2-4 sentence overview of this resource is: what it does, describes/illuminates, or otherwise assists with.
+- These resources are two zooarchaeological reports, one authored by Frank J. Dirrigl, Jr. and the other by Y.M. Lam, Xingbin Chen, and O.M. Pearson, that analyzed the bone mineral densities of 'gallinaceous' birds and a selection of bovids, cervids, and equids, respectively. The former used a DEXA (dual energy X-ray bone densitometer) and the latter used a CT scanner to derive bone mineral density calculations for their selected taxa. I used these measurements in my final report as comparative specimens; they were incredibly helpful because they went into great detail about how the measurements were derived, and made anayalzying fragemented bones possible due to the fact that mutiple scan sites were measured across one bone.
+
+The third link is a collection of resoruces, collected by Professor David L. Carlson at TAMU, for arcaheologists concerning how to download R and then how to use its statistical packages for arcaheological research. I perused this a bit and it helped me wrap my head around the analyses going on in the first two reports about bone mineral density.
 
 ### Who will find this resource helpful
 
-- 2-4 sentence description of who will find this resource helpful; consider things such as what one is looking to do or how much experience one has with R.
+- Zooarchaeologists who are doing similar studies on survivorship of faunal remains would find these reosurces helpful. I relaize it is a very niche audience, but R has become very popular within various specialities of archaeology as a data viz, data analysis, and mapping tool due to its 'open source nature'; having relaible datasets such as these readily available on GitHub without having to hunt through the vast academic literature would be very helpful for said researchers.
 
 ### Advice on how to use
 
-- 2-4 sentences providing advice on how to use the resource. For an R package, this could be tips on how to get started. For articles/blogs (or resources like these), this could be instructions on where to begin to read (or how to navigate the resource).
+- The tables and diagrams in the reports are fairly starightforward; they provide illustrations of each element with the various scan sites depicted, and then provide tables gving the bone mineral densities of each scan site. Multiple 'types' of density measurements are provided, but the best/most useful measurement is pointed out for sake of convenience. 
+- The resources collected by Prof. Carlson are excellent guides for getting started doing analyses in R similar to what this class did, albeit aimed at archaeology instead of education. These resources provide examples of datasets used by archaeologists in R, which is helpful in that a student would not have to hunt down or create their own dataset (like I did!).
 
 ## R-bloggers is a good source for R begginers to learn new skills
 
@@ -76,3 +85,19 @@ Sarah Narvaiz
 ### Advice on how to use
 
 - This is a cheat sheet that would be permitted to be used during a coding exam. It's succinct but has quite a bit of information. If additional description for the tidyverse function is needed, the user could type ?[function] in their console to get additional information. This resource is a good and quick go-to for a refresher and brief understanding. 
+## Template: replace this header with a short (10 words or less) summary of the resource you identified
+
+Link to resource: [add link here]
+[Add your name here]
+
+### What this resource is
+
+- 2-4 sentence overview of this resource is: what it does, describes/illuminates, or otherwise assists with.
+
+### Who will find this resource helpful
+
+- 2-4 sentence description of who will find this resource helpful; consider things such as what one is looking to do or how much experience one has with R.
+
+### Advice on how to use
+
+- 2-4 sentences providing advice on how to use the resource. For an R package, this could be tips on how to get started. For articles/blogs (or resources like these), this could be instructions on where to begin to read (or how to navigate the resource).
