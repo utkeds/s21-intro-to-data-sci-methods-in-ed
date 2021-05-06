@@ -76,3 +76,20 @@ Sarah Narvaiz
 ### Advice on how to use
 
 - This is a cheat sheet that would be permitted to be used during a coding exam. It's succinct but has quite a bit of information. If additional description for the tidyverse function is needed, the user could type ?[function] in their console to get additional information. This resource is a good and quick go-to for a refresher and brief understanding. 
+
+## Institute for Digital Research and Education: Statistical Consulting website
+
+Link to resource: [stats.idre.ucla.edu/r/]
+[Katherine Trubee]
+
+### What this resource is
+
+- This is the website for the Institute for Digital Research and Education: Statistical Consulting at the University of California Los Angeles. It is a site that provides free advice and resources to help "you to independently use common statistical packages for the analysis of research data."
+
+### Who will find this resource helpful
+
+- UCLA's IDRE holds many seminars, textbooks, and even consulting. Their tutorial pages in particular range from beginner to advanced.
+
+### Advice on how to use
+
+- Throughout the semester, when googling problems, this would typically be the first website to pop up. Only later did I go to the home page and realize they have materials for all kinds of statistical software and even webinars. During the final project, I needed to know how to bold and italicize text and the first page I found detailing this process was an introduction to RMarkdown basics: http://stats.idre.ucla.edu/stat/data/rmarkdown/rmarkdown_seminar_flat.html.
