@@ -76,3 +76,23 @@ Sarah Narvaiz
 ### Advice on how to use
 
 - This is a cheat sheet that would be permitted to be used during a coding exam. It's succinct but has quite a bit of information. If additional description for the tidyverse function is needed, the user could type ?[function] in their console to get additional information. This resource is a good and quick go-to for a refresher and brief understanding. 
+
+
+## Template: replace this header with a short (10 words or less) summary of the resource you identified
+
+Link to resource: https://cran.r-project.org/web/packages/tigris/tigris.pdf
+Esther Michela
+
+### What this resource is
+
+- The Tigris package helps you work with files after you download shapefiles from the US census as sf objects, which means they are very detailed, accurate, and inclusive for all US states and territories. You can select specific regions, or states, counties to use, which makes it nice if you need a large or small area for a map.
+
+### Who will find this resource helpful
+
+- This will be a helpful tool for anyone looking to map data related to the United States. It gives you access to complete data on US territories that can be plotted on using latitude and longitudinal data. 
+
+### Advice on how to use
+- To download the shape files, use
+- 'download.file("http://www2.census.gov/geo/tiger/GENZ2015/shp/cb_2015_us_state_20m.zip", destfile = "states.zip")
+- 'unzip("states.zip")'
+- Tigris works well with ggplot2, so it should be fairly straightforward to work with in terms of layering points, titles, etc. It may be a little hard to install as normal, so use 'devtools::install_github('walkerke/tigris')' if it's not working. 
