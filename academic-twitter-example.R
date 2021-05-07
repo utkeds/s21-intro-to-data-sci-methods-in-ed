@@ -5,9 +5,6 @@ library(academictwitteR)
 library(rtweet)
 library(tidyverse)
 
-all_aera_tweets <- c(str_c("#AERA", 14:21), str_c("AERA20", 14:21)) %>% 
-  map(get_hashtag_tweets, "2010-01-01T00:00:00Z", "2021-04-17T00:00:00Z", bearer_token = Sys.getenv("bearer_token"), data_path = "twitter-data-aera/")
-
 hashtags_to_search <- c(str_c("#AERA", 19:21), str_c("AERA20", 19:21)) %>% 
   paste0(collapse = " OR ")
 
