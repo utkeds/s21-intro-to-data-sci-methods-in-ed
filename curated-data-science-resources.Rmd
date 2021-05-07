@@ -299,3 +299,29 @@ Kristin Schrader
 ### Advice on how to use
 
 - This is good reference text. It's a great resource to be able to look up a specific topic. If you have the time, going through it cover to cover would probably be really helpful!
+- ## Template: replace this header with a short (10 words or less) summary of the resource you identified
+
+Link to resource: [add link here]
+[Add your name here]
+
+## PISA mathematics and science data (NCES website)
+
+Link to resource: https://nces.ed.gov/surveys/pisa/idepisa/
+Omiya Sultana
+
+### What this resource is
+- 
+- This is an interactive website where you can find and get your data in a table you want. 
+- You can get PISA data related to science and math from this website
+- First you have to click on the subject icon and select the subject you want to explore. Then you can select different category or scale (OCED international data or country based data). 
+
+### Who will find this resource helpful
+
+- Science/Math educators, researchers and teachers will find this data helpful. They can get to know the level of science education or math education in terms of international standards.
+
+### Advice on how to use
+
+- First you have to click on the subject icon and select the subject you want to explore. 
+- Then you can select different category or scale (OCED international data or country based data). 
+- Then you have to select the variables you want (race, ethnicity, sex etc)
+- Then you can creat a report. It can be downloaded in exel/word/pdf etc file
