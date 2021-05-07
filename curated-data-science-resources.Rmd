@@ -283,19 +283,18 @@ Katherine Trubee
 - It's succinct but has quite a bit of information; I would recommend completing each step to build confidence with ggplot and ggmaps.
 
 
-## Discovering Statistics with R by Andy Field et. al. 
-
-Link to resource: https://www.discoveringstatistics.com/books/discovering-statistics-using-r/
-Kristin Schrader
+## Stackoverflow.com:  Community issue troubleshooting
+Link to resource: https://stackoverflow.com/
+Ashley West
 
 ### What this resource is
 
-- This is a great overview of statistics and provides a lot of information on how to do statistical tests in R. The companion website has data files and intructor resources. 
+- This is a community based site that allows users to both pose questions and troubleshoot others issues with coding, rstudio, etc.  It reminds me a lot of yahoo answers.
 
 ### Who will find this resource helpful
 
-- This is helpful for someone who has a basic understanding of statistics but needs to be able to describe what a test means.  It is also helpful for those new to R so that you can see how the authors program their statistics code. 
+- This website will be helpful to people who are having very specific issues that they can't figure out on their own.  This site is also great because you can see all answers provided, so if one solution doesn't work you can try the next one.
 
 ### Advice on how to use
 
-- This is good reference text. It's a great resource to be able to look up a specific topic. If you have the time, going through it cover to cover would probably be really helpful!
+- This would be most helpful if you created an account to ask more specific questions, however my questions were easy to find since they were already asked.  They also have a helpful search bar that can be used so you are not asking the same questions over and over.  I was able to find solutions to issues I didn't know how to descride just by using specifc keywords.
