@@ -119,6 +119,40 @@ ggmap has the capability of importing base maps from Google and or the ability t
 
 ## Template: replace this header with a short (10 words or less) summary of the resource you identified
 
+Link to resource: https://www2.stat.duke.edu/courses/Fall15/sta112.01/
+Al Shorey
+
+### What this resource is
+
+- This is a course website for a similar course as ours at Duke University (of course our resources are better).  I came across it when I was searching how to do several tasks related to evaluating teacher surveys.
+
+### Who will find this resource helpful
+
+- Those of us in education might find it useful.  It is another example of how to set up an online course and examples of how to present the homeworks etc.
+
+### Advice on how to use
+
+- It is simply another example of how to present a course.  I think the way our course was presented and managed was great.  This is just another way with some different examples of things that we didn't necessarily cover.
+
+## R-bloggers is a good source for R begginers to learn new skills
+
+Link to resource: https://www.r-bloggers.com
+Justin Rose
+
+### What this resource is
+
+- This source has a tremendous amount of different blogs or articles to help R begginners. For instance, it has a blog about using Twitter API within R to collect tweets. It also has a blog about a tutorials to help individuals know how to conduct logistic regression in R. As you can see, this source has an article about various different things to help you use R to your full capacity. 
+
+### Who will find this resource helpful
+
+- Honestly, if you are looking for any tips relating to almost anything wihtin R, this would be a good source. It does not only cover specific programs within R. It does it best to cover everything that you are trying to do within the program. 
+
+### Advice on how to use
+
+- The front page of this source has all the most recent articles written for the site. If you are looking for tutorials, the tutorials tab is conveniently located at the top of the page. Lastly, there is also a section for R related jobs. 
+
+## Template: replace this header with a short (10 words or less) summary of the resource you identified
+
 Link to resource: https://cran.r-project.org/web/packages/tigris/tigris.pdf
 Esther Michela
 
