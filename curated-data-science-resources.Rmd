@@ -69,10 +69,28 @@ Sarah Narvaiz
 
 - This is quite literal a one-page (front and back) cheat sheet on using different functions in R within the Tidyvese for data wrangling purposes. It's helpful to have bookmarked, saved on your computer, or printed and tacked in your study space. It shows you the different functions within the tidyverse and how they can be used for wrangling/tidying data with examples. 
 
+
+## Mapping Resource from GitHub: this resource walks through the step-by-step process of building maps in R using GGPlot and GGMaps. 
+Link to resource: https://eriqande.github.io/rep-res-web/lectures/making-maps-with-R.html 
+**Anna Jackson** 
+
+### What this resource is
+
+- This resource provides simple and transferable instructions/tips to making map formats using the package ggmap. 
+ggmap has the capability of importing base maps from Google and or the ability to incorporate imported coordinate data. This resource also uses functions from ggplot2 to incorporate data layers (i.e., census data). 
 ### Who will find this resource helpful
 
-- Any person who is new to the Tidyverse and any person who is not new to the tidyverse but who sometimes forget the structure of a function or the different types of functions within the Tidyverse which can be used for tidying data.
+- This resource is for someone who only has basic R skills/knowledge. This package uses spatial data (i.e., longitude and latitude coordinates) to build maps. The ggplot2 and ggmap packages allows users to make a variety of maps, from simple to complex. 
 
 ### Advice on how to use
 
-- This is a cheat sheet that would be permitted to be used during a coding exam. It's succinct but has quite a bit of information. If additional description for the tidyverse function is needed, the user could type ?[function] in their console to get additional information. This resource is a good and quick go-to for a refresher and brief understanding. 
+- Even though my project did not require all aspects of this specific mapping resource, I found it most helpful to walk through the entire document and complete each step. This allowed me to familiarize myself with the packages and built my confidence for when it came time to execute my actual project. Extra practice is always useful. Here is  additional links that was also helpful for creating maps in R: https://geocompr.robinlovelace.net/adv-map.html;http://www.nickeubank.com/wp-content/uploads/2015/10/RGIS3_MakingMaps_part1_mappingVectorData.html.  
+
+### Who will find this resource helpful
+
+- A- This resource is for someone who only has basic R skills/knowledge. This package uses spatial data (i.e., longitude and latitude coordinates) to build maps. The ggplot2 and ggmap packages allows users to make a variety of maps, from simple to complex. 
+
+
+### Advice on how to use
+
+-It's succinct but has quite a bit of information; I would recommend completing each step to build confidence with ggplot and ggmaps. 
