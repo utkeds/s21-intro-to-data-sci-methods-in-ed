@@ -299,10 +299,23 @@ Kristin Schrader
 ### Advice on how to use
 
 - This is good reference text. It's a great resource to be able to look up a specific topic. If you have the time, going through it cover to cover would probably be really helpful!
-- ## Template: replace this header with a short (10 words or less) summary of the resource you identified
 
-Link to resource: [add link here]
-[Add your name here]
+## Stockoverflow.com:  I mostly used this to learn to add images to rmarkdown files!
+
+Link to resource: https://stackoverflow.com/questions/25166624/insert-picture-table-in-r-markdown
+Ashley West
+
+### What this resource is
+
+- This website is a Q and A format that allows users to pose questions to the general community. The vocabulary can get complicated if you do not have much prior knowledge of coding and rstudio.
+
+### Who will find this resource helpful
+
+- I feel that people that have specific questions and issues with rstudio can use it both as a referance and as a way to get help with specific issues.  Multiple users can also provide imput so multiple solutions can be found for the same problem.
+
+### Advice on how to use
+
+- This would be a great site to ask about very specific issues that you could not find the anwser for with a basic web search.  
 
 ## PISA mathematics and science data (NCES website)
 
