@@ -10,22 +10,49 @@ knitr::opts_chunk$set(echo = TRUE)
 *Instructions*: Copy everything from the first level-2 header (line 12 of this document, beginning with ##) through the 
 section with advice on how to use. Then, replace the header with your description, add the requested info, and commit your changes!
 
-## Template: replace this header with a short (10 words or less) summary of the resource you identified
+## Financial Analysis Package, data access and cool graphs
 
-Link to resource: [add link here]
-[Add your name here]
+Link to resource: https://cran.r-project.org/web/packages/quantmod/index.html
+
+Mason Boyd 
 
 ### What this resource is
 
-- 2-4 sentence overview of this resource is: what it does, describes/illuminates, or otherwise assists with.
+- Quantmod is a package that makes analyzing financial information easier in R. First of all, it allows you to pull financial information straight form Yahoo finance. This data is already in a time series format, which means that it doesn't need to be converted. That's helpful so that you can do further analysis or plotting for time series data. This package also includes some different financial plots, one of which look like it can do a normal line chart of stock data (this can be open, close, high, or low data), but it can also add what looks to be like a kernal density plot line as well. The kernal density allows you to see the trajectory of the stock a little more clearly. 
 
 ### Who will find this resource helpful
 
-- 2-4 sentence description of who will find this resource helpful; consider things such as what one is looking to do or how much experience one has with R.
+- Anyone interested in examining financial data in R will find this useful. Using the quantmod package was not difficult at all and it makes access and analyzing data really simple. The complicated R comes when you try to do deeper analyses on stock data, including forecasting. 
 
 ### Advice on how to use
 
-- 2-4 sentences providing advice on how to use the resource. For an R package, this could be tips on how to get started. For articles/blogs (or resources like these), this could be instructions on where to begin to read (or how to navigate the resource).
+- Honestly, I have read so many sources about how to use quantmod. Specifically, I looked up the correct code to use the getSymbols function that allows you to pull the data, as well as how to correctly structure the beginning date you want to pull the data from. Also, just google some of the graphs that you can use using the quantmod packages. You will find tons of resources and it appears to be a really popular package. 
+
+## Bone Mineral Density measurements of common North American taxa, and Statistics for Archaeologists
+
+Link to resources: Journal of Archaeological Science (2001) 28, 817–832
+doi:10.1006/jasc.2000.0600, available online at http://www.idealibrary.com
+
+Intertaxonomic Variability in Patterns of Bone Density and the Differential Representationof Bovid, Cervid, and Equid Elements in the Archaeological RecordAuthor(s): Y. M. Lam, Xingbin Chen, O. M. PearsonSource: American Antiquity, Vol. 64, No. 2 (Apr., 1999), pp. 343-362Published by: Society for American ArchaeologyStable URL: http://www.jstor.org/stable/2694283Accessed
+
+http://people.tamu.edu/~dcarlson/quant/Drennan/index.html
+
+[Matt Hoover]
+
+### What this resource is
+
+- These resources are two zooarchaeological reports, one authored by Frank J. Dirrigl, Jr. and the other by Y.M. Lam, Xingbin Chen, and O.M. Pearson, that analyzed the bone mineral densities of 'gallinaceous' birds and a selection of bovids, cervids, and equids, respectively. The former used a DEXA (dual energy X-ray bone densitometer) and the latter used a CT scanner to derive bone mineral density calculations for their selected taxa. I used these measurements in my final report as comparative specimens; they were incredibly helpful because they went into great detail about how the measurements were derived, and made anayalzying fragemented bones possible due to the fact that mutiple scan sites were measured across one bone.
+
+The third link is a collection of resoruces, collected by Professor David L. Carlson at TAMU, for arcaheologists concerning how to download R and then how to use its statistical packages for arcaheological research. I perused this a bit and it helped me wrap my head around the analyses going on in the first two reports about bone mineral density.
+
+### Who will find this resource helpful
+
+- Zooarchaeologists who are doing similar studies on survivorship of faunal remains would find these reosurces helpful. I relaize it is a very niche audience, but R has become very popular within various specialities of archaeology as a data viz, data analysis, and mapping tool due to its 'open source nature'; having relaible datasets such as these readily available on GitHub without having to hunt through the vast academic literature would be very helpful for said researchers.
+
+### Advice on how to use
+
+- The tables and diagrams in the reports are fairly starightforward; they provide illustrations of each element with the various scan sites depicted, and then provide tables gving the bone mineral densities of each scan site. Multiple 'types' of density measurements are provided, but the best/most useful measurement is pointed out for sake of convenience. 
+- The resources collected by Prof. Carlson are excellent guides for getting started doing analyses in R similar to what this class did, albeit aimed at archaeology instead of education. These resources provide examples of datasets used by archaeologists in R, which is helpful in that a student would not have to hunt down or create their own dataset (like I did!).
 
 ## R-bloggers is a good source for R begginers to learn new skills
 
@@ -69,14 +96,26 @@ Sarah Narvaiz
 
 - This is quite literal a one-page (front and back) cheat sheet on using different functions in R within the Tidyvese for data wrangling purposes. It's helpful to have bookmarked, saved on your computer, or printed and tacked in your study space. It shows you the different functions within the tidyverse and how they can be used for wrangling/tidying data with examples. 
 
-### Who will find this resource helpful
-
-- Any person who is new to the Tidyverse and any person who is not new to the tidyverse but who sometimes forget the structure of a function or the different types of functions within the Tidyverse which can be used for tidying data.
-
 ### Advice on how to use
 
 - This is a cheat sheet that would be permitted to be used during a coding exam. It's succinct but has quite a bit of information. If additional description for the tidyverse function is needed, the user could type ?[function] in their console to get additional information. This resource is a good and quick go-to for a refresher and brief understanding. 
 
+## Mapping Resource from GitHub: this resource walks through the step-by-step process of building maps in R using GGPlot and GGMaps. 
+Link to resource: https://eriqande.github.io/rep-res-web/lectures/making-maps-with-R.html 
+**Anna Jackson** 
+
+### What this resource is
+
+- This resource provides simple and transferable instructions/tips to making map formats using the package ggmap. 
+ggmap has the capability of importing base maps from Google and or the ability to incorporate imported coordinate data. This resource also uses functions from ggplot2 to incorporate data layers (i.e., census data). 
+
+### Who will find this resource helpful
+
+- This resource is for someone who only has basic R skills/knowledge. This package uses spatial data (i.e., longitude and latitude coordinates) to build maps. The ggplot2 and ggmap packages allows users to make a variety of maps, from simple to complex. 
+
+### Advice on how to use
+
+- This is a cheat sheet that would be permitted to be used during a coding exam. It's succinct but has quite a bit of information. If additional description for the tidyverse function is needed, the user could type ?[function] in their console to get additional information. This resource is a good and quick go-to for a refresher and brief understanding. 
 
 ## YouTube Playlist of R Data Visualization  
 
@@ -94,3 +133,46 @@ Emily McDonald
 ### Advice on how to use
 
 - This resource is a playlist of videos about different data visualization topics. I would recommend that the viewer of the playlist buildalong in R while watching the video. It will be helpful to pause and rewatch parts of the video. Quick YouTube Tip: Use the "J" key to rewind 10 seconds, use the "K" key to pause, and use the "L" key to jump forward 10 sections. 
+
+## Package for Varying Levels of Color Blindness
+
+Link to resource: https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html
+[Sadie Counts]
+
+### What this resource is
+
+- This is a package called viridis that uses differnt color scales that are more accessible than R's default scales for individuals with varying levels of color blindness. It has 8 differnet scales, all of which have differnt attributes and functions they serve, while also being aesthetically pleasing. 
+
+### Who will find this resource helpful
+
+- This pacakge is useful for anyone who is actively trying to be more concious with their R outputs and who may have concerns over reader accessiblity. This is also useful for any R outputs being used for conference presentations, papers, or posters as it helps ensure graphics will be more accessible for viewers. It is simple to install and use, the same as any other color palette in R. 
+
+### Advice on how to use
+
+- This package can be downloaded from CRAN and easily installed. For use, the package name is simply placed where any other palette woudl be. scalle_fill_viridis, color.palette=viridis, or scale_color_viridis can all be used depending on how color will be used for the graph. 
+
+
+## Institute for Digital Research and Education: Statistical Consulting website
+
+Link to resource: [stats.idre.ucla.edu/r/]
+[Katherine Trubee]
+
+### What this resource is
+
+- This is the website for the Institute for Digital Research and Education: Statistical Consulting at the University of California Los Angeles. It is a site that provides free advice and resources to help "you to independently use common statistical packages for the analysis of research data."
+
+### Who will find this resource helpful
+
+- UCLA's IDRE holds many seminars, textbooks, and even consulting. Their tutorial pages in particular range from beginner to advanced.
+
+### Advice on how to use
+
+- Throughout the semester, when googling problems, this would typically be the first website to pop up. Only later did I go to the home page and realize they have materials for all kinds of statistical software and even webinars. During the final project, I needed to know how to bold and italicize text and the first page I found detailing this process was an introduction to RMarkdown basics: http://stats.idre.ucla.edu/stat/data/rmarkdown/rmarkdown_seminar_flat.html.
+
+- Even though my project did not require all aspects of this specific mapping resource, I found it most helpful to walk through the entire document and complete each step. This allowed me to familiarize myself with the packages and built my confidence for when it came time to execute my actual project. Extra practice is always useful. Here is  additional links that was also helpful for creating maps in R: https://geocompr.robinlovelace.net/adv-map.html;http://www.nickeubank.com/wp-content/uploads/2015/10/RGIS3_MakingMaps_part1_mappingVectorData.html.  
+
+### Who will find this resource helpful
+
+- This resource is for someone who only has basic R skills/knowledge. This package uses spatial data (i.e., longitude and latitude coordinates) to build maps. The ggplot2 and ggmap packages allows users to make a variety of maps, from simple to complex. 
+- It's succinct but has quite a bit of information; I would recommend completing each step to build confidence with ggplot and ggmaps. 
+
