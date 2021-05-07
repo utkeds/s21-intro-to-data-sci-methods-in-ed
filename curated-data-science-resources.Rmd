@@ -117,6 +117,23 @@ ggmap has the capability of importing base maps from Google and or the ability t
 
 - This is a cheat sheet that would be permitted to be used during a coding exam. It's succinct but has quite a bit of information. If additional description for the tidyverse function is needed, the user could type ?[function] in their console to get additional information. This resource is a good and quick go-to for a refresher and brief understanding. 
 
+## Free online "book" about a wide variety of R topics
+
+Link to resource: https://bookdown.org/taragonmd/phds/
+Patricia Aubel
+
+### What this resource is
+
+This is an "book" built especially for population health data scientists. It starts from the basics (the first section is titled "What is R?") but gets to more advanced topics in analyzing data.
+
+### Who will find this resource helpful
+
+This is a useful tool for anyone, but there are especially many examples from public health. The book is written by the director of the Population Health Division at the San Francisco Department of Public Health. There are lots of resources for how to manage epidemiologic data and doing analyses through a socioecological lens. The resource is still growing, too...more chapters are still to be added.
+
+### Advice on how to use
+
+The menu/sidebar shows there are a LOT of chapters. For the most part, they're named intuitively, but you can also use the search bar to search the entire book for a particular topic.
+
 ## Template: replace this header with a short (10 words or less) summary of the resource you identified
 
 Link to resource: https://www2.stat.duke.edu/courses/Fall15/sta112.01/
