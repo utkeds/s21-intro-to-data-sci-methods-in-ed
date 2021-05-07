@@ -338,3 +338,20 @@ Omiya Sultana
 - Then you can select different category or scale (OCED international data or country based data). 
 - Then you have to select the variables you want (race, ethnicity, sex etc)
 - Then you can creat a report. It can be downloaded in exel/word/pdf etc file
+
+## DataCamp, A Source for Novice Coders and Data Scientists. New to Data science? This is a One Stop Shop. 
+
+Link to resource: [https://www.datacamp.com/courses/free-introduction-to-r]
+[Michael Mann]
+
+### What this resource is
+
+* I have been using DataCamp to R coding and practice different functions. This has helped me in solidifying my basic skills. It goes beyond basics, but I am not there yet. There are links to blogs and podcast that talk about different data science programs, including R. 
+
+### Who will find this resource helpful
+* I think that those that are novice to even expert could use this to go back to the basics. Even though I have been using R it has helped me with coding in general. 
+
+### Advice on how to use
+* You can look up specific functions and coding from several different programs, R studio. 
+* I would suggest start with the R tutorial and do guided practice. 
+* It is a use as needed and at your own pace, so it is not stressful. 
