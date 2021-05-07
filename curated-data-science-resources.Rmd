@@ -27,6 +27,50 @@ Link to resource: [add link here]
 
 - 2-4 sentences providing advice on how to use the resource. For an R package, this could be tips on how to get started. For articles/blogs (or resources like these), this could be instructions on where to begin to read (or how to navigate the resource).
 
+## Financial Analysis Package, data access and cool graphs
+
+Link to resource: https://cran.r-project.org/web/packages/quantmod/index.html
+
+Mason Boyd 
+
+### What this resource is
+
+- Quantmod is a package that makes analyzing financial information easier in R. First of all, it allows you to pull financial information straight form Yahoo finance. This data is already in a time series format, which means that it doesn't need to be converted. That's helpful so that you can do further analysis or plotting for time series data. This package also includes some different financial plots, one of which look like it can do a normal line chart of stock data (this can be open, close, high, or low data), but it can also add what looks to be like a kernal density plot line as well. The kernal density allows you to see the trajectory of the stock a little more clearly. 
+
+### Who will find this resource helpful
+
+- Anyone interested in examining financial data in R will find this useful. Using the quantmod package was not difficult at all and it makes access and analyzing data really simple. The complicated R comes when you try to do deeper analyses on stock data, including forecasting. 
+
+### Advice on how to use
+
+- Honestly, I have read so many sources about how to use quantmod. Specifically, I looked up the correct code to use the getSymbols function that allows you to pull the data, as well as how to correctly structure the beginning date you want to pull the data from. Also, just google some of the graphs that you can use using the quantmod packages. You will find tons of resources and it appears to be a really popular package. 
+
+## Bone Mineral Density measurements of common North American taxa, and Statistics for Archaeologists
+
+Link to resources: Journal of Archaeological Science (2001) 28, 817–832
+doi:10.1006/jasc.2000.0600, available online at http://www.idealibrary.com
+
+Intertaxonomic Variability in Patterns of Bone Density and the Differential Representationof Bovid, Cervid, and Equid Elements in the Archaeological RecordAuthor(s): Y. M. Lam, Xingbin Chen, O. M. PearsonSource: American Antiquity, Vol. 64, No. 2 (Apr., 1999), pp. 343-362Published by: Society for American ArchaeologyStable URL: http://www.jstor.org/stable/2694283Accessed
+
+http://people.tamu.edu/~dcarlson/quant/Drennan/index.html
+
+[Matt Hoover]
+
+### What this resource is
+
+- These resources are two zooarchaeological reports, one authored by Frank J. Dirrigl, Jr. and the other by Y.M. Lam, Xingbin Chen, and O.M. Pearson, that analyzed the bone mineral densities of 'gallinaceous' birds and a selection of bovids, cervids, and equids, respectively. The former used a DEXA (dual energy X-ray bone densitometer) and the latter used a CT scanner to derive bone mineral density calculations for their selected taxa. I used these measurements in my final report as comparative specimens; they were incredibly helpful because they went into great detail about how the measurements were derived, and made anayalzying fragemented bones possible due to the fact that mutiple scan sites were measured across one bone.
+
+The third link is a collection of resoruces, collected by Professor David L. Carlson at TAMU, for arcaheologists concerning how to download R and then how to use its statistical packages for arcaheological research. I perused this a bit and it helped me wrap my head around the analyses going on in the first two reports about bone mineral density.
+
+### Who will find this resource helpful
+
+- Zooarchaeologists who are doing similar studies on survivorship of faunal remains would find these reosurces helpful. I relaize it is a very niche audience, but R has become very popular within various specialities of archaeology as a data viz, data analysis, and mapping tool due to its 'open source nature'; having relaible datasets such as these readily available on GitHub without having to hunt through the vast academic literature would be very helpful for said researchers.
+
+### Advice on how to use
+
+- The tables and diagrams in the reports are fairly starightforward; they provide illustrations of each element with the various scan sites depicted, and then provide tables gving the bone mineral densities of each scan site. Multiple 'types' of density measurements are provided, but the best/most useful measurement is pointed out for sake of convenience. 
+- The resources collected by Prof. Carlson are excellent guides for getting started doing analyses in R similar to what this class did, albeit aimed at archaeology instead of education. These resources provide examples of datasets used by archaeologists in R, which is helpful in that a student would not have to hunt down or create their own dataset (like I did!).
+
 ## R-bloggers is a good source for R begginers to learn new skills
 
 Link to resource: https://www.r-bloggers.com
@@ -56,6 +100,7 @@ Link to resource: [https://datascienceplus.com/handling-missing-data-with-mice-p
 ### Who will find this resource helpful
 
 -Any R novice will find this article helpful. It goes step by step and you can even copy their example code from the website and paste the code into your RMD documents with ease.
+
 ### Advice on how to use
 
 - You will need the dplyr and mice packages installed and loaded to follow along with this tutorial. You will also use the sapply function (part of base R). 
@@ -69,14 +114,191 @@ Sarah Narvaiz
 
 - This is quite literal a one-page (front and back) cheat sheet on using different functions in R within the Tidyvese for data wrangling purposes. It's helpful to have bookmarked, saved on your computer, or printed and tacked in your study space. It shows you the different functions within the tidyverse and how they can be used for wrangling/tidying data with examples. 
 
+### Advice on how to use
+
+- This is a cheat sheet that would be permitted to be used during a coding exam. It's succinct but has quite a bit of information. If additional description for the tidyverse function is needed, the user could type ?[function] in their console to get additional information. This resource is a good and quick go-to for a refresher and brief understanding. 
+
+## Mapping Resource from GitHub: this resource walks through the step-by-step process of building maps in R using GGPlot and GGMaps. 
+Link to resource: https://eriqande.github.io/rep-res-web/lectures/making-maps-with-R.html 
+Anna Jackson
+
+### What this resource is
+
+- This resource provides simple and transferable instructions/tips to making map formats using the package ggmap. 
+ggmap has the capability of importing base maps from Google and or the ability to incorporate imported coordinate data. This resource also uses functions from ggplot2 to incorporate data layers (i.e., census data). 
+
 ### Who will find this resource helpful
 
-- Any person who is new to the Tidyverse and any person who is not new to the tidyverse but who sometimes forget the structure of a function or the different types of functions within the Tidyverse which can be used for tidying data.
+- This resource is for someone who only has basic R skills/knowledge. This package uses spatial data (i.e., longitude and latitude coordinates) to build maps. The ggplot2 and ggmap packages allows users to make a variety of maps, from simple to complex. 
 
 ### Advice on how to use
 
 - This is a cheat sheet that would be permitted to be used during a coding exam. It's succinct but has quite a bit of information. If additional description for the tidyverse function is needed, the user could type ?[function] in their console to get additional information. This resource is a good and quick go-to for a refresher and brief understanding. 
 
+## Free online "book" about a wide variety of R topics
+
+Link to resource: https://bookdown.org/taragonmd/phds/
+Patricia Aubel
+
+### What this resource is
+
+This is an "book" built especially for population health data scientists. It starts from the basics (the first section is titled "What is R?") but gets to more advanced topics in analyzing data.
+
+### Who will find this resource helpful
+
+This is a useful tool for anyone, but there are especially many examples from public health. The book is written by the director of the Population Health Division at the San Francisco Department of Public Health. There are lots of resources for how to manage epidemiologic data and doing analyses through a socioecological lens. The resource is still growing, too...more chapters are still to be added.
+
+### Advice on how to use
+
+The menu/sidebar shows there are a LOT of chapters. For the most part, they're named intuitively, but you can also use the search bar to search the entire book for a particular topic.
+
+## Example data science course
+
+Link to resource: https://www2.stat.duke.edu/courses/Fall15/sta112.01/
+Al Shorey
+
+### What this resource is
+
+- This is a course website for a similar course as ours at Duke University (of course our resources are better).  I came across it when I was searching how to do several tasks related to evaluating teacher surveys.
+
+### Who will find this resource helpful
+
+- Those of us in education might find it useful.  It is another example of how to set up an online course and examples of how to present the homeworks etc.
+
+### Advice on how to use
+
+- It is simply another example of how to present a course.  I think the way our course was presented and managed was great.  This is just another way with some different examples of things that we didn't necessarily cover.
+
+## R-bloggers is a good source for R begginers to learn new skills
+
+Link to resource: https://www.r-bloggers.com
+Justin Rose
+
+### What this resource is
+
+- This source has a tremendous amount of different blogs or articles to help R begginners. For instance, it has a blog about using Twitter API within R to collect tweets. It also has a blog about a tutorials to help individuals know how to conduct logistic regression in R. As you can see, this source has an article about various different things to help you use R to your full capacity. 
+
+### Who will find this resource helpful
+
+- Honestly, if you are looking for any tips relating to almost anything wihtin R, this would be a good source. It does not only cover specific programs within R. It does it best to cover everything that you are trying to do within the program. 
+
+### Advice on how to use
+
+- The front page of this source has all the most recent articles written for the site. If you are looking for tutorials, the tutorials tab is conveniently located at the top of the page. Lastly, there is also a section for R related jobs. 
+
+## Mapping with tigris
+
+Link to resource: https://cran.r-project.org/web/packages/tigris/tigris.pdf
+Esther Michela
+
+### What this resource is
+
+- The Tigris package helps you work with files after you download shapefiles from the US census as sf objects, which means they are very detailed, accurate, and inclusive for all US states and territories. You can select specific regions, or states, counties to use, which makes it nice if you need a large or small area for a map.
+
+### Who will find this resource helpful
+
+- This will be a helpful tool for anyone looking to map data related to the United States. It gives you access to complete data on US territories that can be plotted on using latitude and longitudinal data. 
+
+### Advice on how to use
+- To download the shape files, use
+- 'download.file("http://www2.census.gov/geo/tiger/GENZ2015/shp/cb_2015_us_state_20m.zip", destfile = "states.zip")
+- 'unzip("states.zip")'
+- Tigris works well with ggplot2, so it should be fairly straightforward to work with in terms of layering points, titles, etc. It may be a little hard to install as normal, so use 'devtools::install_github('walkerke/tigris')' if it's not working. 
+
+## Weekly Data Science Challenge
+
+Link to resource: https://github.com/rfordatascience/tidytuesday#readme
+Will Andershock
+
+### What this resource is
+
+- R for Data Science's Tidy Tuesday is a page on GitHub that provides a weekly data science challenge. The group provides data sets and challenges people to use their imagination and to challenge themselves to create something new. Additionally, Tidy Tuesday is a community and people respond to one another and help each other with their coding problems 
+
+### Who will find this resource helpful
+
+- Anyone in our Data Science class who wants to continue developing their R skills will find this helpful. Tidy Tuesday is a great way to developing a coding portfolio as well!
+
+### Advice on how to use
+
+- I reccomend checking out the Tidy Tuesday website (https://www.tidytuesday.com/) and joining the slack page. That way you will be able to connect with people and ask for help if needed.
+
+## Tidy Tuesday is a great resource to continue developing R skills
+
+## YouTube Playlist of R Data Visualization  
+
+Link to resource: https://www.youtube.com/playlist?list=PLr5uaPu5L7xLZiscc70d9mOUgnmLktr4C  
+Emily McDonald 
+
+### What this resource is
+
+- This is a YouTube Playlist by dataslice of six short videos about Data Visualizations in R. I found the video about creating a word cloud in R using wordcloud2 very helpful for my final project. The playlist includes the following topics: drag-and-drop ggplot2 graphs, ways to improve ggplot2 graphs, animate graphs with gganimate, interactive graphs with plotly, choropleth and scatter maps with plotly, and word clouds with wordcloud2. These short videos range in time from about 6 minutes to about 14 minutes. 
+
+### Who will find this resource helpful
+
+- This playlist will be helpful for beginners in data visualization that are looking for different or unique ways to represent data with R. I think some of the video topics are niche data visualizations so some of the video topics may not be applicable for all. 
+
+### Advice on how to use
+
+- This resource is a playlist of videos about different data visualization topics. I would recommend that the viewer of the playlist buildalong in R while watching the video. It will be helpful to pause and rewatch parts of the video. Quick YouTube Tip: Use the "J" key to rewind 10 seconds, use the "K" key to pause, and use the "L" key to jump forward 10 sections. 
+
+## Package for Varying Levels of Color Blindness
+
+Link to resource: https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html
+[Sadie Counts]
+
+### What this resource is
+
+- This is a package called viridis that uses differnt color scales that are more accessible than R's default scales for individuals with varying levels of color blindness. It has 8 differnet scales, all of which have differnt attributes and functions they serve, while also being aesthetically pleasing. 
+
+### Who will find this resource helpful
+
+- This pacakge is useful for anyone who is actively trying to be more concious with their R outputs and who may have concerns over reader accessiblity. This is also useful for any R outputs being used for conference presentations, papers, or posters as it helps ensure graphics will be more accessible for viewers. It is simple to install and use, the same as any other color palette in R. 
+
+### Advice on how to use
+
+- This package can be downloaded from CRAN and easily installed. For use, the package name is simply placed where any other palette woudl be. scalle_fill_viridis, color.palette=viridis, or scale_color_viridis can all be used depending on how color will be used for the graph. 
+
+## Institute for Digital Research and Education: Statistical Consulting website
+
+Link to resource: stats.idre.ucla.edu/r/
+Katherine Trubee
+
+### What this resource is
+
+- This is the website for the Institute for Digital Research and Education: Statistical Consulting at the University of California Los Angeles. It is a site that provides free advice and resources to help "you to independently use common statistical packages for the analysis of research data."
+
+### Who will find this resource helpful
+
+- UCLA's IDRE holds many seminars, textbooks, and even consulting. Their tutorial pages in particular range from beginner to advanced.
+
+### Advice on how to use
+
+- Throughout the semester, when googling problems, this would typically be the first website to pop up. Only later did I go to the home page and realize they have materials for all kinds of statistical software and even webinars. During the final project, I needed to know how to bold and italicize text and the first page I found detailing this process was an introduction to RMarkdown basics: http://stats.idre.ucla.edu/stat/data/rmarkdown/rmarkdown_seminar_flat.html.
+
+- Even though my project did not require all aspects of this specific mapping resource, I found it most helpful to walk through the entire document and complete each step. This allowed me to familiarize myself with the packages and built my confidence for when it came time to execute my actual project. Extra practice is always useful. Here is  additional links that was also helpful for creating maps in R: https://geocompr.robinlovelace.net/adv-map.html;http://www.nickeubank.com/wp-content/uploads/2015/10/RGIS3_MakingMaps_part1_mappingVectorData.html.  
+
+### Who will find this resource helpful
+
+- This resource is for someone who only has basic R skills/knowledge. This package uses spatial data (i.e., longitude and latitude coordinates) to build maps. The ggplot2 and ggmap packages allows users to make a variety of maps, from simple to complex. 
+- It's succinct but has quite a bit of information; I would recommend completing each step to build confidence with ggplot and ggmaps.
+
+
+## Discovering Statistics with R by Andy Field et. al. 
+
+Link to resource: https://www.discoveringstatistics.com/books/discovering-statistics-using-r/
+Kristin Schrader
+
+### What this resource is
+
+- This is a great overview of statistics and provides a lot of information on how to do statistical tests in R. The companion website has data files and intructor resources. 
+
+### Who will find this resource helpful
+
+- This is helpful for someone who has a basic understanding of statistics but needs to be able to describe what a test means.  It is also helpful for those new to R so that you can see how the authors program their statistics code. 
+
+### Advice on how to use
+
+- This is good reference text. It's a great resource to be able to look up a specific topic. If you have the time, going through it cover to cover would probably be really helpful!
 
 ## Stockoverflow.com:  I mostly used this to learn to add images to rmarkdown files!
 
