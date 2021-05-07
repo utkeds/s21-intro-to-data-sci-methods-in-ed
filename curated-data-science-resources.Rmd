@@ -281,3 +281,21 @@ Katherine Trubee
 
 - This resource is for someone who only has basic R skills/knowledge. This package uses spatial data (i.e., longitude and latitude coordinates) to build maps. The ggplot2 and ggmap packages allows users to make a variety of maps, from simple to complex. 
 - It's succinct but has quite a bit of information; I would recommend completing each step to build confidence with ggplot and ggmaps.
+
+
+## Discovering Statistics with R by Andy Field et. al. 
+
+Link to resource: https://www.discoveringstatistics.com/books/discovering-statistics-using-r/
+Kristin Schrader
+
+### What this resource is
+
+- This is a great overview of statistics and provides a lot of information on how to do statistical tests in R. The companion website has data files and intructor resources. 
+
+### Who will find this resource helpful
+
+- This is helpful for someone who has a basic understanding of statistics but needs to be able to describe what a test means.  It is also helpful for those new to R so that you can see how the authors program their statistics code. 
+
+### Advice on how to use
+
+- This is good reference text. It's a great resource to be able to look up a specific topic. If you have the time, going through it cover to cover would probably be really helpful!
