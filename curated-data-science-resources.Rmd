@@ -117,6 +117,24 @@ ggmap has the capability of importing base maps from Google and or the ability t
 
 - This is a cheat sheet that would be permitted to be used during a coding exam. It's succinct but has quite a bit of information. If additional description for the tidyverse function is needed, the user could type ?[function] in their console to get additional information. This resource is a good and quick go-to for a refresher and brief understanding. 
 
+## Package for Varying Levels of Color Blindness
+
+Link to resource: https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html
+[Sadie Counts]
+
+### What this resource is
+
+- This is a package called viridis that uses differnt color scales that are more accessible than R's default scales for individuals with varying levels of color blindness. It has 8 differnet scales, all of which have differnt attributes and functions they serve, while also being aesthetically pleasing. 
+
+### Who will find this resource helpful
+
+- This pacakge is useful for anyone who is actively trying to be more concious with their R outputs and who may have concerns over reader accessiblity. This is also useful for any R outputs being used for conference presentations, papers, or posters as it helps ensure graphics will be more accessible for viewers. It is simple to install and use, the same as any other color palette in R. 
+
+### Advice on how to use
+
+- This package can be downloaded from CRAN and easily installed. For use, the package name is simply placed where any other palette woudl be. scalle_fill_viridis, color.palette=viridis, or scale_color_viridis can all be used depending on how color will be used for the graph. 
+
+=======
 ## Institute for Digital Research and Education: Statistical Consulting website
 
 Link to resource: [stats.idre.ucla.edu/r/]
