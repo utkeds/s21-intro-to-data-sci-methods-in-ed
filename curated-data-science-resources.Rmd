@@ -338,3 +338,23 @@ Omiya Sultana
 - Then you can select different category or scale (OCED international data or country based data). 
 - Then you have to select the variables you want (race, ethnicity, sex etc)
 - Then you can creat a report. It can be downloaded in exel/word/pdf etc file
+
+## Template: replace this header with a short (10 words or less) summary of the resource you identified
+
+Link to resource: https://www.reddit.com/r/rstats/
+Travis Crum
+
+### What this resource is
+
+- This is a subreddit dedicated to solving statistical problems in R.
+- It is a good alternative to Stack Overflow and also offers a list of other resources and R cheat sheets made by the community.
+
+### Who will find this resource helpful
+
+- People with a hyper specific bug or issue may find this helpful for the purpose of asking quesitons.
+- Also may be useful to those looking for general R and RStudio resources. 
+
+### Advice on how to use
+
+- I highly recommend making a reddit account so that you can subscribe to all of the R subreddits (there are a few others that are also helpful) so that you can find all of their resources in one feed. 
+- Accounts also give you the ability to save posts you like so that you can find them later.
